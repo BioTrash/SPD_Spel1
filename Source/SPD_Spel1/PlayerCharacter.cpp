@@ -3,6 +3,8 @@
 
 #include "PlayerCharacter.h"
 
+#include "GameFramework/CharacterMovementComponent.h"
+
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {
@@ -78,6 +80,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
 
+	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+
 }
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
@@ -112,6 +116,38 @@ void APlayerCharacter::SwapWeapon()
 	}
 }
 
+//method for dashing (Rebecka)
+void APlayerCharacter::Dash()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Dash called"));
+	if (!bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
+	{
+		if (GetCharacterMovement())
+		{
+			//normalize the dash direction and multiply it by dash speed
+			FVector DashDirection = GetActorForwardVector().GetSafeNormal() * DashSpeed;
+
+			//apply dash velocity to the character
+			GetCharacterMovement()->Launch(DashDirection);
+
+			bIsDashing = true;
+			LastDashTime = GetWorld()->GetTimeSeconds();
+
+			//reset dash after duration
+			GetWorldTimerManager().SetTimer(DashTimerHandle, this, &APlayerCharacter::StopDash, DashDuration, false);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Character movement component not found!"));
+		}
+	}
+}
+
+//method for stopdashing (Rebecka)
+void APlayerCharacter::StopDash()
+{
+	bIsDashing = false;
+}
 
 
 
