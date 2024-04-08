@@ -5,15 +5,6 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/TestEnemy/Enemy/BP_AIFlyingEnemy.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/AI_FlyingEnemy/BT_Fly.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/AI_FlyingEnemy/BT_FlyingEnemy.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/AI_FlyingEnemy/BB_FlyingEnemyAI.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BT_EnemyAI.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterAIController.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BB_EnemyAI.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Whitebox_Test.umap",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_Spel1GameMode.uasset",
 				"C:/Users/walle/Documents/GitHub/SPD_Spel1/Content/StarterContent/Architecture/Floor_400x400.uasset"
 			]
 		}
