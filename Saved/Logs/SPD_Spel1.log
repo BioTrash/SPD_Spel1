@@ -1942,3 +1942,557 @@ LogConfig: Set CVar [[con.DebugEarlyDefault:1]]
 [2024.04.08-12.34.43:632][180]LogFileHelpers: InternalPromptForCheckoutAndSave took 91 ms (total: 1.14 sec)
 [2024.04.08-12.34.43:633][180]AssetCheck: New page: Asset Save: BP_FirstPersonCharacter
 [2024.04.08-12.34.43:634][180]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/FirstPerson/Blueprints/BP_FirstPersonCharacter.BP_FirstPersonCharacter
+[2024.04.08-12.35.08:690][367]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2024.04.08-12.35.08:694][367]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Jeremy/TestMap1' took 0.014
+[2024.04.08-12.35.08:694][367]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/Jeremy/TestMap1/E/EM/T7RUQIAVQI76S5TKDYM1EY_Auto1
+[2024.04.08-12.35.08:694][367]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/T7RUQIAVQI76S5TKDYM1EY_Auto1C878A50841EF22B44340C79C94B289AD.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/Autosaves/Game/__ExternalActors__/Jeremy/TestMap1/E/EM/T7RUQIAVQI76S5TKDYM1EY_Auto1.uasset'
+[2024.04.08-12.35.08:695][367]LogFileHelpers: Auto-saving content packages took 0.001
+[2024.04.08-12.35.11:760][431]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-12.35.11:763][431]LogContentBundle: [TestMap1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.08-12.35.11:763][431]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' started...
+[2024.04.08-12.35.11:764][431]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' took 1 ms (total: 7 ms)
+[2024.04.08-12.35.11:764][431]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-12.35.11:764][431]PIE: New page: PIE session: TestMap1 (8 apr. 2024 16:35:11)
+[2024.04.08-12.35.11:797][431]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.11:800][431]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003192s)
+[2024.04.08-12.35.11:800][431]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003219s)
+[2024.04.08-12.35.11:805][431]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.04.08-12.35.11:806][431]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.35.11:806][431]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.35.11:807][431]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.35.11:807][431]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.35.11:807][431]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.35.11:807][431]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.35.11:807][431]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.35.11:808][431]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.35.11:808][431]LogWorldPartition: Display: WorldPartition initialize took 839 us (total: 171 ms)
+[2024.04.08-12.35.11:808][431]LogPlayLevel: PIE: World Init took: (0.001650s)
+[2024.04.08-12.35.11:808][431]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-12.35.11:808][431]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-12.35.11:808][431]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-12.35.11:808][431]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-12.35.11:808][431]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-12.35.11:808][431]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-12.35.11:810][431]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-12.35.11:820][431]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.08-12.35.11:820][431]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-12.35.11:820][431]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-12.35.11:820][431]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-12.35.11:821][431]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.04.08-12.35.11:821][431]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.04.08-12.35.11:822][431]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.04.08-12.35.11:822][431]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.04.08-12.35.11:822][431]LogInit: FAudioDevice initialized with ID 8.
+[2024.04.08-12.35.11:822][431]LogAudio: Display: Audio Device (ID: 8) registered with world 'TestMap1'.
+[2024.04.08-12.35.11:822][431]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.08-12.35.11:824][431]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.35.11:825][431]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.35.11
+[2024.04.08-12.35.11:825][431]LogWorld: Bringing up level for play took: 0.001309
+[2024.04.08-12.35.11:826][431]LogOnline: OSS: Created online subsystem instance for: :Context_20
+[2024.04.08-12.35.11:828][431]PIE: Server logged in
+[2024.04.08-12.35.11:828][431]PIE: Play in editor total start time 0,065 seconds.
+[2024.04.08-12.35.18:274][197]LogNet: Browse: /Game/Jeremy/TestMap1
+[2024.04.08-12.35.18:274][197]LogLoad: LoadMap: /Game/Jeremy/TestMap1
+[2024.04.08-12.35.18:274][197]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.18:274][197]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.35.18:274][197]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.35.18:275][197]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.35.18:312][197]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.08-12.35.18:314][197]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.04.08-12.35.18:316][197]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.18:319][197]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003065s)
+[2024.04.08-12.35.18:319][197]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003094s)
+[2024.04.08-12.35.18:319][197]LogAudio: Display: Audio Device (ID: 8) registered with world 'TestMap1'.
+[2024.04.08-12.35.18:319][197]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.35.18:319][197]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.35.18:319][197]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.35.18:320][197]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.35.18:320][197]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.35.18:320][197]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.35.18:320][197]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.35.18:320][197]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.35.18:320][197]LogWorldPartition: Display: WorldPartition initialize took 705 us (total: 172 ms)
+[2024.04.08-12.35.18:320][197]LogPlayLevel: PIE: World Init took: (0.001362s)
+[2024.04.08-12.35.18:320][197]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.35.18:322][197]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.35.18
+[2024.04.08-12.35.18:322][197]LogWorld: Bringing up level for play took: 0.001060
+[2024.04.08-12.35.18:323][197]LogLoad: Took 0.050237 seconds to LoadMap(/Game/Jeremy/UEDPIE_0_TestMap1)
+[2024.04.08-12.35.20:712][483]LogBlueprintUserMessages: [BP_SpikeTrap_C_UAID_581122CD5BFD41E901_1858537648] Player take damage
+[2024.04.08-12.35.21:378][563]LogBlueprintUserMessages: [BP_SpikeTrap_C_UAID_581122CD5BFD41E901_1858537648] Player leaving trap
+[2024.04.08-12.35.26:220][144]LogNet: Browse: /Game/Jeremy/TestMap1
+[2024.04.08-12.35.26:220][144]LogLoad: LoadMap: /Game/Jeremy/TestMap1
+[2024.04.08-12.35.26:220][144]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.26:220][144]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.35.26:221][144]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.35.26:221][144]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.35.26:274][144]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.08-12.35.26:276][144]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.04.08-12.35.26:278][144]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.26:281][144]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003069s)
+[2024.04.08-12.35.26:281][144]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003098s)
+[2024.04.08-12.35.26:281][144]LogAudio: Display: Audio Device (ID: 8) registered with world 'TestMap1'.
+[2024.04.08-12.35.26:281][144]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.35.26:281][144]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.35.26:281][144]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.35.26:282][144]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.35.26:282][144]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.35.26:282][144]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.35.26:282][144]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.35.26:282][144]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.35.26:282][144]LogWorldPartition: Display: WorldPartition initialize took 674 us (total: 173 ms)
+[2024.04.08-12.35.26:282][144]LogPlayLevel: PIE: World Init took: (0.001307s)
+[2024.04.08-12.35.26:282][144]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.35.26:283][144]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.35.26
+[2024.04.08-12.35.26:283][144]LogWorld: Bringing up level for play took: 0.001047
+[2024.04.08-12.35.26:285][144]LogLoad: Took 0.064943 seconds to LoadMap(/Game/Jeremy/UEDPIE_0_TestMap1)
+[2024.04.08-12.35.27:058][233]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.35.27:058][233]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.35.27:058][233]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.35.27:058][233]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.35.27:059][233]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.35.27:061][233]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-12.35.27:063][233]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.35.27:068][233]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.35.27:068][233]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.08-12.35.27:068][233]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.08-12.35.27:069][233]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.08-12.35.27:073][233]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.04.08-12.35.27:147][235]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2024.04.08-12.37.11:114][879]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.37.11:235][879]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.37.11:238][879]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.37.11:238][879]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyBD96919D4B19F45AF513D196B9CA5133.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.37.11:245][879]LogFileHelpers: InternalPromptForCheckoutAndSave took 131 ms (total: 1.27 sec)
+[2024.04.08-12.37.11:246][879]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.37.11:247][879]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.37.11:581][919]BlueprintLog: New page: Compile BP_Enemy
+[2024.04.08-12.37.11:595][919]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2024.04.08-12.37.17:327][165]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.37.17:430][165]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.37.17:433][165]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.37.17:434][165]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyD2B9E17248965CBF66A88688B61E347B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.37.17:442][165]LogFileHelpers: InternalPromptForCheckoutAndSave took 115 ms (total: 1.39 sec)
+[2024.04.08-12.37.17:443][165]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.37.17:444][165]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.38.17:413][493]BlueprintLog: New page: Compile BP_Enemy
+[2024.04.08-12.38.17:462][493]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2024.04.08-12.38.17:966][515]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.38.18:058][515]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.38.18:061][515]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.38.18:062][515]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyE37744C9436B66FF3DBBED99BE217D6F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.38.18:068][515]LogFileHelpers: InternalPromptForCheckoutAndSave took 102 ms (total: 1.49 sec)
+[2024.04.08-12.38.18:069][515]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.38.18:069][515]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.39.02:075][874]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-12.39.02:078][874]LogContentBundle: [TestMap1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.08-12.39.02:078][874]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' started...
+[2024.04.08-12.39.02:079][874]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' took 1 ms (total: 8 ms)
+[2024.04.08-12.39.02:079][874]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-12.39.02:079][874]PIE: New page: PIE session: TestMap1 (8 apr. 2024 16:39:02)
+[2024.04.08-12.39.02:079][874]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.39.02:082][874]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003319s)
+[2024.04.08-12.39.02:082][874]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003339s)
+[2024.04.08-12.39.02:088][874]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.08-12.39.02:092][874]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.39.02:092][874]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.39.02:092][874]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.39.02:092][874]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.39.02:092][874]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.39.02:092][874]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.39.02:092][874]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.39.02:093][874]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.39.02:093][874]LogWorldPartition: Display: WorldPartition initialize took 837 us (total: 173 ms)
+[2024.04.08-12.39.02:093][874]LogPlayLevel: PIE: World Init took: (0.001738s)
+[2024.04.08-12.39.02:093][874]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-12.39.02:093][874]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-12.39.02:093][874]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-12.39.02:094][874]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-12.39.02:094][874]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-12.39.02:094][874]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-12.39.02:095][874]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-12.39.02:105][874]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.08-12.39.02:105][874]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-12.39.02:105][874]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-12.39.02:106][874]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-12.39.02:106][874]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2024.04.08-12.39.02:106][874]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2024.04.08-12.39.02:107][874]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2024.04.08-12.39.02:107][874]LogInit: FAudioDevice initialized with ID 9.
+[2024.04.08-12.39.02:107][874]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2024.04.08-12.39.02:107][874]LogAudio: Display: Audio Device (ID: 9) registered with world 'TestMap1'.
+[2024.04.08-12.39.02:107][874]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 9
+[2024.04.08-12.39.02:170][874]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.39.02:170][874]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.39.02:172][874]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.39.02
+[2024.04.08-12.39.02:173][874]LogWorld: Bringing up level for play took: 0.002062
+[2024.04.08-12.39.02:174][874]LogOnline: OSS: Created online subsystem instance for: :Context_21
+[2024.04.08-12.39.02:178][874]PIE: Server logged in
+[2024.04.08-12.39.02:179][874]PIE: Play in editor total start time 0,101 seconds.
+[2024.04.08-12.39.02:186][874]LogViewport: Scene viewport resized to 1714x1360, mode Windowed.
+[2024.04.08-12.39.07:048][415]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.39.07:048][415]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.39.07:048][415]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.08-12.39.07:051][415]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.39.07:051][415]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.39.07:051][415]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.39.07:054][415]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-12.39.07:056][415]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.39.07:063][415]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 9
+[2024.04.08-12.39.07:063][415]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.08-12.39.07:064][415]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.08-12.39.07:068][415]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2024.04.08-12.39.07:113][419]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2024.04.08-12.39.07:940][518]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.39.08:000][518]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.39.08:003][518]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.39.08:003][518]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyCFBF53A44B702F4721FB5F99C8C0F50B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.39.08:009][518]LogFileHelpers: InternalPromptForCheckoutAndSave took 68 ms (total: 1.56 sec)
+[2024.04.08-12.39.08:010][518]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.39.08:010][518]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.39.25:238][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.39.25:294][ 17]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.39.25:296][ 17]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.39.25:297][ 17]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_Enemy8E5BEC2B4E9CA3D4EA89AFB844D3A132.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.39.25:303][ 17]LogFileHelpers: InternalPromptForCheckoutAndSave took 64 ms (total: 1.62 sec)
+[2024.04.08-12.39.25:303][ 17]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.39.25:303][ 17]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.40.14:875][229]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.40.14:916][229]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.40.14:918][229]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.40.14:919][229]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner1782DA4545FDF7C988EEA7B9CAEC6486.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.40.14:924][229]LogFileHelpers: InternalPromptForCheckoutAndSave took 49 ms (total: 1.67 sec)
+[2024.04.08-12.40.14:925][229]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.40.14:925][229]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.40.16:067][352]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.40.16:114][352]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.40.16:117][352]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.40.16:117][352]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawnerDA78DF7142AE44E9D8F882BF0C61DDE2.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.40.16:122][352]LogFileHelpers: InternalPromptForCheckoutAndSave took 55 ms (total: 1.73 sec)
+[2024.04.08-12.40.16:123][352]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.40.16:123][352]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.40.27:583][689]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.40.27:642][689]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.40.27:645][689]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.40.27:645][689]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner99A016EE49B549B20FB247BFDCEA4228.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.40.27:651][689]LogFileHelpers: InternalPromptForCheckoutAndSave took 67 ms (total: 1.80 sec)
+[2024.04.08-12.40.27:652][689]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.40.27:652][689]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.40.28:889][837]BlueprintLog: New page: Compile BP_EnemySpawner
+[2024.04.08-12.40.28:905][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.04.08-12.40.29:616][918]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.40.29:656][918]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.40.29:659][918]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.40.29:659][918]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner132762A543BA203FF019C69C31E54DE7.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.40.29:664][918]LogFileHelpers: InternalPromptForCheckoutAndSave took 47 ms (total: 1.84 sec)
+[2024.04.08-12.40.29:665][918]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.40.29:665][918]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.40.42:689][378]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-12.40.42:693][378]LogContentBundle: [TestMap1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.08-12.40.42:693][378]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' started...
+[2024.04.08-12.40.42:694][378]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' took 1 ms (total: 9 ms)
+[2024.04.08-12.40.42:694][378]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-12.40.42:694][378]PIE: New page: PIE session: TestMap1 (8 apr. 2024 16:40:42)
+[2024.04.08-12.40.42:694][378]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.40.42:697][378]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003094s)
+[2024.04.08-12.40.42:697][378]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003112s)
+[2024.04.08-12.40.42:702][378]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2024.04.08-12.40.42:704][378]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.40.42:704][378]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.40.42:705][378]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.40.42:705][378]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.40.42:705][378]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.40.42:705][378]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.40.42:705][378]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.40.42:706][378]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.40.42:706][378]LogWorldPartition: Display: WorldPartition initialize took 809 us (total: 174 ms)
+[2024.04.08-12.40.42:706][378]LogPlayLevel: PIE: World Init took: (0.001682s)
+[2024.04.08-12.40.42:706][378]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-12.40.42:706][378]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-12.40.42:706][378]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-12.40.42:706][378]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-12.40.42:706][378]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-12.40.42:706][378]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-12.40.42:708][378]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-12.40.42:717][378]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.08-12.40.42:717][378]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-12.40.42:717][378]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-12.40.42:717][378]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-12.40.42:718][378]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2024.04.08-12.40.42:718][378]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2024.04.08-12.40.42:719][378]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2024.04.08-12.40.42:719][378]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2024.04.08-12.40.42:719][378]LogInit: FAudioDevice initialized with ID 10.
+[2024.04.08-12.40.42:719][378]LogAudio: Display: Audio Device (ID: 10) registered with world 'TestMap1'.
+[2024.04.08-12.40.42:719][378]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.08-12.40.42:777][378]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.40.42:778][378]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.40.42:780][378]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.40.42
+[2024.04.08-12.40.42:781][378]LogWorld: Bringing up level for play took: 0.002760
+[2024.04.08-12.40.42:783][378]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2024.04.08-12.40.42:787][378]PIE: Server logged in
+[2024.04.08-12.40.42:787][378]PIE: Play in editor total start time 0,095 seconds.
+[2024.04.08-12.40.42:795][378]LogViewport: Scene viewport resized to 1714x1360, mode Windowed.
+[2024.04.08-12.40.46:404][781]LogBlueprintUserMessages: [BP_SpikeTrap_C_UAID_581122CD5BFD41E901_1858537648] Player take damage
+[2024.04.08-12.40.46:555][799]LogBlueprintUserMessages: [BP_SpikeTrap_C_UAID_581122CD5BFD41E901_1858537648] Player leaving trap
+[2024.04.08-12.40.53:598][640]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.40.53:598][640]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.40.53:599][640]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.08-12.40.53:601][640]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.40.53:601][640]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.40.53:601][640]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.40.53:613][640]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-12.40.53:614][640]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.40.53:620][640]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.08-12.40.53:620][640]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.08-12.40.53:621][640]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.08-12.40.53:626][640]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.08-12.40.53:664][642]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2024.04.08-12.41.03:997][869]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.41.04:141][869]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.41.04:144][869]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.41.04:144][869]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_Enemy82A07C4441B66A377F837EA2977FC4FF.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.41.04:153][869]LogFileHelpers: InternalPromptForCheckoutAndSave took 154 ms (total: 2.00 sec)
+[2024.04.08-12.41.04:153][869]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.41.04:153][869]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.41.04:606][923]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-12.41.04:609][923]LogContentBundle: [TestMap1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.08-12.41.04:609][923]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' started...
+[2024.04.08-12.41.04:610][923]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' took 1 ms (total: 10 ms)
+[2024.04.08-12.41.04:610][923]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.04.08-12.41.04:614][923]LogPlayLevel: [PlayLevel] Compiling BP_Enemy before play...
+[2024.04.08-12.41.04:651][923]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2024.04.08-12.41.04:653][923]LogPlayLevel: PlayLevel: Blueprint regeneration took 43 ms (1 blueprints)
+[2024.04.08-12.41.04:653][923]PIE: New page: PIE session: TestMap1 (8 apr. 2024 16:41:04)
+[2024.04.08-12.41.04:653][923]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.41.04:656][923]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003013s)
+[2024.04.08-12.41.04:656][923]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003036s)
+[2024.04.08-12.41.04:661][923]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2024.04.08-12.41.04:662][923]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.41.04:662][923]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.41.04:662][923]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.41.04:662][923]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.41.04:662][923]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.41.04:662][923]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.41.04:662][923]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.41.04:663][923]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.41.04:663][923]LogWorldPartition: Display: WorldPartition initialize took 823 us (total: 175 ms)
+[2024.04.08-12.41.04:663][923]LogPlayLevel: PIE: World Init took: (0.001631s)
+[2024.04.08-12.41.04:663][923]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-12.41.04:663][923]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-12.41.04:664][923]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-12.41.04:664][923]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-12.41.04:664][923]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-12.41.04:664][923]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-12.41.04:664][923]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-12.41.04:665][923]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-12.41.04:675][923]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.08-12.41.04:675][923]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-12.41.04:675][923]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-12.41.04:675][923]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-12.41.04:676][923]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2024.04.08-12.41.04:676][923]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2024.04.08-12.41.04:677][923]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2024.04.08-12.41.04:677][923]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2024.04.08-12.41.04:677][923]LogInit: FAudioDevice initialized with ID 11.
+[2024.04.08-12.41.04:677][923]LogAudio: Display: Audio Device (ID: 11) registered with world 'TestMap1'.
+[2024.04.08-12.41.04:677][923]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.08-12.41.04:727][923]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.41.04:727][923]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.41.04:728][923]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.41.04
+[2024.04.08-12.41.04:729][923]LogWorld: Bringing up level for play took: 0.001346
+[2024.04.08-12.41.04:730][923]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2024.04.08-12.41.04:732][923]PIE: Server logged in
+[2024.04.08-12.41.04:733][923]PIE: Play in editor total start time 0,125 seconds.
+[2024.04.08-12.41.04:749][923]LogViewport: Scene viewport resized to 1714x1360, mode Windowed.
+[2024.04.08-12.41.12:888][861]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.41.12:888][861]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.41.12:889][861]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.08-12.41.12:891][861]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.41.12:891][861]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.41.12:891][861]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.41.12:894][861]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-12.41.12:896][861]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.41.12:905][861]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.08-12.41.12:905][861]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.08-12.41.12:906][861]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.08-12.41.12:911][861]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2024.04.08-12.41.12:955][865]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2024.04.08-12.41.25:188][582]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.41.25:249][582]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.41.25:252][582]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.41.25:252][582]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner04D3621D43C97073F7B6EA810AA99975.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.41.25:261][582]LogFileHelpers: InternalPromptForCheckoutAndSave took 73 ms (total: 2.07 sec)
+[2024.04.08-12.41.25:262][582]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.41.25:262][582]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.41.26:447][721]BlueprintLog: New page: Compile BP_EnemySpawner
+[2024.04.08-12.41.26:462][721]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.08-12.41.31:718][915]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-12.41.31:721][915]LogContentBundle: [TestMap1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.08-12.41.31:721][915]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' started...
+[2024.04.08-12.41.31:722][915]LogWorldPartition: Display: GenerateStreaming for 'TestMap1' took 1 ms (total: 11 ms)
+[2024.04.08-12.41.31:722][915]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-12.41.31:722][915]PIE: New page: PIE session: TestMap1 (8 apr. 2024 16:41:31)
+[2024.04.08-12.41.31:722][915]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.41.31:725][915]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003102s)
+[2024.04.08-12.41.31:726][915]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMap1.TestMap1 to /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 (0.003120s)
+[2024.04.08-12.41.31:734][915]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.04.08-12.41.31:736][915]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.41.31:736][915]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-12.41.31:737][915]LogAIModule: Creating AISystem for world TestMap1
+[2024.04.08-12.41.31:737][915]LogWorldPartition: ULevel::OnLevelLoaded(TestMap1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.08-12.41.31:737][915]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.08-12.41.31:737][915]LogWorldPartition: UWorldPartition::Initialize : World = TestMap1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.08-12.41.31:737][915]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.08-12.41.31:738][915]LogContentBundle: [TestMap1(Standalone)] Creating new contrainer.
+[2024.04.08-12.41.31:738][915]LogWorldPartition: Display: WorldPartition initialize took 927 us (total: 176 ms)
+[2024.04.08-12.41.31:738][915]LogPlayLevel: PIE: World Init took: (0.001791s)
+[2024.04.08-12.41.31:738][915]LogAudio: Display: Creating Audio Device:                 Id: 12, Scope: Unique, Realtime: True
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-12.41.31:738][915]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-12.41.31:738][915]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-12.41.31:738][915]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-12.41.31:738][915]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-12.41.31:738][915]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-12.41.31:740][915]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-12.41.31:750][915]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.08-12.41.31:750][915]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-12.41.31:750][915]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-12.41.31:750][915]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-12.41.31:751][915]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=12
+[2024.04.08-12.41.31:751][915]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=12
+[2024.04.08-12.41.31:752][915]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=12
+[2024.04.08-12.41.31:752][915]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=12
+[2024.04.08-12.41.31:752][915]LogInit: FAudioDevice initialized with ID 12.
+[2024.04.08-12.41.31:752][915]LogAudio: Display: Audio Device (ID: 12) registered with world 'TestMap1'.
+[2024.04.08-12.41.31:752][915]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 12
+[2024.04.08-12.41.31:805][915]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.41.31:805][915]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.08-12.41.31:807][915]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMap1.TestMap1 up for play (max tick rate 0) at 2024.04.08-14.41.31
+[2024.04.08-12.41.31:807][915]LogWorld: Bringing up level for play took: 0.002788
+[2024.04.08-12.41.31:809][915]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.04.08-12.41.31:812][915]PIE: Server logged in
+[2024.04.08-12.41.31:813][915]PIE: Play in editor total start time 0,092 seconds.
+[2024.04.08-12.41.31:818][915]LogViewport: Scene viewport resized to 1714x1360, mode Windowed.
+[2024.04.08-12.41.40:757][939]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-12.41.40:757][939]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMap1
+[2024.04.08-12.41.40:758][939]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.08-12.41.40:761][939]LogWorld: UWorld::CleanupWorld for TestMap1, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.41.40:761][939]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.41.40:761][939]LogContentBundle: [TestMap1(Standalone)] Deleting container.
+[2024.04.08-12.41.40:774][939]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-12.41.40:776][939]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.41.40:783][939]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 12
+[2024.04.08-12.41.40:783][939]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2024.04.08-12.41.40:784][939]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2024.04.08-12.41.40:789][939]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.04.08-12.41.40:837][942]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.04.08-12.41.45:264][473]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.41.45:307][473]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.41.45:310][473]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.41.45:310][473]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawnerE1123CF940CC6AB0524578BC8530B683.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.41.45:315][473]LogFileHelpers: InternalPromptForCheckoutAndSave took 52 ms (total: 2.13 sec)
+[2024.04.08-12.41.45:317][473]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.41.45:317][473]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.41.47:551][741]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.41.47:594][741]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.41.47:597][741]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.41.47:597][741]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner52DD18B542FD9A59B45651886567F798.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.41.47:604][741]LogFileHelpers: InternalPromptForCheckoutAndSave took 52 ms (total: 2.18 sec)
+[2024.04.08-12.41.47:604][741]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.41.47:604][741]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.41.55:646][703]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.41.55:677][703]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.41.55:679][703]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.41.55:680][703]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner8509ED45445B13F9EC729A8F20618911.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.41.55:685][703]LogFileHelpers: InternalPromptForCheckoutAndSave took 39 ms (total: 2.22 sec)
+[2024.04.08-12.41.55:686][703]AssetCheck: New page: Asset Save: BP_EnemySpawner
+[2024.04.08-12.41.55:686][703]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.42.00:267][253]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.42.00:387][253]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_Enemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset" SILENT=true
+[2024.04.08-12.42.00:390][253]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_Enemy
+[2024.04.08-12.42.00:390][253]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyE5A6831A482F267810FA3DB6B161520D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_Enemy.uasset'
+[2024.04.08-12.42.00:397][253]LogFileHelpers: InternalPromptForCheckoutAndSave took 129 ms (total: 2.35 sec)
+[2024.04.08-12.42.00:397][253]AssetCheck: New page: Asset Save: BP_Enemy
+[2024.04.08-12.42.00:397][253]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_Enemy.BP_Enemy
+[2024.04.08-12.42.07:618][ 36]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-12.42.07:618][ 36]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-12.42.10:289][339]LogContentBrowser: Attempting asset rename: BP_Enemy -> BP_EnemyTesting
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C:OnSuccess_0CC07C6E4C5ED8E1124BE1A91EC45EAB' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.SKEL_BP_EnemyTesting_C' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting:EventGraph.K2Node_Event_1' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting:EventGraph.K2Node_Event_2' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C:ReceiveBeginPlay' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C:ReceiveTick' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.SKEL_BP_EnemyTesting_C:UserConstructionScript' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.SKEL_BP_EnemyTesting_C:ReceiveTick' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.SKEL_BP_EnemyTesting_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.SKEL_BP_EnemyTesting_C:ReceiveBeginPlay' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:306][339]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C:OnFail_0CC07C6E4C5ED8E1124BE1A91EC45EAB' ref from Metadata '/Game/Jeremy/Blueprints/BP_Enemy.PackageMetaData'
+[2024.04.08-12.42.10:313][339]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.42.10:371][339]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.42.10:375][339]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.42.10:375][339]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner7BE8C4404DA840654129C6932E48502A.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.42.10:376][339]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.42.10:410][339]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.08-12.42.10:413][339]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.08-12.42.10:413][339]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTesting8258C7BF4D89339F6EC985A012E5E057.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.08-12.42.10:422][339]LogFileHelpers: InternalPromptForCheckoutAndSave took 109 ms (total: 2.46 sec)
+[2024.04.08-12.42.10:435][339]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.04.08-12.42.10:448][339]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2024.04.08-12.42.10:458][339]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2024.04.08-12.42.10:460][339]AssetCheck: New page: Asset Save: multiple assets
+[2024.04.08-12.42.10:460][339]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.42.10:460][339]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.08-12.42.10:460][339]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-12.42.16:055][  3]LogContentBrowser: Attempting asset rename: BP_EnemySpawner -> BP_EnemyWaveSpawner
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.BP_EnemyWaveSpawner_C' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.BP_EnemyWaveSpawner:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.BP_EnemyWaveSpawner:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.SKEL_BP_EnemyWaveSpawner_C' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.BP_EnemyWaveSpawner_C:ReceiveBeginPlay' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.SKEL_BP_EnemyWaveSpawner_C:UserConstructionScript' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.SKEL_BP_EnemyWaveSpawner_C:Spawn Enemy' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:070][  3]LogMetaData: Removing '/Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.SKEL_BP_EnemyWaveSpawner_C:ReceiveBeginPlay' ref from Metadata '/Game/Jeremy/Blueprints/BP_EnemySpawner.PackageMetaData'
+[2024.04.08-12.42.16:079][  3]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-12.42.16:143][  3]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyWaveSpawner
+[2024.04.08-12.42.16:143][  3]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyWaveSpawnerD15D5787491771B6E81C93ABEC8B65A0.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyWaveSpawner.uasset'
+[2024.04.08-12.42.16:149][  3]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemySpawner" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset" SILENT=true
+[2024.04.08-12.42.16:149][  3]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemySpawner
+[2024.04.08-12.42.16:150][  3]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemySpawner1D6E26D84E309F129792A69D82550172.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemySpawner.uasset'
+[2024.04.08-12.42.16:157][  3]LogFileHelpers: InternalPromptForCheckoutAndSave took 79 ms (total: 2.53 sec)
+[2024.04.08-12.42.16:158][  3]AssetCheck: New page: Asset Save: multiple assets
+[2024.04.08-12.42.16:158][  3]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyWaveSpawner.BP_EnemyWaveSpawner
+[2024.04.08-12.42.16:158][  3]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner
+[2024.04.08-12.42.16:158][  3]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Jeremy/Blueprints/BP_EnemySpawner.BP_EnemySpawner_C
+[2024.04.08-12.42.16:158][  3]LogContentValidation: Display: Validating /Script/CoreUObject.ObjectRedirector /Game/Jeremy/Blueprints/BP_EnemySpawner.Default__BP_EnemySpawner_C
