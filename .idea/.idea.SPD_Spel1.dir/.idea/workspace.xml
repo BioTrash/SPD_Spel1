@@ -9,279 +9,48 @@
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Main.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Main.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Pillar_50x500.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Pillar_50x500.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x200.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x200.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x300.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x300.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_500x500.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_500x500.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Explosion_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire01_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire01_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire_Sparks01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire_Sparks01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Light01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Light01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Light01_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Light01_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Light02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Light02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Light02_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Light02_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Smoke01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Smoke01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Smoke01_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Smoke01_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Background_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Background_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Birds01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Birds01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Music01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Music01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Music_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Music_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Wind05.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Wind05.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Wind06.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Starter_Wind06.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Steam01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Steam01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Steam01_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Steam01_Cue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/Skybox.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/Skybox.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/BP_LightStudio.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/BP_LightStudio.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Maps/Advanced_Lighting.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Maps/Advanced_Lighting.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Maps/Minimal_Default.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Maps/Minimal_Default.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Maps/StarterMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Maps/StarterMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Floor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Floor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Basic_Wall.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Grime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Grime.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Panels.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Panels.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Poured.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Poured.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Glass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Grass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Grass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Gravel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Gravel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Moss.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Ground_Moss.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Chrome.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Chrome.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Copper.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Copper.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Gold.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Gold.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Rust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Rust.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Steel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Metal_Steel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Basalt.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Basalt.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Slate.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Rock_Slate.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Panel.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Tech_Panel.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Water_Lake.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Water_Lake.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Water_Ocean.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Water_Ocean.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Oak.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Oak.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Pine.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Pine.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Walnut.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_Wood_Walnut.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Burst.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Burst.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Spark.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_Spark.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/m_flare_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/m_flare_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Explosion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Explosion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Fire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Fire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Smoke.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Smoke.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Sparks.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Sparks.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Steam_Lit.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Steam_Lit.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/MaterialSphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/MaterialSphere.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Bush.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Bush.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Chair.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Chair.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Door.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Frame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Lamp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Lamp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Rock.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Rock.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Shelf.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Shelf.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Statue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_Statue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/Materials/M_TableRound.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Bush.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Bush.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Chair.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Chair.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_CornerFrame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_CornerFrame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Couch.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Couch.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Door.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Door.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_DoorFrame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_DoorFrame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_GlassWindow.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_GlassWindow.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Lamp_Wall.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Lamp_Wall.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_PillarFrame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_PillarFrame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_PillarFrame300.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_PillarFrame300.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Rock.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Rock.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Shelf.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Shelf.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Stairs.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Stairs.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Statue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_Statue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_TableRound.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_TableRound.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Props/SM_WindowFrame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Props/SM_WindowFrame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cone.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cube.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cube.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cylinder.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Cylinder.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Plane.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Plane.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Sphere.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Torus.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Torus.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Tube.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Tube.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Burst_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Burst_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Bush_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Bush_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Bush_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Bush_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Chair_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Chair_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Chair_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Chair_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Door_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Door_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Door_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Door_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Fire_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Fire_SubUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Frame_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Frame_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Frame_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Frame_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Gradinet_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Gradinet_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Lamp_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Lamp_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Lamp_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Lamp_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_MacroVariation.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_MacroVariation.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_RockMesh_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_RockMesh_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_RockMesh_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_RockMesh_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Shelf_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Shelf_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Shelf_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Shelf_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Single_Tile_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Single_Tile_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Spark_Core.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Spark_Core.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Statue_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Statue_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Statue_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Statue_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_TableRound_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_TableRound_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_TableRound_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_TableRound_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Water_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Water_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Water_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Water_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_ground_Moss_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_ground_Moss_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunColored.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_TestGunColored.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunThird.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_TestGunThird.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_TestWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_TestWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Bridge.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Bridge.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Compat.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Compat.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ControlRig.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ControlRig.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DatasmithContent.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DatasmithContent.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DeviceProfiles.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DeviceProfiles.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorScriptingUtilities.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorScriptingUtilities.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EnhancedInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EnhancedInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/FullBodyIK.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/FullBodyIK.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GLTFExporter.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GLTFExporter.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Game.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Game.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Hardware.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Hardware.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/IKRig.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/IKRig.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Input.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Input.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/InstallBundle.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/InstallBundle.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Interchange.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Interchange.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Lightmass.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Lightmass.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Metasound.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Metasound.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Paper2D.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Paper2D.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/RuntimeOptions.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/RuntimeOptions.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Scalability.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Scalability.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/StructUtils.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/StructUtils.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Synthesis.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Synthesis.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ToolPresets.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ToolPresets.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceDataFilters.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceDataFilters.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceUtilities.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceUtilities.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/VariantManagerContent.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/VariantManagerContent.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.07-10.43.54.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.07-11.17.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,29 +76,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;RufusBranch&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;UnrealLinkOptionsId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Uproject.SPD_Spel1.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "RufusBranch",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "UnrealLinkOptionsId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="SPD_Spel1" type="Uproject" factoryName="rider.uproject">
       <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
@@ -413,6 +183,8 @@
       <workItem from="1712312467521" duration="499000" />
       <workItem from="1712313257801" duration="918000" />
       <workItem from="1712314222503" duration="9520000" />
+      <workItem from="1712569720146" duration="370000" />
+      <workItem from="1712570209259" duration="2232000" />
     </task>
     <servers />
   </component>
