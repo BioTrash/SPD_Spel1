@@ -149,5 +149,9 @@ void APlayerCharacter::StopDash()
 	bIsDashing = false;
 }
 
+float APlayerCharacter::GetHealthPercent() const
+{
+	return Health / MaxHealth;
+}
 
 

@@ -32,6 +32,9 @@ public:
 	//function for stopdashing (Rebecka)
 	void StopDash();
 
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const;
+
 private:
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
@@ -63,5 +66,11 @@ private:
 	float LastDashTime = 0.0f;
 	bool bIsDashing = false;
 	FTimerHandle DashTimerHandle;
+
+	//health variables
+	UPROPERTY(EditAnywhere)
+	float Health = 100.0f;
+	UPROPERTY(EditAnywhere)
+	float MaxHealth = 100.0f;
 
 };

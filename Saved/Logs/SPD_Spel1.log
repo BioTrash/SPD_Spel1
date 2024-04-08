@@ -1442,3 +1442,539 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.04.08-16.50.06:014][548]LogFileHelpers: InternalPromptForCheckoutAndSave took 53 ms
 [2024.04.08-16.50.06:014][548]AssetCheck: New page: Asset Save: WBP_HUD
 [2024.04.08-16.50.06:014][548]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-16.57.02:816][956]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2024.04.08-16.57.02:817][956]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Main' took 0.015
+[2024.04.08-16.57.02:818][956]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/WBP_HUD] ([2] browsable assets)...
+[2024.04.08-16.57.02:824][956]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD]
+[2024.04.08-16.57.02:824][956]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/WBP_HUD]
+[2024.04.08-16.57.02:824][956]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/Autosaves/Game/Blueprints/WBP_HUD_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2024.04.08-16.57.02:828][956]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/WBP_HUD_Auto1
+[2024.04.08-16.57.02:828][956]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUD_Auto1A08B8F66434250207F870B86D50A4FB5.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/Autosaves/Game/Blueprints/WBP_HUD_Auto1.uasset'
+[2024.04.08-16.57.02:829][956]LogFileHelpers: Auto-saving content packages took 0.011
+[2024.04.08-16.58.56:506][894]LogSlate: Took 0.000171 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2024.04.08-17.04.36:970][916]LogLiveCoding: Display: Starting Live Coding compile.
+[2024.04.08-17.04.44:092][118]LogLiveCoding: Display:    Creating library C:\Users\Rebecka\Documents\GitHub\SPD_Spel1\Binaries\Win64\UnrealEditor-SPD_Spel1.patch_0.lib and object C:\Users\Rebecka\Documents\GitHub\SPD_Spel1\Binaries\Win64\UnrealEditor-SPD_Spel1.patch_0.exp
+[2024.04.08-17.04.44:442][119]LogClass: UPackage /Script/SPD_Spel1 Reload.
+[2024.04.08-17.04.44:442][119]LogClass: UClass PlayerCharacter Reload.
+[2024.04.08-17.04.44:442][119]LogClass: Could not find existing class PlayerCharacter in package /Script/SPD_Spel1 for reload, assuming new or modified class
+[2024.04.08-17.04.44:442][119]LogClass: Function GetHealthPercent is new or belongs to a modified class.
+[2024.04.08-17.04.44:452][119]Re-instancing PlayerCharacter after reload.
+[2024.04.08-17.04.44:580][119]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.04.08-17.04.45:034][120]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed
+[2024.04.08-17.04.45:034][120]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2024.04.08-17.04.55:590][832]LogLiveCoding: Display: Console will be hidden but remain running in the background. Restart to disable completely.
+[2024.04.08-17.05.11:849][473]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-17.05.11:849][473]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-17.05.11:855][473]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-17.05.11:855][473]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-17.05.18:801][918]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-17.05.18:801][918]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-17.05.18:801][918]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-17.05.18:810][918]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-17.05.18:810][918]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-17.05.40:643][645]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.08-17.05.40:718][645]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2024.04.08-17.05.41:448][727]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-17.05.41:479][727]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset" SILENT=true
+[2024.04.08-17.05.41:485][727]LogSavePackage: Moving output files for package: /Game/Blueprints/WBP_HUD
+[2024.04.08-17.05.41:486][727]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUDC1CE361D4F76A4E189D88DB150BAA51B.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset'
+[2024.04.08-17.05.41:493][727]LogFileHelpers: InternalPromptForCheckoutAndSave took 44 ms (total: 97 ms)
+[2024.04.08-17.05.41:494][727]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.08-17.05.41:494][727]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-17.06.00:430][291]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-17.06.00:436][291]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-17.06.00:436][291]PIE: New page: PIE session: Main (8 Apr 2024, 21:06:00)
+[2024.04.08-17.06.00:479][291]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Main
+[2024.04.08-17.06.00:481][291]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001839s)
+[2024.04.08-17.06.00:481][291]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Main.Main to /Game/UEDPIE_0_Main.Main (0.001888s)
+[2024.04.08-17.06.00:515][291]LogUObjectHash: Compacting FUObjectHashTables data took   1.38ms
+[2024.04.08-17.06.00:522][291]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-17.06.00:522][291]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-17.06.00:523][291]LogAIModule: Creating AISystem for world Main
+[2024.04.08-17.06.00:523][291]LogPlayLevel: PIE: World Init took: (0.001020s)
+[2024.04.08-17.06.00:523][291]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-17.06.00:523][291]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-17.06.00:523][291]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-17.06.00:524][291]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-17.06.00:524][291]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-17.06.00:524][291]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-17.06.00:526][291]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-17.06.00:541][291]LogAudioMixer: Display: Using Audio Hardware Device SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)
+[2024.04.08-17.06.00:542][291]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-17.06.00:542][291]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-17.06.00:542][291]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-17.06.00:542][291]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.04.08-17.06.00:542][291]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=3
+[2024.04.08-17.06.00:544][291]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.04.08-17.06.00:544][291]LogInit: FAudioDevice initialized with ID 3.
+[2024.04.08-17.06.00:544][291]LogAudio: Display: Audio Device (ID: 3) registered with world 'Main'.
+[2024.04.08-17.06.00:544][291]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.04.08-17.06.00:544][291]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.08-17.06.00:547][291]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.08-17.06.00:547][291]LogWorld: Bringing World /Game/UEDPIE_0_Main.Main up for play (max tick rate 0) at 2024.04.08-19.06.00
+[2024.04.08-17.06.00:548][291]LogWorld: Bringing up level for play took: 0.000681
+[2024.04.08-17.06.00:549][291]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2024.04.08-17.06.00:550][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:551][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:551][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:551][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:552][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:552][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:552][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:552][291]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-17.06.00:552][291]PIE: Server logged in
+[2024.04.08-17.06.00:553][291]PIE: Play in editor total start time 0,117 seconds.
+[2024.04.08-17.06.01:969][433]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-17.06.01:969][433]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Main
+[2024.04.08-17.06.01:969][433]LogWorld: UWorld::CleanupWorld for Main, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-17.06.01:969][433]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-17.06.01:972][433]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-17.06.01:975][433]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-17.06.01:987][433]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-17.06.01:988][433]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.08-17.06.01:988][433]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.08-17.06.01:989][433]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.08-17.06.01:994][433]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.04.08-17.06.02:041][437]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2024.04.08-17.47.19:055][770]LogDerivedDataCache: C:/Users/Rebecka/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.098 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1433 files in 2292 folders with total size 101 MiB.
+[2024.04.08-18.07.36:571][372]LogAssetEditorSubsystem: Opening Asset editor for LevelScriptBlueprint /Game/Main.Main:PersistentLevel.Main
+[2024.04.08-18.07.36:571][372]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-18.07.36:572][372]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-18.09.49:788][842]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.09.49:816][842]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Main" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Main.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.04.08-18.09.49:863][842]LogUObjectHash: Compacting FUObjectHashTables data took   2.39ms
+[2024.04.08-18.09.49:882][842]LogSavePackage: Moving output files for package: /Game/Main
+[2024.04.08-18.09.49:882][842]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/MainE874AC184151841CC87686972E3E24DA.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Main.umap'
+[2024.04.08-18.09.49:889][842]LogFileHelpers: Saving map 'Main' took 0.073
+[2024.04.08-18.09.49:895][842]LogFileHelpers: InternalPromptForCheckoutAndSave took 106 ms (total: 203 ms)
+[2024.04.08-18.09.49:896][842]AssetCheck: New page: Asset Save: Main
+[2024.04.08-18.09.49:896][842]LogContentValidation: Display: Validating /Script/Engine.World /Game/Main.Main
+[2024.04.08-18.10.14:152][732]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.08-18.10.14:177][732]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2024.04.08-18.10.14:571][764]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.10.14:597][764]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset" SILENT=true
+[2024.04.08-18.10.14:602][764]LogSavePackage: Moving output files for package: /Game/Blueprints/WBP_HUD
+[2024.04.08-18.10.14:603][764]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUDB0D70B7845EA770948A46DB3B3ED0A52.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset'
+[2024.04.08-18.10.14:609][764]LogFileHelpers: InternalPromptForCheckoutAndSave took 38 ms (total: 242 ms)
+[2024.04.08-18.10.14:610][764]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.08-18.10.14:610][764]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-18.10.15:856][912]BlueprintLog: New page: Compile Main
+[2024.04.08-18.10.15:872][912]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.08-18.10.16:282][957]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.10.16:311][957]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Main" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Main.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.04.08-18.10.16:335][957]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.08-18.10.16:347][957]LogSavePackage: Moving output files for package: /Game/Main
+[2024.04.08-18.10.16:347][957]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/MainEF14D63B49BF5269E4B3E7B03FD9DB48.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Main.umap'
+[2024.04.08-18.10.16:352][957]LogFileHelpers: Saving map 'Main' took 0.042
+[2024.04.08-18.10.16:358][957]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 318 ms)
+[2024.04.08-18.10.16:360][957]AssetCheck: New page: Asset Save: Main
+[2024.04.08-18.10.16:360][957]LogContentValidation: Display: Validating /Script/Engine.World /Game/Main.Main
+[2024.04.08-18.10.17:498][ 69]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-18.10.17:503][ 69]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-18.10.17:503][ 69]PIE: New page: PIE session: Main (8 Apr 2024, 22:10:17)
+[2024.04.08-18.10.17:503][ 69]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Main
+[2024.04.08-18.10.17:506][ 69]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002663s)
+[2024.04.08-18.10.17:506][ 69]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Main.Main to /Game/UEDPIE_0_Main.Main (0.002703s)
+[2024.04.08-18.10.17:519][ 69]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.04.08-18.10.17:520][ 69]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-18.10.17:520][ 69]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-18.10.17:520][ 69]LogAIModule: Creating AISystem for world Main
+[2024.04.08-18.10.17:521][ 69]LogPlayLevel: PIE: World Init took: (0.000779s)
+[2024.04.08-18.10.17:521][ 69]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-18.10.17:521][ 69]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-18.10.17:521][ 69]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-18.10.17:521][ 69]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-18.10.17:521][ 69]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-18.10.17:521][ 69]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-18.10.17:523][ 69]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-18.10.17:539][ 69]LogAudioMixer: Display: Using Audio Hardware Device SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)
+[2024.04.08-18.10.17:539][ 69]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-18.10.17:539][ 69]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-18.10.17:539][ 69]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-18.10.17:540][ 69]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.04.08-18.10.17:540][ 69]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=4
+[2024.04.08-18.10.17:542][ 69]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.04.08-18.10.17:542][ 69]LogInit: FAudioDevice initialized with ID 4.
+[2024.04.08-18.10.17:542][ 69]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.04.08-18.10.17:542][ 69]LogAudio: Display: Audio Device (ID: 4) registered with world 'Main'.
+[2024.04.08-18.10.17:542][ 69]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.08-18.10.17:545][ 69]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.08-18.10.17:546][ 69]LogWorld: Bringing World /Game/UEDPIE_0_Main.Main up for play (max tick rate 0) at 2024.04.08-20.10.17
+[2024.04.08-18.10.17:547][ 69]LogWorld: Bringing up level for play took: 0.001364
+[2024.04.08-18.10.17:548][ 69]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.04.08-18.10.17:550][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:550][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:550][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:550][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:551][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:551][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:551][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:551][ 69]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.10.17:551][ 69]PIE: Server logged in
+[2024.04.08-18.10.17:552][ 69]PIE: Play in editor total start time 0,049 seconds.
+[2024.04.08-18.10.20:065][339]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:073][340]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:081][341]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:090][342]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:098][343]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:106][344]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:115][345]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:123][346]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:132][347]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:140][348]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:148][349]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:157][350]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:165][351]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:173][352]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:181][353]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:190][354]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:198][355]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:207][356]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:215][357]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:223][358]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:232][359]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:239][360]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:248][361]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:256][362]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:265][363]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:273][364]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:281][365]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:289][366]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:298][367]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:306][368]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:315][369]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:323][370]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:331][371]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:340][372]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:348][373]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:357][374]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:365][375]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:374][376]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:382][377]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:389][378]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:398][379]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:407][380]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:415][381]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:423][382]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:432][383]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:440][384]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:448][385]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:456][386]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:465][387]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:473][388]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:482][389]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:490][390]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:498][391]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:508][392]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:516][393]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.20:525][394]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.10.21:729][532]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.10.21:729][532]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Main
+[2024.04.08-18.10.21:729][532]LogWorld: UWorld::CleanupWorld for Main, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-18.10.21:730][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.10.21:732][532]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-18.10.21:735][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.10.21:746][532]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.08-18.10.21:746][532]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.08-18.10.21:746][532]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.08-18.10.21:748][532]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.08-18.10.21:753][532]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.10.21:755][532]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2024.04.08-18.10.21:804][534]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.04.08-18.11.30:332][164]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.04.08-18.11.41:127][365]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.08-18.11.41:154][365]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.04.08-18.11.41:606][404]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.11.41:633][404]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset" SILENT=true
+[2024.04.08-18.11.41:638][404]LogSavePackage: Moving output files for package: /Game/Blueprints/WBP_HUD
+[2024.04.08-18.11.41:639][404]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUD92097C194654977370A65499ADBC929D.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset'
+[2024.04.08-18.11.41:645][404]LogFileHelpers: InternalPromptForCheckoutAndSave took 39 ms (total: 357 ms)
+[2024.04.08-18.11.41:646][404]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.08-18.11.41:646][404]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-18.11.42:788][526]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-18.11.42:794][526]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-18.11.42:794][526]PIE: New page: PIE session: Main (8 Apr 2024, 22:11:42)
+[2024.04.08-18.11.42:829][526]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Main
+[2024.04.08-18.11.42:831][526]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002325s)
+[2024.04.08-18.11.42:831][526]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Main.Main to /Game/UEDPIE_0_Main.Main (0.002365s)
+[2024.04.08-18.11.42:845][526]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.04.08-18.11.42:848][526]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-18.11.42:848][526]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-18.11.42:848][526]LogAIModule: Creating AISystem for world Main
+[2024.04.08-18.11.42:849][526]LogPlayLevel: PIE: World Init took: (0.000830s)
+[2024.04.08-18.11.42:849][526]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-18.11.42:849][526]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-18.11.42:849][526]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-18.11.42:849][526]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-18.11.42:849][526]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-18.11.42:849][526]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-18.11.42:851][526]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-18.11.42:866][526]LogAudioMixer: Display: Using Audio Hardware Device SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)
+[2024.04.08-18.11.42:867][526]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-18.11.42:867][526]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-18.11.42:867][526]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-18.11.42:868][526]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2024.04.08-18.11.42:868][526]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=5
+[2024.04.08-18.11.42:869][526]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2024.04.08-18.11.42:869][526]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2024.04.08-18.11.42:869][526]LogInit: FAudioDevice initialized with ID 5.
+[2024.04.08-18.11.42:869][526]LogAudio: Display: Audio Device (ID: 5) registered with world 'Main'.
+[2024.04.08-18.11.42:869][526]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2024.04.08-18.11.42:872][526]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.08-18.11.42:872][526]LogWorld: Bringing World /Game/UEDPIE_0_Main.Main up for play (max tick rate 0) at 2024.04.08-20.11.42
+[2024.04.08-18.11.42:872][526]LogWorld: Bringing up level for play took: 0.000730
+[2024.04.08-18.11.42:874][526]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.04.08-18.11.42:876][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:876][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:876][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:876][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:877][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:877][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:877][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:877][526]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.11.42:877][526]PIE: Server logged in
+[2024.04.08-18.11.42:878][526]PIE: Play in editor total start time 0,084 seconds.
+[2024.04.08-18.11.44:752][739]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:761][740]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:769][741]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:777][742]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:785][743]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:794][744]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:802][745]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:810][746]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:820][747]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:829][748]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:837][749]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:845][750]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:853][751]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:862][752]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:870][753]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:878][754]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:887][755]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:895][756]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:903][757]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:911][758]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:920][759]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:928][760]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:937][761]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:944][762]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:953][763]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:961][764]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:970][765]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:979][766]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:988][767]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.44:996][768]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:004][769]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:013][770]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:021][771]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:031][772]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:039][773]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:048][774]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:056][775]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:064][776]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:073][777]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:082][778]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:089][779]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:098][780]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:106][781]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:115][782]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:123][783]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:131][784]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.11.45:309][801]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.11.45:309][801]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Main
+[2024.04.08-18.11.45:309][801]LogWorld: UWorld::CleanupWorld for Main, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-18.11.45:309][801]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.11.45:312][801]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-18.11.45:315][801]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.11.45:326][801]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.08-18.11.45:326][801]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2024.04.08-18.11.45:326][801]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.08-18.11.45:328][801]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.08-18.11.45:332][801]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.11.45:334][801]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.08-18.11.45:384][803]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: ================================================
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: Total job queries 72, among them cache hits 11 (15.28%)
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: Tracking 61 distinct input hashes that result in 43 distinct outputs (70.49%)
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: RAM used: 1,31 MiB of 1,60 GiB budget. Usage: 0.08%
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0%)
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.04.08-18.11.45:407][805]LogShaderCompilers: Display: ================================================
+[2024.04.08-18.12.51:713][549]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
+[2024.04.08-18.12.51:713][549]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
+[2024.04.08-18.12.53:585][773]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.08-18.12.53:606][773]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.04.08-18.12.54:115][812]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.12.54:145][812]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset" SILENT=true
+[2024.04.08-18.12.54:151][812]LogSavePackage: Moving output files for package: /Game/Blueprints/WBP_HUD
+[2024.04.08-18.12.54:151][812]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUD6CA07D0949A2A7C208D1DD9ADF13F614.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset'
+[2024.04.08-18.12.54:158][812]LogFileHelpers: InternalPromptForCheckoutAndSave took 42 ms (total: 399 ms)
+[2024.04.08-18.12.54:159][812]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.08-18.12.54:159][812]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
+[2024.04.08-18.12.55:673][979]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.08-18.12.55:679][979]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.08-18.12.55:679][979]PIE: New page: PIE session: Main (8 Apr 2024, 22:12:55)
+[2024.04.08-18.12.55:708][979]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Main
+[2024.04.08-18.12.55:711][979]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002355s)
+[2024.04.08-18.12.55:711][979]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Main.Main to /Game/UEDPIE_0_Main.Main (0.002393s)
+[2024.04.08-18.12.55:722][979]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.08-18.12.55:726][979]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.08-18.12.55:726][979]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.08-18.12.55:726][979]LogAIModule: Creating AISystem for world Main
+[2024.04.08-18.12.55:727][979]LogPlayLevel: PIE: World Init took: (0.000828s)
+[2024.04.08-18.12.55:727][979]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.08-18.12.55:727][979]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.08-18.12.55:727][979]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.08-18.12.55:727][979]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.08-18.12.55:727][979]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.08-18.12.55:727][979]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.08-18.12.55:729][979]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.08-18.12.55:745][979]LogAudioMixer: Display: Using Audio Hardware Device SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)
+[2024.04.08-18.12.55:746][979]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.08-18.12.55:746][979]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.08-18.12.55:746][979]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.08-18.12.55:747][979]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.04.08-18.12.55:747][979]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=6
+[2024.04.08-18.12.55:749][979]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.04.08-18.12.55:749][979]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.04.08-18.12.55:749][979]LogInit: FAudioDevice initialized with ID 6.
+[2024.04.08-18.12.55:749][979]LogAudio: Display: Audio Device (ID: 6) registered with world 'Main'.
+[2024.04.08-18.12.55:749][979]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.08-18.12.55:750][979]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.08-18.12.55:752][979]LogWorld: Bringing World /Game/UEDPIE_0_Main.Main up for play (max tick rate 0) at 2024.04.08-20.12.55
+[2024.04.08-18.12.55:752][979]LogWorld: Bringing up level for play took: 0.000707
+[2024.04.08-18.12.55:753][979]LogOnline: OSS: Created online subsystem instance for: :Context_26
+[2024.04.08-18.12.55:755][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:755][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:755][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:755][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:756][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:756][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:756][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:756][979]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.08-18.12.55:756][979]PIE: Server logged in
+[2024.04.08-18.12.55:756][979]PIE: Play in editor total start time 0,078 seconds.
+[2024.04.08-18.12.57:713][199]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:722][200]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:730][201]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:739][202]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:747][203]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:755][204]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:764][205]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:772][206]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:780][207]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:789][208]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:799][209]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:810][210]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:819][211]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:827][212]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:835][213]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:846][214]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:855][215]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:863][216]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:871][217]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:880][218]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:888][219]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:896][220]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:904][221]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:912][222]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:921][223]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:929][224]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:941][225]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:950][226]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:958][227]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:968][228]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:977][229]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:986][230]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.57:995][231]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:003][232]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:012][233]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:020][234]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:029][235]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:037][236]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:045][237]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:053][238]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:061][239]LogBlueprintUserMessages: [BP_TestGunColored_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.08-18.12.58:389][273]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.12.58:389][273]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Main
+[2024.04.08-18.12.58:389][273]LogWorld: UWorld::CleanupWorld for Main, bSessionEnded=true, bCleanupResources=true
+[2024.04.08-18.12.58:389][273]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.12.58:392][273]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.08-18.12.58:395][273]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.08-18.12.58:408][273]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.08-18.12.58:408][273]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.08-18.12.58:408][273]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.08-18.12.58:409][273]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.08-18.12.58:416][273]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2024.04.08-18.12.58:464][275]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2024.04.08-18.12.59:349][378]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.04.08-18.13.02:366][740]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.02:366][740]LogEditorTransaction: Undo Edit Right
+[2024.04.08-18.13.02:639][746]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.02:639][746]LogEditorTransaction: Undo Edit Right
+[2024.04.08-18.13.02:881][751]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.02:881][751]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.03:110][764]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.03:110][764]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.03:334][777]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.03:334][777]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.04.08-18.13.03:518][785]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.03:518][785]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.03:862][813]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.03:862][813]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.04:043][821]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.04:044][821]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.04:256][832]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.04:256][832]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.04:421][838]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.04:421][838]LogEditorTransaction: Undo Edit Size To Content
+[2024.04.08-18.13.04:616][848]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.04:616][848]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.04.08-18.13.04:881][866]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.04:881][866]LogEditorTransaction: Undo Changed Anchors
+[2024.04.08-18.13.05:270][899]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.05:270][899]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.05:549][919]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.05:549][919]LogEditorTransaction: Undo Resize Widget
+[2024.04.08-18.13.05:795][935]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.05:795][935]LogEditorTransaction: Undo Move Anchor
+[2024.04.08-18.13.06:067][954]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.06:067][954]LogEditorTransaction: Undo Drag and Drop Widget
+[2024.04.08-18.13.06:342][961]Cmd: TRANSACTION UNDO
+[2024.04.08-18.13.06:342][961]LogEditorTransaction: Undo Changed Anchors
+[2024.04.08-18.13.20:611][604]BlueprintLog: New page: Compile WBP_HUD
+[2024.04.08-18.13.20:637][604]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2024.04.08-18.13.21:156][644]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.08-18.13.21:185][644]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/WBP_HUD" FILE="../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset" SILENT=true
+[2024.04.08-18.13.21:189][644]LogSavePackage: Moving output files for package: /Game/Blueprints/WBP_HUD
+[2024.04.08-18.13.21:190][644]LogSavePackage: Moving '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Saved/WBP_HUD76BE702F43DA80A416CC9BA1C0A84666.tmp' to '../../../../../../Users/Rebecka/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset'
+[2024.04.08-18.13.21:197][644]LogFileHelpers: InternalPromptForCheckoutAndSave took 40 ms (total: 440 ms)
+[2024.04.08-18.13.21:198][644]AssetCheck: New page: Asset Save: WBP_HUD
+[2024.04.08-18.13.21:198][644]LogContentValidation: Display: Validating /Script/UMGEditor.WidgetBlueprint /Game/Blueprints/WBP_HUD.WBP_HUD
