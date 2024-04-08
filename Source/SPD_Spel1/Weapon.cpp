@@ -71,7 +71,7 @@ void AWeapon::PullTrigger()
 	else
 	{
 		// If this suddenly stops working or direct shots get stuck in air check whether the ECC_GameTraceChannel is still correct (Rufus)
-		// Messing around with order in 'Project Settings -> Engine -> Collision -> Trace Channels' may brake it (Rufus)
+		// Messing around with order in 'Project Settings -> Engine -> Collision -> Trace Channels' may break it (Rufus)
 		// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 		if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 		{
