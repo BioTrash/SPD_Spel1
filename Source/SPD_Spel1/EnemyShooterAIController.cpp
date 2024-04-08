@@ -3,6 +3,7 @@
 
 #include "EnemyShooterAIController.h"
 
+#include "BehaviorTree/BlackboardComponent.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -13,6 +14,9 @@ void AEnemyShooterAIController::BeginPlay()
 	if (AIBehavior != nullptr)
 	{
 		RunBehaviorTree(AIBehavior);
+
+		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	}
 
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
