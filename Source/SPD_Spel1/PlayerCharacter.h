@@ -36,12 +36,18 @@ private:
 	// Controls weapon swapping (Rufus)
 	void SwapWeapon();
 
+	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
+	void Shoot();
+	// Required for 'Shoot()'
+	UPROPERTY()
+	class AWeapon* TriggerWeapon;
+	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<TSubclassOf<AActor>> InitialWeaponArray;
+	TArray<TSubclassOf<class AWeapon>> InitialWeaponArray;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<AActor*> CurrentWeaponArray;
+	TArray<class AWeapon*> CurrentWeaponArray;
 
 };
