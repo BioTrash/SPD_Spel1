@@ -8,7 +8,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Saved/Logs/WorldPartition/StreamingGeneration-PIE_Hanna_Louis-000092b8-2024-04-08T12.48.01.812Z.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SPD_Spel1/MyAIController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/SPD_Spel1/MyAIController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BB_EnemyAI.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BP_ShooterAIController.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BT_EnemyAI.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/TestEnemy/Enemy/BP_AIFlyingEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/TestEnemy/Enemy/BP_AIFlyingEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Test.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTSerive_PlayerLocationIfSeen.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTSerive_PlayerLocationIfSeen.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTService_PlayerLocation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTService_PlayerLocation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTTask_ClearBlackboardValue.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTTask_ClearBlackboardValue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTTask_Shoot.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/BTTask_Shoot.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Shooter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Shooter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterAIController.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterAIController.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +48,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
@@ -29,13 +59,16 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2eaWiQM0xPsSH3FAcEtTxJb4CM6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -51,9 +84,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -138,6 +171,8 @@
       <workItem from="1712236988949" duration="66000" />
       <workItem from="1712237062288" duration="14337000" />
       <workItem from="1712310702547" duration="238000" />
+      <workItem from="1712562664420" duration="1991000" />
+      <workItem from="1712569860147" duration="3063000" />
     </task>
     <servers />
   </component>
@@ -145,6 +180,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
