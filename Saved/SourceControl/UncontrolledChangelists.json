@@ -5,6 +5,10 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/TestEnemy/Enemy/BP_AIFlyingEnemy.uasset",
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis/4/2V/BD20VZWOA6WBUEHEA6S236.uasset",
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis/E/P7/CZAGUYF9FQQUZWA6Q16G7S.uasset",
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis/A/AB/H4KK43M3MMSZ4L9XUX7SRE.uasset",
 				"C:/Users/walle/Documents/GitHub/SPD_Spel1/Content/StarterContent/Architecture/Floor_400x400.uasset"
 			]
 		}
