@@ -51,13 +51,13 @@ private:
 	TArray<AActor*> CurrentWeaponArray;
 	
 	//sets default values for dash (Rebecka)
-	UPROPERTY(EditAnywhere)
-	float DashSpeed = 2000.0f;
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashSpeed = 4000.0f;
 
-	UPROPERTY(EditAnywhere)
-	float DashDuration = 0.2f;
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashDuration = 0.4f;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashCooldown = 5.0f;
 
 	float LastDashTime = 0.0f;
