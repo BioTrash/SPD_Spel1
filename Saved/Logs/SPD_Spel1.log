@@ -14632,3 +14632,744 @@ Otherwise assets can be missing from cooked builds. Continue with rename?
 [2024.04.09-12.38.43:286][893]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Jeremy/Blueprints/BP_EnemyTesting_Auto8
 [2024.04.09-12.38.43:286][893]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTesting_Auto8E916371D4B30456F1C6208A4DA7A0E87.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/Autosaves/Game/Jeremy/Blueprints/BP_EnemyTesting_Auto8.uasset'
 [2024.04.09-12.38.43:287][893]LogFileHelpers: Auto-saving content packages took 0.090
+[2024.04.09-12.39.13:960][ 89]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.39.14:027][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.04.09-12.39.14:038][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.32ms
+[2024.04.09-12.39.14:046][ 89]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.04.09-12.39.14:055][ 89]LogFileHelpers: InternalPromptForCheckoutAndSave took 95 ms (total: 36.5 sec)
+[2024.04.09-12.39.17:476][489]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.09-12.39.19:374][489]LogSlate: Window 'Delete Assets' being destroyed
+[2024.04.09-12.39.19:391][489]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/Jeremy/Blueprints/BP_SpawnPointShooter.BP_SpawnPointShooter
+	Asset Type: Blueprint
+[2024.04.09-12.39.19:522][489]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.39.19:522][489]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.39.19:522][489]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.39.19:522][489]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.39.19:541][489]LogWorldPartition: Actor /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD7AEA01_1298568739 is unreachable without properly detaching object /Game/__ExternalActors__/Jeremy/TestMapJeremy/1/0Y/MD2PUW96Q00OUNO4W3V1PR.PackageMetaData in its package
+[2024.04.09-12.39.19:542][489]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2024.04.09-12.39.19:551][489]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2024.04.09-12.39.19:562][489]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2024.04.09-12.39.19:587][490]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.04.09-12.39.20:139][543]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.39.20:213][543]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2024.04.09-12.39.20:223][543]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2024.04.09-12.39.20:235][543]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.09-12.39.20:243][543]LogFileHelpers: InternalPromptForCheckoutAndSave took 103 ms (total: 36.6 sec)
+[2024.04.09-12.39.22:180][768]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.39.22:245][768]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.39.22:246][768]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger0C28B4D34CF8DBD6698DB2B04A4A8314.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.39.22:252][768]LogFileHelpers: InternalPromptForCheckoutAndSave took 71 ms (total: 36.7 sec)
+[2024.04.09-12.39.22:253][768]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.39.22:253][768]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.39.31:564][855]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.39.31:581][855]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2024.04.09-12.39.38:973][696]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.39.39:016][696]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.39.39:016][696]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerE35E370343946771B5A08FA071C83581.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.39.39:023][696]LogFileHelpers: InternalPromptForCheckoutAndSave took 50 ms (total: 36.7 sec)
+[2024.04.09-12.39.39:024][696]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.39.39:024][696]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.39.39:552][759]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.39.39:569][759]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2024.04.09-12.39.40:095][799]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.39.40:146][799]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.39.40:147][799]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger96D3B5B341538E8B7D87C78AF4CD413D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.39.40:153][799]LogFileHelpers: InternalPromptForCheckoutAndSave took 58 ms (total: 36.8 sec)
+[2024.04.09-12.39.40:154][799]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.39.40:155][799]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.40.02:495][463]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.40.02:548][463]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.40.02:548][463]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger9897BABD4D0AB53ACB7AB68B2249B4E1.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.40.02:555][463]LogFileHelpers: InternalPromptForCheckoutAndSave took 60 ms (total: 36.8 sec)
+[2024.04.09-12.40.02:556][463]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.40.02:556][463]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.40.29:025][537]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.40.29:088][537]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.40.29:089][537]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerF56B22694ACD4C3744DCD383094FE1D9.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.40.29:095][537]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 36.9 sec)
+[2024.04.09-12.40.29:096][537]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.40.29:096][537]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.40.53:645][397]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.40.53:723][397]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.40.53:724][397]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerC9208C444FEB132D4561BC9F165CA3C5.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.40.53:731][397]LogFileHelpers: InternalPromptForCheckoutAndSave took 85 ms (total: 37.0 sec)
+[2024.04.09-12.40.53:732][397]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.40.53:732][397]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.41.13:425][642]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.41.13:492][642]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.41.13:493][642]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerADD2BB1143B012099CD5F58107292C78.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.41.13:500][642]LogFileHelpers: InternalPromptForCheckoutAndSave took 74 ms (total: 37.1 sec)
+[2024.04.09-12.41.13:501][642]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.41.13:501][642]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.41.19:571][355]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.41.19:627][355]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.41.19:628][355]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger56F4CEA9452F66B4B4A9F08C5868EB72.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.41.19:634][355]LogFileHelpers: InternalPromptForCheckoutAndSave took 63 ms (total: 37.1 sec)
+[2024.04.09-12.41.19:635][355]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.41.19:635][355]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.41.20:262][427]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.41.20:281][427]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.04.09-12.41.21:548][558]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.41.21:551][558]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.41.21:551][558]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.41.21:553][558]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 142 ms)
+[2024.04.09-12.41.21:553][558]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.41.21:553][558]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:41:21)
+[2024.04.09-12.41.21:553][558]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.41.21:556][558]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003476s)
+[2024.04.09-12.41.21:556][558]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003499s)
+[2024.04.09-12.41.21:565][558]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.04.09-12.41.21:570][558]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.41.21:570][558]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.41.21:571][558]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.41.21:571][558]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.41.21:571][558]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.41.21:571][558]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.41.21:571][558]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.41.21:572][558]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.41.21:572][558]LogWorldPartition: Display: WorldPartition initialize took 943 us (total: 654 ms)
+[2024.04.09-12.41.21:572][558]LogPlayLevel: PIE: World Init took: (0.001906s)
+[2024.04.09-12.41.21:572][558]LogAudio: Display: Creating Audio Device:                 Id: 116, Scope: Unique, Realtime: True
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.41.21:572][558]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.41.21:572][558]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.41.21:573][558]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.41.21:573][558]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.41.21:573][558]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.41.21:574][558]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.41.21:585][558]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.41.21:585][558]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.41.21:585][558]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.41.21:585][558]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.41.21:586][558]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=116
+[2024.04.09-12.41.21:586][558]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=116
+[2024.04.09-12.41.21:587][558]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=116
+[2024.04.09-12.41.21:587][558]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=116
+[2024.04.09-12.41.21:587][558]LogInit: FAudioDevice initialized with ID 116.
+[2024.04.09-12.41.21:587][558]LogAudio: Display: Audio Device (ID: 116) registered with world 'TestMapJeremy'.
+[2024.04.09-12.41.21:587][558]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 116
+[2024.04.09-12.41.21:640][558]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.41.21:640][558]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.41.21:642][558]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.41.21
+[2024.04.09-12.41.21:643][558]LogWorld: Bringing up level for play took: 0.002435
+[2024.04.09-12.41.21:644][558]LogOnline: OSS: Created online subsystem instance for: :Context_150
+[2024.04.09-12.41.21:648][558]PIE: Server logged in
+[2024.04.09-12.41.21:649][558]PIE: Play in editor total start time 0,097 seconds.
+[2024.04.09-12.41.21:658][558]LogViewport: Scene viewport resized to 1714x1360, mode Windowed.
+[2024.04.09-12.41.25:371][957]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.41.25:371][957]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.41.26:047][ 38]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.41.26:574][101]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.41.27:573][221]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.41.27:573][221]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.41.27:573][221]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.41.27:573][221]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.41.27:573][221]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.41.27:574][221]LogBlueprintUserMessages: [BP_TestGun_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.41.27:574][221]LogBlueprintUserMessages: [BP_TestGunThird_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.41.29:713][474]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.41.29:713][474]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.41.29:713][474]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.09-12.41.29:716][474]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.41.29:716][474]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.41.29:716][474]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.41.29:718][474]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.41.29:721][474]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.41.29:726][474]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.09-12.41.29:726][474]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 116
+[2024.04.09-12.41.29:726][474]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=116
+[2024.04.09-12.41.29:728][474]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=116
+[2024.04.09-12.41.29:732][474]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.09-12.41.29:790][479]LogPlayLevel: Display: Destroying online subsystem :Context_150
+[2024.04.09-12.41.32:881][846]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.41.32:932][846]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.41.32:932][846]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger73410F5C4DFB4893922E11A24BD3AD2B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.41.32:940][846]LogFileHelpers: InternalPromptForCheckoutAndSave took 59 ms (total: 37.2 sec)
+[2024.04.09-12.41.32:941][846]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.41.32:941][846]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.41.34:412][ 22]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.41.34:428][ 22]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.04.09-12.42.29:401][398]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.42.29:463][398]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.42.29:463][398]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerBDBC72E44BEF6C03A85ABFB0CD052645.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.42.29:470][398]LogFileHelpers: InternalPromptForCheckoutAndSave took 68 ms (total: 37.3 sec)
+[2024.04.09-12.42.29:471][398]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.42.29:471][398]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.43.01:821][257]LogEditorTransaction: Undo Move Node
+[2024.04.09-12.43.10:514][237]LogEditorTransaction: Undo Move Node
+[2024.04.09-12.43.11:155][253]LogEditorTransaction: Undo Move Node
+[2024.04.09-12.43.12:499][394]LogEditorTransaction: Undo Move Node
+[2024.04.09-12.43.13:924][546]LogEditorTransaction: Redo Move Node
+[2024.04.09-12.43.14:509][596]LogEditorTransaction: Redo Move Node
+[2024.04.09-12.43.29:166][295]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.43.29:222][295]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.43.29:222][295]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerADDCAED84C15EB380DC906AB1D28BB00.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.43.29:229][295]LogFileHelpers: InternalPromptForCheckoutAndSave took 63 ms (total: 37.3 sec)
+[2024.04.09-12.43.29:230][295]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.43.29:230][295]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.43.34:484][925]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.43.34:523][925]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.43.34:523][925]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger617B36514EBF6FB8B096A6A149EA6E17.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.43.34:532][925]LogFileHelpers: InternalPromptForCheckoutAndSave took 47 ms (total: 37.4 sec)
+[2024.04.09-12.43.34:532][925]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.43.34:532][925]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.43.45:689][260]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.43.45:711][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2024.04.09-12.43.51:613][937]LogBlueprint: Warning: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\Jeremy\Blueprints\BP_SpawnZoneTrigger.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  Event Tick  and was replaced as a Custom Event!
+[2024.04.09-12.43.56:158][419]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.43.56:219][419]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.43.56:219][419]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger495F71F84B56894AFF23159E9673ED58.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.43.56:226][419]LogFileHelpers: InternalPromptForCheckoutAndSave took 68 ms (total: 37.4 sec)
+[2024.04.09-12.43.56:227][419]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.43.56:227][419]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.16:084][697]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.16:149][697]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.44.16:149][697]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger8AA878B84AC811450195968BAE900E5E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.44.16:158][697]LogFileHelpers: InternalPromptForCheckoutAndSave took 73 ms (total: 37.5 sec)
+[2024.04.09-12.44.16:159][697]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.44.16:159][697]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.17:244][827]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.44.17:266][827]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.04.09-12.44.26:105][854]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.26:149][854]LogSlate: Warning: Ignoring SetUserFocus because it's not an active modal Window (user 0 not set to SGraphPanel [SGraphEditorImpl.cpp(754)].
+[2024.04.09-12.44.26:166][854]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.44.26:166][854]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger8C587BDF470A08CD74F165BE08338C7D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.44.26:176][854]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 37.6 sec)
+[2024.04.09-12.44.26:176][854]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.44.26:176][854]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.38:894][263]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.38:938][263]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.44.38:938][263]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger61AAA2E445BA1DC649E1788F89971F80.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.44.38:944][263]LogFileHelpers: InternalPromptForCheckoutAndSave took 50 ms (total: 37.6 sec)
+[2024.04.09-12.44.38:945][263]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.44.38:945][263]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.42:864][733]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.44.42:888][733]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2024.04.09-12.44.43:624][784]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.43:688][784]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.44.43:689][784]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerB9864FC948C851B5F53EB18ACB4EBA7E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.44.43:696][784]LogFileHelpers: InternalPromptForCheckoutAndSave took 71 ms (total: 37.7 sec)
+[2024.04.09-12.44.43:697][784]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.44.43:697][784]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.44:046][826]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.44:107][826]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.44.44:107][826]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger345BBA2F4F9C57B001250897AB747619.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.44.44:114][826]LogFileHelpers: InternalPromptForCheckoutAndSave took 66 ms (total: 37.8 sec)
+[2024.04.09-12.44.44:115][826]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.44.44:115][826]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.44.45:017][924]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.45:051][924]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_SpawnPoint" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset" SILENT=true
+[2024.04.09-12.44.45:054][924]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnPoint
+[2024.04.09-12.44.45:054][924]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnPoint378D80034E63968C52E8548E9E59F830.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset'
+[2024.04.09-12.44.45:061][924]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 37.8 sec)
+[2024.04.09-12.44.45:062][924]AssetCheck: New page: Asset Save: BP_SpawnPoint
+[2024.04.09-12.44.45:062][924]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint
+[2024.04.09-12.44.45:358][960]BlueprintLog: New page: Compile BP_SpawnPoint
+[2024.04.09-12.44.45:385][960]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2024.04.09-12.44.46:587][ 78]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.46:699][ 78]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.09-12.44.46:705][ 78]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.09-12.44.46:705][ 78]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTestingC039689E49DFB8BBBA372AB598EEE8B0.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.09-12.44.46:713][ 78]LogFileHelpers: InternalPromptForCheckoutAndSave took 126 ms (total: 37.9 sec)
+[2024.04.09-12.44.46:714][ 78]AssetCheck: New page: Asset Save: BP_EnemyTesting
+[2024.04.09-12.44.46:714][ 78]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.09-12.44.46:925][102]BlueprintLog: New page: Compile BP_EnemyTesting
+[2024.04.09-12.44.46:944][102]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.04.09-12.44.47:403][139]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.44.47:500][139]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.09-12.44.47:506][139]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.09-12.44.47:507][139]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTesting50A15DA84F6713F51FF4A293150860FD.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.09-12.44.47:515][139]LogFileHelpers: InternalPromptForCheckoutAndSave took 111 ms (total: 38.1 sec)
+[2024.04.09-12.44.47:516][139]AssetCheck: New page: Asset Save: BP_EnemyTesting
+[2024.04.09-12.44.47:516][139]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.09-12.44.59:271][478]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C
+[2024.04.09-12.44.59:271][478]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C
+[2024.04.09-12.44.59:271][478]LogActorFactory: Actor Factory spawned Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint as actor: BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_1
+[2024.04.09-12.44.59:272][478]LogActorFactory: Actor Factory spawned Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint as actor: BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_1
+[2024.04.09-12.45.01:035][643]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C
+[2024.04.09-12.45.01:035][643]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C
+[2024.04.09-12.45.01:037][643]LogActorFactory: Actor Factory spawned Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint as actor: BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.45.01:037][643]LogActorFactory: Actor Factory spawned Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint as actor: BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.45.10:131][628]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.45.10:195][628]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/1/XS/ON2SB8S65J2IERDDJUTJH2
+[2024.04.09-12.45.10:196][628]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/ON2SB8S65J2IERDDJUTJH2E3EB734C465C0CF7DDE8BB8A12D4948E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/1/XS/ON2SB8S65J2IERDDJUTJH2.uasset'
+[2024.04.09-12.45.10:197][628]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW
+[2024.04.09-12.45.10:197][628]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/RSCB26XHAAB73E5AIM36NW0B43B0244D4FB3C4B859B2A7E04C2E10.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW.uasset'
+[2024.04.09-12.45.10:198][628]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS
+[2024.04.09-12.45.10:198][628]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/ZU29CG0TWO607CY9V7YIFS4DD87FE94DF6E1184B3C55ADEDC34914.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS.uasset'
+[2024.04.09-12.45.10:207][628]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 38.1 sec)
+[2024.04.09-12.45.10:208][628]AssetCheck: New page: Asset Save: multiple assets
+[2024.04.09-12.45.10:208][628]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562
+[2024.04.09-12.45.10:208][628]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1378553207
+[2024.04.09-12.45.10:208][628]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.45.10:770][694]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.45.10:773][694]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.45.10:773][694]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.45.10:774][694]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 143 ms)
+[2024.04.09-12.45.10:774][694]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.45.10:774][694]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:45:10)
+[2024.04.09-12.45.10:812][694]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.45.10:816][694]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003596s)
+[2024.04.09-12.45.10:816][694]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003625s)
+[2024.04.09-12.45.10:827][694]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.04.09-12.45.10:830][694]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.45.10:830][694]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.45.10:831][694]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.45.10:831][694]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.45.10:831][694]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.45.10:831][694]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.45.10:831][694]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.45.10:832][694]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.45.10:832][694]LogWorldPartition: Display: WorldPartition initialize took 914 us (total: 655 ms)
+[2024.04.09-12.45.10:832][694]LogPlayLevel: PIE: World Init took: (0.001760s)
+[2024.04.09-12.45.10:832][694]LogAudio: Display: Creating Audio Device:                 Id: 117, Scope: Unique, Realtime: True
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.45.10:832][694]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.45.10:832][694]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.45.10:832][694]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.45.10:832][694]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.45.10:832][694]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.45.10:834][694]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.45.10:845][694]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.45.10:845][694]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.45.10:845][694]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.45.10:845][694]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.45.10:846][694]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=117
+[2024.04.09-12.45.10:846][694]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=117
+[2024.04.09-12.45.10:847][694]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=117
+[2024.04.09-12.45.10:847][694]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=117
+[2024.04.09-12.45.10:847][694]LogInit: FAudioDevice initialized with ID 117.
+[2024.04.09-12.45.10:847][694]LogAudio: Display: Audio Device (ID: 117) registered with world 'TestMapJeremy'.
+[2024.04.09-12.45.10:847][694]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 117
+[2024.04.09-12.45.10:849][694]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.45.10:850][694]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.45.10
+[2024.04.09-12.45.10:850][694]LogWorld: Bringing up level for play took: 0.001361
+[2024.04.09-12.45.10:851][694]LogOnline: OSS: Created online subsystem instance for: :Context_151
+[2024.04.09-12.45.10:853][694]PIE: Server logged in
+[2024.04.09-12.45.10:854][694]PIE: Play in editor total start time 0,082 seconds.
+[2024.04.09-12.45.14:100][ 76]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.45.14:101][ 76]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.45.14:558][131]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.45.15:500][244]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.45.16:500][364]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.45.16:500][364]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.45.16:500][364]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.45.16:500][364]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.45.16:500][364]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.45.16:501][364]LogBlueprintUserMessages: [BP_TestGun_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.45.16:501][364]LogBlueprintUserMessages: [BP_TestGunThird_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.45.20:873][886]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.45.20:873][886]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.45.20:873][886]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.45.20:873][886]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.45.20:873][886]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.45.20:876][886]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.45.20:878][886]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.45.20:887][886]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.09-12.45.20:887][886]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 117
+[2024.04.09-12.45.20:887][886]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=117
+[2024.04.09-12.45.20:889][886]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=117
+[2024.04.09-12.45.20:891][886]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.45.20:893][886]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2024.04.09-12.45.21:004][888]LogPlayLevel: Display: Destroying online subsystem :Context_151
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: ================================================
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Total job queries 134, among them cache hits 41 (30.60%)
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Tracking 93 distinct input hashes that result in 72 distinct outputs (77.42%)
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: RAM used: 2,04 MiB of 1,60 GiB budget. Usage: 0.12%
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Shaders Compiled: 14
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Jobs assigned 14, completed 14 (100%)
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Average time worker was idle: 700.22 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Time job spent in pending queue: average 0.03 s, longest 0.04 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Job execution time: average 0.58 s, max 0.94 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Job life time (pending + execution): average 0.61 s, max 0.96
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Shader code size: average 33,81 KiB, min 6 KiB, max 49,117 KiB
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.53 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Jobs were issued in 14 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Average processing rate: 9.17 jobs/sec
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Total thread time: 4,371 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Total thread preprocess time: 1,632 s
+[2024.04.09-12.45.28:828][732]LogShaderCompilers: Display: Percentage time preprocessing: 37.33%
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display: Effective parallelization: 2.86 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled    1 times, average 0.60 sec, max 0.60 sec, min 0.60 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy (compiled    1 times, average 0.37 sec, max 0.37 sec, min 0.37 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:             TShadowDepthVSVertexShadowDepth_VirtualShadowMap (compiled    1 times, average 0.35 sec, max 0.35 sec, min 0.35 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    2 times, average 0.31 sec, max 0.41 sec, min 0.22 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    2 times, average 0.26 sec, max 0.34 sec, min 0.19 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 14.40% of total time (compiled    2 times, average 0.31 sec, max 0.41 sec, min 0.22 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 13.81% of total time (compiled    1 times, average 0.60 sec, max 0.60 sec, min 0.60 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 12.02% of total time (compiled    2 times, average 0.26 sec, max 0.34 sec, min 0.19 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                                 FLumenCardVS - 11.83% of total time (compiled    2 times, average 0.26 sec, max 0.33 sec, min 0.19 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.51% of total time (compiled    1 times, average 0.37 sec, max 0.37 sec, min 0.37 sec)
+[2024.04.09-12.45.28:829][732]LogShaderCompilers: Display: ================================================
+[2024.04.09-12.45.47:762][834]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.45.47:792][834]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/2/OS/8BZYAUL5B6XG7K10FUTFL2
+[2024.04.09-12.45.47:792][834]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/8BZYAUL5B6XG7K10FUTFL29FEFD5A14FFF41BEA59FA39C3847A287.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/2/OS/8BZYAUL5B6XG7K10FUTFL2.uasset'
+[2024.04.09-12.45.47:793][834]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW
+[2024.04.09-12.45.47:794][834]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/RSCB26XHAAB73E5AIM36NWA741FEF443FA774176723F98406DFB91.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW.uasset'
+[2024.04.09-12.45.47:801][834]LogFileHelpers: InternalPromptForCheckoutAndSave took 38 ms (total: 38.2 sec)
+[2024.04.09-12.45.47:802][834]AssetCheck: New page: Asset Save: multiple assets
+[2024.04.09-12.45.47:802][834]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD7AEA01_1904145741
+[2024.04.09-12.45.47:802][834]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1378553207
+[2024.04.09-12.45.55:563][683]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.45.55:617][683]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS
+[2024.04.09-12.45.55:617][683]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/ZU29CG0TWO607CY9V7YIFS18AAD6D348FF0F88629CD6AEDBC07CAB.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS.uasset'
+[2024.04.09-12.45.55:625][683]LogFileHelpers: InternalPromptForCheckoutAndSave took 62 ms (total: 38.2 sec)
+[2024.04.09-12.45.55:626][683]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.45.55:626][683]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.45.59:765][172]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.45.59:769][172]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.45.59:769][172]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.45.59:770][172]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 144 ms)
+[2024.04.09-12.45.59:770][172]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.45.59:770][172]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:45:59)
+[2024.04.09-12.45.59:793][172]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.45.59:796][172]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003588s)
+[2024.04.09-12.45.59:796][172]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003614s)
+[2024.04.09-12.45.59:801][172]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2024.04.09-12.45.59:804][172]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.45.59:804][172]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.45.59:805][172]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.45.59:805][172]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.45.59:805][172]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.45.59:805][172]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.45.59:805][172]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.45.59:806][172]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.45.59:806][172]LogWorldPartition: Display: WorldPartition initialize took 914 us (total: 656 ms)
+[2024.04.09-12.45.59:806][172]LogPlayLevel: PIE: World Init took: (0.001777s)
+[2024.04.09-12.45.59:806][172]LogAudio: Display: Creating Audio Device:                 Id: 118, Scope: Unique, Realtime: True
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.45.59:806][172]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.45.59:806][172]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.45.59:806][172]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.45.59:806][172]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.45.59:806][172]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.45.59:808][172]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.45.59:818][172]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.45.59:819][172]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.45.59:819][172]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.45.59:819][172]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.45.59:819][172]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=118
+[2024.04.09-12.45.59:819][172]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=118
+[2024.04.09-12.45.59:820][172]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=118
+[2024.04.09-12.45.59:820][172]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=118
+[2024.04.09-12.45.59:820][172]LogInit: FAudioDevice initialized with ID 118.
+[2024.04.09-12.45.59:820][172]LogAudio: Display: Audio Device (ID: 118) registered with world 'TestMapJeremy'.
+[2024.04.09-12.45.59:820][172]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 118
+[2024.04.09-12.45.59:822][172]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.45.59:823][172]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.45.59
+[2024.04.09-12.45.59:823][172]LogWorld: Bringing up level for play took: 0.001346
+[2024.04.09-12.45.59:825][172]LogOnline: OSS: Created online subsystem instance for: :Context_152
+[2024.04.09-12.45.59:826][172]PIE: Server logged in
+[2024.04.09-12.45.59:827][172]PIE: Play in editor total start time 0,058 seconds.
+[2024.04.09-12.46.03:835][646]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.46.03:836][646]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.46.04:510][727]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.46.05:060][793]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.46.06:059][913]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.46.06:060][913]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.46.06:060][913]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.46.06:060][913]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.46.06:060][913]LogSkeletalMesh: Error: Material with missing usage flag was applied to skeletal mesh /Game/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2024.04.09-12.46.06:060][913]LogBlueprintUserMessages: [BP_TestGun_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.46.06:061][913]LogBlueprintUserMessages: [BP_TestGunThird_C_0] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.09-12.46.13:002][742]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.46.13:003][742]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.46.13:003][742]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.46.13:003][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.46.13:003][742]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.46.13:006][742]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.46.13:008][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.46.13:015][742]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.09-12.46.13:015][742]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 118
+[2024.04.09-12.46.13:015][742]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=118
+[2024.04.09-12.46.13:016][742]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=118
+[2024.04.09-12.46.13:019][742]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.46.13:021][742]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.04.09-12.46.13:131][744]LogPlayLevel: Display: Destroying online subsystem :Context_152
+[2024.04.09-12.46.29:999][721]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.46.30:027][721]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW
+[2024.04.09-12.46.30:028][721]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/RSCB26XHAAB73E5AIM36NWC851011F4F7ADC21F31695911A309C72.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW.uasset'
+[2024.04.09-12.46.30:034][721]LogFileHelpers: InternalPromptForCheckoutAndSave took 34 ms (total: 38.3 sec)
+[2024.04.09-12.46.30:035][721]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1378553207
+[2024.04.09-12.46.30:035][721]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1378553207
+[2024.04.09-12.46.30:863][820]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.46.30:866][820]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.46.30:866][820]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.46.30:867][820]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 145 ms)
+[2024.04.09-12.46.30:867][820]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.46.30:868][820]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:46:30)
+[2024.04.09-12.46.30:893][820]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.46.30:896][820]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003554s)
+[2024.04.09-12.46.30:896][820]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003584s)
+[2024.04.09-12.46.30:904][820]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.09-12.46.30:907][820]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.46.30:907][820]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.46.30:908][820]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.46.30:908][820]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.46.30:908][820]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.46.30:908][820]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.46.30:908][820]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.46.30:909][820]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.46.30:909][820]LogWorldPartition: Display: WorldPartition initialize took 920 us (total: 657 ms)
+[2024.04.09-12.46.30:909][820]LogPlayLevel: PIE: World Init took: (0.001797s)
+[2024.04.09-12.46.30:909][820]LogAudio: Display: Creating Audio Device:                 Id: 119, Scope: Unique, Realtime: True
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.46.30:909][820]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.46.30:909][820]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.46.30:909][820]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.46.30:909][820]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.46.30:909][820]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.46.30:911][820]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.46.30:921][820]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.46.30:921][820]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.46.30:922][820]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.46.30:922][820]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.46.30:922][820]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=119
+[2024.04.09-12.46.30:922][820]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=119
+[2024.04.09-12.46.30:923][820]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=119
+[2024.04.09-12.46.30:923][820]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=119
+[2024.04.09-12.46.30:923][820]LogInit: FAudioDevice initialized with ID 119.
+[2024.04.09-12.46.30:923][820]LogAudio: Display: Audio Device (ID: 119) registered with world 'TestMapJeremy'.
+[2024.04.09-12.46.30:923][820]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 119
+[2024.04.09-12.46.30:925][820]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.46.30:926][820]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.46.30
+[2024.04.09-12.46.30:926][820]LogWorld: Bringing up level for play took: 0.001356
+[2024.04.09-12.46.30:927][820]LogOnline: OSS: Created online subsystem instance for: :Context_153
+[2024.04.09-12.46.30:929][820]PIE: Server logged in
+[2024.04.09-12.46.30:930][820]PIE: Play in editor total start time 0,064 seconds.
+[2024.04.09-12.46.34:147][198]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.46.34:147][198]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.46.34:604][253]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.46.35:346][342]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.46.36:346][462]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.46.36:347][462]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] I HAVE SPAWNED
+[2024.04.09-12.46.37:896][648]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] 0
+[2024.04.09-12.46.42:763][228]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.46.42:763][228]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.46.42:763][228]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.46.42:763][228]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.46.42:763][228]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.46.42:766][228]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.46.42:768][228]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.46.42:773][228]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.46.42:774][228]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 119
+[2024.04.09-12.46.42:774][228]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=119
+[2024.04.09-12.46.42:775][228]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=119
+[2024.04.09-12.46.42:779][228]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2024.04.09-12.46.42:886][230]LogPlayLevel: Display: Destroying online subsystem :Context_153
+[2024.04.09-12.46.53:538][495]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.46.53:581][495]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.46.53:581][495]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerAB121E634375AB1EA36A3BB964DA0A5E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.46.53:588][495]LogFileHelpers: InternalPromptForCheckoutAndSave took 49 ms (total: 38.3 sec)
+[2024.04.09-12.46.53:589][495]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.46.53:589][495]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.46.57:052][902]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.46.57:100][902]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.46.57:100][902]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger1B5348D14D8BEFBF2BDD938FDB43E86E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.46.57:109][902]LogFileHelpers: InternalPromptForCheckoutAndSave took 56 ms (total: 38.4 sec)
+[2024.04.09-12.46.57:110][902]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.46.57:110][902]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.46.57:460][944]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.46.57:490][944]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.04.09-12.47.19:939][437]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.47.19:942][437]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.47.19:942][437]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.47.19:943][437]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 146 ms)
+[2024.04.09-12.47.19:943][437]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.47.19:943][437]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:47:19)
+[2024.04.09-12.47.19:982][437]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.47.19:986][437]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003569s)
+[2024.04.09-12.47.19:986][437]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003594s)
+[2024.04.09-12.47.19:991][437]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.04.09-12.47.19:995][437]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.47.19:995][437]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.47.19:995][437]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.47.19:995][437]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.47.19:995][437]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.47.19:995][437]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.47.19:995][437]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.47.19:996][437]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.47.19:996][437]LogWorldPartition: Display: WorldPartition initialize took 976 us (total: 658 ms)
+[2024.04.09-12.47.19:996][437]LogPlayLevel: PIE: World Init took: (0.001886s)
+[2024.04.09-12.47.19:997][437]LogAudio: Display: Creating Audio Device:                 Id: 120, Scope: Unique, Realtime: True
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.47.19:997][437]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.47.19:997][437]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.47.19:997][437]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.47.19:997][437]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.47.19:997][437]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.47.19:998][437]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.47.20:009][437]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.47.20:009][437]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.47.20:009][437]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.47.20:009][437]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.47.20:010][437]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=120
+[2024.04.09-12.47.20:010][437]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=120
+[2024.04.09-12.47.20:010][437]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=120
+[2024.04.09-12.47.20:010][437]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=120
+[2024.04.09-12.47.20:010][437]LogInit: FAudioDevice initialized with ID 120.
+[2024.04.09-12.47.20:010][437]LogAudio: Display: Audio Device (ID: 120) registered with world 'TestMapJeremy'.
+[2024.04.09-12.47.20:010][437]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 120
+[2024.04.09-12.47.20:012][437]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.47.20:014][437]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.47.20
+[2024.04.09-12.47.20:014][437]LogWorld: Bringing up level for play took: 0.001329
+[2024.04.09-12.47.20:015][437]LogOnline: OSS: Created online subsystem instance for: :Context_154
+[2024.04.09-12.47.20:016][437]PIE: Server logged in
+[2024.04.09-12.47.20:017][437]PIE: Play in editor total start time 0,075 seconds.
+[2024.04.09-12.47.23:616][862]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.47.23:617][862]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.47.24:074][917]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.47.24:775][  1]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.47.25:774][121]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.47.25:774][121]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] I HAVE SPAWNED
+[2024.04.09-12.47.26:966][264]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] 0
+[2024.04.09-12.47.31:763][836]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.47.31:763][836]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.47.31:763][836]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.47.31:763][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.47.31:763][836]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.47.31:766][836]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.47.31:768][836]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.47.31:774][836]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.09-12.47.31:774][836]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 120
+[2024.04.09-12.47.31:774][836]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=120
+[2024.04.09-12.47.31:776][836]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=120
+[2024.04.09-12.47.31:778][836]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.47.31:780][836]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2024.04.09-12.47.31:889][838]LogPlayLevel: Display: Destroying online subsystem :Context_154
+[2024.04.09-12.47.32:441][904]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.47.32:491][904]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS
+[2024.04.09-12.47.32:491][904]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/ZU29CG0TWO607CY9V7YIFS1ACF83D64F1E9780EC13A6A22AC71B4F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS.uasset'
+[2024.04.09-12.47.32:499][904]LogFileHelpers: InternalPromptForCheckoutAndSave took 58 ms (total: 38.4 sec)
+[2024.04.09-12.47.32:501][904]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.47.32:501][904]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/Jeremy/TestMapJeremy.TestMapJeremy:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD88EA01_1971486208
+[2024.04.09-12.48.11:552][577]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.48.11:601][577]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.48.11:601][577]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger2F50D70648C55AAF042B888B75D22D69.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.48.11:609][577]LogFileHelpers: InternalPromptForCheckoutAndSave took 57 ms (total: 38.5 sec)
+[2024.04.09-12.48.11:610][577]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.48.11:610][577]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.48.58:112][ 82]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.48.58:178][ 82]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.48.58:178][ 82]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger308F21794EEF5A456CE2E7AB4AB9F2D1.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.48.58:187][ 82]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 38.6 sec)
+[2024.04.09-12.48.58:188][ 82]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.48.58:188][ 82]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.49.23:810][  9]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.49.23:829][  9]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.04.09-12.49.24:513][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.49.24:586][ 52]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.09-12.49.24:586][ 52]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger77D14790479F73CD597FB58407111A40.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.09-12.49.24:593][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave took 78 ms (total: 38.6 sec)
+[2024.04.09-12.49.24:594][ 52]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.09-12.49.24:594][ 52]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.09-12.49.25:752][159]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.09-12.49.25:755][159]LogContentBundle: [TestMapJeremy(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.09-12.49.25:755][159]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' started...
+[2024.04.09-12.49.25:756][159]LogWorldPartition: Display: GenerateStreaming for 'TestMapJeremy' took 1 ms (total: 148 ms)
+[2024.04.09-12.49.25:756][159]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.09-12.49.25:756][159]PIE: New page: PIE session: TestMapJeremy (9 apr. 2024 16:49:25)
+[2024.04.09-12.49.25:793][159]LogPlayLevel: Creating play world package: /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.49.25:796][159]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003800s)
+[2024.04.09-12.49.25:796][159]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Jeremy/TestMapJeremy.TestMapJeremy to /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy (0.003827s)
+[2024.04.09-12.49.25:802][159]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2024.04.09-12.49.25:807][159]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-12.49.25:807][159]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.09-12.49.25:808][159]LogAIModule: Creating AISystem for world TestMapJeremy
+[2024.04.09-12.49.25:808][159]LogWorldPartition: ULevel::OnLevelLoaded(TestMapJeremy)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.09-12.49.25:808][159]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.09-12.49.25:808][159]LogWorldPartition: UWorldPartition::Initialize : World = TestMapJeremy, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.09-12.49.25:808][159]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.09-12.49.25:809][159]LogContentBundle: [TestMapJeremy(Standalone)] Creating new contrainer.
+[2024.04.09-12.49.25:809][159]LogWorldPartition: Display: WorldPartition initialize took 908 us (total: 659 ms)
+[2024.04.09-12.49.25:809][159]LogPlayLevel: PIE: World Init took: (0.001742s)
+[2024.04.09-12.49.25:809][159]LogAudio: Display: Creating Audio Device:                 Id: 121, Scope: Unique, Realtime: True
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.09-12.49.25:809][159]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.09-12.49.25:809][159]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.09-12.49.25:809][159]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.09-12.49.25:809][159]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.09-12.49.25:809][159]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.09-12.49.25:811][159]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.09-12.49.25:822][159]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.09-12.49.25:822][159]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.09-12.49.25:822][159]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.09-12.49.25:822][159]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.09-12.49.25:823][159]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=121
+[2024.04.09-12.49.25:823][159]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=121
+[2024.04.09-12.49.25:823][159]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=121
+[2024.04.09-12.49.25:823][159]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=121
+[2024.04.09-12.49.25:824][159]LogInit: FAudioDevice initialized with ID 121.
+[2024.04.09-12.49.25:824][159]LogAudio: Display: Audio Device (ID: 121) registered with world 'TestMapJeremy'.
+[2024.04.09-12.49.25:824][159]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 121
+[2024.04.09-12.49.25:825][159]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.09-12.49.25:827][159]LogWorld: Bringing World /Game/Jeremy/UEDPIE_0_TestMapJeremy.TestMapJeremy up for play (max tick rate 0) at 2024.04.09-14.49.25
+[2024.04.09-12.49.25:827][159]LogWorld: Bringing up level for play took: 0.001333
+[2024.04.09-12.49.25:828][159]LogOnline: OSS: Created online subsystem instance for: :Context_155
+[2024.04.09-12.49.25:830][159]PIE: Server logged in
+[2024.04.09-12.49.25:830][159]PIE: Play in editor total start time 0,075 seconds.
+[2024.04.09-12.49.29:409][581]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] I HAVE SPAWNED
+[2024.04.09-12.49.29:410][581]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] I HAVE SPAWNED
+[2024.04.09-12.49.29:867][636]LogBlueprintUserMessages: [BP_EnemyTesting_C_1] 1
+[2024.04.09-12.49.30:735][740]LogBlueprintUserMessages: [BP_EnemyTesting_C_0] 0
+[2024.04.09-12.49.31:734][860]LogBlueprintUserMessages: [BP_SpawnZone_C_UAID_581122CD5BFD79EA01_1998277562] Wave 2
+[2024.04.09-12.49.31:735][860]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] I HAVE SPAWNED
+[2024.04.09-12.49.33:820][110]LogBlueprintUserMessages: [BP_EnemyTesting_C_2] 0
+[2024.04.09-12.49.37:223][513]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.49.37:223][513]LogWorld: BeginTearingDown for /Game/Jeremy/UEDPIE_0_TestMapJeremy
+[2024.04.09-12.49.37:223][513]LogWorld: UWorld::CleanupWorld for TestMapJeremy, bSessionEnded=true, bCleanupResources=true
+[2024.04.09-12.49.37:223][513]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.49.37:223][513]LogContentBundle: [TestMapJeremy(Standalone)] Deleting container.
+[2024.04.09-12.49.37:226][513]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.09-12.49.37:228][513]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.09-12.49.37:234][513]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.09-12.49.37:234][513]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 121
+[2024.04.09-12.49.37:234][513]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=121
+[2024.04.09-12.49.37:235][513]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=121
+[2024.04.09-12.49.37:238][513]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.09-12.49.37:240][513]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2024.04.09-12.49.37:286][514]LogPlayLevel: Display: Destroying online subsystem :Context_155
+[2024.04.09-12.49.54:275][534]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.09-12.49.54:294][534]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.04.09-12.50.37:212][505]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.09-12.50.37:240][505]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_SpawnPoint" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset" SILENT=true
+[2024.04.09-12.50.37:242][505]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnPoint
+[2024.04.09-12.50.37:243][505]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnPointF7DACE934FCE2CFB9DA5D2A5994C796C.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset'
+[2024.04.09-12.50.37:249][505]LogFileHelpers: InternalPromptForCheckoutAndSave took 36 ms (total: 38.7 sec)
+[2024.04.09-12.50.37:250][505]AssetCheck: New page: Asset Save: BP_SpawnPoint
+[2024.04.09-12.50.37:250][505]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint
