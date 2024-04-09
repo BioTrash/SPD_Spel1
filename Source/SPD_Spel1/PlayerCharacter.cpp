@@ -164,7 +164,7 @@ void APlayerCharacter::StopDash()
 	bIsDashing = false;
 }
 
-//method for taking damage (Rebecka)
+//method for making damage to a character (Rebecka)
 float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
