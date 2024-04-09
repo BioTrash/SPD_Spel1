@@ -10,17 +10,17 @@
 void AEnemyShooterAIController::BeginPlay()
 {
 	Super::BeginPlay();
-
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	SetFocus(PlayerPawn);
 	
 	if (AIBehavior != nullptr)
 	{
 		RunBehaviorTree(AIBehavior);
 
-		//APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	}
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	SetFocus(PlayerPawn);
+	
 }
 
 
