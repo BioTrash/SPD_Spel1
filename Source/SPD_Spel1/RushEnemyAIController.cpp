@@ -25,5 +25,11 @@ void ARushEnemyAIController::BeginPlay()
 void ARushEnemyAIController::Tick(float DeltaSeconds)
 {
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (PlayerPawn != nullptr)
+	{
+		SetFocus(PlayerPawn);
+	}
+
+	Super::Tick(DeltaSeconds);
 	MoveToActor(PlayerPawn, 20);
 }
