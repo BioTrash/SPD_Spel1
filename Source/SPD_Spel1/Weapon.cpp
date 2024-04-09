@@ -76,6 +76,10 @@ void AWeapon::PullTrigger()
 		if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
+			if (Hit.GetActor() != nullptr && Hit.GetActor()->ActorHasTag("Enemy"))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("ENEMY HAS BEEN HIT"));
+			}
 		}
 	}
 }
