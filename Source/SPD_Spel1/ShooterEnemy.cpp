@@ -2,6 +2,8 @@
 
 
 #include "ShooterEnemy.h"
+#include "Weapon.h"
+
 
 // Sets default values
 AShooterEnemy::AShooterEnemy()
@@ -15,6 +17,11 @@ AShooterEnemy::AShooterEnemy()
 void AShooterEnemy::BeginPlay()
 {
 	Super::BeginPlay();
+	Health = MaxHealth;
+
+	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
+	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
+
 	
 }
 
@@ -23,6 +30,11 @@ void AShooterEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if(Health <= 0)
+	{
+		KillEnemy();
+	}
+
 }
 
 // Called to bind functionality to input
@@ -30,5 +42,25 @@ void AShooterEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+void AShooterEnemy::TimeToFire()
+{
+
+}
+
+float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
+	DamageToMake = FMath::Min(Health,DamageToMake);
+	Health -= DamageToMake;
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	return DamageToMake;
+}
+
+void AShooterEnemy::KillEnemy()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	Destroy();
 }
 

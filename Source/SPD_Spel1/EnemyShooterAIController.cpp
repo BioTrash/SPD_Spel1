@@ -18,15 +18,16 @@ void AEnemyShooterAIController::BeginPlay()
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	}
-
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	SetFocus(PlayerPawn);
+	
 }
 
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);;
 	MoveToActor(PlayerPawn, 500);
 }
 
