@@ -19,7 +19,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	//declaration of function to connect WBP to the actual health of the player (Rebecka)
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const;
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -30,10 +34,10 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 private:
-	//function for dash (Rebecka)
+	//declaration for method dash (Rebecka)
 	void Dash();
 
-	//function for stopdashing (Rebecka)
+	//declaration for method stopdashing (Rebecka)
 	void StopDash();
 	
 	// Controls forward and backward movement (Rufus)
@@ -64,21 +68,29 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 100;
 
+	//health for player (Rebecka)
 	UPROPERTY(VisibleAnywhere)
 	float Health;
 
-	//sets default values for dash (Rebecka)
+	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashSpeed = 4000.0f;
 
+	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
 
+	//cooldown for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashCooldown = 5.0f;
 
+	//keeping track of when the dash happened last (Rebecka)
 	float LastDashTime = 0.0f;
-	bool bIsDashing = false;
-	FTimerHandle DashTimerHandle;
 
+	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
+	bool bIsDashing = false;
+
+	//handles the timer for the dash (Rebecka)
+	FTimerHandle DashTimerHandle;
+	
 };
