@@ -25,15 +25,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	
-	//function for dash (Rebecka)
-	void Dash();
-
-	//function for stopdashing (Rebecka)
-	void StopDash();
-
-	UFUNCTION(BlueprintPure)
-	float GetHealthPercent() const;
 
 private:
 	// Controls forward and backward movement (Rufus)
@@ -45,32 +36,18 @@ private:
 	// Controls weapon swapping (Rufus)
 	void SwapWeapon();
 
+	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
+	void Shoot();
+	// Required for 'Shoot()'
+	UPROPERTY()
+	class AWeapon* TriggerWeapon;
+	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<TSubclassOf<AActor>> InitialWeaponArray;
+	TArray<TSubclassOf<class AWeapon>> InitialWeaponArray;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<AActor*> CurrentWeaponArray;
-	
-	//sets default values for dash (Rebecka)
-	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashSpeed = 4000.0f;
-
-	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashDuration = 0.4f;
-
-	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashCooldown = 5.0f;
-
-	float LastDashTime = 0.0f;
-	bool bIsDashing = false;
-	FTimerHandle DashTimerHandle;
-
-	//health variables
-	UPROPERTY(EditAnywhere)
-	float Health = 100.0f;
-	UPROPERTY(EditAnywhere)
-	float MaxHealth = 100.0f;
+	TArray<class AWeapon*> CurrentWeaponArray;
 
 };

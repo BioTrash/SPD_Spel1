@@ -8,89 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Audio/FirstPersonTemplateWeaponFire02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Audio/FirstPersonTemplateWeaponFire02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/BaseMaterial.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/BaseMaterial.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/FirstPersonProjectileMaterial.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/FirstPersonProjectileMaterial.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/M_FPGun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/M_FPGun.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_Screen.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/ML_SoftMetal_UE4.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Aluminum01_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_FineRubber.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_FineRubber.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Materials/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Mesh/FirstPersonProjectileMesh.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Mesh/FirstPersonProjectileMesh.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_Physics.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_Physics.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_PhysicsAsset.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_PhysicsAsset.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Mesh/SK_FPGun_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Textures/T_FPGun_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Textures/T_FPGun_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FPWeapon/Textures/T_FPGun_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FPWeapon/Textures/T_FPGun_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonPlayerController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_Pickup_Rifle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_Pickup_Rifle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_Weapon_Component.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_Weapon_Component.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Falling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Falling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Idle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Idle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Jump.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Jump.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Land.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Land.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Falling.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Falling.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Fire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Fire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Idle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Idle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Jump.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Jump.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Land.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Land.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Run.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Run.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Shoot_Montage.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Rifle_Shoot_Montage.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Run_Fwd.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Run_Fwd.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Walk_Fwd.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FP_Walk_Fwd.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FirstPerson_AnimBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Animations/FirstPerson_AnimBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/CA_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/CA_Mannequin.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/ChromaticCurve.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/ChromaticCurve.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/MF_Diffraction.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/MF_Diffraction.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/MF_logo3layers.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/MF_logo3layers.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/ML_BaseColorFallOff.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Functions/ML_BaseColorFallOff.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Instances/Manny/MI_Manny_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Instances/Manny/MI_Manny_01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Instances/Manny/MI_Manny_02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/Instances/Manny/MI_Manny_02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/M_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Materials/M_Mannequin.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms_PhysicsAsset.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms_PhysicsAsset.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Mesh/SK_Mannequin_Arms_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_ASAOPMASK_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_ASAOPMASK_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_BN.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_BN.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_CCRCCPlastic_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_CCRCCPlastic_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_MSR_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_MSR_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_Tan.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_01_Tan.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_ASAOPMASK_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_ASAOPMASK_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_BN.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_BN.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_CCRCCPlastic_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_CCRCCPlastic_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_MSR_MSK.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_MSR_MSK.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_N.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_Tan.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Manny/T_Manny_02_Tan.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Shared/T_UE_Logo_M.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonArms/Character/Textures/Shared/T_UE_Logo_M.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MF_ProcGrid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MF_ProcGrid.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_02.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_02.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_TopDark.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_PrototypeGrid_TopDark.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_Solid_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/MI_Solid_Blue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/M_PrototypeGrid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/M_PrototypeGrid.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/M_Solid.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Materials/M_Solid.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_ChamferCube.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_ChamferCube.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Cube.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Cube.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Cylinder.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Cylinder.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_QuarterCylinder.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_QuarterCylinder.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Meshes/SM_Ramp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/LevelPrototyping/Textures/T_GridChecker_A.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/LevelPrototyping/Textures/T_GridChecker_A.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Main.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Main.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Pillar_50x500.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Pillar_50x500.uasset" afterDir="false" />
@@ -356,7 +278,10 @@
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_ground_Moss_D.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_ground_Moss_D.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunColored.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_TestGunColored.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunThird.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_TestGunThird.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -393,13 +318,14 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;UnrealLinkOptionsId&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
       &quot;C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
@@ -484,6 +410,9 @@
       <workItem from="1712236835707" duration="68000" />
       <workItem from="1712236988949" duration="66000" />
       <workItem from="1712237062288" duration="14337000" />
+      <workItem from="1712312467521" duration="499000" />
+      <workItem from="1712313257801" duration="918000" />
+      <workItem from="1712314222503" duration="9520000" />
     </task>
     <servers />
   </component>
