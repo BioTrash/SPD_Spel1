@@ -27,6 +27,12 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	//function for dash (Rebecka)
+	void Dash();
+
+	//function for stopdashing (Rebecka)
+	void StopDash();
+	
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
 	
@@ -49,5 +55,19 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
 	TArray<class AWeapon*> CurrentWeaponArray;
+
+	//sets default values for dash (Rebecka)
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashSpeed = 4000.0f;
+
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashDuration = 0.4f;
+
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashCooldown = 5.0f;
+
+	float LastDashTime = 0.0f;
+	bool bIsDashing = false;
+	FTimerHandle DashTimerHandle;
 
 };
