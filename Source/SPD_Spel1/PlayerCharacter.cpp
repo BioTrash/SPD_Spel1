@@ -2,6 +2,9 @@
 
 
 #include "PlayerCharacter.h"
+#include "Weapon.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Blueprint/UserWidget.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -16,14 +19,17 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//Start with the MaxHealth when starting the level (Rebecka)
+	Health = MaxHealth;
+
 	// Checks whether player is suppose to have any weapons at the start or not (Rufus)
 	if(!InitialWeaponArray.IsEmpty())
 	{
 		// Goes through the entire array of weapon blueprints (Rufus)
-		for(TSubclassOf<AActor>& Weapon : InitialWeaponArray) 
+		for(TSubclassOf<AWeapon>& Weapon : InitialWeaponArray) 
 		{
 			// Spawns in each weapon blue print at zero world position (Rufus)
-			AActor* WeaponInstance = GetWorld()->SpawnActor<AActor>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
+			AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
 
 			// Checks whether spawn was successful or not (Rufus)
 			if(WeaponInstance)
@@ -40,8 +46,9 @@ void APlayerCharacter::BeginPlay()
 				WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
 				CurrentWeaponArray.Push(WeaponInstance);
 
-				// Helps with positioning, closer to the actual bone (Rufus)
-				WeaponInstance->SetOwner(this);
+				// Required by 'PullTriger' in 'Weapon.cpp' (Rufus)
+				TriggerWeapon = WeaponInstance;
+				TriggerWeapon->SetOwner(this);
 				
 			}
 		}
@@ -78,7 +85,19 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
 
+	//Binding for dash (Rebecka)
+	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+	
+	// Below ought to be merged manually into authoritative PlayerCharacter version, same goes fo header (Rufus)
+	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
+	
 }
+
+void APlayerCharacter::Shoot()
+{
+	TriggerWeapon->PullTrigger();
+}
+
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
@@ -96,7 +115,7 @@ void APlayerCharacter::SwapWeapon()
 {
 	if(!CurrentWeaponArray.IsEmpty())
 	{
-		AActor* lastElement = CurrentWeaponArray.Last(); // Save the last element
+		AWeapon* lastElement = CurrentWeaponArray.Last(); // Save the last element
     
 		// Shift elements to the right
 		for (int i = CurrentWeaponArray.Num() - 1; i > 0; --i) {
@@ -110,6 +129,57 @@ void APlayerCharacter::SwapWeapon()
 		CurrentWeaponArray[0]->SetActorHiddenInGame(false);
 		
 	}
+}
+
+
+//method for dashing (Rebecka)
+void APlayerCharacter::Dash()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Dash called"));
+	if (!bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
+	{
+		if (GetCharacterMovement())
+		{
+			//normalize the dash direction and multiply it by dash speed
+			FVector DashDirection = GetActorForwardVector().GetSafeNormal() * DashSpeed;
+
+			//apply dash velocity to the character
+			GetCharacterMovement()->Launch(DashDirection);
+
+			bIsDashing = true;
+			LastDashTime = GetWorld()->GetTimeSeconds();
+
+			//reset dash after duration
+			GetWorldTimerManager().SetTimer(DashTimerHandle, this, &APlayerCharacter::StopDash, DashDuration, false);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Character movement component not found"));
+		}
+	}
+}
+
+//method for stopdashing (Rebecka)
+void APlayerCharacter::StopDash()
+{
+	bIsDashing = false;
+}
+
+//method for making damage to a character (Rebecka)
+float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
+	DamageToMake = FMath::Min(Health,DamageToMake);
+	Health -= DamageToMake;
+	//log to see how much health is left
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	return DamageToMake;
+}
+
+float APlayerCharacter::GetHealthPercent() const
+{
+	return Health/MaxHealth;
 }
 
 
