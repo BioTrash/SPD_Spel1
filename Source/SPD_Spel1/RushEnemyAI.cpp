@@ -34,17 +34,30 @@ void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 }
 
-void ARushEnemyAI::NotifyActorBeginOverlap(AActor* OtherActor)
-{
-	Super::NotifyActorBeginOverlap(OtherActor);
 
-	ACharacter* PlayerCharacter = Cast<ACharacter>(OtherActor);
-	UE_LOG(LogTemp, Warning, TEXT("Enemy damaged the player"));
-	
-	if(PlayerCharacter)
-	{
-		
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
