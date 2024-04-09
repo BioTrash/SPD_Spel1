@@ -3,6 +3,7 @@
 
 #include "PlayerCharacter.h"
 #include "Weapon.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -16,6 +17,9 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//Start with the MaxHealth when starting the level (Rebecka)
+	Health = MaxHealth;
 
 	// Checks whether player is suppose to have any weapons at the start or not (Rufus)
 	if(!InitialWeaponArray.IsEmpty())
@@ -80,8 +84,12 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
 
+	//Binding for dash (Rebecka)
+	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+	
 	// Below ought to be merged manually into authoritative PlayerCharacter version, same goes fo header (Rufus)
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
+	
 }
 
 void APlayerCharacter::Shoot()
@@ -120,6 +128,51 @@ void APlayerCharacter::SwapWeapon()
 		CurrentWeaponArray[0]->SetActorHiddenInGame(false);
 		
 	}
+}
+
+
+//method for dashing (Rebecka)
+void APlayerCharacter::Dash()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Dash called"));
+	if (!bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
+	{
+		if (GetCharacterMovement())
+		{
+			//normalize the dash direction and multiply it by dash speed
+			FVector DashDirection = GetActorForwardVector().GetSafeNormal() * DashSpeed;
+
+			//apply dash velocity to the character
+			GetCharacterMovement()->Launch(DashDirection);
+
+			bIsDashing = true;
+			LastDashTime = GetWorld()->GetTimeSeconds();
+
+			//reset dash after duration
+			GetWorldTimerManager().SetTimer(DashTimerHandle, this, &APlayerCharacter::StopDash, DashDuration, false);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Character movement component not found"));
+		}
+	}
+}
+
+//method for stopdashing (Rebecka)
+void APlayerCharacter::StopDash()
+{
+	bIsDashing = false;
+}
+
+//method for making damage to a character (Rebecka)
+float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
+	DamageToMake = FMath::Min(Health,DamageToMake);
+	Health -= DamageToMake;
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	return DamageToMake;
 }
 
 
