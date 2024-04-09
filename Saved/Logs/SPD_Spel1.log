@@ -1129,3 +1129,4 @@ Make sure 'PlayerCharacter' has been compiled for  Get Health Percent
 [2024.04.09-06.41.42:142][305]LogSlate: Window 'Content Browser' being destroyed
 [2024.04.09-06.41.42:146][305]LogSlate: Window 'Content Browser' being destroyed
 [2024.04.09-06.41.46:312][757]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.09-06.43.26:086][ 93]LogDerivedDataCache: C:/Users/rehs8543/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.116 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1216 files in 1964 folders with total size 100 MiB.
