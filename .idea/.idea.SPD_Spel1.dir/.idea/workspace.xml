@@ -9,10 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_ShooterEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_ShooterEnemy.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.06-13.19.55.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +147,7 @@
       <workItem from="1712314222503" duration="9520000" />
       <workItem from="1712569720146" duration="370000" />
       <workItem from="1712570209259" duration="2232000" />
-      <workItem from="1712646281611" duration="1424000" />
+      <workItem from="1712646281611" duration="2293000" />
     </task>
     <servers />
   </component>
