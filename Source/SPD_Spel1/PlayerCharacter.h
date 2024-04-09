@@ -26,6 +26,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//Taking damage method (Rebecka)
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
 private:
 	//function for dash (Rebecka)
 	void Dash();
@@ -44,6 +47,7 @@ private:
 
 	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
 	void Shoot();
+	
 	// Required for 'Shoot()'
 	UPROPERTY()
 	class AWeapon* TriggerWeapon;
@@ -55,6 +59,13 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
 	TArray<class AWeapon*> CurrentWeaponArray;
+
+	//the health the player is initialized with (Rebecka)
+	UPROPERTY(EditDefaultsOnly)
+	float MaxHealth = 100;
+
+	UPROPERTY(VisibleAnywhere)
+	float Health;
 
 	//sets default values for dash (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")

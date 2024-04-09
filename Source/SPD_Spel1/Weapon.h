@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/DamageEvents.h"
 #include "GameFramework/Actor.h"
 #include "Weapon.generated.h"
 
@@ -27,7 +28,6 @@ public:
 	void PullTrigger();
 
 private:
-
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
@@ -43,5 +43,8 @@ private:
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class AProjectile> Projectile;
 
+	UPROPERTY(EditAnywhere)
+	float Damage = 10;
+	
 
 };

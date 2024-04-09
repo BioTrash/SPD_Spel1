@@ -18,6 +18,9 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//Start with the MaxHealth when starting the level (Rebecka)
+	Health = MaxHealth;
+
 	// Checks whether player is suppose to have any weapons at the start or not (Rufus)
 	if(!InitialWeaponArray.IsEmpty())
 	{
@@ -159,6 +162,17 @@ void APlayerCharacter::Dash()
 void APlayerCharacter::StopDash()
 {
 	bIsDashing = false;
+}
+
+//method for taking damage (Rebecka)
+float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
+	DamageToMake = FMath::Min(Health,DamageToMake);
+	Health -= DamageToMake;
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	return DamageToMake;
 }
 
 

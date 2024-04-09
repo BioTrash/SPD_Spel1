@@ -55,7 +55,9 @@ void AWeapon::PullTrigger()
 
 	// End is max range (Rufus)
 	FVector End = Location + Rotation.Vector() * MaxShootingRange;
-	
+
+	//the direction in which the bullets shoot (Rebecka)
+	FVector ShotDirection;
 	FHitResult Hit;
 
 	// Is needed because direct shots get blocked by colliders at spawn, potentially damaging the actor that shot (Rufus)
@@ -76,6 +78,15 @@ void AWeapon::PullTrigger()
 		if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
+
+//NEW CHANGES; CAN REMOVE IF NOT WORKING
+			AActor* HitActor = Hit.GetActor();
+			//if we hit an actor, we make the actor take damage (Rebecka)
+			if(HitActor != nullptr)
+			{
+				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
+				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
+			}
 		}
 	}
 }

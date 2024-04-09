@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/L_Rebecka.umap",
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/Blueprints/WBP_HUD.uasset",
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/UI/WBP_HealthSystem.uasset",
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_PlayerCharacter.uasset",
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/WBP_Health.uasset",
+				"C:/Users/rehs8543/Documents/GitHub/SPD_Spel1/Content/Main.umap",
 				"C:/Users/logu5907/Documents/GitHub/SPD_Spel1/Content/Main.umap",
 				"C:/Users/logu5907/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_EnemyShooterAIController.uasset",
 				"C:/Users/logu5907/Documents/GitHub/SPD_Spel1/Content/BP_ShooterEnemy.uasset",
