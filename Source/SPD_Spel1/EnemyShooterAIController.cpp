@@ -44,27 +44,29 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         {
             EnemyWeapon->SetActorRotation(WeaponRotation);
 
+            // Vectors where trace is happening (Louis)
             FVector StartTrace = EnemyWeapon->GetActorLocation();
             FVector EndTrace = PlayerPawn->GetActorLocation();
 
+            //Params for linetrace (Louis)
             FHitResult HitResult;
             FCollisionQueryParams CollisionParams;
             CollisionParams.AddIgnoredActor(Enemy);
 
-            // Perform a line trace to check if there's a clear line of sight to the player
-            if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_Visibility, CollisionParams))
+            // Perform a line trace to check if there's a clear line of sight to the player (Louis)
+            if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
             {
+                // If the ray hits the player, shoot (Louis)
                 if (HitResult.GetActor() == PlayerPawn)
                 {
-                    // If the ray hits the player, call the pulltrigger function
-                    EnemyWeapon->PullTrigger();
-                    UE_LOG(LogTemp, Warning, TEXT("GOGOGO"));
-
+                    DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
+                    EnemyWeapon->PullTrigger(true);
+                    EnemyWeapon->PullTrigger(false);
                 }
             }
 
             // Visualize the line trace
-            DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
+            
         }
     }
 }
