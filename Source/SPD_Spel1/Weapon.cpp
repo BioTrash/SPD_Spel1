@@ -34,7 +34,7 @@ void AWeapon::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-/*
+
 void AWeapon::PullTrigger()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
@@ -90,7 +90,7 @@ void AWeapon::PullTrigger()
 		}
 	}
 }
-*/
+
 
 
 

@@ -5,43 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Unreal/SPD_Spel1/Content/Whitebox_Test.umap",
-				"C:/Unreal/SPD_Spel1/Content/Blueprints/BP_Spel1GameMode.uasset",
-				"C:/Unreal/SPD_Spel1/Content/Whitebox_Test_BuiltData.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Boolean_EBEB5204.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_75FE42E3.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_B0AC85AC.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_EDB30E44.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Cylinder_D6D04281.uasset",
-<<<<<<< HEAD
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Boolean_9E7AE528.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_3B617289.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_4EFAB855.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_747BC045.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_8F862D2D.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_9931D57F.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_9A556E8D.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_B61A1DF2.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_C68F52E0.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_C7812BEF.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_CB4293FB.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_DCDC3E3E.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_E38FE7ED.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_E685FF75.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_EE850BB9.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Box_FD20F6FF.uasset",
-				"D:/UE/UE_5.3/Engine/Plugins/Enterprise/DatasmithContent/Content/Materials/FBXImporter/VRED/Glass.uasset",
-				"C:/Unreal/SPD_Spel1/Content/Meshes/standardSurface1.uasset",
-				"C:/Unreal/SPD_Spel1/Content/Meshes/SM_TunnelWall.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Stairs_836C2F66.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Stairs_CE70C519.uasset",
-				"C:/Unreal/SPD_Spel1/Content/_GENERATED/noodle3/Rectangle_CDB52A22.uasset",
-=======
->>>>>>> baecfadbf0165c94aa9079a52937412b90822544
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_TestWeapon.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/EnemyAI/RushEnemy/BT_EnemyRushAI.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset",
-				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset"
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_PlayerCharacter.uasset",
+				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset"
 			]
 		}
 	]
