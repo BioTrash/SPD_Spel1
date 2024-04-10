@@ -23,11 +23,17 @@ void AEnemyShooterAIController::BeginPlay()
 	
 }
 
-
+//Hanna
+//Sätter SetFocus på spelaren i världen, dvs att karakätren vänder på sig baserat på spelarens plats
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
-	
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);;
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (PlayerPawn != nullptr)
+	{
+		SetFocus(PlayerPawn);
+	}
+
+	Super::Tick(DeltaSeconds);
 	MoveToActor(PlayerPawn, 500);
 }
 

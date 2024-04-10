@@ -61,6 +61,9 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 void AShooterEnemy::KillEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	
+	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
+	OnEnemyDeath();
 	Destroy();
 }
 
