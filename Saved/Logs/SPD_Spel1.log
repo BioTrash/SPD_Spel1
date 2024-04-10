@@ -1664,3 +1664,1236 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.04.10-07.45.23:644][827]LogFileHelpers: InternalPromptForCheckoutAndSave took 41 ms (total: 367 ms)
 [2024.04.10-07.45.23:645][827]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
 [2024.04.10-07.45.23:645][827]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-07.46.09:053][281]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.46.09:081][281]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/2/XA/V4482WKJR0D88G3EFD1Q4G
+[2024.04.10-07.46.09:081][281]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/V4482WKJR0D88G3EFD1Q4GFA67AEED4E1EA3F738D816B6F7933F71.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/2/XA/V4482WKJR0D88G3EFD1Q4G.uasset'
+[2024.04.10-07.46.09:088][281]LogFileHelpers: InternalPromptForCheckoutAndSave took 34 ms (total: 401 ms)
+[2024.04.10-07.46.09:089][281]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377
+[2024.04.10-07.46.09:089][281]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger_C /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1:PersistentLevel.BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377
+[2024.04.10-07.46.10:517][448]LogViewport: Scene viewport resized to 1526x900, mode Windowed.
+[2024.04.10-07.47.38:652][898]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.47.38:683][898]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-07.47.38:684][898]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerDCD7E35444E12FD1706A82A5B87A4B1A.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-07.47.38:688][898]LogFileHelpers: InternalPromptForCheckoutAndSave took 36 ms (total: 438 ms)
+[2024.04.10-07.47.38:689][898]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-07.47.38:689][898]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-07.47.39:562][  3]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.47.39:592][  3]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2024.04.10-07.49.26:682][670]LogD3D12RHI: Warning: Descriptor cache ran out of sub allocated descriptor blocks! Moving to Context local View heap strategy
+[2024.04.10-07.49.26:682][670]LogD3D12RHI: This should only happen in the Editor where it doesn't matter as much. If it happens in game you should increase the device global heap size!
+[2024.04.10-07.49.58:010][429]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2024.04.10-07.52.31:609][283]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.52.31:642][283]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2024.04.10-07.52.32:279][346]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.52.32:310][346]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-07.52.32:310][346]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger31CE1C6E44DABF15C213FEB39786E42D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-07.52.32:314][346]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 473 ms)
+[2024.04.10-07.52.32:315][346]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-07.52.32:315][346]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-07.54.43:005][854]LogSlate: Took 0.000351 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2024.04.10-07.54.45:410][132]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.54.45:448][132]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-07.54.45:449][132]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger33EA0AAD486ED278347E0F9F43B51F48.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-07.54.45:453][132]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 516 ms)
+[2024.04.10-07.54.45:454][132]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-07.54.45:454][132]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-07.54.46:166][217]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.54.46:197][217]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.04.10-07.55.02:628][924]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.55.02:658][924]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.10-07.55.07:895][538]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.55.07:924][538]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.04.10-07.55.08:562][599]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.55.08:601][599]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-07.55.08:601][599]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger7710F15240AD672964A85D95AEA353EA.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-07.55.08:605][599]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 560 ms)
+[2024.04.10-07.55.08:606][599]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-07.55.08:606][599]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-07.56.25:837][775]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.56.25:867][775]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2024.04.10-07.57.32:990][501]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-07.57.33:020][501]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.04.10-07.57.33:656][566]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-07.57.33:697][566]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-07.57.33:698][566]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger94F1968944F4068BF4F41688F0D6900E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-07.57.33:702][566]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 605 ms)
+[2024.04.10-07.57.33:702][566]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-07.57.33:702][566]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.00.19:912][511]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=2460G4 (NVIDIA High Definition Audio), InstanceID=1
+[2024.04.10-08.00.19:915][511]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=10216
+[2024.04.10-08.00.19:941][514]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{2c86dcc0-bc75-44c7-a9ab-394c157a859a}, Name=2460G4 (NVIDIA High Definition Audio)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=24.25
+[2024.04.10-08.00.19:941][514]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2024.04.10-08.00.19:943][514]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.04.10-08.00.23:724][968]LogAudioMixer: Warning: FMixerPlatformXAudio2: Changing default audio render device to new device: Role=Console, DeviceName=Headset Earphone (HyperX Virtual Surround Sound), InstanceID=1
+[2024.04.10-08.00.23:726][968]LogAudioMixer: Display: FMixerNullCallback: Simulating a h/w device callback at [21ms], ThreadID=10216
+[2024.04.10-08.00.23:886][985]LogAudioMixer: Display: Successful Swap new Device is (NumChannels=2, SampleRate=48000, DeviceID={0.0.0.00000000}.{7767212b-b2b8-4ca0-9a44-2b06492ca3e9}, Name=Headset Earphone (HyperX Virtual Surround Sound)), Reason=FMixerPlatformXAudio2::OnDefaultRenderDeviceChanged, InstanceID=1, DurationMS=155.55
+[2024.04.10-08.00.23:886][985]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=1
+[2024.04.10-08.00.23:887][985]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=1
+[2024.04.10-08.02.23:747][115]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.02.23:777][115]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.04.10-08.02.24:810][218]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.02.24:849][218]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.02.24:850][218]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger3ECCF72C4445FE1FB5EEBDB08041322B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.02.24:854][218]LogFileHelpers: InternalPromptForCheckoutAndSave took 42 ms (total: 648 ms)
+[2024.04.10-08.02.24:855][218]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.02.24:855][218]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.02.25:285][270]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.02.25:317][270]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.04.10-08.04.39:915][803]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.04.39:948][803]LogUObjectHash: Compacting FUObjectHashTables data took   1.38ms
+[2024.04.10-08.05.20:140][519]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.05.20:176][519]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.05.20:176][519]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger1B4ABD2D464ABED017FE51AD96A5489B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.05.20:180][519]LogFileHelpers: InternalPromptForCheckoutAndSave took 40 ms (total: 688 ms)
+[2024.04.10-08.05.20:181][519]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.05.20:181][519]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.05.36:081][400]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.05.36:115][400]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.05.36:115][400]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger749B07EA4EA1055FF8C6E1BDB7FA895D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.05.36:119][400]LogFileHelpers: InternalPromptForCheckoutAndSave took 38 ms (total: 726 ms)
+[2024.04.10-08.05.36:120][400]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.05.36:120][400]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.05.43:346][266]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.05.43:386][266]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.05.43:387][266]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger2157640C4A8414550D056885080DC826.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.05.43:391][266]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 771 ms)
+[2024.04.10-08.05.43:392][266]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.05.43:392][266]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.05.46:957][693]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.05.46:989][693]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.05.46:990][693]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger63A26D1D46C9F49A5DD6BBB07B5717D3.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.05.46:994][693]LogFileHelpers: InternalPromptForCheckoutAndSave took 36 ms (total: 808 ms)
+[2024.04.10-08.05.46:995][693]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.05.46:995][693]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.05.50:840][154]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.05.50:879][154]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.05.50:879][154]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerC19E9AFF40E10AD242D6F5A9229A2875.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.05.50:883][154]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 852 ms)
+[2024.04.10-08.05.50:885][154]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.05.50:885][154]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.06.01:067][314]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.06.01:109][314]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.06.01:109][314]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerD3C70A444EB44E6FE64F4390956327DF.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.06.01:113][314]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 897 ms)
+[2024.04.10-08.06.01:114][314]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.06.01:114][314]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.06.03:022][543]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.06.03:053][543]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.04.10-08.06.03:770][615]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.06.03:803][615]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.06.03:804][615]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger19F05AA148202E066A199F9806B33EFF.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.06.03:808][615]LogFileHelpers: InternalPromptForCheckoutAndSave took 37 ms (total: 935 ms)
+[2024.04.10-08.06.03:809][615]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.06.03:809][615]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.06.05:804][852]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-08.06.05:808][852]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-08.06.05:809][852]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-08.06.05:810][852]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 10 ms)
+[2024.04.10-08.06.05:811][852]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-08.06.05:811][852]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 12:06:05)
+[2024.04.10-08.06.05:811][852]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.06.05:815][852]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004655s)
+[2024.04.10-08.06.05:815][852]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004676s)
+[2024.04.10-08.06.05:828][852]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.04.10-08.06.05:831][852]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.06.05:831][852]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.06.05:832][852]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-08.06.05:832][852]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-08.06.05:832][852]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-08.06.05:832][852]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-08.06.05:832][852]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-08.06.05:834][852]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-08.06.05:834][852]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 168 ms)
+[2024.04.10-08.06.05:834][852]LogPlayLevel: PIE: World Init took: (0.002257s)
+[2024.04.10-08.06.05:834][852]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-08.06.05:834][852]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-08.06.05:834][852]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-08.06.05:834][852]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-08.06.05:834][852]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-08.06.05:834][852]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-08.06.05:836][852]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-08.06.05:850][852]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-08.06.05:850][852]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-08.06.05:850][852]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-08.06.05:850][852]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-08.06.05:851][852]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.04.10-08.06.05:851][852]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2024.04.10-08.06.05:852][852]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.04.10-08.06.05:852][852]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.04.10-08.06.05:852][852]LogInit: FAudioDevice initialized with ID 6.
+[2024.04.10-08.06.05:852][852]LogAudio: Display: Audio Device (ID: 6) registered with world 'Hanna_Louis1'.
+[2024.04.10-08.06.05:852][852]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.10-08.06.05:880][852]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.06.05:880][852]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-08.06.05:883][852]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-10.06.05
+[2024.04.10-08.06.05:883][852]LogWorld: Bringing up level for play took: 0.002451
+[2024.04.10-08.06.05:884][852]LogOnline: OSS: Created online subsystem instance for: :Context_14
+[2024.04.10-08.06.05:889][852]PIE: Server logged in
+[2024.04.10-08.06.05:891][852]PIE: Play in editor total start time 0,083 seconds.
+[2024.04.10-08.06.05:898][852]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-08.06.06:524][897]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.09:846][268]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:003][286]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:163][304]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:163][304]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.06.10:280][317]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:280][317]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.06.10:417][332]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:417][332]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.06.10:556][347]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:557][347]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.06.10:692][362]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:692][362]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.06.10:822][376]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:822][376]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.06.10:967][392]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.10:967][392]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.06.11:103][407]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:103][407]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.06.11:239][422]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:239][422]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.06.11:377][437]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:377][437]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.06.11:377][437]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.06.11:514][452]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:794][483]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:794][483]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.06.11:964][502]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.11:964][502]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.06.12:110][518]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:110][518]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.06.12:251][534]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:251][534]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.06.12:386][549]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:386][549]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.06.12:537][566]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:537][566]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.06.12:653][579]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:653][579]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.06.12:783][594]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:783][594]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.06.12:916][609]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.12:916][609]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.06.13:059][625]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.13:059][625]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.06.13:059][625]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.06.13:188][640]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.17:488][118]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.17:488][118]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.06.17:651][136]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.17:651][136]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.06.17:793][152]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.17:793][152]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.06.17:932][168]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.17:932][168]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.06.18:072][184]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:072][184]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.06.18:200][198]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:200][198]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.06.18:341][214]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:341][214]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.06.18:592][242]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:592][242]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.06.18:744][259]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:744][259]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.06.18:898][276]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.18:898][276]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.06.18:899][276]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.06.19:027][291]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:027][291]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.06.19:274][320]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:274][320]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.06.19:430][338]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:430][338]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.06.19:570][354]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:570][354]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.06.19:726][372]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:726][372]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.06.19:872][389]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.19:872][389]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.06.20:008][405]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.20:008][405]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.06.20:149][421]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.20:150][421]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.06.20:285][437]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.20:285][437]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.06.20:435][455]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.20:435][455]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.06.20:435][455]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.06.20:585][473]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.06.29:616][514]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.06.29:616][514]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.06.29:616][514]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-08.06.29:619][514]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.06.29:620][514]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.06.29:620][514]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-08.06.29:638][514]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-08.06.29:641][514]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.06.29:652][514]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-08.06.29:652][514]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.10-08.06.29:652][514]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.10-08.06.29:654][514]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.10-08.06.29:661][514]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2024.04.10-08.06.29:757][515]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2024.04.10-08.06.31:284][698]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.06.31:334][698]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.06.31:334][698]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger91DD6C3C4C90A46BFA6F88BF2AF1F604.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.06.31:338][698]LogFileHelpers: InternalPromptForCheckoutAndSave took 54 ms (total: 990 ms)
+[2024.04.10-08.06.31:339][698]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.06.31:339][698]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.06.34:106][ 30]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.06.34:144][ 30]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.06.34:144][ 30]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerFCA0C61548E0111C50298288B800868F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.06.34:148][ 30]LogFileHelpers: InternalPromptForCheckoutAndSave took 41 ms (total: 1.03 sec)
+[2024.04.10-08.06.34:149][ 30]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.06.34:149][ 30]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.06.34:955][127]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.06.34:986][127]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.10-08.07.32:503][ 10]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.07.32:537][ 10]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2024.04.10-08.07.32:979][ 50]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.07.33:012][ 50]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.07.33:013][ 50]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerE18BC9F442B16E44B901C4AB3FCF3D0F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.07.33:017][ 50]LogFileHelpers: InternalPromptForCheckoutAndSave took 37 ms (total: 1.06 sec)
+[2024.04.10-08.07.33:018][ 50]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.07.33:018][ 50]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.07.45:615][559]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.07.45:649][559]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.10-08.07.46:109][599]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.07.46:144][599]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.07.46:144][599]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerB14F7AC343094D96AFACFB907E441E66.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.07.46:148][599]LogFileHelpers: InternalPromptForCheckoutAndSave took 38 ms (total: 1.10 sec)
+[2024.04.10-08.07.46:149][599]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.07.46:149][599]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.07.59:074][150]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.07.59:106][150]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2024.04.10-08.07.59:818][223]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.07.59:859][223]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.07.59:860][223]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerE5DBF4B84162C5E04C9ECABECC46D606.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.07.59:864][223]LogFileHelpers: InternalPromptForCheckoutAndSave took 45 ms (total: 1.15 sec)
+[2024.04.10-08.07.59:865][223]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.07.59:865][223]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.08.10:863][543]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.08.10:896][543]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2024.04.10-08.08.11:301][579]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.08.11:332][579]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.08.11:333][579]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerCCFD12AB4B231DEFF66B38BB974530F0.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.08.11:337][579]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 1.18 sec)
+[2024.04.10-08.08.11:338][579]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.08.11:338][579]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.08.42:667][309]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.08.42:698][309]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2024.04.10-08.08.43:603][405]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-08.08.43:608][405]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-08.08.43:608][405]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-08.08.43:610][405]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 2 ms (total: 12 ms)
+[2024.04.10-08.08.43:610][405]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-08.08.43:610][405]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 12:08:43)
+[2024.04.10-08.08.43:610][405]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.08.43:615][405]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004791s)
+[2024.04.10-08.08.43:615][405]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004812s)
+[2024.04.10-08.08.43:626][405]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.10-08.08.43:630][405]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.08.43:630][405]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.08.43:630][405]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-08.08.43:631][405]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-08.08.43:631][405]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-08.08.43:631][405]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-08.08.43:631][405]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-08.08.43:632][405]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-08.08.43:632][405]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 169 ms)
+[2024.04.10-08.08.43:632][405]LogPlayLevel: PIE: World Init took: (0.002041s)
+[2024.04.10-08.08.43:632][405]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-08.08.43:632][405]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-08.08.43:632][405]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-08.08.43:632][405]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-08.08.43:632][405]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-08.08.43:632][405]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-08.08.43:634][405]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-08.08.43:648][405]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-08.08.43:648][405]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-08.08.43:648][405]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-08.08.43:648][405]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-08.08.43:649][405]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.04.10-08.08.43:649][405]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.04.10-08.08.43:650][405]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.04.10-08.08.43:650][405]LogInit: FAudioDevice initialized with ID 7.
+[2024.04.10-08.08.43:650][405]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.04.10-08.08.43:650][405]LogAudio: Display: Audio Device (ID: 7) registered with world 'Hanna_Louis1'.
+[2024.04.10-08.08.43:650][405]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2024.04.10-08.08.43:674][405]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.08.43:675][405]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-08.08.43:677][405]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-10.08.43
+[2024.04.10-08.08.43:677][405]LogWorld: Bringing up level for play took: 0.002436
+[2024.04.10-08.08.43:679][405]LogOnline: OSS: Created online subsystem instance for: :Context_15
+[2024.04.10-08.08.43:684][405]PIE: Server logged in
+[2024.04.10-08.08.43:686][405]PIE: Play in editor total start time 0,078 seconds.
+[2024.04.10-08.08.43:693][405]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-08.08.44:272][446]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.47:749][840]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.47:886][855]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:036][872]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:301][901]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:301][901]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.08.48:450][918]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:450][918]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.08.48:591][934]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:591][934]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.08.48:735][950]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:735][950]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.08.48:878][966]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.48:878][966]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.08.49:011][981]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:011][981]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.08.49:162][998]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:162][998]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.08.49:359][ 20]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:359][ 20]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.08.49:516][ 38]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:516][ 38]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.08.49:661][ 54]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:661][ 54]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.08.49:796][ 69]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:796][ 69]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.08.49:941][ 85]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.49:941][ 85]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.08.50:076][100]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.50:076][100]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.08.50:224][117]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.50:224][117]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.08.50:349][131]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.50:349][131]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.08.50:479][145]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.50:479][145]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.08.50:479][145]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.08.50:617][160]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.51:171][223]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.51:171][223]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.08.51:407][249]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.51:407][249]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.08.51:556][266]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.51:556][266]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.08.51:695][282]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.51:695][282]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.08.51:696][282]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.08.51:831][298]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.08.53:766][518]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.08.53:766][518]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.08.53:766][518]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-08.08.53:769][518]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.08.53:770][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.08.53:770][518]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-08.08.53:787][518]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-08.08.53:790][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.08.53:803][518]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-08.08.53:803][518]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2024.04.10-08.08.53:803][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.10-08.08.53:804][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.10-08.08.53:811][518]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.04.10-08.08.53:905][519]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2024.04.10-08.08.59:923][  7]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.08.59:953][  7]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.04.10-08.09.08:093][968]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-08.09.08:098][968]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-08.09.08:098][968]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-08.09.08:100][968]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 2 ms (total: 14 ms)
+[2024.04.10-08.09.08:100][968]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-08.09.08:100][968]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 12:09:08)
+[2024.04.10-08.09.08:100][968]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.09.08:105][968]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004766s)
+[2024.04.10-08.09.08:105][968]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004790s)
+[2024.04.10-08.09.08:117][968]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.04.10-08.09.08:121][968]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.09.08:121][968]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.09.08:122][968]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-08.09.08:122][968]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-08.09.08:122][968]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-08.09.08:122][968]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-08.09.08:122][968]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-08.09.08:123][968]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-08.09.08:123][968]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 170 ms)
+[2024.04.10-08.09.08:123][968]LogPlayLevel: PIE: World Init took: (0.002106s)
+[2024.04.10-08.09.08:123][968]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-08.09.08:123][968]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-08.09.08:123][968]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-08.09.08:124][968]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-08.09.08:124][968]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-08.09.08:124][968]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-08.09.08:125][968]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-08.09.08:139][968]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-08.09.08:139][968]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-08.09.08:139][968]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-08.09.08:139][968]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-08.09.08:139][968]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.04.10-08.09.08:139][968]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.04.10-08.09.08:141][968]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.04.10-08.09.08:141][968]LogInit: FAudioDevice initialized with ID 8.
+[2024.04.10-08.09.08:141][968]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.04.10-08.09.08:141][968]LogAudio: Display: Audio Device (ID: 8) registered with world 'Hanna_Louis1'.
+[2024.04.10-08.09.08:141][968]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.10-08.09.08:166][968]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.09.08:166][968]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-08.09.08:169][968]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-10.09.08
+[2024.04.10-08.09.08:169][968]LogWorld: Bringing up level for play took: 0.002335
+[2024.04.10-08.09.08:171][968]LogOnline: OSS: Created online subsystem instance for: :Context_16
+[2024.04.10-08.09.08:175][968]PIE: Server logged in
+[2024.04.10-08.09.08:177][968]PIE: Play in editor total start time 0,08 seconds.
+[2024.04.10-08.09.08:184][968]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-08.09.12:199][280]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.15:729][673]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.15:729][673]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.09.15:885][690]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.15:885][690]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.09.16:023][705]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:023][705]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.09.16:180][722]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:180][722]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.09.16:315][737]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:315][737]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.09.16:451][752]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:451][752]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.09.16:600][768]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:600][768]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.09.16:728][782]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:728][782]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.09.16:874][798]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:874][798]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.09.16:995][811]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.16:995][811]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.09.17:146][828]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:146][828]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.09.17:341][850]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:341][850]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.09.17:504][868]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:504][868]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.09.17:645][883]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:646][883]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.09.17:779][898]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:779][898]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.09.17:926][914]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.17:926][914]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.09.17:926][914]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.09.18:055][928]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.18:519][979]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.18:519][979]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.09.18:666][995]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.18:666][995]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.09.18:797][ 10]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.18:797][ 10]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.09.18:931][ 25]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.18:931][ 25]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.09.18:931][ 25]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.09.19:069][ 40]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.09.31:606][455]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.09.31:606][455]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.09.31:607][455]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-08.09.31:610][455]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.09.31:610][455]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.09.31:610][455]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-08.09.31:628][455]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-08.09.31:631][455]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.09.31:644][455]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-08.09.31:644][455]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.10-08.09.31:644][455]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.10-08.09.31:645][455]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.10-08.09.31:651][455]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2024.04.10-08.09.31:745][456]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2024.04.10-08.09.32:839][587]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.09.32:892][587]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.09.32:893][587]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTriggerAE533B6C41F57A2A5485BD86DA68F4FF.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.09.32:897][587]LogFileHelpers: InternalPromptForCheckoutAndSave took 58 ms (total: 1.24 sec)
+[2024.04.10-08.09.32:899][587]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.09.32:899][587]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.09.45:562][  6]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.09.45:562][  6]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.09.45:562][  6]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: ================================================
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Total job queries 82, among them cache hits 15 (18.29%)
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Tracking 63 distinct input hashes that result in 51 distinct outputs (80.95%)
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: RAM used: 1,34 MiB of 1,60 GiB budget. Usage: 0.08%
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Shaders Compiled: 2
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Jobs assigned 6, completed 2 (33.33%)
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Time job spent in pending queue: average 0.06 s, longest 0.07 s
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Job execution time: average 0.64 s, max 0.64 s
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Job life time (pending + execution): average 0.70 s, max 0.70
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Shader code size: average 37,439 KiB, min 36,648 KiB, max 38,23 KiB
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.70 s
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Jobs were issued in 6 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Average processing rate: 2.85 jobs/sec
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Total thread time: 0,571 s
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Total thread preprocess time: 0,403 s
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Percentage time preprocessing: 70.52%
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Effective parallelization: 0.81 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Top 1 most expensive shader types by average time:
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display:                                          FLumenCardPS<false> (compiled    2 times, average 0.29 sec, max 0.29 sec, min 0.28 sec)
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: Top 1 shader types by total compile time:
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 100.00% of total time (compiled    2 times, average 0.29 sec, max 0.29 sec, min 0.28 sec)
+[2024.04.10-08.09.46:430][ 88]LogShaderCompilers: Display: ================================================
+[2024.04.10-08.09.46:909][ 95]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.09.49:245][374]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.09.49:278][374]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.09.49:345][374]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.09.49:349][374]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.09.49:349][374]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyC9C24FED4B6DE285AC85CC8D72FCB8FC.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.09.49:355][374]LogFileHelpers: InternalPromptForCheckoutAndSave took 110 ms (total: 1.35 sec)
+[2024.04.10-08.09.49:356][374]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.09.49:356][374]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.09.55:929][ 97]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.10-08.09.55:929][ 97]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.09.55:929][ 97]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.09.58:446][336]LogSlate: Window 'BP_EnemyTesting' being destroyed
+[2024.04.10-08.10.09:395][644]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.10.09:417][644]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.10.09:492][644]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.10-08.10.09:501][644]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.10-08.10.09:501][644]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTestingE57D06FA4B5D1B20DB84FE9D13ECD19E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.10-08.10.09:507][644]LogFileHelpers: InternalPromptForCheckoutAndSave took 111 ms (total: 1.46 sec)
+[2024.04.10-08.10.09:508][644]AssetCheck: New page: Asset Save: BP_EnemyTesting
+[2024.04.10-08.10.09:508][644]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.10-08.12.04:247][664]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.12.04:271][664]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.10-08.12.04:278][664]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.10-08.12.04:279][664]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTesting6AA13A5A42BDA7FEBB6F5DB39D3D9A5F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.10-08.12.04:284][664]LogFileHelpers: InternalPromptForCheckoutAndSave took 36 ms (total: 1.50 sec)
+[2024.04.10-08.12.04:285][664]AssetCheck: New page: Asset Save: BP_EnemyTesting
+[2024.04.10-08.12.04:285][664]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.10-08.12.53:624][517]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.12.53:701][517]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.12.53:706][517]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.12.53:707][517]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyAB7A67E447B453F7B2FC1484690EA569.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.12.53:711][517]LogFileHelpers: InternalPromptForCheckoutAndSave took 87 ms (total: 1.59 sec)
+[2024.04.10-08.12.53:713][517]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.12.53:713][517]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.12.54:852][654]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.12.54:879][654]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.04.10-08.12.55:825][760]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.12.55:909][760]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.12.55:915][760]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.12.55:915][760]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyFAD20CFD49E9C22AEAA53097F89E9721.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.12.55:920][760]LogFileHelpers: InternalPromptForCheckoutAndSave took 96 ms (total: 1.68 sec)
+[2024.04.10-08.12.55:921][760]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.12.55:921][760]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.13.03:874][711]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.13.03:890][711]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.13.03:895][711]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.13.03:896][711]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyE212478F434469A444C896AD91F2CDE9.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.13.03:900][711]LogFileHelpers: InternalPromptForCheckoutAndSave took 26 ms (total: 1.71 sec)
+[2024.04.10-08.13.03:901][711]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.13.03:901][711]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.13.07:322][122]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.13.07:350][122]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.04.10-08.14.25:972][972]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.14.26:054][972]LogUObjectHash: Compacting FUObjectHashTables data took   2.23ms
+[2024.04.10-08.14.27:061][ 54]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.14.27:114][ 54]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2024.04.10-08.14.31:074][465]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.14.31:218][465]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.14.31:227][465]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.14.31:228][465]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy901B0853452903AABA7E1C9B3141AB9B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.14.31:236][465]LogFileHelpers: InternalPromptForCheckoutAndSave took 162 ms (total: 1.87 sec)
+[2024.04.10-08.14.31:239][465]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.14.31:239][465]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.14.31:796][530]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.14.31:858][530]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2024.04.10-08.16.04:815][622]LogSlate: External Image Picker: DecompressImage failed
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: ================================================
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Total job queries 97, among them cache hits 15 (15.46%)
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Tracking 68 distinct input hashes that result in 54 distinct outputs (79.41%)
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: RAM used: 1,46 MiB of 1,60 GiB budget. Usage: 0.09%
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Shaders Compiled: 7
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Jobs assigned 21, completed 7 (33.33%)
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Average time worker was idle: 378.38 s
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Time job spent in pending queue: average 0.07 s, longest 0.12 s
+[2024.04.10-08.16.05:308][645]LogShaderCompilers: Display: Job execution time: average 0.71 s, max 0.94 s
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Job life time (pending + execution): average 0.77 s, max 1.01
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Shader code size: average 41,225 KiB, min 32,695 KiB, max 56,137 KiB
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.40 s
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Jobs were issued in 21 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Average processing rate: 5.00 jobs/sec
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Total thread time: 2,551 s
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Total thread preprocess time: 1,294 s
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Percentage time preprocessing: 50.71%
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Effective parallelization: 1.82 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Top 3 most expensive shader types by average time:
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy (compiled    2 times, average 0.56 sec, max 0.57 sec, min 0.56 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                                 FLumenCardVS (compiled    2 times, average 0.35 sec, max 0.36 sec, min 0.35 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                          FLumenCardPS<false> (compiled    3 times, average 0.24 sec, max 0.29 sec, min 0.14 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: Top 3 shader types by total compile time:
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 44.22% of total time (compiled    2 times, average 0.56 sec, max 0.57 sec, min 0.56 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 28.06% of total time (compiled    3 times, average 0.24 sec, max 0.29 sec, min 0.14 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display:                                                 FLumenCardVS - 27.71% of total time (compiled    2 times, average 0.35 sec, max 0.36 sec, min 0.35 sec)
+[2024.04.10-08.16.05:309][645]LogShaderCompilers: Display: ================================================
+[2024.04.10-08.16.15:009][650]LogSlate: Window 'Project Settings' being destroyed
+[2024.04.10-08.16.15:020][650]LogSlate: Window 'Project Settings' being destroyed
+[2024.04.10-08.16.15:706][724]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-08.16.15:712][724]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-08.16.15:712][724]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-08.16.15:714][724]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 2 ms (total: 16 ms)
+[2024.04.10-08.16.15:714][724]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-08.16.15:714][724]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 12:16:15)
+[2024.04.10-08.16.15:714][724]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.16.15:720][724]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005658s)
+[2024.04.10-08.16.15:720][724]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.005686s)
+[2024.04.10-08.16.15:733][724]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.10-08.16.15:734][724]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.16.15:734][724]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.16.15:735][724]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-08.16.15:735][724]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-08.16.15:735][724]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-08.16.15:735][724]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-08.16.15:735][724]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-08.16.15:736][724]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-08.16.15:736][724]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 172 ms)
+[2024.04.10-08.16.15:736][724]LogPlayLevel: PIE: World Init took: (0.002291s)
+[2024.04.10-08.16.15:736][724]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-08.16.15:736][724]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-08.16.15:737][724]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-08.16.15:737][724]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-08.16.15:737][724]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-08.16.15:737][724]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-08.16.15:737][724]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-08.16.15:739][724]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-08.16.15:753][724]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-08.16.15:753][724]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-08.16.15:753][724]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-08.16.15:753][724]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-08.16.15:754][724]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2024.04.10-08.16.15:754][724]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2024.04.10-08.16.15:755][724]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2024.04.10-08.16.15:755][724]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2024.04.10-08.16.15:755][724]LogInit: FAudioDevice initialized with ID 9.
+[2024.04.10-08.16.15:755][724]LogAudio: Display: Audio Device (ID: 9) registered with world 'Hanna_Louis1'.
+[2024.04.10-08.16.15:755][724]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 9
+[2024.04.10-08.16.15:759][724]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-08.16.15:761][724]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-10.16.15
+[2024.04.10-08.16.15:762][724]LogWorld: Bringing up level for play took: 0.002290
+[2024.04.10-08.16.15:763][724]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2024.04.10-08.16.15:765][724]PIE: Server logged in
+[2024.04.10-08.16.15:766][724]PIE: Play in editor total start time 0,054 seconds.
+[2024.04.10-08.16.16:189][760]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.16:654][816]LogTemp: Warning: Dash called
+[2024.04.10-08.16.17:781][947]LogTemp: Warning: Dash called
+[2024.04.10-08.16.18:422][ 20]LogTemp: Warning: Dash called
+[2024.04.10-08.16.18:613][ 42]LogTemp: Warning: Dash called
+[2024.04.10-08.16.18:771][ 60]LogTemp: Warning: Dash called
+[2024.04.10-08.16.18:944][ 80]LogTemp: Warning: Dash called
+[2024.04.10-08.16.19:143][103]LogTemp: Warning: Dash called
+[2024.04.10-08.16.19:407][134]LogTemp: Warning: Dash called
+[2024.04.10-08.16.19:589][155]LogTemp: Warning: Dash called
+[2024.04.10-08.16.19:758][174]LogTemp: Warning: Dash called
+[2024.04.10-08.16.19:925][193]LogTemp: Warning: Dash called
+[2024.04.10-08.16.20:074][210]LogTemp: Warning: Dash called
+[2024.04.10-08.16.20:232][228]LogTemp: Warning: Dash called
+[2024.04.10-08.16.20:408][248]LogTemp: Warning: Dash called
+[2024.04.10-08.16.20:626][273]LogTemp: Warning: Dash called
+[2024.04.10-08.16.20:809][294]LogTemp: Warning: Dash called
+[2024.04.10-08.16.21:095][326]LogTemp: Warning: Dash called
+[2024.04.10-08.16.21:969][425]LogTemp: Warning: Dash called
+[2024.04.10-08.16.22:164][447]LogTemp: Warning: Dash called
+[2024.04.10-08.16.23:343][584]LogTemp: Warning: Dash called
+[2024.04.10-08.16.23:598][614]LogTemp: Warning: Dash called
+[2024.04.10-08.16.26:024][890]LogTemp: Warning: Dash called
+[2024.04.10-08.16.28:008][116]LogTemp: Warning: Dash called
+[2024.04.10-08.16.29:295][265]LogTemp: Warning: Dash called
+[2024.04.10-08.16.30:454][396]LogTemp: Warning: Dash called
+[2024.04.10-08.16.30:740][429]LogTemp: Warning: Dash called
+[2024.04.10-08.16.30:913][449]LogTemp: Warning: Dash called
+[2024.04.10-08.16.31:357][500]LogTemp: Warning: Dash called
+[2024.04.10-08.16.31:558][522]LogTemp: Warning: Dash called
+[2024.04.10-08.16.31:766][545]LogTemp: Warning: Dash called
+[2024.04.10-08.16.31:972][568]LogTemp: Warning: Dash called
+[2024.04.10-08.16.32:429][620]LogTemp: Warning: Dash called
+[2024.04.10-08.16.32:648][645]LogTemp: Warning: Dash called
+[2024.04.10-08.16.33:089][695]LogTemp: Warning: Dash called
+[2024.04.10-08.16.33:306][720]LogTemp: Warning: Dash called
+[2024.04.10-08.16.35:381][959]LogTemp: Warning: Dash called
+[2024.04.10-08.16.35:564][980]LogTemp: Warning: Dash called
+[2024.04.10-08.16.35:747][  1]LogTemp: Warning: Dash called
+[2024.04.10-08.16.35:925][ 21]LogTemp: Warning: Dash called
+[2024.04.10-08.16.36:643][104]LogTemp: Warning: Dash called
+[2024.04.10-08.16.36:791][121]LogTemp: Warning: Dash called
+[2024.04.10-08.16.38:289][295]LogTemp: Warning: Dash called
+[2024.04.10-08.16.39:636][449]LogTemp: Warning: Dash called
+[2024.04.10-08.16.39:914][481]LogTemp: Warning: Dash called
+[2024.04.10-08.16.40:548][554]LogTemp: Warning: Dash called
+[2024.04.10-08.16.41:883][706]LogTemp: Warning: Dash called
+[2024.04.10-08.16.43:824][921]LogTemp: Warning: Dash called
+[2024.04.10-08.16.44:360][981]LogBlueprintUserMessages: [BP_Rifle_C_1] Cast to BP_FirstPersonCharacter FAILED
+[2024.04.10-08.16.44:730][ 23]LogTemp: Warning: Dash called
+[2024.04.10-08.16.45:622][125]LogTemp: Warning: Dash called
+[2024.04.10-08.16.46:617][238]LogTemp: Warning: Dash called
+[2024.04.10-08.16.47:814][374]LogTemp: Warning: Dash called
+[2024.04.10-08.16.49:026][511]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.49:026][511]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.16.49:187][529]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.49:321][544]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.49:321][544]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.16.49:447][558]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.49:447][558]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.16.49:593][574]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.49:593][574]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.16.50:553][682]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.50:553][682]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.16.50:698][698]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.50:698][698]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.16.50:844][714]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.50:844][714]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.16.50:973][728]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.50:973][728]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-08.16.51:110][743]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:110][743]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.16.51:367][771]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:367][771]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.16.51:518][788]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:518][788]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.16.51:518][788]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.16.51:651][803]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:651][803]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-08.16.51:784][818]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:784][818]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-08.16.51:924][834]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.51:924][834]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-08.16.52:057][849]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:057][849]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-08.16.52:191][864]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:191][864]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-08.16.52:334][880]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:334][880]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-08.16.52:474][896]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:474][896]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-08.16.52:593][909]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:593][909]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-08.16.52:727][924]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.52:727][924]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-08.16.52:728][924]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-08.16.52:860][939]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.16.56:990][405]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.16.56:990][405]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.16.56:990][405]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.16.56:991][405]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.16.56:991][405]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-08.16.56:995][405]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-08.16.56:998][405]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.16.57:008][405]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-08.16.57:008][405]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 9
+[2024.04.10-08.16.57:009][405]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.10-08.16.57:010][405]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.10-08.16.57:014][405]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.16.57:016][405]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.10-08.16.57:096][407]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2024.04.10-08.26.26:356][432]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.26.26:383][432]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2024.04.10-08.26.27:991][618]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.26.28:078][618]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.26.28:084][618]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.26.28:084][618]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy47B79BD8429097F46A804683591BFDA2.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.26.28:089][618]LogFileHelpers: InternalPromptForCheckoutAndSave took 98 ms (total: 1.97 sec)
+[2024.04.10-08.26.28:090][618]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.26.28:090][618]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.28.25:094][447]LogEditorClassViewer: Warning: AssetRegistry Blueprint /Game/AI/Tests/BP_ShooterAIController.BP_ShooterAIController is missing tag value for GeneratedClass. Blueprint will not be available to ClassViewer when unloaded.
+[2024.04.10-08.30.40:901][504]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.30.40:905][504]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] This blueprint (self) is not a BP_SpawnZoneTrigger_C, therefore ' Target ' must have a connection.
+[2024.04.10-08.30.40:905][504]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] This blueprint (self) is not a BP_SpawnZoneTrigger_C, therefore ' Target ' must have a connection.
+[2024.04.10-08.30.40:906][504]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] Variable node  Set EnemiesCount  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2024.04.10-08.30.40:906][504]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] Variable node  Set EnemiesCount  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2024.04.10-08.30.40:930][504]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2024.04.10-08.30.49:562][513]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.30.49:588][513]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.04.10-08.30.50:258][584]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.30.50:338][584]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.30.50:344][584]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.30.50:344][584]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy5BB0EF8E405148A510469782DE223E63.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.30.50:349][584]LogFileHelpers: InternalPromptForCheckoutAndSave took 91 ms (total: 2.06 sec)
+[2024.04.10-08.30.50:350][584]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.30.50:350][584]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.00:533][803]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.00:560][803]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.00:565][803]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.00:566][803]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy80AE24594FFFD209350B2DB17C69FBCA.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.00:570][803]LogFileHelpers: InternalPromptForCheckoutAndSave took 36 ms (total: 2.10 sec)
+[2024.04.10-08.31.00:571][803]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.00:571][803]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.01:161][874]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.31.01:188][874]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.10-08.31.01:634][923]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.01:712][923]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.01:717][923]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.01:718][923]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyEC0BAC9942C6BBD465AA11A078F24A43.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.01:722][923]LogFileHelpers: InternalPromptForCheckoutAndSave took 88 ms (total: 2.19 sec)
+[2024.04.10-08.31.01:723][923]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.01:723][923]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.10:322][948]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.10:393][948]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.10:399][948]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.10:399][948]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy336D6C1E4E89C1BE2CDB2ABEB8B3DBAB.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.10:404][948]LogFileHelpers: InternalPromptForCheckoutAndSave took 82 ms (total: 2.27 sec)
+[2024.04.10-08.31.10:405][948]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.10:405][948]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.11:401][ 68]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.31.11:427][ 68]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.10-08.31.15:128][507]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.15:225][507]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.15:230][507]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.15:231][507]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy8855A222458F98AC2E779282405BC342.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.15:235][507]LogFileHelpers: InternalPromptForCheckoutAndSave took 107 ms (total: 2.38 sec)
+[2024.04.10-08.31.15:236][507]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.15:236][507]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.15:658][558]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.31.15:685][558]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2024.04.10-08.31.27:148][925]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.27:226][925]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.27:232][925]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.27:233][925]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyEAC01CBF48E1444DAB8BC5B086ECE50E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.27:237][925]LogFileHelpers: InternalPromptForCheckoutAndSave took 89 ms (total: 2.47 sec)
+[2024.04.10-08.31.27:238][925]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.27:238][925]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.31.28:111][ 30]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.31.28:136][ 30]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2024.04.10-08.31.28:728][ 96]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.31.28:807][ 96]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.31.28:813][ 96]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.31.28:814][ 96]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyB7CD75F74EB1C3A2F5A727B888C9956E.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.31.28:819][ 96]LogFileHelpers: InternalPromptForCheckoutAndSave took 91 ms (total: 2.56 sec)
+[2024.04.10-08.31.28:820][ 96]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.31.28:820][ 96]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.44.10:631][490]LogDerivedDataCache: C:/Users/jeva3947/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.048 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1292 files in 2133 folders with total size 109 MiB.
+[2024.04.10-08.57.18:624][185]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.57.18:652][185]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.57.18:658][185]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.57.18:658][185]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy65BC862740FA7E95B0DB289571A30388.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.57.18:663][185]LogFileHelpers: InternalPromptForCheckoutAndSave took 39 ms (total: 2.60 sec)
+[2024.04.10-08.57.18:664][185]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.57.18:664][185]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.57.20:746][435]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.57.20:771][435]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.57.20:777][435]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.57.20:777][435]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy4FB6BEFB4A9DC59C51CB9CABDA10AD91.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.57.20:781][435]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 2.63 sec)
+[2024.04.10-08.57.20:782][435]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.57.20:782][435]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.57.21:395][507]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.57.21:395][507]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.57.33:861][988]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.57.33:900][988]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-08.57.33:901][988]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger709AFFEC42E1829522A794BDA12475DC.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-08.57.33:905][988]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 2.68 sec)
+[2024.04.10-08.57.33:906][988]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-08.57.33:906][988]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-08.57.52:786][253]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-08.57.52:825][253]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2024.04.10-08.58.52:990][238]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-08.58.52:991][238]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.58.52:991][238]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.59.01:816][271]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.59.01:844][271]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.04.10-08.59.30:102][585]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-08.59.30:132][585]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.04.10-08.59.31:271][715]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-08.59.31:276][715]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-08.59.31:276][715]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-08.59.31:278][715]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 18 ms)
+[2024.04.10-08.59.31:278][715]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-08.59.31:278][715]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 12:59:31)
+[2024.04.10-08.59.31:278][715]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.59.31:283][715]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004820s)
+[2024.04.10-08.59.31:283][715]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004843s)
+[2024.04.10-08.59.31:294][715]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.10-08.59.31:296][715]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-08.59.31:296][715]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-08.59.31:296][715]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-08.59.31:297][715]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-08.59.31:297][715]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-08.59.31:297][715]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-08.59.31:297][715]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-08.59.31:298][715]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-08.59.31:298][715]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 173 ms)
+[2024.04.10-08.59.31:298][715]LogPlayLevel: PIE: World Init took: (0.002171s)
+[2024.04.10-08.59.31:298][715]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-08.59.31:298][715]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-08.59.31:298][715]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-08.59.31:298][715]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-08.59.31:298][715]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-08.59.31:298][715]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-08.59.31:300][715]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-08.59.31:315][715]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-08.59.31:315][715]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-08.59.31:315][715]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-08.59.31:315][715]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-08.59.31:316][715]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2024.04.10-08.59.31:316][715]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2024.04.10-08.59.31:317][715]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2024.04.10-08.59.31:317][715]LogInit: FAudioDevice initialized with ID 10.
+[2024.04.10-08.59.31:317][715]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2024.04.10-08.59.31:317][715]LogAudio: Display: Audio Device (ID: 10) registered with world 'Hanna_Louis1'.
+[2024.04.10-08.59.31:317][715]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.10-08.59.31:347][715]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.59.31:347][715]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-08.59.31:351][715]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-10.59.31
+[2024.04.10-08.59.31:351][715]LogWorld: Bringing up level for play took: 0.003602
+[2024.04.10-08.59.31:354][715]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.04.10-08.59.31:358][715]PIE: Server logged in
+[2024.04.10-08.59.31:359][715]PIE: Play in editor total start time 0,082 seconds.
+[2024.04.10-08.59.31:366][715]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-08.59.31:807][742]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-08.59.34:712][ 69]LogBlueprintUserMessages: [BP_RushEnemy_C_0] I have spawned bitch
+[2024.04.10-08.59.34:713][ 69]LogBlueprintUserMessages: [BP_RushEnemy_C_1] I have spawned bitch
+[2024.04.10-08.59.36:331][243]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-08.59.36:331][243]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-08.59.36:331][243]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-08.59.36:335][243]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-08.59.36:335][243]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.59.36:335][243]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-08.59.36:338][243]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-08.59.36:342][243]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-08.59.36:355][243]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-08.59.36:355][243]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.10-08.59.36:355][243]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.10-08.59.36:357][243]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.10-08.59.36:363][243]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.10-08.59.36:396][245]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.04.10-08.59.39:055][562]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-08.59.39:133][562]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-08.59.39:139][562]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-08.59.39:139][562]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy223BCB89468769DCC6049B8A65F41E0F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-08.59.39:144][562]LogFileHelpers: InternalPromptForCheckoutAndSave took 89 ms (total: 2.77 sec)
+[2024.04.10-08.59.39:145][562]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-08.59.39:145][562]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.00.10:785][265]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.00.10:869][265]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.00.10:875][265]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.00.10:876][265]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyE34EBCC842B887629108DC9389EF2F41.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.00.10:881][265]LogFileHelpers: InternalPromptForCheckoutAndSave took 95 ms (total: 2.86 sec)
+[2024.04.10-09.00.10:882][265]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.00.10:882][265]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.00.41:813][929]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.00.41:899][929]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.00.41:906][929]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.00.41:906][929]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy5956C732467BEE06F765B8A3CF32DFA6.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.00.41:911][929]LogFileHelpers: InternalPromptForCheckoutAndSave took 98 ms (total: 2.96 sec)
+[2024.04.10-09.00.41:913][929]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.00.41:913][929]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.00.42:369][981]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.00.42:396][981]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2024.04.10-09.01.11:556][388]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.01.11:665][388]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.01.11:672][388]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.01.11:672][388]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy32CC69E24C1477EBC877A4B25FE6AE3C.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.01.11:677][388]LogFileHelpers: InternalPromptForCheckoutAndSave took 120 ms (total: 3.08 sec)
+[2024.04.10-09.01.11:678][388]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.01.11:678][388]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.01.12:571][495]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.01.12:576][495]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] This blueprint (self) is not a BP_SpawnZoneTrigger_C, therefore ' Target ' must have a connection.
+[2024.04.10-09.01.12:576][495]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] This blueprint (self) is not a BP_SpawnZoneTrigger_C, therefore ' Target ' must have a connection.
+[2024.04.10-09.01.12:576][495]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] Variable node  Set EnemiesCount  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2024.04.10-09.01.12:576][495]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_RushEnemy.uasset: [Compiler] Variable node  Set EnemiesCount  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2024.04.10-09.01.12:603][495]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.04.10-09.01.16:225][901]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.01.16:312][901]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.01.16:319][901]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.01.16:319][901]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy4840DAFE44E0AB49557C1C9970DFAFEA.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.01.16:324][901]LogFileHelpers: InternalPromptForCheckoutAndSave took 98 ms (total: 3.18 sec)
+[2024.04.10-09.01.16:325][901]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.01.16:325][901]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.01.16:944][975]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.01.16:972][975]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2024.04.10-09.01.24:077][808]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.01.24:104][808]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2024.04.10-09.01.25:160][924]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-09.01.25:164][924]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-09.01.25:165][924]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-09.01.25:166][924]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 20 ms)
+[2024.04.10-09.01.25:167][924]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-09.01.25:167][924]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 13:01:25)
+[2024.04.10-09.01.25:167][924]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-09.01.25:171][924]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004792s)
+[2024.04.10-09.01.25:172][924]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004816s)
+[2024.04.10-09.01.25:187][924]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.10-09.01.25:190][924]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-09.01.25:190][924]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-09.01.25:191][924]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-09.01.25:191][924]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-09.01.25:191][924]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-09.01.25:191][924]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-09.01.25:191][924]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-09.01.25:192][924]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-09.01.25:192][924]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 174 ms)
+[2024.04.10-09.01.25:192][924]LogPlayLevel: PIE: World Init took: (0.002342s)
+[2024.04.10-09.01.25:192][924]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-09.01.25:192][924]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-09.01.25:193][924]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-09.01.25:193][924]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-09.01.25:193][924]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-09.01.25:193][924]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-09.01.25:193][924]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-09.01.25:195][924]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-09.01.25:209][924]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-09.01.25:209][924]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-09.01.25:209][924]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-09.01.25:209][924]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-09.01.25:210][924]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2024.04.10-09.01.25:210][924]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2024.04.10-09.01.25:211][924]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2024.04.10-09.01.25:211][924]LogInit: FAudioDevice initialized with ID 11.
+[2024.04.10-09.01.25:211][924]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2024.04.10-09.01.25:211][924]LogAudio: Display: Audio Device (ID: 11) registered with world 'Hanna_Louis1'.
+[2024.04.10-09.01.25:211][924]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.10-09.01.25:234][924]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-09.01.25:234][924]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-09.01.25:237][924]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-11.01.25
+[2024.04.10-09.01.25:237][924]LogWorld: Bringing up level for play took: 0.002496
+[2024.04.10-09.01.25:239][924]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.04.10-09.01.25:243][924]PIE: Server logged in
+[2024.04.10-09.01.25:245][924]PIE: Play in editor total start time 0,08 seconds.
+[2024.04.10-09.01.25:254][924]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-09.01.25:730][951]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.29:432][339]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.29:432][339]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-09.01.29:583][355]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.29:583][355]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-09.01.29:741][371]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.29:741][371]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-09.01.29:877][385]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.29:877][385]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-09.01.30:023][400]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:023][400]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-09.01.30:152][413]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:152][413]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-09.01.30:279][426]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:279][426]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-09.01.30:428][441]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:428][441]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-09.01.30:563][455]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:563][455]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-09.01.30:691][468]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.30:691][468]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-09.01.30:691][468]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-09.01.30:817][481]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:120][512]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:120][512]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-09.01.31:282][529]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:282][529]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-09.01.31:430][545]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:430][545]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-09.01.31:556][558]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:556][558]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-09.01.31:697][573]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:697][573]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-09.01.31:841][588]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:841][588]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-09.01.31:985][603]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.31:985][603]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-09.01.32:108][616]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.32:108][616]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-09.01.32:234][630]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.32:234][630]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-09.01.32:377][645]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.32:377][645]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-09.01.32:377][645]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-09.01.32:522][661]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-09.01.33:895][803]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-09.01.33:895][803]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-09.01.33:895][803]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-09.01.33:898][803]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-09.01.33:899][803]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-09.01.33:899][803]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-09.01.33:902][803]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-09.01.33:906][803]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-09.01.33:919][803]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-09.01.33:919][803]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.10-09.01.33:919][803]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.10-09.01.33:921][803]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.10-09.01.33:926][803]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2024.04.10-09.01.33:979][807]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.04.10-09.01.35:943][ 42]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.01.36:047][ 42]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.01.36:054][ 42]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.01.36:055][ 42]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemy3387F93A4725B32592392086D8C7F26B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.01.36:060][ 42]LogFileHelpers: InternalPromptForCheckoutAndSave took 116 ms (total: 3.30 sec)
+[2024.04.10-09.01.36:061][ 42]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.01.36:061][ 42]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.01.36:841][136]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.01.36:872][136]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.04.10-09.01.44:310][984]LogEditorClassViewer: Warning: AssetRegistry Blueprint /Game/AI/Tests/BP_ShooterAIController.BP_ShooterAIController is missing tag value for GeneratedClass. Blueprint will not be available to ClassViewer when unloaded.
+[2024.04.10-09.01.48:341][413]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.01.48:369][413]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221
+[2024.04.10-09.01.48:370][413]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/GXZBQK47C1DCG15GHEU221DBC3C55743DAFC9696776DA3B3E01C45.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset'
+[2024.04.10-09.01.48:376][413]LogFileHelpers: InternalPromptForCheckoutAndSave took 34 ms (total: 3.33 sec)
+[2024.04.10-09.01.48:378][413]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-09.01.48:378][413]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-09.01.50:846][702]BlueprintLog: New page: Compile BP_SpawnZoneTrigger
+[2024.04.10-09.01.50:886][702]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2024.04.10-09.01.51:444][751]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.01.51:473][751]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger
+[2024.04.10-09.01.51:473][751]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnZoneTrigger50541D68423C56B91626C4ACB6DD7461.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset'
+[2024.04.10-09.01.51:478][751]LogFileHelpers: InternalPromptForCheckoutAndSave took 33 ms (total: 3.36 sec)
+[2024.04.10-09.01.51:479][751]AssetCheck: New page: Asset Save: BP_SpawnZoneTrigger
+[2024.04.10-09.01.51:479][751]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnZoneTrigger.BP_SpawnZoneTrigger
+[2024.04.10-09.02.06:851][580]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.02.06:945][580]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.02.06:952][580]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.02.06:952][580]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyF2A1EF824A459FF750A75BBED852F926.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.02.06:958][580]LogFileHelpers: InternalPromptForCheckoutAndSave took 106 ms (total: 3.47 sec)
+[2024.04.10-09.02.06:959][580]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.02.06:959][580]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-09.02.16:570][729]LogBlueprint: Warning: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\Jeremy\Blueprints\BP_EnemyTesting.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  Event BeginPlay  and was replaced as a Custom Event!
+[2024.04.10-09.02.28:849][ 99]BlueprintLog: New page: Compile BP_EnemyTesting
+[2024.04.10-09.02.28:853][ 99]LogBlueprint: Warning: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\Jeremy\Blueprints\BP_EnemyTesting.uasset: [Compiler] Could not find a variable named "SpawnzoneParent" in 'BP_EnemyTesting_C'.
+Make sure 'BP_EnemyTesting_C' has been compiled for  Set SpawnzoneParent
+[2024.04.10-09.02.28:854][ 99]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\Jeremy\Blueprints\BP_EnemyTesting.uasset: [Compiler] Could not find an event-dispatcher named "OnDeath" in 'BP_EnemyTesting_C'.
+Make sure 'BP_EnemyTesting_C' has been compiled for  Call OnDeath
+[2024.04.10-09.02.28:854][ 99]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\Jeremy\Blueprints\BP_EnemyTesting.uasset: [Compiler] The property associated with  Spawnzone Parent  could not be found in '/Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting_C'
+[2024.04.10-09.02.28:877][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.10-09.02.29:609][179]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.02.29:671][179]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_EnemyTesting" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" SILENT=true
+[2024.04.10-09.02.29:678][179]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_EnemyTesting
+[2024.04.10-09.02.29:678][179]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_EnemyTesting3A69144F4BBAC6924649D484DDFF17AE.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset'
+[2024.04.10-09.02.29:684][179]LogFileHelpers: InternalPromptForCheckoutAndSave took 74 ms (total: 3.54 sec)
+[2024.04.10-09.02.29:685][179]AssetCheck: New page: Asset Save: BP_EnemyTesting
+[2024.04.10-09.02.29:685][179]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_EnemyTesting.BP_EnemyTesting
+[2024.04.10-09.02.46:999][904]BlueprintLog: New page: Compile BP_RushEnemy
+[2024.04.10-09.02.47:026][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.10-09.02.47:881][996]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-09.02.47:965][996]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_RushEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset" SILENT=true
+[2024.04.10-09.02.47:972][996]LogSavePackage: Moving output files for package: /Game/AI/BP_RushEnemy
+[2024.04.10-09.02.47:973][996]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_RushEnemyE05BDD9346E447E6E0DB3CBFEC36236F.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset'
+[2024.04.10-09.02.47:978][996]LogFileHelpers: InternalPromptForCheckoutAndSave took 96 ms (total: 3.64 sec)
+[2024.04.10-09.02.47:979][996]AssetCheck: New page: Asset Save: BP_RushEnemy
+[2024.04.10-09.02.47:979][996]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
