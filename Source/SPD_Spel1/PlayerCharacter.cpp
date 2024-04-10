@@ -82,13 +82,20 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	// Below ought to be merged manually into authoritative PlayerCharacter version, same goes fo header (Rufus)
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
+	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
 }
 
 void APlayerCharacter::Shoot()
 {
-	TriggerWeapon->PullTrigger();
+	SprayShooting = true;
+	TriggerWeapon->PullTrigger(SprayShooting);
 }
 
+void APlayerCharacter::CancelShoot()
+{
+	SprayShooting = false;
+	TriggerWeapon->PullTrigger(SprayShooting);
+}
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
