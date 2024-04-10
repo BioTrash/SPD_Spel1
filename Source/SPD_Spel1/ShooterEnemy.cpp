@@ -21,8 +21,26 @@ void AShooterEnemy::BeginPlay()
 
 	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
 	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
+	if (WeaponClass)
+	{
+		// Spawn the weapon
+		AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(WeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
-	
+		// Check if spawn was successful
+		if (WeaponInstance)
+		{
+			// Attach the weapon to the mesh socket
+			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+
+			// Set the owner of the weapon
+			WeaponInstance->SetOwner(this);
+
+			// Store a reference to the weapon
+			TriggerWeapon = WeaponInstance;
+
+			TriggerWeapon->SetOwner(this);
+		}
+	}
 }
 
 // Called every frame
