@@ -52,7 +52,7 @@ void AWeapon::Tick(float DeltaTime)
 
 void AWeapon::PullTrigger(bool SprayShooting)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
+	//UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
 	
 	if(Projectile)
 	{
@@ -127,16 +127,26 @@ void AWeapon::ShootProjectile()
 
 void AWeapon::Reload()
 {
-	if(TotalAmmo-ClipSize > 0)
+	if(UnlimitedAmmo)
 	{
 		CurrentClip = ClipSize;
-		TotalAmmo -= ClipSize;
 	}
 	else
 	{
-		CurrentClip = TotalAmmo;
-		TotalAmmo = 0;
+		if(TotalAmmo-ClipSize > 0)
+		{
+			TotalAmmo -= (ClipSize - CurrentClip);
+			CurrentClip = ClipSize;
+		}
+		else
+		{
+			CurrentClip = TotalAmmo;
+			TotalAmmo = 0;
+		}
 	}
+
+
+	UE_LOG(LogTemp, Warning, TEXT("Total Ammo: %f, CurrentAmmo: %f"), TotalAmmo, CurrentClip);
 }
 
 

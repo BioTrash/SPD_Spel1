@@ -34,11 +34,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool UnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere)
-	int32 TotalAmmo;
+	float TotalAmmo;
 	UPROPERTY(EditAnywhere)
-	int32 CurrentClip;
+	float CurrentClip;
 	UPROPERTY(EditAnywhere)
-	int32 ClipSize;
+	float ClipSize;
 	
 	UPROPERTY()
 	FVector Location;
