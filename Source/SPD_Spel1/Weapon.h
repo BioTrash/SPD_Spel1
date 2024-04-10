@@ -29,7 +29,15 @@ public:
 	void PullTrigger(bool SprayShooting);
 	
 private:
-
+	UPROPERTY(EditDefaultsOnly)
+	bool UnlimitedAmmo = false;
+	UPROPERTY(EditDefaultsOnly)
+	int32 TotalAmmo;
+	UPROPERTY(EditDefaultsOnly)
+	int32 CurrentClip;
+	UPROPERTY(EditDefaultsOnly)
+	int32 ClipSize;
+	
 	UPROPERTY()
 	FVector Location;
 	UPROPERTY()
@@ -67,6 +75,5 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 10;
-
 	
 };

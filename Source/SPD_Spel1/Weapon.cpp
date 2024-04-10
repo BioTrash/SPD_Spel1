@@ -95,16 +95,22 @@ void AWeapon::ShootWithoutProjectile()
 	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 	{
-		DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
-
-		//NEW CHANGES; CAN REMOVE IF NOT WORKING
-		AActor* HitActor = Hit.GetActor();
-		//if we hit an actor, we make the actor take damage (Rebecka)
-		if(HitActor != nullptr)
+		while(UnlimitedAmmo || CurrentClip > 0)
 		{
-			FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
-			HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
+			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
+
+			//NEW CHANGES; CAN REMOVE IF NOT WORKING
+			AActor* HitActor = Hit.GetActor();
+			//if we hit an actor, we make the actor take damage (Rebecka)
+			if(HitActor != nullptr)
+			{
+				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
+				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
+			}
+
+			CurrentClip--;
 		}
+
 	}
 }
 
