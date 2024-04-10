@@ -27,15 +27,17 @@ public:
 
 	// Is a shoot function, triggered from PlayerCharacter.cpp under Shoot function as well as CancelShoot under it (Rufus)
 	void PullTrigger(bool SprayShooting);
+
+	void Reload();
 	
 private:
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	bool UnlimitedAmmo = false;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	int32 TotalAmmo;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	int32 CurrentClip;
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	int32 ClipSize;
 	
 	UPROPERTY()

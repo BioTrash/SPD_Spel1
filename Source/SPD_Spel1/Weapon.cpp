@@ -95,7 +95,7 @@ void AWeapon::ShootWithoutProjectile()
 	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 	{
-		while(UnlimitedAmmo || CurrentClip > 0)
+		if(UnlimitedAmmo || CurrentClip > 0)
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
 
@@ -110,6 +110,10 @@ void AWeapon::ShootWithoutProjectile()
 
 			CurrentClip--;
 		}
+		else
+		{
+			Reload();
+		}
 
 	}
 }
@@ -119,6 +123,20 @@ void AWeapon::ShootProjectile()
 	// ForwardVector is not required but is a workaround until spawn point of real meshes is set (Rufus)
 	// CHANGE WHEN WEAPON MESHES ARE MADE! (Rufus)
 	GetWorld()->SpawnActor<AProjectile>(Projectile, Location + GetOwner()->GetActorForwardVector()*100, Rotation);
+}
+
+void AWeapon::Reload()
+{
+	if(TotalAmmo-ClipSize > 0)
+	{
+		CurrentClip = ClipSize;
+		TotalAmmo -= ClipSize;
+	}
+	else
+	{
+		CurrentClip = TotalAmmo;
+		TotalAmmo = 0;
+	}
 }
 
 
