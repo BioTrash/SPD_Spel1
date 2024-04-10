@@ -83,6 +83,8 @@ private:
 	float LastDashTime = 0.0f;
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
+	//how much it slows the character down when dashing in the air
+	float AirDashMultiplier = 0.25f;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 
@@ -104,7 +106,7 @@ private:
 	float SlideDuration = 0.5f;
 	//how long you have to wait in order to slide again (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
-	float SlideCooldown = 0.0f;
+	float SlideCooldown = 5.0f;
 	//how fast you will walk after sliding (Rebecka)
 	float DefaultWalkSpeed = 600.f;
 

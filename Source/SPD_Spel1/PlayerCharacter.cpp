@@ -7,6 +7,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Tasks/Task.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -167,8 +168,14 @@ void APlayerCharacter::Dash()
 			//normalize the dash direction by mulitplying it to the dash speed (Rebecka)
 			FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashSpeed;
 
-			//apply dash velocity to the character
-			GetCharacterMovement()->Launch(DashDirection);
+			//checks if the character is grounded
+			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+
+			//if the character is grounded, the value will be 1, if its not grounded it will be the value of AirDashMulitplier
+			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
+
+			//apply dash velocity to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+			GetCharacterMovement()->Launch(DashDirection * LaunchMultiplier);
 			
 			bIsDashing = true;
 			LastDashTime = GetWorld()->GetTimeSeconds();
