@@ -1274,3 +1274,620 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.04.10-14.22.22:170][607]LogFileHelpers: InternalPromptForCheckoutAndSave took 31 ms (total: 160 ms)
 [2024.04.10-14.22.22:170][607]AssetCheck: New page: Asset Save: BP_PlayerCharacter
 [2024.04.10-14.22.22:170][607]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Blueprints/BP_PlayerCharacter.BP_PlayerCharacter
+[2024.04.10-14.23.03:221][616]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.06:806][ 16]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.23.06:810][ 16]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.23.06:810][ 16]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.23.06:812][ 16]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 3 ms)
+[2024.04.10-14.23.06:812][ 16]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.23.06:812][ 16]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:23:06)
+[2024.04.10-14.23.06:843][ 16]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.23.06:848][ 16]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004691s)
+[2024.04.10-14.23.06:848][ 16]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004718s)
+[2024.04.10-14.23.06:860][ 16]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.04.10-14.23.06:861][ 16]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.06:861][ 16]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.23.06:861][ 16]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.23.06:862][ 16]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.23.06:862][ 16]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.23.06:862][ 16]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.23.06:862][ 16]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.23.06:863][ 16]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.23.06:863][ 16]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 395 ms)
+[2024.04.10-14.23.06:863][ 16]LogPlayLevel: PIE: World Init took: (0.002257s)
+[2024.04.10-14.23.06:863][ 16]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.23.06:863][ 16]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.23.06:863][ 16]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.23.06:864][ 16]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.23.06:864][ 16]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.23.06:864][ 16]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.23.06:865][ 16]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.23.06:879][ 16]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.23.06:879][ 16]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.23.06:879][ 16]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.23.06:879][ 16]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.23.06:880][ 16]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.04.10-14.23.06:880][ 16]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.04.10-14.23.06:881][ 16]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.04.10-14.23.06:881][ 16]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.04.10-14.23.06:881][ 16]LogInit: FAudioDevice initialized with ID 3.
+[2024.04.10-14.23.06:881][ 16]LogAudio: Display: Audio Device (ID: 3) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.23.06:881][ 16]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.10-14.23.06:883][ 16]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.23.06:885][ 16]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.23.06
+[2024.04.10-14.23.06:885][ 16]LogWorld: Bringing up level for play took: 0.002222
+[2024.04.10-14.23.06:887][ 16]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2024.04.10-14.23.06:888][ 16]PIE: Server logged in
+[2024.04.10-14.23.06:889][ 16]PIE: Play in editor total start time 0,078 seconds.
+[2024.04.10-14.23.07:203][ 41]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.07:769][109]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.07:936][129]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.08:095][148]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.08:605][205]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.23.08:605][205]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.23.08:605][205]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.23.08:605][205]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.23.08:605][205]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.23.08:608][205]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.23.08:611][205]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.23.08:621][205]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.23.08:621][205]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2024.04.10-14.23.08:621][205]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.10-14.23.08:622][205]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.10-14.23.08:628][205]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.04.10-14.23.08:672][207]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2024.04.10-14.23.11:006][479]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.23.11:006][479]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.11:006][479]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.23.11:063][479]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.12:284][610]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.23.12:284][610]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.23.12:295][610]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.23.12:295][610]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.12:295][610]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.23.13:565][738]LogSlate: Took 0.000099 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.10-14.23.13:576][739]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.13:584][739]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.13:648][741]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.15:770][986]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.15:770][986]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.15:770][986]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.15:821][987]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.17:377][173]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.23.17:405][173]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.17:488][173]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.23.17:492][173]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.23.17:492][173]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy6A7F5FD0405AE285C49AE2B76DD4A316.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.23.17:498][173]LogFileHelpers: InternalPromptForCheckoutAndSave took 121 ms (total: 281 ms)
+[2024.04.10-14.23.17:499][173]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.23.17:499][173]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.23.17:901][221]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.23.17:923][221]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.23.17:928][221]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.23.17:928][221]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy3090C72A4E5FE95569200D8DF555BF27.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.23.17:932][221]LogFileHelpers: InternalPromptForCheckoutAndSave took 31 ms (total: 313 ms)
+[2024.04.10-14.23.17:933][221]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.23.17:933][221]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.23.18:249][256]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.23.18:315][256]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.04.10-14.23.18:479][258]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.23.20:125][430]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-14.23.20:125][430]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.20:126][430]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.23.37:531][396]LogDerivedDataCache: C:/Users/jeva3947/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.070 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1632 files in 2656 folders with total size 134 MiB.
+[2024.04.10-14.23.37:869][435]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.23.37:892][435]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2024.04.10-14.23.39:722][647]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.23.39:786][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.23.39:792][647]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.23.39:793][647]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy0F3DADC14342653540E5469C02B0F125.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.23.39:797][647]LogFileHelpers: InternalPromptForCheckoutAndSave took 74 ms (total: 388 ms)
+[2024.04.10-14.23.39:798][647]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.23.39:798][647]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.23.46:086][367]LogEditorClassViewer: Warning: AssetRegistry Blueprint /Game/AI/Tests/BP_ShooterAIController.BP_ShooterAIController is missing tag value for GeneratedClass. Blueprint will not be available to ClassViewer when unloaded.
+[2024.04.10-14.23.49:812][764]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.23.49:837][764]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221
+[2024.04.10-14.23.49:838][764]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/GXZBQK47C1DCG15GHEU22146FF635240C71E3CECC294A2353DCC7C.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset'
+[2024.04.10-14.23.49:844][764]LogFileHelpers: InternalPromptForCheckoutAndSave took 32 ms (total: 420 ms)
+[2024.04.10-14.23.49:845][764]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-14.23.49:845][764]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-14.23.51:330][940]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.23.51:335][940]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.23.51:335][940]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.23.51:337][940]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 2 ms (total: 5 ms)
+[2024.04.10-14.23.51:337][940]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.23.51:337][940]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:23:51)
+[2024.04.10-14.23.51:374][940]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.23.51:378][940]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004726s)
+[2024.04.10-14.23.51:378][940]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004757s)
+[2024.04.10-14.23.51:390][940]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2024.04.10-14.23.51:391][940]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.23.51:391][940]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.23.51:392][940]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.23.51:392][940]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.23.51:392][940]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.23.51:392][940]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.23.51:392][940]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.23.51:393][940]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.23.51:393][940]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 396 ms)
+[2024.04.10-14.23.51:393][940]LogPlayLevel: PIE: World Init took: (0.002040s)
+[2024.04.10-14.23.51:393][940]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.23.51:393][940]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.23.51:393][940]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.23.51:394][940]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.23.51:394][940]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.23.51:394][940]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.23.51:396][940]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.23.51:410][940]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.23.51:411][940]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.23.51:411][940]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.23.51:411][940]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.23.51:411][940]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.04.10-14.23.51:411][940]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.04.10-14.23.51:412][940]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.04.10-14.23.51:412][940]LogInit: FAudioDevice initialized with ID 4.
+[2024.04.10-14.23.51:412][940]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.04.10-14.23.51:412][940]LogAudio: Display: Audio Device (ID: 4) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.23.51:412][940]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.10-14.23.51:415][940]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.23.51:417][940]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.23.51
+[2024.04.10-14.23.51:417][940]LogWorld: Bringing up level for play took: 0.002058
+[2024.04.10-14.23.51:418][940]LogOnline: OSS: Created online subsystem instance for: :Context_17
+[2024.04.10-14.23.51:420][940]PIE: Server logged in
+[2024.04.10-14.23.51:420][940]PIE: Play in editor total start time 0,085 seconds.
+[2024.04.10-14.23.51:782][971]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.54:648][315]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 1
+[2024.04.10-14.23.54:649][315]LogBlueprintUserMessages: [BP_ShooterEnemy_C_0] 2
+[2024.04.10-14.23.55:274][390]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.55:274][390]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.23.55:441][410]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.55:441][410]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.23.55:441][410]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.23.55:441][410]LogBlueprintUserMessages: [BP_RushEnemy_C_0] 1
+[2024.04.10-14.23.56:815][575]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.56:815][575]LogTemp: Warning: Health left: 90.000000
+[2024.04.10-14.23.56:949][591]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.56:949][591]LogTemp: Warning: Health left: 80.000000
+[2024.04.10-14.23.57:457][652]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.57:457][652]LogTemp: Warning: Health left: 70.000000
+[2024.04.10-14.23.57:625][672]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.57:625][672]LogTemp: Warning: Health left: 60.000000
+[2024.04.10-14.23.57:791][692]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.57:791][692]LogTemp: Warning: Health left: 50.000000
+[2024.04.10-14.23.57:941][710]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.57:941][710]LogTemp: Warning: Health left: 40.000000
+[2024.04.10-14.23.58:107][730]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.58:107][730]LogTemp: Warning: Health left: 30.000000
+[2024.04.10-14.23.58:258][748]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.58:258][748]LogTemp: Warning: Health left: 20.000000
+[2024.04.10-14.23.58:399][765]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.58:399][765]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.23.58:540][782]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.23.58:540][782]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.23.58:540][782]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.23.58:691][800]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.00:864][ 55]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.24.00:864][ 55]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.24.00:864][ 55]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.24.00:864][ 55]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.00:864][ 55]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.24.00:867][ 55]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.24.00:870][ 55]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.00:880][ 55]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-14.24.00:880][ 55]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2024.04.10-14.24.00:880][ 55]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.10-14.24.00:881][ 55]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.10-14.24.00:884][ 55]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.24.00:887][ 55]LogUObjectHash: Compacting FUObjectHashTables data took   1.14ms
+[2024.04.10-14.24.00:920][ 56]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2024.04.10-14.24.04:199][437]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.24.08:070][889]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.24.08:170][889]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.24.08:177][889]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.24.08:177][889]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy1D69D866489567FCE7EB6FAC48C159A4.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.24.08:182][889]LogFileHelpers: InternalPromptForCheckoutAndSave took 112 ms (total: 533 ms)
+[2024.04.10-14.24.08:183][889]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.24.08:183][889]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.24.08:697][951]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.24.08:772][951]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2024.04.10-14.24.09:312][996]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.24.09:396][996]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.24.09:403][996]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.24.09:403][996]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy1CA27A8E4B99FCA72687E1B1159AF9CB.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.24.09:408][996]LogFileHelpers: InternalPromptForCheckoutAndSave took 96 ms (total: 629 ms)
+[2024.04.10-14.24.09:409][996]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.24.09:409][996]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.24.10:982][184]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.24.10:982][184]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.12:293][338]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2024.04.10-14.24.12:293][338]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.24.12:293][338]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.19:263][ 77]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.24.20:904][260]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Jeremy/Blueprints/BP_SpawnzoneEnemy.BP_SpawnzoneEnemy
+[2024.04.10-14.24.20:905][260]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.24.20:905][260]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.24.29:168][220]BlueprintLog: New page: Compile BP_SpawnzoneEnemy
+[2024.04.10-14.24.29:209][220]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2024.04.10-14.24.29:654][255]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.24.29:677][255]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Jeremy/Blueprints/BP_SpawnzoneEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset" SILENT=true
+[2024.04.10-14.24.29:692][255]LogSavePackage: Moving output files for package: /Game/Jeremy/Blueprints/BP_SpawnzoneEnemy
+[2024.04.10-14.24.29:692][255]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_SpawnzoneEnemy01B1A4D94216E870CCC90B87E5F75100.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset'
+[2024.04.10-14.24.29:698][255]LogFileHelpers: InternalPromptForCheckoutAndSave took 43 ms (total: 672 ms)
+[2024.04.10-14.24.29:699][255]AssetCheck: New page: Asset Save: BP_SpawnzoneEnemy
+[2024.04.10-14.24.29:699][255]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Jeremy/Blueprints/BP_SpawnzoneEnemy.BP_SpawnzoneEnemy
+[2024.04.10-14.24.31:416][448]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.24.31:506][448]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.24.31:512][448]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.24.31:513][448]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy0170F1CD4A8D081786AC25BEB175323A.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.24.31:518][448]LogFileHelpers: InternalPromptForCheckoutAndSave took 101 ms (total: 774 ms)
+[2024.04.10-14.24.31:519][448]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.24.31:519][448]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.24.35:402][898]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.24.35:407][898]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.24.35:407][898]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.24.35:409][898]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 7 ms)
+[2024.04.10-14.24.35:410][898]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.24.35:410][898]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:24:35)
+[2024.04.10-14.24.35:442][898]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.24.35:447][898]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004764s)
+[2024.04.10-14.24.35:447][898]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004790s)
+[2024.04.10-14.24.35:457][898]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.04.10-14.24.35:458][898]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.24.35:458][898]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.24.35:458][898]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.24.35:459][898]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.24.35:459][898]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.24.35:459][898]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.24.35:459][898]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.24.35:460][898]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.24.35:460][898]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 397 ms)
+[2024.04.10-14.24.35:460][898]LogPlayLevel: PIE: World Init took: (0.002260s)
+[2024.04.10-14.24.35:460][898]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.24.35:460][898]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.24.35:460][898]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.24.35:460][898]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.24.35:460][898]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.24.35:460][898]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.24.35:462][898]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.24.35:476][898]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.24.35:476][898]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.24.35:476][898]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.24.35:476][898]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.24.35:477][898]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2024.04.10-14.24.35:477][898]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2024.04.10-14.24.35:478][898]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2024.04.10-14.24.35:478][898]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2024.04.10-14.24.35:478][898]LogInit: FAudioDevice initialized with ID 5.
+[2024.04.10-14.24.35:478][898]LogAudio: Display: Audio Device (ID: 5) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.24.35:478][898]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2024.04.10-14.24.35:480][898]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.24.35:483][898]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.24.35
+[2024.04.10-14.24.35:483][898]LogWorld: Bringing up level for play took: 0.002068
+[2024.04.10-14.24.35:485][898]LogOnline: OSS: Created online subsystem instance for: :Context_20
+[2024.04.10-14.24.35:486][898]PIE: Server logged in
+[2024.04.10-14.24.35:487][898]PIE: Play in editor total start time 0,078 seconds.
+[2024.04.10-14.24.35:742][917]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.38:608][261]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 1
+[2024.04.10-14.24.38:609][261]LogBlueprintUserMessages: [BP_ShooterEnemy_C_0] 2
+[2024.04.10-14.24.39:525][371]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.39:525][371]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.24.39:709][393]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.39:709][393]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.24.39:709][393]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.24.39:709][393]LogBlueprintUserMessages: [BP_RushEnemy_C_0] 1
+[2024.04.10-14.24.40:267][460]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.40:267][460]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.24.40:425][479]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.24.40:425][479]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.24.40:426][479]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.24.42:512][725]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.24.42:512][725]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.24.42:512][725]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.24.42:513][725]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.42:513][725]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.24.42:528][725]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.24.42:531][725]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.24.42:543][725]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.10-14.24.42:543][725]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2024.04.10-14.24.42:543][725]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.10-14.24.42:545][725]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.10-14.24.42:548][725]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.24.42:550][725]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2024.04.10-14.24.42:585][726]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2024.04.10-14.24.50:353][573]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_RushEnemy.BP_RushEnemy
+[2024.04.10-14.24.50:353][573]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.24.50:353][573]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.24.50:552][575]LogAnimation: Warning: SkeletalMesh SkeletalMesh /Game/TestEnemy/Wraith/Meshes/Wraith.Wraith has no skeleton. This needs to fixed before an animation can be set
+[2024.04.10-14.25.14:987][438]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.25.14:990][438]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_ShooterEnemy.uasset: [Compiler] This blueprint (self) is not a BP_SpawnzoneEnemy_C, therefore ' Target ' must have a connection.
+[2024.04.10-14.25.14:990][438]LogBlueprint: Error: [AssetLog] C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Content\AI\BP_ShooterEnemy.uasset: [Compiler] Variable node  Get EnemiesAlive  uses an invalid target.  It may depend on a node that is not connected to the execution chain, and got purged.
+[2024.04.10-14.25.15:014][438]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2024.04.10-14.25.17:984][776]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.25.18:010][776]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.10-14.25.20:231][ 37]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.25.20:326][ 37]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.25.20:333][ 37]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.25.20:333][ 37]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy9037A4D644216C5FFA9E068C9545B6D4.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.25.20:338][ 37]LogFileHelpers: InternalPromptForCheckoutAndSave took 106 ms (total: 880 ms)
+[2024.04.10-14.25.20:339][ 37]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.25.20:339][ 37]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.25.21:094][128]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.25.21:099][128]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.25.21:099][128]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.25.21:100][128]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 9 ms)
+[2024.04.10-14.25.21:101][128]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.25.21:101][128]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:25:21)
+[2024.04.10-14.25.21:101][128]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.25.21:105][128]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004666s)
+[2024.04.10-14.25.21:105][128]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004688s)
+[2024.04.10-14.25.21:118][128]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2024.04.10-14.25.21:120][128]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.25.21:120][128]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.25.21:121][128]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.25.21:121][128]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.25.21:121][128]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.25.21:121][128]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.25.21:121][128]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.25.21:122][128]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.25.21:122][128]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 399 ms)
+[2024.04.10-14.25.21:122][128]LogPlayLevel: PIE: World Init took: (0.002222s)
+[2024.04.10-14.25.21:122][128]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.04.10-14.25.21:122][128]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.25.21:123][128]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.25.21:123][128]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.25.21:123][128]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.25.21:123][128]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.25.21:123][128]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.25.21:124][128]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.25.21:138][128]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.25.21:138][128]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.25.21:138][128]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.25.21:138][128]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.25.21:139][128]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.04.10-14.25.21:139][128]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2024.04.10-14.25.21:140][128]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.04.10-14.25.21:140][128]LogInit: FAudioDevice initialized with ID 6.
+[2024.04.10-14.25.21:140][128]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.04.10-14.25.21:140][128]LogAudio: Display: Audio Device (ID: 6) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.25.21:140][128]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.10-14.25.21:158][128]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.25.21:158][128]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.25.21:160][128]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.25.21
+[2024.04.10-14.25.21:160][128]LogWorld: Bringing up level for play took: 0.002430
+[2024.04.10-14.25.21:162][128]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2024.04.10-14.25.21:165][128]PIE: Server logged in
+[2024.04.10-14.25.21:166][128]PIE: Play in editor total start time 0,067 seconds.
+[2024.04.10-14.25.21:173][128]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-14.25.21:498][136]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.24:390][456]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 1
+[2024.04.10-14.25.24:392][456]LogBlueprintUserMessages: [BP_ShooterEnemy_C_0] 2
+[2024.04.10-14.25.24:877][507]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.24:877][507]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.25.25:037][524]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.25:037][524]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.25.25:037][524]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.25.25:544][578]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.25:544][578]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.25.25:688][593]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.25:688][593]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.25.25:689][593]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.25.25:689][593]LogBlueprintUserMessages: [BP_RushEnemy_C_0] 1
+[2024.04.10-14.25.27:112][745]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.25.27:112][745]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.25.27:112][745]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-14.25.27:116][745]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.25.27:116][745]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.25.27:117][745]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.25.27:120][745]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.25.27:123][745]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.25.27:133][745]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2024.04.10-14.25.27:133][745]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.10-14.25.27:135][745]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.10-14.25.27:141][745]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2024.04.10-14.25.27:181][746]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2024.04.10-14.25.33:416][489]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.25.33:440][489]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.25.33:446][489]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.25.33:447][489]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy62E655994E042C8770A674AE88169DF4.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.25.33:451][489]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 916 ms)
+[2024.04.10-14.25.33:452][489]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.25.33:452][489]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.25.33:752][520]BlueprintLog: New page: Compile BP_ShooterEnemy
+[2024.04.10-14.25.33:775][520]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2024.04.10-14.25.47:361][120]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.25.48:832][282]LogEditorClassViewer: Warning: AssetRegistry Blueprint /Game/AI/Tests/BP_ShooterAIController.BP_ShooterAIController is missing tag value for GeneratedClass. Blueprint will not be available to ClassViewer when unloaded.
+[2024.04.10-14.25.53:061][747]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.25.53:080][747]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221
+[2024.04.10-14.25.53:081][747]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/GXZBQK47C1DCG15GHEU221694CBE3E46C92ABE0B6045B2E1DBDEA2.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset'
+[2024.04.10-14.25.53:085][747]LogFileHelpers: InternalPromptForCheckoutAndSave took 23 ms (total: 939 ms)
+[2024.04.10-14.25.53:086][747]AssetCheck: New page: Asset Save: BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-14.25.53:086][747]LogContentValidation: Display: Validating /Game/Jeremy/Blueprints/BP_SpawnPoint.BP_SpawnPoint_C /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1:PersistentLevel.BP_SpawnPoint_C_UAID_581122CD5BFD89EA01_1970892378
+[2024.04.10-14.25.54:433][905]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.25.54:438][905]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.25.54:438][905]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.25.54:440][905]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 2 ms (total: 11 ms)
+[2024.04.10-14.25.54:440][905]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.25.54:440][905]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:25:54)
+[2024.04.10-14.25.54:462][905]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.25.54:467][905]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004769s)
+[2024.04.10-14.25.54:467][905]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004797s)
+[2024.04.10-14.25.54:479][905]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.10-14.25.54:480][905]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.25.54:480][905]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.25.54:480][905]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.25.54:481][905]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.25.54:481][905]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.25.54:481][905]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.25.54:481][905]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.25.54:482][905]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.25.54:482][905]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 400 ms)
+[2024.04.10-14.25.54:482][905]LogPlayLevel: PIE: World Init took: (0.002214s)
+[2024.04.10-14.25.54:482][905]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.25.54:482][905]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.25.54:482][905]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.25.54:482][905]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.25.54:482][905]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.25.54:482][905]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.25.54:484][905]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.25.54:497][905]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.25.54:497][905]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.25.54:497][905]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.25.54:497][905]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.25.54:498][905]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.04.10-14.25.54:498][905]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.04.10-14.25.54:499][905]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.04.10-14.25.54:499][905]LogInit: FAudioDevice initialized with ID 7.
+[2024.04.10-14.25.54:499][905]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.04.10-14.25.54:499][905]LogAudio: Display: Audio Device (ID: 7) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.25.54:499][905]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2024.04.10-14.25.54:501][905]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.25.54:504][905]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.25.54
+[2024.04.10-14.25.54:504][905]LogWorld: Bringing up level for play took: 0.002277
+[2024.04.10-14.25.54:505][905]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2024.04.10-14.25.54:507][905]PIE: Server logged in
+[2024.04.10-14.25.54:507][905]PIE: Play in editor total start time 0,07 seconds.
+[2024.04.10-14.25.54:756][922]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.57:681][273]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 1
+[2024.04.10-14.25.58:607][384]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.58:607][384]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.25.58:799][407]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.58:799][407]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.25.58:799][407]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.25.58:799][407]LogBlueprintUserMessages: [BP_RushEnemy_C_0] 1
+[2024.04.10-14.25.59:274][464]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.59:274][464]LogTemp: Warning: Health left: 10.000000
+[2024.04.10-14.25.59:440][484]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.25.59:440][484]LogTemp: Warning: Health left: 0.000000
+[2024.04.10-14.25.59:441][484]LogTemp: Warning: ENEMY SHOULD DIE
+[2024.04.10-14.25.59:441][484]LogBlueprintUserMessages: [BP_RushEnemy_C_1] 0
+[2024.04.10-14.25.59:441][484]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 2
+[2024.04.10-14.26.01:022][669]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.26.01:022][669]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.26.01:022][669]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.26.01:022][669]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.26.01:023][669]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.26.01:026][669]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.26.01:030][669]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.26.01:039][669]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.26.01:040][669]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2024.04.10-14.26.01:040][669]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.10-14.26.01:041][669]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.10-14.26.01:047][669]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2024.04.10-14.26.01:122][671]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2024.04.10-14.26.27:086][779]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.26.27:183][779]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.26.27:189][779]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.26.27:190][779]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy24D6E01640D37C74114D7DB34F55480B.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.26.27:194][779]LogFileHelpers: InternalPromptForCheckoutAndSave took 108 ms (total: 1.04 sec)
+[2024.04.10-14.26.27:195][779]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.26.27:195][779]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.26.28:629][951]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.26.28:652][951]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.26.28:659][951]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.26.28:660][951]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy610840C240F6966FBECE0EB874A2AF22.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.26.28:664][951]LogFileHelpers: InternalPromptForCheckoutAndSave took 35 ms (total: 1.08 sec)
+[2024.04.10-14.26.28:665][951]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.26.28:666][951]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
+[2024.04.10-14.26.36:623][903]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.10-14.26.36:626][903]LogContentBundle: [Hanna_Louis1(Standalone)] Generating Streaming for 0 Content Bundles.
+[2024.04.10-14.26.36:626][903]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' started...
+[2024.04.10-14.26.36:628][903]LogWorldPartition: Display: GenerateStreaming for 'Hanna_Louis1' took 1 ms (total: 13 ms)
+[2024.04.10-14.26.36:628][903]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.10-14.26.36:628][903]PIE: New page: PIE session: Hanna_Louis1 (10 apr. 2024 18:26:36)
+[2024.04.10-14.26.36:628][903]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.26.36:633][903]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004525s)
+[2024.04.10-14.26.36:633][903]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/Hanna_Louis1.Hanna_Louis1 to /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 (0.004544s)
+[2024.04.10-14.26.36:643][903]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2024.04.10-14.26.36:644][903]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.10-14.26.36:644][903]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.10-14.26.36:645][903]LogAIModule: Creating AISystem for world Hanna_Louis1
+[2024.04.10-14.26.36:645][903]LogWorldPartition: ULevel::OnLevelLoaded(Hanna_Louis1)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2024.04.10-14.26.36:645][903]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.04.10-14.26.36:645][903]LogWorldPartition: UWorldPartition::Initialize : World = Hanna_Louis1, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2024.04.10-14.26.36:645][903]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2024.04.10-14.26.36:646][903]LogContentBundle: [Hanna_Louis1(Standalone)] Creating new contrainer.
+[2024.04.10-14.26.36:646][903]LogWorldPartition: Display: WorldPartition initialize took 1 ms (total: 401 ms)
+[2024.04.10-14.26.36:646][903]LogPlayLevel: PIE: World Init took: (0.002127s)
+[2024.04.10-14.26.36:646][903]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.10-14.26.36:646][903]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.10-14.26.36:646][903]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.10-14.26.36:647][903]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.10-14.26.36:647][903]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.10-14.26.36:647][903]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.10-14.26.36:648][903]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.10-14.26.36:662][903]LogAudioMixer: Display: Using Audio Hardware Device Headset Earphone (HyperX Virtual Surround Sound)
+[2024.04.10-14.26.36:662][903]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.10-14.26.36:662][903]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.10-14.26.36:662][903]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.10-14.26.36:663][903]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.04.10-14.26.36:663][903]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.04.10-14.26.36:664][903]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.04.10-14.26.36:664][903]LogInit: FAudioDevice initialized with ID 8.
+[2024.04.10-14.26.36:664][903]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.04.10-14.26.36:664][903]LogAudio: Display: Audio Device (ID: 8) registered with world 'Hanna_Louis1'.
+[2024.04.10-14.26.36:664][903]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.10-14.26.36:692][903]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.26.36:692][903]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.10-14.26.36:694][903]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1.Hanna_Louis1 up for play (max tick rate 0) at 2024.04.10-16.26.36
+[2024.04.10-14.26.36:695][903]LogWorld: Bringing up level for play took: 0.002318
+[2024.04.10-14.26.36:697][903]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2024.04.10-14.26.36:700][903]PIE: Server logged in
+[2024.04.10-14.26.36:701][903]PIE: Play in editor total start time 0,075 seconds.
+[2024.04.10-14.26.36:707][903]LogViewport: Scene viewport resized to 1280x720, mode Windowed.
+[2024.04.10-14.26.36:997][909]LogTemp: Warning: Trigger has been pulled
+[2024.04.10-14.26.39:787][224]LogBlueprintUserMessages: [BP_SpawnZoneTrigger_C_UAID_581122CD5BFD89EA01_1927761377] Wave 1
+[2024.04.10-14.26.40:851][340]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.10-14.26.40:851][340]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_Hanna_Louis1
+[2024.04.10-14.26.40:852][340]LogSlate: Window 'SPD_Spel1 Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2024.04.10-14.26.40:856][340]LogWorld: UWorld::CleanupWorld for Hanna_Louis1, bSessionEnded=true, bCleanupResources=true
+[2024.04.10-14.26.40:856][340]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.26.40:856][340]LogContentBundle: [Hanna_Louis1(Standalone)] Deleting container.
+[2024.04.10-14.26.40:860][340]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.10-14.26.40:863][340]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.10-14.26.40:873][340]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2024.04.10-14.26.40:873][340]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.10-14.26.40:874][340]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.10-14.26.40:880][340]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2024.04.10-14.26.40:919][343]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2024.04.10-14.26.49:211][334]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.10-14.26.49:231][334]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_ShooterEnemy" FILE="../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset" SILENT=true
+[2024.04.10-14.26.49:237][334]LogSavePackage: Moving output files for package: /Game/AI/BP_ShooterEnemy
+[2024.04.10-14.26.49:237][334]LogSavePackage: Moving '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Saved/BP_ShooterEnemy521F93C444BBA59EB1BC648411D89B4D.tmp' to '../../../../../../Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_ShooterEnemy.uasset'
+[2024.04.10-14.26.49:242][334]LogFileHelpers: InternalPromptForCheckoutAndSave took 30 ms (total: 1.11 sec)
+[2024.04.10-14.26.49:243][334]AssetCheck: New page: Asset Save: BP_ShooterEnemy
+[2024.04.10-14.26.49:243][334]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/AI/BP_ShooterEnemy.BP_ShooterEnemy
