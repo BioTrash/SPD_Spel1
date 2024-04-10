@@ -6,7 +6,6 @@
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 
-//Hanna
 void ARushEnemyAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -22,8 +21,7 @@ void ARushEnemyAIController::BeginPlay()
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	SetFocus(PlayerPawn);
 }
-//Hanna
-//Sätter SetFocus på spelaren i världen, dvs att karakätren vänder på sig baserat på spelarens plats
+
 void ARushEnemyAIController::Tick(float DeltaSeconds)
 {
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
