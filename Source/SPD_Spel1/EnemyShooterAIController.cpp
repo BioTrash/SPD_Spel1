@@ -6,6 +6,8 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
+#include "ShooterEnemy.h"
+#include "Weapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
 {
@@ -35,6 +37,24 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
 	Super::Tick(DeltaSeconds);
 	MoveToActor(PlayerPawn, 500);
+
+	AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
+	if (Enemy)
+	{
+		// Vector from shooter to the player (Louis)
+		FVector DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
+
+		// How much are we to rotate the weapon? (Louis)
+		FRotator WeaponRotation = DirectionToPlayer.Rotation();
+
+		// Point to the enemys weapon (Louis)
+		AWeapon* EnemyWeapon = Enemy->TriggerWeapon;
+		if (EnemyWeapon)
+		{
+			// Start rotating weapon (Louis)
+			EnemyWeapon->SetActorRotation(WeaponRotation);
+		}
+	}
 }
 
 

@@ -95,7 +95,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Shoot()
 {
-	//TriggerWeapon->PullTrigger();
+	TriggerWeapon->PullTrigger();
 }
 
 
