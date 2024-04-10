@@ -9,48 +9,18 @@
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_TestWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_TestWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BP_RushEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BP_RushEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BT_EnemyRushAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BT_EnemyRushAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/AI/BP_RushEnemy_Auto1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/Game/AI/BP_RushEnemy_Auto1.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Bridge.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Bridge.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Compat.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Compat.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ControlRig.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ControlRig.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DatasmithContent.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DatasmithContent.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DeviceProfiles.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/DeviceProfiles.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorScriptingUtilities.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorScriptingUtilities.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EnhancedInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EnhancedInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/FullBodyIK.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/FullBodyIK.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GLTFExporter.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GLTFExporter.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Game.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Game.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Hardware.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Hardware.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/IKRig.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/IKRig.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Input.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Input.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/InstallBundle.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/InstallBundle.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Interchange.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Interchange.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Lightmass.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Lightmass.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Metasound.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Metasound.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Paper2D.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Paper2D.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/RuntimeOptions.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/RuntimeOptions.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Scalability.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Scalability.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/StructUtils.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/StructUtils.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Synthesis.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Synthesis.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ToolPresets.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ToolPresets.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceDataFilters.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceDataFilters.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceUtilities.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/TraceUtilities.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/VariantManagerContent.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/VariantManagerContent.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.07-10.43.54.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.07-11.17.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.09-07.59.37.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,18 +41,21 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2eaWiQM0xPsSH3FAcEtTxJb4CM6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Uproject.SPD_Spel1.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "RufusBranch",
+    "git-widget-placeholder": "HannaBranch",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -94,9 +67,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -108,7 +81,7 @@
         <option name="PLATFORM" value="Win64" />
         <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rutr7079\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\haar9434\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -117,7 +90,7 @@
       <configuration_3>
         <option name="CONFIGURATION" value="DebugGame" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\rutr7079\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
@@ -130,7 +103,7 @@
         <option name="PLATFORM" value="Win64" />
         <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rutr7079\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\haar9434\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -139,7 +112,7 @@
       <configuration_5>
         <option name="CONFIGURATION" value="Development" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\rutr7079\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
@@ -150,7 +123,7 @@
       <configuration_6>
         <option name="CONFIGURATION" value="Shipping" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\rutr7079\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
@@ -185,6 +158,7 @@
       <workItem from="1712314222503" duration="9520000" />
       <workItem from="1712569720146" duration="370000" />
       <workItem from="1712570209259" duration="2232000" />
+      <workItem from="1712662881908" duration="1983000" />
     </task>
     <servers />
   </component>
@@ -192,6 +166,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
