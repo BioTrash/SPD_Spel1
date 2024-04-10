@@ -196,31 +196,34 @@ void APlayerCharacter::Slide()
 	UE_LOG(LogTemp, Warning, TEXT("Sliding called"));
 	//checking if the character is currently grounded and not dashing (Rebecka)
 	if(GetCharacterMovement()->IsMovingOnGround() && !bIsDashing)
-		if(!bIsSliding &&(GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown) {
+		if(!bIsSliding && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown) {
 			{
 				FVector PlayerVelocity = GetCharacterMovement()->Velocity;
-		
-				//reducing the characters capsule by half its height to simulate sliding (Rebecka)
-				GetCapsuleComponent()->SetCapsuleHalfHeight(NewHalfHeight, true);
-
-				//adjust the camera position (Rebecka)
-				if(FPSCamera)
+				if(PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
 				{
-					FVector NewCameraLocation = FPSCamera->GetComponentLocation();
-					NewCameraLocation.Z -= SlideCameraOffset;
-					FPSCamera->SetWorldLocation(NewCameraLocation);
+					//reducing the characters capsule by half its height to simulate sliding (Rebecka)
+					GetCapsuleComponent()->SetCapsuleHalfHeight(NewHalfHeight, true);
+
+					//adjust the camera position (Rebecka)
+					if(FPSCamera)
+					{
+						FVector NewCameraLocation = FPSCamera->GetComponentLocation();
+						NewCameraLocation.Z -= SlideCameraOffset;
+						FPSCamera->SetWorldLocation(NewCameraLocation);
+					}
+					//normalize the slide direction by mulitplying it to the slide speed (Rebecka)
+					FVector SlideDirection = PlayerVelocity.GetSafeNormal() * SlideSpeed;
+
+					//apply slide velocity to the character
+					GetCharacterMovement()->Launch(SlideDirection);
+					GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+
+					bIsSliding = true;
+					LastSlideTime = GetWorld()->GetTimeSeconds();
+
+					//set a timer for how long sliding lasts
+					GetWorldTimerManager().SetTimer(SliderTimerHandle, this, &APlayerCharacter::StopSlide, SlideDuration, false);
 				}
-				//normalize the slide direction by mulitplying it to the slide speed (Rebecka)
-				FVector SlideDirection = PlayerVelocity.GetSafeNormal() * SlideSpeed;
-
-				//apply slide velocity to the character
-				GetCharacterMovement()->Launch(SlideDirection);
-
-				bIsSliding = true;
-				LastSlideTime = GetWorld()->GetTimeSeconds();
-
-				//set a timer for how long sliding lasts
-				GetWorldTimerManager().SetTimer(SliderTimerHandle, this, &APlayerCharacter::StopSlide, SlideDuration, false);
 			}
 		}
 }
