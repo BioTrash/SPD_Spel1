@@ -5,6 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Unreal/SPD_Spel1/Content/Whitebox_Test.umap",
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset",
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset",
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset",
