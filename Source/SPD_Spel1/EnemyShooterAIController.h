@@ -26,5 +26,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+	float LastShotTime = 0.0f;
+
+	// Cooldown duration between shots
+	float ShootCooldown = 0.5f;
 	
 };
