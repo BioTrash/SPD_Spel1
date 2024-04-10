@@ -51,10 +51,6 @@ private:
 
 	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
 	void Shoot();
-
-	// Function and bool is required in order to determine when the player stops shooting continuously (Rufus)
-	void CancelShoot();
-	bool SprayShooting = true;
 	
 	// Required for 'Shoot()'
 	UPROPERTY()
