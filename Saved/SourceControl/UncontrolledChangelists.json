@@ -5,6 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/logu5907/Documents/GitHub/SPD_Spel1/Content/AI/EnemyAI/ShooterEnemy/BT_EnemyShooterAI.uasset",
 				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_PlayerCharacter.uasset",
 				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset"
 			]
