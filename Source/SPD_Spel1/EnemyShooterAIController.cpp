@@ -57,7 +57,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 if (HitResult.GetActor() == PlayerPawn)
                 {
                     // If the ray hits the player, call the pulltrigger function
-                    //Enemy->PullTrigger();
+                    EnemyWeapon->PullTrigger();
                     UE_LOG(LogTemp, Warning, TEXT("GOGOGO"));
 
                 }
