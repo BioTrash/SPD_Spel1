@@ -88,16 +88,29 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	//Binding for dash (Rebecka)
 	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
 	
-	// Below ought to be merged manually into authoritative PlayerCharacter version, same goes fo header (Rufus)
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
+	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
+
+	PlayerInputComponent->BindAction(TEXT("Reload"), EInputEvent::IE_Pressed, this, &APlayerCharacter::ReloadWeapon);
 	
 }
 
 void APlayerCharacter::Shoot()
 {
-	TriggerWeapon->PullTrigger();
+	SprayShooting = true;
+	TriggerWeapon->PullTrigger(SprayShooting);
 }
 
+void APlayerCharacter::CancelShoot()
+{
+	SprayShooting = false;
+	TriggerWeapon->PullTrigger(SprayShooting);
+}
+
+void APlayerCharacter::ReloadWeapon()
+{
+	TriggerWeapon->Reload();
+}
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
