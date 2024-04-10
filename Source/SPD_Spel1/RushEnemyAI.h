@@ -39,9 +39,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
-
+	float MaxTraceDistance = 60.f;
 private:
-	UPROPERTY(VisibleAnywhere)
-	class USphereComponent *CollisionComponent;
+	void PerformLineTrace();
 	
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 };
