@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset",
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset",
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset",
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/9/48/A93T2P6LBUYFHDUPCT73R2.uasset",
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/2/XA/V4482WKJR0D88G3EFD1Q4G.uasset",
+				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset",
 				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/Blueprints/BP_PlayerCharacter.uasset",
 				"C:/Users/haar9434/Documents/GitHub/SPD_Spel1/Content/AI/BP_RushEnemy.uasset"
 			]
