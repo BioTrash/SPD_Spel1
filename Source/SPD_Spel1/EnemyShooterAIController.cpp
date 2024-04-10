@@ -24,6 +24,8 @@ void AEnemyShooterAIController::BeginPlay()
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
+    LastShotTime += DeltaSeconds;
+    
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     if (PlayerPawn != nullptr)
     {
@@ -43,7 +45,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         if (EnemyWeapon)
         {
             EnemyWeapon->SetActorRotation(WeaponRotation);
-
+        if (LastShotTime >= ShootCooldown)
+        {
             // Vectors where trace is happening (Louis)
             FVector StartTrace = EnemyWeapon->GetActorLocation();
             FVector EndTrace = PlayerPawn->GetActorLocation();
@@ -59,12 +62,16 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 // If the ray hits the player, shoot (Louis)
                 if (HitResult.GetActor() == PlayerPawn)
                 {
-                    DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
+                    //DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
                     EnemyWeapon->PullTrigger(true);
+                    DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                     EnemyWeapon->PullTrigger(false);
+
+                    //Resetta timern
+                    LastShotTime = 0.0f;
                 }
             }
-
+        }
             // Visualize the line trace
             
         }
