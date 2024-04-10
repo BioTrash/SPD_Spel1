@@ -88,14 +88,21 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	//Binding for dash (Rebecka)
 	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
 	
-	// Below ought to be merged manually into authoritative PlayerCharacter version, same goes fo header (Rufus)
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
+	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
 	
 }
 
 void APlayerCharacter::Shoot()
 {
-	TriggerWeapon->PullTrigger();
+	SprayShooting = true;
+	TriggerWeapon->PullTrigger(SprayShooting);
+}
+
+void APlayerCharacter::CancelShoot()
+{
+	SprayShooting = false;
+	TriggerWeapon->PullTrigger(SprayShooting);
 }
 
 
