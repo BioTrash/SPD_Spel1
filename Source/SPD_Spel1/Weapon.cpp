@@ -146,7 +146,12 @@ void AWeapon::Reload()
 	}
 
 
-	UE_LOG(LogTemp, Warning, TEXT("Total Ammo: %f, CurrentAmmo: %f"), TotalAmmo, CurrentClip);
+	UE_LOG(LogTemp, Warning, TEXT("Total Ammo: %d, CurrentAmmo: %d"), TotalAmmo, CurrentClip);
+}
+
+FString AWeapon::GetAmmo() const
+{
+	return FString::Printf(TEXT("%d / %d"), TotalAmmo, CurrentClip);
 }
 
 

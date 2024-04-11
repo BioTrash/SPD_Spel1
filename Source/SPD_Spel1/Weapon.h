@@ -29,16 +29,19 @@ public:
 	void PullTrigger(bool SprayShooting);
 
 	void Reload();
+
+	UFUNCTION(BlueprintPure)
+	FString GetAmmo() const;
 	
 private:
 	UPROPERTY(EditAnywhere)
 	bool UnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere)
-	float TotalAmmo;
+	int32 TotalAmmo;
 	UPROPERTY(EditAnywhere)
-	float CurrentClip;
+	int32 CurrentClip;
 	UPROPERTY(EditAnywhere)
-	float ClipSize;
+	int32 ClipSize;
 	
 	UPROPERTY()
 	FVector Location;

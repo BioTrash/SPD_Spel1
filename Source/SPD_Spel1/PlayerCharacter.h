@@ -33,6 +33,9 @@ public:
 	//Taking damage method (Rebecka)
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
+	UFUNCTION(BlueprintPure)
+	AWeapon* GetTriggerWeapon() const;
+
 private:
 	//declaration for method dash (Rebecka)
 	void Dash();
@@ -51,10 +54,17 @@ private:
 
 	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
 	void Shoot();
+
+	// Function and bool is required in order to determine when the player stops shooting continuously (Rufus)
+	void CancelShoot();
+	bool SprayShooting = true;
+
+	// Triggers reloading manually in Weapon.cpp of 'TriggerWeapon'
+	void ReloadWeapon();
 	
 	// Required for 'Shoot()'
 	UPROPERTY()
-	class AWeapon* TriggerWeapon;
+	AWeapon* TriggerWeapon;
 	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
