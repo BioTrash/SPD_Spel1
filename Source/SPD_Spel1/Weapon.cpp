@@ -40,8 +40,8 @@ void AWeapon::PullTrigger()
 	UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
 
 	// Is needed in order to get controller (Rufus)
-	 APawn* OwnerCharacter = Cast<APawn>(GetOwner());
-	 if(!OwnerCharacter) return;
+	APawn* OwnerCharacter = Cast<APawn>(GetOwner());
+	if(!OwnerCharacter) return;
 
 	// Is needed in order to get PlayerViewPort (Rufus)
 	AController* OwnerController = OwnerCharacter->GetController();
@@ -79,7 +79,7 @@ void AWeapon::PullTrigger()
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
 
-//NEW CHANGES; CAN REMOVE IF NOT WORKING
+			//NEW CHANGES; CAN REMOVE IF NOT WORKING
 			AActor* HitActor = Hit.GetActor();
 			//if we hit an actor, we make the actor take damage (Rebecka)
 			if(HitActor != nullptr)
@@ -90,6 +90,7 @@ void AWeapon::PullTrigger()
 		}
 	}
 }
+
 
 
 
