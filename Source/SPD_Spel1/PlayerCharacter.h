@@ -95,20 +95,20 @@ private:
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.45f;
+	float AirDashMultiplier = 0.50f;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
 	//how much the characters capsule gets rid of (Rebecka)
-	float NewHalfHeight = 50.f;
+	float NewHalfHeight = 10.f;
 	//keeping track of when the slide happened last (Rebecka)
 	float LastSlideTime = 0.0f;
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 50.f;
+	float SlideCameraOffset = 10.f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;

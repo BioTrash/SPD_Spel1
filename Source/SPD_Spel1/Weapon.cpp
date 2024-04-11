@@ -107,8 +107,13 @@ void AWeapon::ShootWithoutProjectile()
 				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
 				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
 			}
-
+			
 			CurrentClip--;
+			
+			if(CurrentClip == 0)
+			{
+				Reload();
+			}
 		}
 		else
 		{
