@@ -3,7 +3,7 @@
 
 #include "RushEnemyAI.h"
 #include "PlayerCharacter.h"
-#include "PlayerCharacter.h"
+#include "Components/SphereComponent.h"
 
 // Sets default values
 ARushEnemyAI::ARushEnemyAI()
@@ -11,6 +11,10 @@ ARushEnemyAI::ARushEnemyAI()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//Skapar en collisioncomponent(Hanna)
+	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
+	CollisionComponent->SetupAttachment(RootComponent);
+	CollisionComponent->SetSphereRadius(50.f);
 }
 
 // Called when the game starts or when spawned
@@ -24,7 +28,22 @@ void ARushEnemyAI::BeginPlay()
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+	/*TArray<AActor> OverlappingActor;
+	CollisionComponent->GetOverlappingActors(OverlappingActors, APlayerCharacter::StaticClass());
+
+	for(AActor OverlappingActor:OverlappingActors)
+	{
+		APlayerCharacter* Player = Cast<APlayerCharacter>(OverlappingActor);
+		if (Player)
+		{
+			Player->TakeDamage(DamageAmount, FDamageEvent(), GetController(), this);
+			break; 
+		}
+	}*/
+	if(Health <= 0)
+	{
+		KillEnemy();
+	}
 }
 
 // Called to bind functionality to input
@@ -47,33 +66,8 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 void ARushEnemyAI::KillEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	
+	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
+	OnEnemyDeath();
 	Destroy();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
