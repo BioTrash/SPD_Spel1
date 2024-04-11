@@ -35,13 +35,5 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	float Health;
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
-	void OnEnemyDeath();
-	
-
-private:
-	UPROPERTY(VisibleAnywhere)
-	class USphereComponent *CollisionComponent;
 	
 };
