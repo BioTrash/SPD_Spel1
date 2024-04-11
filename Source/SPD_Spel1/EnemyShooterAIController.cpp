@@ -60,8 +60,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 if (HitResult.GetActor() == PlayerPawn)
                 {
                     DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
-                    EnemyWeapon->PullTrigger();
-                    EnemyWeapon->PullTrigger();
+                    EnemyWeapon->PullTrigger(true);
+                    EnemyWeapon->PullTrigger(true);
                 }
             }
 

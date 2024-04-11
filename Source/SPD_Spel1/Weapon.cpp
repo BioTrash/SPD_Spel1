@@ -97,7 +97,7 @@ void AWeapon::ShootWithoutProjectile()
 	{
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
-			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
+			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
 			AActor* HitActor = Hit.GetActor();
