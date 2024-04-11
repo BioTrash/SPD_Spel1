@@ -9,37 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemyWaveSpawner.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemyWaveSpawner.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Pickup.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Pickup.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPoint.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/TestMapJeremy.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/TestMapJeremy.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_EnemyCountTestJeremy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_HealthTestJeremy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Test.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/1/XS/ON2SB8S65J2IERDDJUTJH2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/1/XS/ON2SB8S65J2IERDDJUTJH2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/2/N1/OF3CCTUU40A3V2QDR0CTV3.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/2/OS/8BZYAUL5B6XG7K10FUTFL2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/2/OS/8BZYAUL5B6XG7K10FUTFL2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/4/YJ/7KDC3SYIW5SB1XDFEFY95B.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/0U/RSCB26XHAAB73E5AIM36NW.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/26/T1VTFDBUA2XZ8N8RAJZ6CY.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/7S/6793RTBQ8BMZTCSZG4YXNY.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/6/DY/T2GKTF6PNZASY7HMFAG7BR.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/8/1C/3JE4YUM1Q10ENC4F4W4XW8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/8/MI/UJU0KVCJUAG09RVZHGHDWT.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/9/GX/ZRHFYI63GIG20NMQWUKJUN.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/9/GX/ZRHFYI63GIG20NMQWUKJUN.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/CK/1A4KHQ5T8KM9NZBZXBGVDU.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/B/GD/ZU29CG0TWO607CY9V7YIFS.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Jeremy/TestMapJeremy/E/1Y/VJ6CEFVVY4SYC619L82XMG.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalObjects__/Jeremy/TestMapJeremy/C/6H/QEH54XZPFH25YO6WDIOXL0.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/1599092374.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WorldState/1599092374.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/953026618.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WorldState/953026618.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1-backup-2024.04.09-06.55.26.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/SPD_Spel1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Uproject.SPD_Spel1.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "JeremyBranch",
+    "git-widget-placeholder": "JeremyBranch2",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -183,6 +153,7 @@
       <workItem from="1712662881908" duration="1983000" />
       <workItem from="1712748623101" duration="2659000" />
       <workItem from="1712759504154" duration="615000" />
+      <workItem from="1712823852393" duration="312000" />
     </task>
     <servers />
   </component>
