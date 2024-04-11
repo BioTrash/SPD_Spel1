@@ -5,6 +5,16 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+<<<<<<< HEAD
+=======
+				"C:/SchoolWork/SPM/SPD_Spel1/Content/AI/BP_RushEnemy.uasset",
+				"C:/SchoolWork/SPM/SPD_Spel1/Content/Whitebox_Lit1.umap",
+				"C:/SchoolWork/SPM/SPD_Spel1/Content/Effects/NS_Trail.uasset",
+				"C:/Users/olno8904/SPD_Spel1/Content/StarterContent/Props/MaterialSphere.uasset",
+				"C:/Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap",
+				"C:/Users/olno8904/SPD_Spel1/Content/_GENERATED/olno8904/Box_4B214E63.uasset",
+				"C:/Unreal/SPD_Spel1/Content/Whitebox_Test.umap",
+>>>>>>> main
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/E2/GXZBQK47C1DCG15GHEU221.uasset",
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_SpawnZoneTrigger.uasset",
 				"C:/Users/jeva3947/Documents/GitHub/SPD_Spel1/Content/Jeremy/Blueprints/BP_EnemyTesting.uasset",
