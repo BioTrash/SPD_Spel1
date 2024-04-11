@@ -3963,3 +3963,485 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.04.11-08.23.08:646][702]LogFileHelpers: InternalPromptForCheckoutAndSave took 882 ms (total: 5.75 sec)
 [2024.04.11-08.23.08:664][702]AssetCheck: New page: Asset Save: Whitebox_Test
 [2024.04.11-08.23.08:664][702]LogContentValidation: Display: Validating /Script/Engine.World /Game/Whitebox_Test.Whitebox_Test
+[2024.04.11-08.24.21:032][235]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.11-08.24.21:190][235]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.24.21:239][235]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Whitebox_Lit.Whitebox_Lit
+[2024.04.11-08.24.21:240][235]Cmd: MAP LOAD FILE="../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Lit.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2024.04.11-08.24.21:240][235]LightingResults: New page: Lighting Build
+[2024.04.11-08.24.21:242][235]LoadErrors: New page: Loading map: Whitebox_Lit.umap
+[2024.04.11-08.24.21:317][235]LogWorld: UWorld::CleanupWorld for Whitebox_Test, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.24.21:370][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.24.21:371][235]MapCheck: New page: Map Check
+[2024.04.11-08.24.21:371][235]LightingResults: New page: Lighting Build
+[2024.04.11-08.24.21:413][235]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.11-08.24.21:444][235]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2024.04.11-08.24.21:462][235]LogWorld: UWorld::CleanupWorld for Whitebox_Lit, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.24.21:466][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.24.21:484][235]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2024.04.11-08.24.21:491][235]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2024.04.11-08.24.21:599][235]LogAudio: Display: Audio Device (ID: 1) registered with world 'Whitebox_Lit'.
+[2024.04.11-08.24.21:599][235]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.24.21:599][235]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.11-08.24.21:599][235]LogAIModule: Creating AISystem for world Whitebox_Lit
+[2024.04.11-08.24.21:711][235]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2024.04.11-08.24.21:733][235]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2024.04.11-08.24.21:738][235]Cmd: MAP CHECKDEP NOCLEARLOG
+[2024.04.11-08.24.21:738][235]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,351ms to complete.
+[2024.04.11-08.24.21:785][235]LogViewport: Scene viewport resized to 2038x1252, mode Windowed.
+[2024.04.11-08.32.56:279][558]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.11-08.32.56:283][558]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.11-08.32.56:283][558]PIE: New page: PIE session: Whitebox_Lit (11 apr. 2024 12:32:56)
+[2024.04.11-08.32.56:283][558]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Whitebox_Lit
+[2024.04.11-08.32.56:413][558]LogPlayLevel: PIE: StaticDuplicateObject took: (0.129149s)
+[2024.04.11-08.32.56:413][558]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Whitebox_Lit.Whitebox_Lit to /Game/UEDPIE_0_Whitebox_Lit.Whitebox_Lit (0.129197s)
+[2024.04.11-08.32.56:418][558]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2024.04.11-08.32.56:420][558]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.32.56:420][558]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.11-08.32.56:421][558]LogAIModule: Creating AISystem for world Whitebox_Lit
+[2024.04.11-08.32.56:421][558]LogPlayLevel: PIE: World Init took: (0.001575s)
+[2024.04.11-08.32.56:422][558]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.11-08.32.56:422][558]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.11-08.32.56:422][558]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.11-08.32.56:422][558]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.11-08.32.56:422][558]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.11-08.32.56:422][558]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.11-08.32.56:425][558]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.11-08.32.56:440][558]LogAudioMixer: Display: Using Audio Hardware Device Headphones (High Definition Audio Device)
+[2024.04.11-08.32.56:442][558]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.11-08.32.56:442][558]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.11-08.32.56:442][558]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.11-08.32.56:442][558]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2024.04.11-08.32.56:442][558]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2024.04.11-08.32.56:444][558]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2024.04.11-08.32.56:444][558]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2024.04.11-08.32.56:444][558]LogInit: FAudioDevice initialized with ID 10.
+[2024.04.11-08.32.56:444][558]LogAudio: Display: Audio Device (ID: 10) registered with world 'Whitebox_Lit'.
+[2024.04.11-08.32.56:444][558]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.11-08.32.56:448][558]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.11-08.32.56:516][558]LogWorld: Bringing World /Game/UEDPIE_0_Whitebox_Lit.Whitebox_Lit up for play (max tick rate 0) at 2024.04.11-10.32.56
+[2024.04.11-08.32.56:517][558]LogWorld: Bringing up level for play took: 0.067995
+[2024.04.11-08.32.56:519][558]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2024.04.11-08.32.56:523][558]PIE: Server logged in
+[2024.04.11-08.32.56:524][558]PIE: Play in editor total start time 0,241 seconds.
+[2024.04.11-08.32.56:747][567]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.04:846][214]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.32:980][946]LogTemp: Warning: Dash called
+[2024.04.11-08.33.36:040][240]LogTemp: Warning: Dash called
+[2024.04.11-08.33.36:488][287]LogTemp: Warning: Dash called
+[2024.04.11-08.33.37:824][414]LogTemp: Warning: Dash called
+[2024.04.11-08.33.38:045][437]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.38:428][478]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.38:613][497]LogTemp: Warning: Dash called
+[2024.04.11-08.33.38:741][510]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.39:795][618]LogTemp: Warning: Dash called
+[2024.04.11-08.33.41:790][801]LogTemp: Warning: Dash called
+[2024.04.11-08.33.42:022][821]LogTemp: Warning: Dash called
+[2024.04.11-08.33.43:125][917]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.43:145][919]LogTemp: Warning: Dash called
+[2024.04.11-08.33.43:637][965]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.43:752][976]LogTemp: Warning: Dash called
+[2024.04.11-08.33.43:786][979]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.43:952][995]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.44:005][  0]LogTemp: Warning: Dash called
+[2024.04.11-08.33.44:111][ 10]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.44:289][ 27]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.44:468][ 44]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.44:730][ 70]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.44:963][ 94]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.45:190][117]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.45:355][134]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.45:520][151]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.45:682][168]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.45:867][187]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:040][205]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:192][221]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:335][236]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:503][253]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:722][276]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.46:918][296]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:111][316]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:288][334]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:453][351]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:647][370]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:800][386]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.47:958][401]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.48:130][416]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.48:292][430]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.48:360][436]LogTemp: Warning: Dash called
+[2024.04.11-08.33.48:443][443]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.48:568][454]LogTemp: Warning: Dash called
+[2024.04.11-08.33.48:615][458]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.48:757][470]LogTemp: Warning: Dash called
+[2024.04.11-08.33.48:782][472]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.56:915][670]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.33.58:311][783]LogTemp: Warning: Dash called
+[2024.04.11-08.34.03:597][313]LogTemp: Warning: Dash called
+[2024.04.11-08.34.03:800][332]LogTemp: Warning: Dash called
+[2024.04.11-08.34.03:982][350]LogTemp: Warning: Dash called
+[2024.04.11-08.34.09:914][916]LogTemp: Warning: Dash called
+[2024.04.11-08.34.10:096][933]LogTemp: Warning: Dash called
+[2024.04.11-08.34.10:268][949]LogTemp: Warning: Dash called
+[2024.04.11-08.34.12:876][188]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.34.13:092][206]LogTemp: Warning: Dash called
+[2024.04.11-08.34.13:493][240]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.34.16:479][359]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.34.45:073][218]LogTemp: Warning: Dash called
+[2024.04.11-08.34.47:666][476]LogTemp: Warning: Dash called
+[2024.04.11-08.35.00:185][642]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.01:377][738]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.01:386][739]LogTemp: Warning: Dash called
+[2024.04.11-08.35.01:531][754]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.02:299][834]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.02:505][855]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.02:724][877]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:043][907]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:206][922]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:358][936]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:525][952]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:679][968]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:834][984]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.03:988][999]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.04:140][ 13]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.35.05:404][136]LogTemp: Warning: Dash called
+[2024.04.11-08.35.07:265][294]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.11-08.35.07:265][294]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Whitebox_Lit
+[2024.04.11-08.35.07:266][294]LogWorld: UWorld::CleanupWorld for Whitebox_Lit, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.35.07:274][294]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.35.07:278][294]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.11-08.35.07:283][294]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.35.07:287][294]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.11-08.35.07:297][294]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2024.04.11-08.35.07:297][294]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.11-08.35.07:299][294]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.11-08.35.07:319][294]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.04.11-08.35.07:355][295]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2024.04.11-08.41.17:930][904]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@2] File [Scalability]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.SkeletalMeshLODBias:0]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.ViewDistanceScale:0.8]]
+[2024.04.11-08.41.17:930][904]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@2] File [Scalability]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.FXAA.Quality:3]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.TSR.History.UpdateQuality:2]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.TSR.ShadingRejection.Flickering:1]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.TSR.ShadingRejection.TileOverscan:3]]
+[2024.04.11-08.41.17:930][904]LogConfig: CVar [[r.TSR.Velocity.Extrapolation:0]] deferred - dummy variable created
+[2024.04.11-08.41.17:930][904]LogConfig: Applying CVar settings from Section [ShadowQuality@2] File [Scalability]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.ShadowQuality:5]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.CSM.MaxCascades:4]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.RadiusThreshold:0.04]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.DistanceScale:0.85]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.CSM.TransitionScale:0.8]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.DistanceFieldShadowing:1]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.VolumetricFog:1]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.LightMaxDrawDistanceScale:1]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.MaxPhysicalPages:2048]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectional:-0.5]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:-0.5]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocal:0.0]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocalMoving:1.0]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountDirectional:8]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:4]]
+[2024.04.11-08.41.17:930][904]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountLocal:8]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayLocal:4]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [GlobalIlluminationQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Lumen.DiffuseIndirect.Allow:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [ReflectionQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Lumen.Reflections.Allow:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [PostProcessQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.MotionBlur.HalfResGather:0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.AmbientOcclusionMipLevelFactor:0.6]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DepthOfFieldQuality:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.RenderTargetPoolMin:400]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.LensFlareQuality:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SceneColorFringeQuality:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.BloomQuality:5]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Bloom.ScreenPercentage:50.000]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.FastBlurThreshold:3]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.LightShaftQuality:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Filter.SizeScale:0.8]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Tonemapper.Quality:5]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DOF.Scatter.BackgroundCompositing:1    ; no background occlusion]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DOF.Kernel.MaxForegroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [TextureQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Streaming.MipBias:0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.MaxAnisotropy:4]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.VT.MaxAnisotropy:8]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.Streaming.PoolSize:800]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [EffectsQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.TranslucencyLightingVolumeDim:48]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.RefractionQuality:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.TranslucencyVolumeBlur:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SSS.Scale:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SSS.SampleSet:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SSS.Quality:-1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SSGI.Quality:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.EmitterSpawnRateScale:0.5]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.ParticleLightQuality:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:64.0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMax:64.0]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[fx.Niagara.QualityLevel:2]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [FoliageQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[foliage.DensityScale:0.8]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[grass.DensityScale:0.8]]
+[2024.04.11-08.41.17:931][904]LogConfig: Applying CVar settings from Section [ShadingQuality@2] File [Scalability]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2024.04.11-08.41.17:931][904]LogConfig: Set CVar [[r.AnisotropicMaterials:1]]
+[2024.04.11-08.41.17:949][904]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.04.11-08.41.17:999][906]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.04.11-08.41.18:102][907]LogContentStreaming: Texture pool size now 800 MB
+[2024.04.11-08.41.26:518][491]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.SkeletalMeshLODBias:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.ViewDistanceScale:0.6]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.FXAA.Quality:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.TSR.History.UpdateQuality:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.TSR.ShadingRejection.Flickering:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.TSR.ShadingRejection.TileOverscan:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: CVar [[r.TSR.Velocity.Extrapolation:0]] deferred - dummy variable created
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [ShadowQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.ShadowQuality:3]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.CSM.MaxCascades:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.MaxCSMResolution:1024]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.RadiusThreshold:0.05]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.DistanceScale:0.7]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.CSM.TransitionScale:0.25]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DistanceFieldShadowing:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.VolumetricFog:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.LightMaxDrawDistanceScale:.5]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.MaxPhysicalPages:512]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectional:0.0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasDirectionalMoving:0.0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocal:1.0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.ResolutionLodBiasLocalMoving:2.0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountDirectional:4]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayDirectional:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.RayCountLocal:4]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Shadow.Virtual.SMRT.SamplesPerRayLocal:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [GlobalIlluminationQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Lumen.DiffuseIndirect.Allow:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [ReflectionQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Lumen.Reflections.Allow:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [PostProcessQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.MotionBlur.HalfResGather:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.AmbientOcclusionMipLevelFactor:1.0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.AmbientOcclusionMaxQuality:60]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DepthOfFieldQuality:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.RenderTargetPoolMin:350]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.LensFlareQuality:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.SceneColorFringeQuality:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.BloomQuality:4]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Bloom.ScreenPercentage:35.355]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.FastBlurThreshold:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.LightShaftQuality:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Filter.SizeScale:0.7]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Tonemapper.Quality:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DOF.Gather.RingCount:3                 ; low number of samples when gathering]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DOF.Scatter.ForegroundCompositing:0    ; no foreground scattering]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DOF.Scatter.BackgroundCompositing:0    ; no foreground scattering]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DOF.Kernel.MaxForegroundRadius:0.006   ; required because low gathering and no scattering and not looking great at 1080p]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.006   ; required because low gathering and no scattering and not looking great at 1080p]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [TextureQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Streaming.MipBias:1]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.MaxAnisotropy:2]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.VT.MaxAnisotropy:4]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.Streaming.PoolSize:600]]
+[2024.04.11-08.41.26:519][491]LogConfig: Applying CVar settings from Section [EffectsQuality@1] File [Scalability]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.TranslucencyLightingVolumeDim:32]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.RefractionQuality:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.TranslucencyVolumeBlur:0]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.MaterialQualityLevel:2 ; Medium quality]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.SSS.Scale:0.75]]
+[2024.04.11-08.41.26:519][491]LogConfig: Set CVar [[r.SSS.SampleSet:0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SSS.Quality:0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SSGI.Quality:1]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.EmitterSpawnRateScale:0.25]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.ParticleLightQuality:0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:1]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.SkyLight.RealTimeReflectionCapture:0]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[fx.Niagara.QualityLevel:1]]
+[2024.04.11-08.41.26:520][491]LogConfig: Applying CVar settings from Section [FoliageQuality@1] File [Scalability]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[foliage.DensityScale:0.4]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[grass.DensityScale:0.4]]
+[2024.04.11-08.41.26:520][491]LogConfig: Applying CVar settings from Section [ShadingQuality@1] File [Scalability]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:1]]
+[2024.04.11-08.41.26:520][491]LogConfig: Set CVar [[r.AnisotropicMaterials:0]]
+[2024.04.11-08.41.26:542][491]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2024.04.11-08.41.26:590][493]LogRenderer: Display: Recreating Shadow.Virtual.PhysicalPagePool due to size or flags change. This will also drop any cached pages.
+[2024.04.11-08.41.26:687][495]LogContentStreaming: Texture pool size now 600 MB
+[2024.04.11-08.41.40:511][606]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2024.04.11-08.41.40:788][606]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.41.40:882][606]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Whitebox_Test.Whitebox_Test
+[2024.04.11-08.41.40:882][606]Cmd: MAP LOAD FILE="../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2024.04.11-08.41.40:882][606]LightingResults: New page: Lighting Build
+[2024.04.11-08.41.40:882][606]LoadErrors: New page: Loading map: Whitebox_Test.umap
+[2024.04.11-08.41.40:909][606]LogWorld: UWorld::CleanupWorld for Whitebox_Lit, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.41.40:910][606]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.41.40:911][606]MapCheck: New page: Map Check
+[2024.04.11-08.41.40:911][606]LightingResults: New page: Lighting Build
+[2024.04.11-08.41.40:954][606]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.11-08.41.40:981][606]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2024.04.11-08.41.40:992][606]LogWorld: UWorld::CleanupWorld for Whitebox_Test, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.41.41:001][606]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.41.41:033][606]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2024.04.11-08.41.41:039][606]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2024.04.11-08.41.41:255][606]LogAudio: Display: Audio Device (ID: 1) registered with world 'Whitebox_Test'.
+[2024.04.11-08.41.41:255][606]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.41.41:255][606]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.11-08.41.41:256][606]LogAIModule: Creating AISystem for world Whitebox_Test
+[2024.04.11-08.41.41:456][606]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2024.04.11-08.41.41:498][606]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2024.04.11-08.41.41:501][606]Cmd: MAP CHECKDEP NOCLEARLOG
+[2024.04.11-08.41.41:502][606]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,59ms to complete.
+[2024.04.11-08.44.10:748][461]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.11-08.44.10:802][461]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Whitebox_Test" FILE="../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.04.11-08.44.10:814][461]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2024.04.11-08.44.11:566][461]LogSavePackage: Moving output files for package: /Game/Whitebox_Test
+[2024.04.11-08.44.11:566][461]LogSavePackage: Moving '../../../../../../Users/olno8904/SPD_Spel1/Saved/Whitebox_TestDC524D434364EAE775455F91A761D74A.tmp' to '../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap'
+[2024.04.11-08.44.11:585][461]LogFileHelpers: Saving map 'Whitebox_Test' took 0.786
+[2024.04.11-08.44.11:599][461]LogFileHelpers: InternalPromptForCheckoutAndSave took 850 ms (total: 6.60 sec)
+[2024.04.11-08.44.11:615][461]AssetCheck: New page: Asset Save: Whitebox_Test
+[2024.04.11-08.44.11:615][461]LogContentValidation: Display: Validating /Script/Engine.World /Game/Whitebox_Test.Whitebox_Test
+[2024.04.11-08.44.20:009][400]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.04.11-08.44.20:012][400]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.11-08.44.20:012][400]PIE: New page: PIE session: Whitebox_Test (11 apr. 2024 12:44:20)
+[2024.04.11-08.44.20:034][400]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_Whitebox_Test
+[2024.04.11-08.44.20:281][400]LogPlayLevel: PIE: StaticDuplicateObject took: (0.247191s)
+[2024.04.11-08.44.20:281][400]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Whitebox_Test.Whitebox_Test to /Game/UEDPIE_0_Whitebox_Test.Whitebox_Test (0.247246s)
+[2024.04.11-08.44.20:287][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2024.04.11-08.44.20:287][400]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.04.11-08.44.20:287][400]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.11-08.44.20:288][400]LogAIModule: Creating AISystem for world Whitebox_Test
+[2024.04.11-08.44.20:289][400]LogPlayLevel: PIE: World Init took: (0.001696s)
+[2024.04.11-08.44.20:289][400]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2024.04.11-08.44.20:289][400]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.11-08.44.20:289][400]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.11-08.44.20:289][400]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.11-08.44.20:289][400]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.11-08.44.20:290][400]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.11-08.44.20:292][400]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.11-08.44.20:308][400]LogAudioMixer: Display: Using Audio Hardware Device Headphones (High Definition Audio Device)
+[2024.04.11-08.44.20:308][400]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.11-08.44.20:308][400]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.11-08.44.20:308][400]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.11-08.44.20:309][400]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2024.04.11-08.44.20:309][400]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2024.04.11-08.44.20:311][400]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2024.04.11-08.44.20:311][400]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2024.04.11-08.44.20:311][400]LogInit: FAudioDevice initialized with ID 11.
+[2024.04.11-08.44.20:311][400]LogAudio: Display: Audio Device (ID: 11) registered with world 'Whitebox_Test'.
+[2024.04.11-08.44.20:311][400]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.11-08.44.20:315][400]LogLoad: Game class is 'BP_Spel1GameMode_C'
+[2024.04.11-08.44.20:453][400]LogWorld: Bringing World /Game/UEDPIE_0_Whitebox_Test.Whitebox_Test up for play (max tick rate 0) at 2024.04.11-10.44.20
+[2024.04.11-08.44.20:454][400]LogWorld: Bringing up level for play took: 0.139058
+[2024.04.11-08.44.20:456][400]LogOnline: OSS: Created online subsystem instance for: :Context_12
+[2024.04.11-08.44.20:461][400]PIE: Server logged in
+[2024.04.11-08.44.20:464][400]PIE: Play in editor total start time 0,45 seconds.
+[2024.04.11-08.44.21:688][529]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.44.23:290][721]LogTemp: Warning: Dash called
+[2024.04.11-08.44.25:759][ 17]LogTemp: Warning: Dash called
+[2024.04.11-08.44.29:935][517]LogTemp: Warning: Dash called
+[2024.04.11-08.44.32:372][809]LogTemp: Warning: Dash called
+[2024.04.11-08.44.43:429][131]LogTemp: Warning: Dash called
+[2024.04.11-08.44.44:761][290]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.44.45:246][348]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.44.45:432][370]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.44.48:189][700]LogTemp: Warning: Dash called
+[2024.04.11-08.44.50:515][977]LogTemp: Warning: Dash called
+[2024.04.11-08.45.11:716][512]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.12:075][555]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.16:030][ 28]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.16:976][141]LogTemp: Warning: Dash called
+[2024.04.11-08.45.24:688][ 63]LogTemp: Warning: Dash called
+[2024.04.11-08.45.25:530][163]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.25:830][199]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.25:981][217]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.26:131][235]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.26:282][253]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.28:440][511]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.28:608][531]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.28:766][550]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.28:941][571]LogTemp: Warning: Trigger has been pulled
+[2024.04.11-08.45.29:265][610]LogTemp: Warning: Dash called
+[2024.04.11-08.45.31:696][901]LogTemp: Warning: Dash called
+[2024.04.11-08.45.33:335][ 94]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.11-08.45.33:335][ 94]LogWorld: BeginTearingDown for /Game/UEDPIE_0_Whitebox_Test
+[2024.04.11-08.45.33:337][ 94]LogWorld: UWorld::CleanupWorld for Whitebox_Test, bSessionEnded=true, bCleanupResources=true
+[2024.04.11-08.45.33:354][ 94]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.45.33:358][ 94]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.11-08.45.33:364][ 94]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.11-08.45.33:370][ 94]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.11-08.45.33:381][ 94]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2024.04.11-08.45.33:381][ 94]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.11-08.45.33:384][ 94]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2024.04.11-08.45.33:421][ 94]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2024.04.11-08.45.33:473][ 95]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2024.04.11-08.45.34:074][164]Cmd: SELECT NONE
+[2024.04.11-08.45.34:325][194]Cmd: SELECT NONE
+[2024.04.11-08.45.34:325][194]LogEditorBookmarks: Warning: FBookmarkTypeToolsImpl::JumpToBookmark - Null Bookmark at index 1
+[2024.04.11-08.45.34:650][233]Cmd: SELECT NONE
+[2024.04.11-08.45.34:717][241]Cmd: SELECT NONE
+[2024.04.11-08.49.08:470][767]LogDerivedDataCache: C:/Users/olno8904/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.074 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1302 files in 2171 folders with total size 101 MiB.
+[2024.04.11-08.49.12:854][264]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.04.11-08.49.12:917][264]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Whitebox_Test" FILE="../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2024.04.11-08.49.12:930][264]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2024.04.11-08.49.13:684][264]LogSavePackage: Moving output files for package: /Game/Whitebox_Test
+[2024.04.11-08.49.13:685][264]LogSavePackage: Moving '../../../../../../Users/olno8904/SPD_Spel1/Saved/Whitebox_Test7227F33648E163574AAFAB981EAFF316.tmp' to '../../../../../../Users/olno8904/SPD_Spel1/Content/Whitebox_Test.umap'
+[2024.04.11-08.49.13:705][264]LogFileHelpers: Saving map 'Whitebox_Test' took 0.791
+[2024.04.11-08.49.13:714][264]LogFileHelpers: InternalPromptForCheckoutAndSave took 860 ms (total: 7.46 sec)
+[2024.04.11-08.49.13:731][264]AssetCheck: New page: Asset Save: Whitebox_Test
+[2024.04.11-08.49.13:731][264]LogContentValidation: Display: Validating /Script/Engine.World /Game/Whitebox_Test.Whitebox_Test
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: ================================================
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Total job queries 7 541, among them cache hits 23 (0.30%)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Tracking 7 511 distinct input hashes that result in 5 491 distinct outputs (73.11%)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: RAM used: 114,29 MiB of 1,60 GiB budget. Usage: 6.98%
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Shaders Compiled: 7 511
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Jobs assigned 7 513, completed 7 511 (99.97%)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Average time worker was idle: 35.94 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Time job spent in pending queue: average 54.93 s, longest 122.88 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Job execution time: average 2.62 s, max 29.36 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Job life time (pending + execution): average 57.56 s, max 126.00
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Shader code size: average 31,98 KiB, min 2,078 KiB, max 454,4 KiB
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 137.34 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Jobs were issued in 903 batches (only local compilation was used), average 8.32 jobs/batch
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Average processing rate: 54.69 jobs/sec
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Total thread time: 1 985,853 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Total thread preprocess time: 131,959 s
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Percentage time preprocessing: 6.64%
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Effective parallelization: 14.46 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display:                                               FPathTracingRG (compiled    4 times, average 22.12 sec, max 28.32 sec, min 16.79 sec)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display:                                   FSSDTemporalAccumulationCS (compiled   10 times, average 4.20 sec, max 5.11 sec, min 2.77 sec)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display:                                          FClusteredShadingPS (compiled    4 times, average 3.80 sec, max 6.85 sec, min 1.26 sec)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display:                                          FTSRRejectShadingCS (compiled   12 times, average 3.76 sec, max 7.22 sec, min 0.59 sec)
+[2024.04.11-09.29.13:426][ 30]LogShaderCompilers: Display:                                    FRayTracingReflectionsRGS (compiled   48 times, average 2.21 sec, max 2.78 sec, min 1.73 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display:                                             FDeferredLightPS - 7.97% of total time (compiled  134 times, average 1.18 sec, max 2.15 sec, min 0.91 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display:                                    FRayTracingReflectionsRGS - 5.34% of total time (compiled   48 times, average 2.21 sec, max 2.78 sec, min 1.73 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display:                                                FOcclusionRGS - 4.48% of total time (compiled  192 times, average 0.46 sec, max 0.87 sec, min 0.20 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display:                                               FPathTracingRG - 4.46% of total time (compiled    4 times, average 22.12 sec, max 28.32 sec, min 16.79 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display:                              FVolumetricFogLightScatteringCS - 4.20% of total time (compiled  256 times, average 0.33 sec, max 0.95 sec, min 0.20 sec)
+[2024.04.11-09.29.13:427][ 30]LogShaderCompilers: Display: ================================================
+[2024.04.11-09.32.39:316][383]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
