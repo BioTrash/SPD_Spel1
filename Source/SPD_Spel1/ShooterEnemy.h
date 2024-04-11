@@ -20,24 +20,31 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	void TimeToFire();
-
-	void KillEnemy();
 	
+	void KillEnemy();
+
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 100;
-	
+
 	UPROPERTY(VisibleAnywhere)
 	float Health;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	TSubclassOf<AWeapon> WeaponClass;
+
+	UPROPERTY(EditAnywhere)
+	class AWeapon* TriggerWeapon;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
+	void OnEnemyDeath();
 	
 
 
