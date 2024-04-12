@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "EnemyShooterAIController.h"
+
+#include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
@@ -60,9 +62,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
             {
                 // If the ray hits the player, shoot (Louis)
-                if (HitResult.GetActor() == PlayerPawn)
+                if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                 {
-                    //DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
                     EnemyWeapon->PullTrigger(true);
                     DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                     EnemyWeapon->PullTrigger(false);
