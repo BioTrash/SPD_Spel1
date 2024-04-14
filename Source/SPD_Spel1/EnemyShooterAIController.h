@@ -14,7 +14,7 @@ class SPD_SPEL1_API AEnemyShooterAIController : public AAIController
 {
 	GENERATED_BODY()
 
-	public:
+public:
 
 	virtual void Tick(float DeltaSeconds) override;
 	
@@ -26,5 +26,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+	float LastShotTime = 0.0f;
+
+	// Cooldown duration between shots
+	float ShootCooldown = 0.5f;
 	
 };
