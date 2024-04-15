@@ -5,18 +5,17 @@
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStaticsTypes.h"
 
-// Sets default values
 ARushEnemyAI::ARushEnemyAI()
 {
 	PrimaryActorTick.bCanEverTick = true;
-}	
+}
+
 void ARushEnemyAI::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
 }
 
-// Called every frame
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -27,11 +26,11 @@ void ARushEnemyAI::Tick(float DeltaTime)
 	}
 }
 
-// Called to bind functionality to input
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
+
 void ARushEnemyAI::KillEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
@@ -53,6 +52,10 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 
 void ARushEnemyAI::PerformLineTrace()
 {
+	if(!bCanAttack)
+	{
+		return;
+	}
 	FVector StartLocation = GetActorLocation();
 	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
 
@@ -67,7 +70,33 @@ void ARushEnemyAI::PerformLineTrace()
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
 		if (Player)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Collision with player detected!"));
+			DealDamageToPlayer();
+			StartAttackDelay();
 		}
 	}
 }
+void ARushEnemyAI::DealDamageToPlayer()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
+}
+
+void ARushEnemyAI::StartAttackDelay()
+{
+	if (!bCanAttack)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Attack cooldown already active."));
+		return;
+	}
+
+	bCanAttack = false;
+	GetWorldTimerManager().SetTimer(AttackCooldown, this, &ARushEnemyAI::EndAttackDelay, 3.0f, false);
+	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown started."));
+}
+
+void ARushEnemyAI::EndAttackDelay()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown ended."));
+	bCanAttack = true;
+}
+
+

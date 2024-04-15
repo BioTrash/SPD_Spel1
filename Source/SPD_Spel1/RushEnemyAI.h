@@ -22,12 +22,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void KillEnemy();
-
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -40,9 +37,17 @@ public:
 	void OnEnemyDeath();
 	
 	float MaxTraceDistance = 60.f;
+	
 private:
 	void PerformLineTrace();
+	UFUNCTION()
+	void DealDamageToPlayer();
+	void StartAttackDelay();
+	void EndAttackDelay();
 	
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
+	bool bCanAttack = true;
+	FTimerHandle AttackCooldown;
 };
