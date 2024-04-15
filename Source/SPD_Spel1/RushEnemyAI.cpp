@@ -90,6 +90,7 @@ void ARushEnemyAI::Explode()
 {
 	DealDamageToPlayer(30.0f);
 	EndExplodeCooldown();
+	OnEnemyDeath();
 	Destroy();
 }
 void ARushEnemyAI::EndExplodeCooldown()
