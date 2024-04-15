@@ -66,6 +66,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 {
                     EnemyWeapon->PullTrigger(true);
                     DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
+                    FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
+                    HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
                     EnemyWeapon->PullTrigger(false);
 
                     //Resetta timern

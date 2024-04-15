@@ -26,6 +26,8 @@ void AShooterEnemy::BeginPlay()
 		// Spawn the weapon
 		AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(WeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
+		//Assign projectile to projectile
+		
 		// Check if spawn was successful
 		if (WeaponInstance)
 		{
