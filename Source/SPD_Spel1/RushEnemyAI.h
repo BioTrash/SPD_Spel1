@@ -40,9 +40,13 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageRadius = 200.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Jump")
+	float JumpForce = 1000.0f;
 	
 private:
 	void PerformLineTrace();
+	void JumpLedge(const FVector& LedgeLocation);
 	UFUNCTION()
 	void DealDamageToPlayer(float Damage);
 	void Explode();

@@ -72,8 +72,22 @@ void ARushEnemyAI::PerformLineTrace()
 			bCanAttack = false;
 			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 4.0f, false);
 		}
+		if (HitResult.GetComponent()->ComponentHasTag("Ledge"))
+		{
+			JumpLedge(HitResult.ImpactPoint);
+	}
 	}
 }
+void ARushEnemyAI::JumpLedge(const FVector& LedgeLocation)
+{
+	FVector JumpDirection = LedgeLocation - GetActorLocation();
+	JumpDirection.Z = 30.f;
+	JumpDirection.Normalize();
+	SetActorRotation(JumpDirection.Rotation());
+	LaunchCharacter(JumpDirection * JumpForce, true, true);
+	
+}
+
 void ARushEnemyAI::DealDamageToPlayer(float Damage)
 {
 	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
@@ -90,7 +104,7 @@ void ARushEnemyAI::Explode()
 {
 	DealDamageToPlayer(30.0f);
 	EndExplodeCooldown();
-	Destroy();
+	KillEnemy();
 }
 void ARushEnemyAI::EndExplodeCooldown()
 {
