@@ -37,17 +37,20 @@ public:
 	void OnEnemyDeath();
 	
 	float MaxTraceDistance = 60.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Damage")
+	float DamageRadius = 200.0f;
 	
 private:
 	void PerformLineTrace();
 	UFUNCTION()
-	void DealDamageToPlayer();
-	void StartAttackDelay();
-	void EndAttackDelay();
-	
-	UPROPERTY(EditAnywhere)
-	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+	void DealDamageToPlayer(float Damage);
+	void Explode();
+	void EndExplodeCooldown();
 
 	bool bCanAttack = true;
-	FTimerHandle AttackCooldown;
+	FTimerHandle ExplodeCooldown;
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 };
