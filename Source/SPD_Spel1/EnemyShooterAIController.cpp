@@ -2,12 +2,14 @@
 
 #include "EnemyShooterAIController.h"
 
+#include "EnemyWeapon.h"
 #include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
 #include "Weapon.h"
+#include "EnemyWeapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
 {
@@ -43,7 +45,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         FVector DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
         FRotator WeaponRotation = DirectionToPlayer.Rotation();
 
-        AWeapon* EnemyWeapon = Enemy->TriggerWeapon;
+        AEnemyWeapon* EnemyWeapon = Enemy->TriggerWeapon;
         if (EnemyWeapon)
         {
             EnemyWeapon->SetActorRotation(WeaponRotation);
@@ -68,12 +70,12 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                     FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
                     HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
-                    EnemyWeapon->PullTrigger(false);
 
                     //Resetta timern
                     LastShotTime = 0.0f;
                 }
             }
+            EnemyWeapon->PullTrigger(false);
         }
             // Visualize the line trace
             

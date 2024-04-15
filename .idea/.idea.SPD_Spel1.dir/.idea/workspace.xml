@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Ammo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Ammo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_EnemyWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_EnemyWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,7 @@
       <workItem from="1712849528566" duration="711000" />
       <workItem from="1712854080962" duration="355000" />
       <workItem from="1712906173737" duration="93000" />
-      <workItem from="1713174622412" duration="963000" />
+      <workItem from="1713174622412" duration="7708000" />
     </task>
     <servers />
   </component>
