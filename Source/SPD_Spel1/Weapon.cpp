@@ -52,7 +52,7 @@ void AWeapon::Tick(float DeltaTime)
 
 void AWeapon::PullTrigger(bool SprayShooting)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
+	//UE_LOG(LogTemp, Warning, TEXT("Trigger has been pulled"));
 	
 	if(Projectile)
 	{
@@ -97,7 +97,7 @@ void AWeapon::ShootWithoutProjectile()
 	{
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
-			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, true);
+			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
 			AActor* HitActor = Hit.GetActor();
@@ -107,8 +107,13 @@ void AWeapon::ShootWithoutProjectile()
 				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
 				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
 			}
-
+			
 			CurrentClip--;
+			
+			if(CurrentClip == 0)
+			{
+				Reload();
+			}
 		}
 		else
 		{
@@ -127,16 +132,31 @@ void AWeapon::ShootProjectile()
 
 void AWeapon::Reload()
 {
-	if(TotalAmmo-ClipSize > 0)
+	if(UnlimitedAmmo)
 	{
 		CurrentClip = ClipSize;
-		TotalAmmo -= ClipSize;
 	}
 	else
 	{
-		CurrentClip = TotalAmmo;
-		TotalAmmo = 0;
+		if(TotalAmmo-ClipSize > 0)
+		{
+			TotalAmmo -= (ClipSize - CurrentClip);
+			CurrentClip = ClipSize;
+		}
+		else
+		{
+			CurrentClip = TotalAmmo;
+			TotalAmmo = 0;
+		}
 	}
+
+
+	UE_LOG(LogTemp, Warning, TEXT("Total Ammo: %d, CurrentAmmo: %d"), TotalAmmo, CurrentClip);
+}
+
+FString AWeapon::GetAmmo() const
+{
+	return FString::Printf(TEXT("%d / %d"), TotalAmmo, CurrentClip);
 }
 
 

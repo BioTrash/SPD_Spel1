@@ -29,6 +29,9 @@ public:
 	void PullTrigger(bool SprayShooting);
 
 	void Reload();
+
+	UFUNCTION(BlueprintPure)
+	FString GetAmmo() const;
 	
 private:
 	UPROPERTY(EditAnywhere)

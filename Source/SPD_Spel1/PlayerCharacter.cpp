@@ -5,6 +5,9 @@
 #include "Weapon.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Blueprint/UserWidget.h"
+#include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Tasks/Task.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -18,6 +21,17 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//finding and assign the camera component
+	TArray<UCameraComponent*> CameraComponents;
+	GetComponents<UCameraComponent>(CameraComponents);
+	if(CameraComponents.Num() > 0)
+	{
+		FPSCamera = CameraComponents[0];
+	} else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No camera component found on PlayerCharacter"));
+	}
 
 	//Start with the MaxHealth when starting the level (Rebecka)
 	Health = MaxHealth;
@@ -87,6 +101,9 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	//Binding for dash (Rebecka)
 	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+	//Binding for lide (Rebecka)
+	PlayerInputComponent->BindAction(TEXT("Slide"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Slide);
+	
 	
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
@@ -111,6 +128,12 @@ void APlayerCharacter::ReloadWeapon()
 {
 	TriggerWeapon->Reload();
 }
+
+AWeapon* APlayerCharacter::GetTriggerWeapon() const
+{
+	return TriggerWeapon;
+}
+
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
@@ -140,10 +163,10 @@ void APlayerCharacter::SwapWeapon()
 		// Move the last element to the beginning
 		CurrentWeaponArray[0] = lastElement;
 		CurrentWeaponArray[0]->SetActorHiddenInGame(false);
+		TriggerWeapon = CurrentWeaponArray[0];
 		
 	}
 }
-
 
 //method for dashing (Rebecka)
 void APlayerCharacter::Dash()
@@ -153,16 +176,31 @@ void APlayerCharacter::Dash()
 	{
 		if (GetCharacterMovement())
 		{
-			//normalize the dash direction and multiply it by dash speed
-			FVector DashDirection = GetActorForwardVector().GetSafeNormal() * DashSpeed;
+			//get the players velocity so we can dash in the direction the player is moving (Rebecka)
+			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
 
-			//apply dash velocity to the character
-			GetCharacterMovement()->Launch(DashDirection);
+			//if the player is not moving (or velocity is close to 0) the forward vector insted (Rebecka)
+			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER)
+			{
+				PlayerVelocity = GetActorForwardVector();
+			}
 
+			//normalize the dash direction by mulitplying it to the dash speed (Rebecka)
+			FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashSpeed;
+
+			//checks if the character is grounded
+			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+
+			//if the character is grounded, the value will be 1, if its not grounded it will be the value of AirDashMulitplier
+			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
+
+			//apply dash velocity to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+			GetCharacterMovement()->Launch(DashDirection * LaunchMultiplier);
+			
 			bIsDashing = true;
 			LastDashTime = GetWorld()->GetTimeSeconds();
 
-			//reset dash after duration
+			//sets a timer for how long the dash lasts
 			GetWorldTimerManager().SetTimer(DashTimerHandle, this, &APlayerCharacter::StopDash, DashDuration, false);
 		}
 		else
@@ -172,11 +210,67 @@ void APlayerCharacter::Dash()
 	}
 }
 
-//method for stopdashing (Rebecka)
+//method to stop dashing and sets the bool to false to help resetting dash efter duration (Rebecka)
 void APlayerCharacter::StopDash()
 {
 	bIsDashing = false;
 }
+
+//method for slide movement for player (Rebecka)
+void APlayerCharacter::Slide()
+{
+	//check if the method is being called
+	UE_LOG(LogTemp, Warning, TEXT("Sliding called"));
+	//checking if the character is currently grounded and not dashing (Rebecka)
+	if(GetCharacterMovement()->IsMovingOnGround() && !bIsDashing)
+		if(!bIsSliding && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown) {
+			{
+				FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+				if(PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
+				{
+					//reducing the characters capsule by half its height to simulate sliding (Rebecka)
+					GetCapsuleComponent()->SetCapsuleHalfHeight(NewHalfHeight, true);
+
+					//adjust the camera position (Rebecka)
+					if(FPSCamera)
+					{
+						FVector NewCameraLocation = FPSCamera->GetComponentLocation();
+						NewCameraLocation.Z -= SlideCameraOffset;
+						FPSCamera->SetWorldLocation(NewCameraLocation);
+					}
+					//normalize the slide direction by mulitplying it to the slide speed (Rebecka)
+					FVector SlideDirection = PlayerVelocity.GetSafeNormal() * SlideSpeed;
+
+					//apply slide velocity to the character
+					GetCharacterMovement()->Launch(SlideDirection);
+					GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+
+					bIsSliding = true;
+					LastSlideTime = GetWorld()->GetTimeSeconds();
+
+					//set a timer for how long sliding lasts
+					GetWorldTimerManager().SetTimer(SliderTimerHandle, this, &APlayerCharacter::StopSlide, SlideDuration, false);
+				}
+			}
+		}
+}
+
+void APlayerCharacter::StopSlide()
+{
+	//reset any changes made during the slide (Rebecka)
+	GetCapsuleComponent()->SetCapsuleHalfHeight(GetDefaultHalfHeight(),true); //restores original capsule height
+	GetCharacterMovement()->MaxWalkSpeed = DefaultWalkSpeed;
+	bIsSliding = false;
+
+	//reset the camera position
+	if(FPSCamera)
+	{
+		FVector DefaultCameraPosition = FPSCamera->GetComponentLocation();
+		DefaultCameraPosition.Z += SlideCameraOffset; //adding back the offset to restore the original Z position of the camera (Rebecka)
+		FPSCamera->SetWorldLocation(DefaultCameraPosition);
+	}
+}
+
 
 //method for making damage to a character (Rebecka)
 float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -194,7 +288,3 @@ float APlayerCharacter::GetHealthPercent() const
 {
 	return Health/MaxHealth;
 }
-
-
-
-
