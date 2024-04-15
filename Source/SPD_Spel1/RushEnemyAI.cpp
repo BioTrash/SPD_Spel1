@@ -3,54 +3,41 @@
 
 #include "RushEnemyAI.h"
 #include "PlayerCharacter.h"
-#include "Components/SphereComponent.h"
+#include "Kismet/GameplayStaticsTypes.h"
 
-// Sets default values
 ARushEnemyAI::ARushEnemyAI()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//Skapar en collisioncomponent(Hanna)
-	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
-	CollisionComponent->SetupAttachment(RootComponent);
-	CollisionComponent->SetSphereRadius(50.f);
 }
 
-// Called when the game starts or when spawned
 void ARushEnemyAI::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
 }
 
-// Called every frame
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	/*TArray<AActor> OverlappingActor;
-	CollisionComponent->GetOverlappingActors(OverlappingActors, APlayerCharacter::StaticClass());
-
-	for(AActor OverlappingActor:OverlappingActors)
-	{
-		APlayerCharacter* Player = Cast<APlayerCharacter>(OverlappingActor);
-		if (Player)
-		{
-			Player->TakeDamage(DamageAmount, FDamageEvent(), GetController(), this);
-			break; 
-		}
-	}*/
+	PerformLineTrace();
 	if(Health <= 0)
 	{
 		KillEnemy();
 	}
 }
 
-// Called to bind functionality to input
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
 
+void ARushEnemyAI::KillEnemy()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	
+	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
+	OnEnemyDeath();
+	Destroy();
 }
 
 float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -63,11 +50,53 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
-void ARushEnemyAI::KillEnemy()
+void ARushEnemyAI::PerformLineTrace()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	if(!bCanAttack)
+	{
+		return;
+	}
+	FVector StartLocation = GetActorLocation();
+	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
+
+	FHitResult HitResult;
+	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(this); 
 	
-	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	OnEnemyDeath();
-	Destroy();
+	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
+	DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
+	if (bHit)
+	{
+		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
+		if (Player)
+		{
+			DealDamageToPlayer();
+			StartAttackDelay();
+		}
+	}
 }
+void ARushEnemyAI::DealDamageToPlayer()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
+}
+
+void ARushEnemyAI::StartAttackDelay()
+{
+	if (!bCanAttack)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Attack cooldown already active."));
+		return;
+	}
+
+	bCanAttack = false;
+	GetWorldTimerManager().SetTimer(AttackCooldown, this, &ARushEnemyAI::EndAttackDelay, 3.0f, false);
+	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown started."));
+}
+
+void ARushEnemyAI::EndAttackDelay()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown ended."));
+	bCanAttack = true;
+}
+
+
