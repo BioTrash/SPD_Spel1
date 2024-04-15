@@ -1,9 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+struct FDamageEvent;
 
 #include "RushEnemyAI.h"
 #include "PlayerCharacter.h"
-#include "Kismet/GameplayStaticsTypes.h"
+#include "Kismet/GameplayStatics.h"
+#include "Engine/EngineTypes.h"
 
 ARushEnemyAI::ARushEnemyAI()
 {
@@ -52,10 +54,6 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 
 void ARushEnemyAI::PerformLineTrace()
 {
-	if(!bCanAttack)
-	{
-		return;
-	}
 	FVector StartLocation = GetActorLocation();
 	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
 
@@ -68,35 +66,39 @@ void ARushEnemyAI::PerformLineTrace()
 	if (bHit)
 	{
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
-		if (Player)
+		if (Player && bCanAttack)
 		{
-			DealDamageToPlayer();
-			StartAttackDelay();
+			DealDamageToPlayer(3.0f);
+			bCanAttack = false;
+			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 4.0f, false);
 		}
 	}
 }
-void ARushEnemyAI::DealDamageToPlayer()
+void ARushEnemyAI::DealDamageToPlayer(float Damage)
 {
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	if(PlayerCharacter)
+	{
+		float ActualDamage = PlayerCharacter->TakeDamage(Damage, FDamageEvent(), GetController(), this);
+		UE_LOG(LogTemp, Warning, TEXT("Enemy dealt %f damage to player!"), ActualDamage);
+	}
+
 	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
 }
 
-void ARushEnemyAI::StartAttackDelay()
+void ARushEnemyAI::Explode()
 {
-	if (!bCanAttack)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Attack cooldown already active."));
-		return;
-	}
-
-	bCanAttack = false;
-	GetWorldTimerManager().SetTimer(AttackCooldown, this, &ARushEnemyAI::EndAttackDelay, 3.0f, false);
-	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown started."));
+	DealDamageToPlayer(30.0f);
+	EndExplodeCooldown();
+	Destroy();
 }
-
-void ARushEnemyAI::EndAttackDelay()
+void ARushEnemyAI::EndExplodeCooldown()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Attack cooldown ended."));
 	bCanAttack = true;
 }
+
+
+
+
 
 
