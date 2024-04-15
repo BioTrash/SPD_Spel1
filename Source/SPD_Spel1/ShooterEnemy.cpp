@@ -61,10 +61,6 @@ void AShooterEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
-void AShooterEnemy::TimeToFire()
-{
-
-}
 
 float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
@@ -82,6 +78,7 @@ void AShooterEnemy::KillEnemy()
 	
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	OnEnemyDeath();
+	TriggerWeapon->Destroy();
 	Destroy();
 }
 

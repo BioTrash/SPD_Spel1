@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "EnemyShooterAIController.h"
+
+#include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
@@ -24,6 +26,8 @@ void AEnemyShooterAIController::BeginPlay()
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
+    LastShotTime += DeltaSeconds;
+    
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     if (PlayerPawn != nullptr)
     {
@@ -43,28 +47,34 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         if (EnemyWeapon)
         {
             EnemyWeapon->SetActorRotation(WeaponRotation);
-
+        if (LastShotTime >= ShootCooldown)
+        {
+            // Vectors where trace is happening (Louis)
             FVector StartTrace = EnemyWeapon->GetActorLocation();
             FVector EndTrace = PlayerPawn->GetActorLocation();
 
+            //Params for linetrace (Louis)
             FHitResult HitResult;
             FCollisionQueryParams CollisionParams;
             CollisionParams.AddIgnoredActor(Enemy);
 
-            // Perform a line trace to check if there's a clear line of sight to the player
-            if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_Visibility, CollisionParams))
+            // Perform a line trace to check if there's a clear line of sight to the player (Louis)
+            if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
             {
-                if (HitResult.GetActor() == PlayerPawn)
+                // If the ray hits the player, shoot (Louis)
+                if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                 {
-                    // If the ray hits the player, call the pulltrigger function
-                    EnemyWeapon->PullTrigger();
-                    UE_LOG(LogTemp, Warning, TEXT("GOGOGO"));
+                    EnemyWeapon->PullTrigger(true);
+                    DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
+                    EnemyWeapon->PullTrigger(false);
 
+                    //Resetta timern
+                    LastShotTime = 0.0f;
                 }
             }
-
+        }
             // Visualize the line trace
-            DrawDebugLine(GetWorld(), StartTrace, EndTrace, FColor::Green, false, 0.1f, 0, 2);
+            
         }
     }
 }
