@@ -37,11 +37,15 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool UnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere)
+	bool Spread = false;
+	UPROPERTY(EditAnywhere)
 	int32 TotalAmmo;
 	UPROPERTY(EditAnywhere)
 	int32 CurrentClip;
 	UPROPERTY(EditAnywhere)
 	int32 ClipSize;
+	UPROPERTY(EditAnywhere)
+	int32 SpreadSize;
 	
 	UPROPERTY()
 	FVector Location;

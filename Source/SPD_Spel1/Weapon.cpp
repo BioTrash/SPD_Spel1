@@ -33,10 +33,7 @@ void AWeapon::BeginPlay()
 void AWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	// End is max range (Rufus)
-	End = Location + Rotation.Vector() * MaxShootingRange;
-
+	
 	// Is needed in order to get controller (Rufus)
 	APawn* OwnerCharacter = Cast<APawn>(GetOwner());
 	if(!OwnerCharacter) return;
@@ -48,6 +45,26 @@ void AWeapon::Tick(float DeltaTime)
 	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
 	OwnerController->GetPlayerViewPoint(Location, Rotation);
 
+	if (Spread)
+	{
+		// Calculate spread for all axes
+		FVector SpreadAmount(
+			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along X
+			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along Y
+			FMath::RandRange(-SpreadSize, SpreadSize)    // Spread along Z
+		);
+
+		// Apply spread to the location
+		FVector SpreadLocation = Location + SpreadAmount;
+
+		// Calculate the endpoint after applying spread
+		End = SpreadLocation + Rotation.Vector() * MaxShootingRange;
+	}
+	else
+	{
+		// End is max range (Rufus)
+		End = Location + Rotation.Vector() * MaxShootingRange;
+	}
 }
 
 void AWeapon::PullTrigger(bool SprayShooting)
@@ -97,7 +114,6 @@ void AWeapon::ShootWithoutProjectile()
 	{
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
-			//FMath::RandRange(int32 min, int32 max);
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
