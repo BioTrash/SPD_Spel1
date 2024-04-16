@@ -72,17 +72,22 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        
                         EnemyWeapon->PullTrigger(true);
+                        
                         DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
+                        
                         FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
                         HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
+                        LastShotTime = 0.0f;
                     }
                     //Resetta timern
                     else
                     {
+	                    UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAA"));
                         GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
                     }
-                    LastShotTime = 0.0f;
+                    
                 }
                 else
                 {
