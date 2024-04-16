@@ -21,6 +21,13 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	//the health the player is initialized with (Rebecka)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxHealth = 100;
+	//health for player (Rebecka)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float Health;
+
 public:
 	//declaration of function to connect WBP to the actual health of the player (Rebecka)
 	UFUNCTION(BlueprintPure)
@@ -74,13 +81,6 @@ private:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
 	TArray<class AWeapon*> CurrentWeaponArray;
-
-	//the health the player is initialized with (Rebecka)
-	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 100;
-	//health for player (Rebecka)
-	UPROPERTY(VisibleAnywhere)
-	float Health;
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
