@@ -69,18 +69,24 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
+                        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                         EnemyWeapon->PullTrigger(true);
                         DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                         FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
                         HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
-                        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                     }
                     //Resetta timern
+                    else
+                    {
+                        GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
+                    }
                     LastShotTime = 0.0f;
                 }
                 else
                 {
+                    UE_LOG(LogTemp, Warning, TEXT("Should stop shooting"));
                     GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                     EnemyWeapon->PullTrigger(false);
                 }
