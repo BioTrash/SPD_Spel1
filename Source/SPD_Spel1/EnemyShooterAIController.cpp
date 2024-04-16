@@ -29,7 +29,7 @@ void AEnemyShooterAIController::BeginPlay()
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
     LastShotTime += DeltaSeconds;
-    GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+    //GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 
     
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
@@ -65,6 +65,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 // Perform a line trace to check if there's a clear line of sight to the player (Louis)
                 if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
                 {
+                    
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
