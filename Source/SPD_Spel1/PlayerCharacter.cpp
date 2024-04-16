@@ -100,7 +100,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
 
 	//Binding for dash (Rebecka)
-	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+	PlayerInputComponent->BindAction(TEXT("DashMovement"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
 	//Binding for lide (Rebecka)
 	PlayerInputComponent->BindAction(TEXT("Slide"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Slide);
 	
@@ -172,35 +172,37 @@ void APlayerCharacter::SwapWeapon()
 void APlayerCharacter::Dash()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Dash called"));
+
 	if (!bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
 	{
 		if (GetCharacterMovement())
 		{
-			//get the players velocity so we can dash in the direction the player is moving (Rebecka)
-			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+			//get the player's forward vector as the dash direction
+			FVector DashDirection = GetActorForwardVector();
 
-			//if the player is not moving (or velocity is close to 0) the forward vector insted (Rebecka)
-			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER)
-			{
-				PlayerVelocity = GetActorForwardVector();
-			}
+			//normalize the dash direction
+			DashDirection.Normalize();
 
-			//normalize the dash direction by mulitplying it to the dash speed (Rebecka)
-			FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashSpeed;
+			//apply constant dash force
+			FVector DashForceVector = DashDirection * DashForce;
 
 			//checks if the character is grounded
 			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
-
-			//if the character is grounded, the value will be 1, if its not grounded it will be the value of AirDashMulitplier
+			
+			//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
 			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
+			
+			//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+			//GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
+			LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
 
-			//apply dash velocity to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
-			GetCharacterMovement()->Launch(DashDirection * LaunchMultiplier);
+			FTimerHandle UnusedHandle;
+			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
 			
 			bIsDashing = true;
 			LastDashTime = GetWorld()->GetTimeSeconds();
 
-			//sets a timer for how long the dash lasts
+			// Sets a timer for how long the dash lasts
 			GetWorldTimerManager().SetTimer(DashTimerHandle, this, &APlayerCharacter::StopDash, DashDuration, false);
 		}
 		else
@@ -208,9 +210,25 @@ void APlayerCharacter::Dash()
 			UE_LOG(LogTemp, Error, TEXT("Character movement component not found"));
 		}
 	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Cannot dash: Already dashing or on cooldown"));
+	}
 }
 
-//method to stop dashing and sets the bool to false to help resetting dash efter duration (Rebecka)
+
+//method to make the player dash a bit upwards (Rebecka)
+void APlayerCharacter::DashUp()
+{
+	FVector UpVector = GetActorUpVector();
+	
+	const float DashHeight = 300.0f;
+
+	//Upward Dash
+	LaunchCharacter(UpVector * DashHeight, false, true);
+}
+
+//method to stop dashing and sets the bool to false to help resetting dash after duration (Rebecka)
 void APlayerCharacter::StopDash()
 {
 	bIsDashing = false;
@@ -219,58 +237,55 @@ void APlayerCharacter::StopDash()
 //method for slide movement for player (Rebecka)
 void APlayerCharacter::Slide()
 {
-	//check if the method is being called
-	UE_LOG(LogTemp, Warning, TEXT("Sliding called"));
-	//checking if the character is currently grounded and not dashing (Rebecka)
-	if(GetCharacterMovement()->IsMovingOnGround() && !bIsDashing)
-		if(!bIsSliding && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown) {
+	//check if sliding can be initiated (not currently sliding, ensures player is on ground, ensures player's not dashing, ensures enough time has passed since last slide to initiate new slide
+	if (!bIsSliding && GetCharacterMovement()->IsMovingOnGround() && !bIsDashing && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown)
+	{
+		//checks if playervelocity is enough to initate slide
+		FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+		if (PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
+		{
+			//adjust capsule half height for sliding
+			GetCapsuleComponent()->SetCapsuleHalfHeight(NewHalfHeight, true);
+
+			//adjust camera position
+			if (FPSCamera)
 			{
-				FVector PlayerVelocity = GetCharacterMovement()->Velocity;
-				if(PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
-				{
-					//reducing the characters capsule by half its height to simulate sliding (Rebecka)
-					GetCapsuleComponent()->SetCapsuleHalfHeight(NewHalfHeight, true);
-
-					//adjust the camera position (Rebecka)
-					if(FPSCamera)
-					{
-						FVector NewCameraLocation = FPSCamera->GetComponentLocation();
-						NewCameraLocation.Z -= SlideCameraOffset;
-						FPSCamera->SetWorldLocation(NewCameraLocation);
-					}
-					//normalize the slide direction by mulitplying it to the slide speed (Rebecka)
-					FVector SlideDirection = PlayerVelocity.GetSafeNormal() * SlideSpeed;
-
-					//apply slide velocity to the character
-					GetCharacterMovement()->Launch(SlideDirection);
-					GetCharacterMovement()->SetMovementMode(MOVE_Walking);
-
-					bIsSliding = true;
-					LastSlideTime = GetWorld()->GetTimeSeconds();
-
-					//set a timer for how long sliding lasts
-					GetWorldTimerManager().SetTimer(SliderTimerHandle, this, &APlayerCharacter::StopSlide, SlideDuration, false);
-				}
+				FVector NewCameraLocation = FPSCamera->GetComponentLocation();
+				NewCameraLocation.Z -= SlideCameraOffset;
+				FPSCamera->SetWorldLocation(NewCameraLocation);
 			}
+
+			//calculate slide direction based on player's valocity and defined slide speed
+			FVector SlideDirection = PlayerVelocity.GetSafeNormal() * SlideSpeed;
+
+			//apply slide velocity to the character
+			GetCharacterMovement()->Launch(SlideDirection);
+			//sets character back to walking after slide
+			GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+
+			bIsSliding = true;
+			LastSlideTime = GetWorld()->GetTimeSeconds();
+
+			//set a timer for how long sliding lasts
+			GetWorldTimerManager().SetTimer(SliderTimerHandle, this, &APlayerCharacter::StopSlide, SlideDuration, false);
 		}
+	}
 }
 
 void APlayerCharacter::StopSlide()
 {
-	//reset any changes made during the slide (Rebecka)
-	GetCapsuleComponent()->SetCapsuleHalfHeight(GetDefaultHalfHeight(),true); //restores original capsule height
-	GetCharacterMovement()->MaxWalkSpeed = DefaultWalkSpeed;
+	//reset changes made during sliding
+	GetCapsuleComponent()->SetCapsuleHalfHeight(GetDefaultHalfHeight(), true); //restore original capsule height
 	bIsSliding = false;
 
-	//reset the camera position
-	if(FPSCamera)
+	//reset camera position
+	if (FPSCamera)
 	{
 		FVector DefaultCameraPosition = FPSCamera->GetComponentLocation();
-		DefaultCameraPosition.Z += SlideCameraOffset; //adding back the offset to restore the original Z position of the camera (Rebecka)
+		DefaultCameraPosition.Z += SlideCameraOffset; //restore original Z position of the camera
 		FPSCamera->SetWorldLocation(DefaultCameraPosition);
 	}
 }
-
 
 //method for making damage to a character (Rebecka)
 float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
