@@ -32,6 +32,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	FString GetAmmo() const;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
+	float HeadshotMultiplier = 2.0f;
 	
 private:
 	UPROPERTY(EditAnywhere)

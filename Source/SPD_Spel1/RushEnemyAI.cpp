@@ -36,9 +36,9 @@ void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 void ARushEnemyAI::KillEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
-	
-	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	OnEnemyDeath();
+
+	OnEnemyDeathDelegate.Broadcast();
+
 	Destroy();
 }
 
@@ -68,7 +68,7 @@ void ARushEnemyAI::PerformLineTrace()
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
 		if (Player && bCanAttack)
 		{
-			DealDamageToPlayer(3.0f);
+			DealDamageToPlayer(5.0f);
 			bCanAttack = false;
 			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 3.0f, false);
 		}
