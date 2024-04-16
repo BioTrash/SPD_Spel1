@@ -2,6 +2,8 @@
 
 
 #include "ShooterEnemy.h"
+
+#include "EnemyWeapon.h"
 #include "Weapon.h"
 
 
@@ -24,8 +26,10 @@ void AShooterEnemy::BeginPlay()
 	if (WeaponClass)
 	{
 		// Spawn the weapon
-		AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(WeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
+		AEnemyWeapon* WeaponInstance = GetWorld()->SpawnActor<AEnemyWeapon>(WeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
+		//Assign projectile to projectile
+		
 		// Check if spawn was successful
 		if (WeaponInstance)
 		{
