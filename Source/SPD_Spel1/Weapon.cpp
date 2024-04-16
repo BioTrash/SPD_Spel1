@@ -2,7 +2,10 @@
 
 
 #include "Weapon.h"
+
+#include "PlayerCharacter.h"
 #include "Projectile.h"
+#include "Camera/CameraComponent.h"
 
 
 // Sets default values
@@ -35,7 +38,7 @@ void AWeapon::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	
 	// Is needed in order to get controller (Rufus)
-	APawn* OwnerCharacter = Cast<APawn>(GetOwner());
+	OwnerCharacter = Cast<APawn>(GetOwner());
 	if(!OwnerCharacter) return;
 
 	// Is needed in order to get PlayerViewPort (Rufus)
@@ -44,6 +47,23 @@ void AWeapon::Tick(float DeltaTime)
 
 	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
 	OwnerController->GetPlayerViewPoint(Location, Rotation);
+	if(Recoil)
+	{
+		APlayerCharacter* Player = Cast<APlayerCharacter>(GetOwner());
+		if(!Player)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("PlayerCharacter not found or conversion failed"));
+			return;
+		}
+	
+		
+		PlayerCamera = Player->GetFPSCameraComponent();
+		if(!PlayerCamera)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("PlayerCamera not found"));
+			return;
+		}
+	}
 
 	if (Spread)
 	{
@@ -92,6 +112,8 @@ void AWeapon::PullTrigger(bool SprayShooting)
 		else
 		{
 			GetWorld()->GetTimerManager().ClearTimer(SprayShootingTimer);
+			
+			PlayerCamera->SetWorldRotation(FQuat(FRotator(0.0f, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll)));
 		}
 	}
 }
@@ -115,7 +137,17 @@ void AWeapon::ShootWithoutProjectile()
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
-
+			
+			if(PlayerCamera)
+			{
+				FQuat NewCameraQuat = OwnerCharacter->GetActorQuat();
+				FQuat RecoilQuat = FQuat(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
+				NewCameraQuat *= RecoilQuat;
+				NewCameraQuat.Normalize();
+				PlayerCamera->SetWorldRotation(NewCameraQuat.Rotator());
+				
+			}
+			
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
 			AActor* HitActor = Hit.GetActor();
 			//if we hit an actor, we make the actor take damage (Rebecka)

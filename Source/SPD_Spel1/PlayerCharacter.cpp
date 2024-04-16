@@ -288,3 +288,8 @@ float APlayerCharacter::GetHealthPercent() const
 {
 	return Health/MaxHealth;
 }
+
+UCameraComponent* APlayerCharacter::GetFPSCameraComponent()
+{
+	return FPSCamera;
+}

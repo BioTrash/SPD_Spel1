@@ -39,6 +39,8 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool Spread = false;
 	UPROPERTY(EditAnywhere)
+	bool Recoil = false;
+	UPROPERTY(EditAnywhere)
 	int32 TotalAmmo;
 	UPROPERTY(EditAnywhere)
 	int32 CurrentClip;
@@ -65,6 +67,12 @@ private:
 
 	UPROPERTY()
 	AController* OwnerController;
+
+	UPROPERTY()
+	APawn* OwnerCharacter;
+
+	UPROPERTY()
+	class UCameraComponent* PlayerCamera;
 	
 	// Max range is applicable only when no projectile is found, in case of projectile max range should be regulated with physics (Rufus)
 	UPROPERTY(EditAnywhere, Category="Weaponry")
@@ -75,6 +83,10 @@ private:
 	TSubclassOf<class AProjectile> Projectile;
 
 	FTimerHandle SprayShootingTimer;
+
+	// RecoilOffset get reset when SprayShootingTimer resets (Rufus)
+	UPROPERTY(EditAnywhere, Category="Weaponry")
+	float RecoilCameraOffset = 1.0f;
 
 	// The default way of shooting if no projectile is specified in blueprints (Rufus)
 	void ShootWithoutProjectile();
