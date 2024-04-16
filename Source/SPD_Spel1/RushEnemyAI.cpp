@@ -1,56 +1,45 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+struct FDamageEvent;
 
 #include "RushEnemyAI.h"
 #include "PlayerCharacter.h"
-#include "Components/SphereComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Engine/EngineTypes.h"
 
-// Sets default values
 ARushEnemyAI::ARushEnemyAI()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	//Skapar en collisioncomponent(Hanna)
-	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
-	CollisionComponent->SetupAttachment(RootComponent);
-	CollisionComponent->SetSphereRadius(50.f);
 }
 
-// Called when the game starts or when spawned
 void ARushEnemyAI::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
 }
 
-// Called every frame
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	/*TArray<AActor> OverlappingActor;
-	CollisionComponent->GetOverlappingActors(OverlappingActors, APlayerCharacter::StaticClass());
-
-	for(AActor OverlappingActor:OverlappingActors)
-	{
-		APlayerCharacter* Player = Cast<APlayerCharacter>(OverlappingActor);
-		if (Player)
-		{
-			Player->TakeDamage(DamageAmount, FDamageEvent(), GetController(), this);
-			break; 
-		}
-	}*/
+	PerformLineTrace();
 	if(Health <= 0)
 	{
 		KillEnemy();
 	}
 }
 
-// Called to bind functionality to input
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
 
+void ARushEnemyAI::KillEnemy()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	
+	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
+	OnEnemyDeath();
+	Destroy();
 }
 
 float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -63,11 +52,68 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
-void ARushEnemyAI::KillEnemy()
+void ARushEnemyAI::PerformLineTrace()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	FVector StartLocation = GetActorLocation();
+	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
+
+	FHitResult HitResult;
+	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(this); 
 	
-	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	OnEnemyDeath();
-	Destroy();
+	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
+	//DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
+	if (bHit)
+	{
+		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
+		if (Player && bCanAttack)
+		{
+			DealDamageToPlayer(3.0f);
+			bCanAttack = false;
+			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 3.0f, false);
+		}
+		if (HitResult.GetComponent()->ComponentHasTag("Ledge"))
+		{
+			JumpLedge(HitResult.ImpactPoint);
+	}
+	}
 }
+void ARushEnemyAI::JumpLedge(const FVector& LedgeLocation)
+{
+	FVector JumpDirection = LedgeLocation - GetActorLocation();
+	JumpDirection.Z = 30.f;
+	JumpDirection.Normalize();
+	SetActorRotation(JumpDirection.Rotation());
+	LaunchCharacter(JumpDirection * JumpForce, true, true);
+}
+
+void ARushEnemyAI::DealDamageToPlayer(float Damage)
+{
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	if (PlayerCharacter)
+	{
+		float DistanceToPlayer = FVector::Dist(GetActorLocation(), PlayerCharacter->GetActorLocation());
+		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
+		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetController(), this);
+
+		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
+	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 5.0f);
+}
+
+void ARushEnemyAI::Explode()
+{
+	DealDamageToPlayer(30.0f);
+	KillEnemy();
+}
+void ARushEnemyAI::EndExplodeCooldown()
+{
+	bCanAttack = true;
+}
+
+
+
+
+
+
