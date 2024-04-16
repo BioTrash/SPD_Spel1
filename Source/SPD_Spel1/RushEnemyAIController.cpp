@@ -27,6 +27,7 @@ void ARushEnemyAIController::BeginPlay()
 void ARushEnemyAIController::Tick(float DeltaSeconds)
 {
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	if (PlayerPawn != nullptr)
 	{
 		SetFocus(PlayerPawn);

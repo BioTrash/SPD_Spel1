@@ -3,6 +3,9 @@
 
 #include "Weapon.h"
 #include "Projectile.h"
+#include "Components/SceneComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/ActorComponent.h"
 
 
 // Sets default values
@@ -95,18 +98,37 @@ void AWeapon::ShootWithoutProjectile()
 	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 	{
+		AActor* HitActor = Hit.GetActor();
+		if (HitActor && HitActor->ActorHasTag("Enemy"))
+		{
+			TArray<USphereComponent*> SphereComponents;
+			HitActor->GetComponents<USphereComponent>(SphereComponents);
+
+			for (USphereComponent* SphereComponent : SphereComponents)
+			{
+				if (SphereComponent->ComponentHasTag("Headshot"))
+				{
+					FString ComponentName = SphereComponent->GetName();
+					Damage += 20.0f;
+					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
+					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
+				}
+			}
+		}
+		
+		
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
 			//FMath::RandRange(int32 min, int32 max);
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
-			AActor* HitActor = Hit.GetActor();
+			AActor* HitActorHeadshot = Hit.GetActor();
 			//if we hit an actor, we make the actor take damage (Rebecka)
-			if(HitActor != nullptr)
+			if(HitActorHeadshot != nullptr)
 			{
 				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
-				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
+				HitActorHeadshot->TakeDamage(Damage, DamageEvent, OwnerController, this);
 			}
 			
 			CurrentClip--;
@@ -159,18 +181,3 @@ FString AWeapon::GetAmmo() const
 {
 	return FString::Printf(TEXT("%d / %d"), TotalAmmo, CurrentClip);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
