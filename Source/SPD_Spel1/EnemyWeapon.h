@@ -21,16 +21,9 @@ public:
 	void FireAtPlayer(float DamageDone);
 	//void PullTrigger();
 
-protected:
-
-	void BeginPlay() override;
-
 private:
 	//virtual void ShootProjectile();
 	
     UPROPERTY()
     AWeapon* WeaponComponent;
-
-	UPROPERTY(EditAnywhere, Category= "Projectile")
-	TSubclassOf<class AProjectile> Bullet;
 };
