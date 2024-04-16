@@ -100,7 +100,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
 
 	//Binding for dash (Rebecka)
-	PlayerInputComponent->BindAction(TEXT("DashMovement"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
+	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
 	//Binding for lide (Rebecka)
 	PlayerInputComponent->BindAction(TEXT("Slide"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Slide);
 	
@@ -261,7 +261,7 @@ void APlayerCharacter::Slide()
 			//apply slide velocity to the character
 			GetCharacterMovement()->Launch(SlideDirection);
 			//sets character back to walking after slide
-			GetCharacterMovement()->SetMovementMode(MOVE_Walking);
+			GetCharacterMovement()->SetMovementMode(MOVE_MAX);
 
 			bIsSliding = true;
 			LastSlideTime = GetWorld()->GetTimeSeconds();
