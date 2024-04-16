@@ -97,6 +97,7 @@ void AWeapon::ShootWithoutProjectile()
 	{
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
+			//FMath::RandRange(int32 min, int32 max);
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING

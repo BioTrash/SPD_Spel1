@@ -62,7 +62,7 @@ void ARushEnemyAI::PerformLineTrace()
 	Params.AddIgnoredActor(this); 
 	
 	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
-	DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
+	//DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
 	if (bHit)
 	{
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
@@ -70,28 +70,42 @@ void ARushEnemyAI::PerformLineTrace()
 		{
 			DealDamageToPlayer(3.0f);
 			bCanAttack = false;
-			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 4.0f, false);
+			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 3.0f, false);
 		}
+		if (HitResult.GetComponent()->ComponentHasTag("Ledge"))
+		{
+			JumpLedge(HitResult.ImpactPoint);
+	}
 	}
 }
+void ARushEnemyAI::JumpLedge(const FVector& LedgeLocation)
+{
+	FVector JumpDirection = LedgeLocation - GetActorLocation();
+	JumpDirection.Z = 30.f;
+	JumpDirection.Normalize();
+	SetActorRotation(JumpDirection.Rotation());
+	LaunchCharacter(JumpDirection * JumpForce, true, true);
+}
+
 void ARushEnemyAI::DealDamageToPlayer(float Damage)
 {
 	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	if(PlayerCharacter)
+	if (PlayerCharacter)
 	{
-		float ActualDamage = PlayerCharacter->TakeDamage(Damage, FDamageEvent(), GetController(), this);
-		UE_LOG(LogTemp, Warning, TEXT("Enemy dealt %f damage to player!"), ActualDamage);
-	}
+		float DistanceToPlayer = FVector::Dist(GetActorLocation(), PlayerCharacter->GetActorLocation());
+		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
+		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetController(), this);
 
+		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
+	}
 	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
+	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 5.0f);
 }
 
 void ARushEnemyAI::Explode()
 {
 	DealDamageToPlayer(30.0f);
-	EndExplodeCooldown();
-	OnEnemyDeath();
-	Destroy();
+	KillEnemy();
 }
 void ARushEnemyAI::EndExplodeCooldown()
 {
