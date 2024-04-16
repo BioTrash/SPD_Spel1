@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DamageEvents.h"
-#include "Components/SplineMeshComponent.h"
 #include "GameFramework/Actor.h"
 #include "Weapon.generated.h"
 
@@ -61,9 +60,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* Mesh;
-
-	UPROPERTY(VisibleAnywhere)
-	class USplineMeshComponent* Spline;
 
 	UPROPERTY()
 	AController* OwnerController;

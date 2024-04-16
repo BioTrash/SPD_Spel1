@@ -112,8 +112,7 @@ void AWeapon::PullTrigger(bool SprayShooting)
 		else
 		{
 			GetWorld()->GetTimerManager().ClearTimer(SprayShootingTimer);
-			
-			PlayerCamera->SetWorldRotation(FQuat(FRotator(0.0f, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll)));
+			//PlayerCamera->SetWorldRotation(FQuat(FRotator(PlayerCamera->GetComponentRotation().Pitch, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll)));
 		}
 	}
 }
@@ -137,15 +136,20 @@ void AWeapon::ShootWithoutProjectile()
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
+
+
+			// TIP FOR TMRWS BUG FIX: CAMERA'S PITCH DOESN'T LISTEN TO PLAYER INPUTS WHILE SHOOTING
+			// POSSIBLE SOLUTION: CURRENT PITCH += RECOILCAMERAOFFSET
 			
 			if(PlayerCamera)
 			{
-				FQuat NewCameraQuat = OwnerCharacter->GetActorQuat();
-				FQuat RecoilQuat = FQuat(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
-				NewCameraQuat *= RecoilQuat;
-				NewCameraQuat.Normalize();
-				PlayerCamera->SetWorldRotation(NewCameraQuat.Rotator());
-				
+				// FQuat NewCameraQuat = PlayerCamera->GetComponentQuat();
+				// FQuat RecoilQuat = FQuat(FRotator(Rotation.Pitch, 0.0f, 0.0f));
+				// NewCameraQuat *= RecoilQuat;
+				// NewCameraQuat.Normalize();
+
+				float CurrentPitch = PlayerCamera->GetComponentRotation().Pitch;
+				PlayerCamera->SetWorldRotation(FRotator(CurrentPitch += RecoilCameraOffset, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll));
 			}
 			
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
