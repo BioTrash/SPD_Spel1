@@ -192,7 +192,7 @@ void APlayerCharacter::Dash()
 			//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
 			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
 			
-			//apply dash velocity to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+			//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
 			//GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
 			LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
 
@@ -215,6 +215,8 @@ void APlayerCharacter::Dash()
 		UE_LOG(LogTemp, Warning, TEXT("Cannot dash: Already dashing or on cooldown"));
 	}
 }
+
+
 //method to make the player dash a bit upwards (Rebecka)
 void APlayerCharacter::DashUp()
 {
