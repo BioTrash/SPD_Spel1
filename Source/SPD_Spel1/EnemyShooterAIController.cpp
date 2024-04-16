@@ -9,12 +9,15 @@
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
 #include "Weapon.h"
+#include "RushEnemyAI.h"
 #include "EnemyWeapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
-
+    
+    ARushEnemyAI Rusher;
+    
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -24,7 +27,14 @@ void AEnemyShooterAIController::BeginPlay()
     }
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
+    // Assuming you have a reference to the enemy AI instance
+    if (ARushEnemyAI* Enemy = Cast<ARushEnemyAI>(Rusher))
+    {
+        // Bind the HandleEnemyDeath function to the OnEnemyDeathDelegate
+        Enemy->OnEnemyDeathDelegate.AddDynamic(this, &AYourOtherClass::HandleEnemyDeath);
+    }
 }
+
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
@@ -99,4 +109,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
         }
     }
+}
+void AShooterEnemy::HandleEnemyDeath()
+{
+    // Your logic to handle enemy death
 }
