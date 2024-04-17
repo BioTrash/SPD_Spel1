@@ -39,14 +39,11 @@ public:
 	UFUNCTION(BlueprintPure)
 	AWeapon* GetTriggerWeapon() const;
 
-	//Is needed for recoil in Weapon.cpp (Rufus)
-	UFUNCTION()
-	UCameraComponent* GetFPSCameraComponent();
-
 private:
 	void Slide();
 	void StopSlide();
 	void Dash();
+	void DashUp();
 	void StopDash();
 	
 	// Controls forward and backward movement (Rufus)
@@ -87,32 +84,33 @@ private:
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashSpeed = 4000.0f;
+	float DashForce = 1000.0f;
 	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
 	//cooldown for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashCooldown = 2.5f;
+	float DashCooldown = 0.0f;
 	//keeping track of when the dash happened last (Rebecka)
 	float LastDashTime = 0.0f;
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.50f;
+	float AirDashMultiplier = 0.6f;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
-
+	float DashDelay = 0.01f;
+	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
 	//how much the characters capsule gets rid of (Rebecka)
-	float NewHalfHeight = 10.f;
+	float NewHalfHeight = 60.f;
 	//keeping track of when the slide happened last (Rebecka)
 	float LastSlideTime = 0.0f;
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 10.f;
+	float SlideCameraOffset = 150.f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;
@@ -121,12 +119,10 @@ private:
 	float SlideDuration = 0.5f;
 	//how long you have to wait in order to slide again (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
-	float SlideCooldown = 2.5f;
-	//how fast you will walk after sliding (Rebecka)
-	float DefaultWalkSpeed = 600.f;
+	float SlideCooldown = 0.0f;
 
 	UPROPERTY()
 	FTimerHandle SliderTimerHandle;
-
-	float DefaultCameraView=100.f;
+	
+	
 };
