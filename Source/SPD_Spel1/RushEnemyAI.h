@@ -22,12 +22,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void KillEnemy();
-
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UPROPERTY(EditDefaultsOnly)
@@ -39,9 +36,25 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
+	float MaxTraceDistance = 60.f;
 
-private:
-	UPROPERTY(VisibleAnywhere)
-	class USphereComponent *CollisionComponent;
+	UPROPERTY(EditDefaultsOnly, Category = "Damage")
+	float DamageRadius = 300.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Jump")
+	float JumpForce = 1000.0f;
 	
+private:
+	void PerformLineTrace();
+	void JumpLedge(const FVector& LedgeLocation);
+	UFUNCTION()
+	void DealDamageToPlayer(float Damage);
+	void Explode();
+	void EndExplodeCooldown();
+
+	bool bCanAttack = true;
+	FTimerHandle ExplodeCooldown;
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 };
