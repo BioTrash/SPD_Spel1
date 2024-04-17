@@ -49,6 +49,8 @@ private:
 	int32 ClipSize;
 	UPROPERTY(EditAnywhere)
 	int32 SpreadSize;
+	UPROPERTY(EditAnywhere)
+	int32 RecoilPower;
 	
 	UPROPERTY()
 	FVector Location;

@@ -49,6 +49,8 @@ void AWeapon::Tick(float DeltaTime)
 
 	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
 	OwnerController->GetPlayerViewPoint(Location, Rotation);
+
+	// The block of code below is unused as of camera-based old recoil system. Useful enough to be kept though. May be thrown into it's own class dedicated to camera effects such as shake (Rufus)  
 	if(Recoil)
 	{
 		APlayerCharacter* Player = Cast<APlayerCharacter>(GetOwner());
@@ -75,11 +77,25 @@ void AWeapon::Tick(float DeltaTime)
 			FMath::RandRange(-SpreadSize, SpreadSize)    // Spread along Z
 		);
 
-		// Apply spread to the location
-		FVector SpreadLocation = Location + SpreadAmount;
+		if(Recoil)
+		{
+			FVector RecoilAmount(
+				FMath::RandRange(-0,0),   // Spread along X
+				FMath::RandRange(-0,0),   // Spread along Y
+				FMath::RandRange(-0,RecoilPower)    // Spread along Z
+			);
 
-		// Calculate the endpoint after applying spread
-		End = SpreadLocation + Rotation.Vector() * MaxShootingRange;
+			FVector RecoilLocation = Location + (SpreadAmount + RecoilAmount);
+
+			End = RecoilLocation + Rotation.Vector() * MaxShootingRange;
+		}
+		else
+		{
+			FVector SpreadLocation = Location + SpreadAmount;
+
+			End = SpreadLocation + Rotation.Vector() * MaxShootingRange;
+		}
+		
 	}
 	else
 	{
@@ -89,8 +105,8 @@ void AWeapon::Tick(float DeltaTime)
 
 	if(RecoilRecovery)
 	{
-		
-		FQuat NewRotation = FQuat::Slerp(
+		// THIS RECOIL IS BUGGED AND DEPRECATED (Rufus)
+		/*FQuat NewRotation = FQuat::Slerp(
 		
 				FQuat(FRotator(
 				PlayerCamera->GetComponentRotation().Pitch,
@@ -115,7 +131,7 @@ void AWeapon::Tick(float DeltaTime)
 		
 		DefaultRotation = FRotator::ZeroRotator;
 		TotalRecoil = 0.0f;
-		RecoilRecovery = false;
+		RecoilRecovery = false;*/
 	}
 
 }
@@ -142,7 +158,8 @@ void AWeapon::PullTrigger(bool SprayShooting)
 		{
 			if(Recoil)
 			{
-				DefaultRotation.Pitch += PlayerCamera->GetComponentRotation().Pitch;
+				// PART OF DEPRECATED RECOIL (Rufus)
+				// DefaultRotation.Pitch += PlayerCamera->GetComponentRotation().Pitch;
 			}
 			GetWorld()->GetTimerManager().SetTimer(SprayShootingTimer, this, &AWeapon::ShootWithoutProjectile, 0.1f, true, 0.0f);			
 		}
@@ -174,9 +191,11 @@ void AWeapon::ShootWithoutProjectile()
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
+			
 			if(PlayerCamera)
 			{
-				PlayerCamera->AddLocalRotation(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
+				// PART OF DEPRECATED RECOIL (Rufus)
+				// PlayerCamera->AddLocalRotation(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
 			}
 			
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
