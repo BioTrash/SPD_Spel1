@@ -28,10 +28,21 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float Health;
 
+	UFUNCTION(BlueprintCallable)
+	void Dash();
+	UFUNCTION(BlueprintCallable)
+	void DashUp();
+	UFUNCTION(BlueprintCallable)
+	void StopDash();
+
 public:
 	//declaration of function to connect WBP to the actual health of the player (Rebecka)
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
+
+	//function to connect WBP_DashCooldown and get the cooldown percentage for the dash
+	UFUNCTION(BlueprintPure, Category= "Cooldown")
+	float GetDashCooldownPercentage() const;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -49,10 +60,7 @@ public:
 private:
 	void Slide();
 	void StopSlide();
-	void Dash();
-	void DashUp();
-	void StopDash();
-	
+
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
 	// Controls right and left movement (Rufus)
@@ -90,13 +98,13 @@ private:
 	float DashDuration = 0.4f;
 	//cooldown for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashCooldown = 0.0f;
+	float DashCooldown = 2.0f;
 	//keeping track of when the dash happened last (Rebecka)
 	float LastDashTime = 0.0f;
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.6f;
+	float AirDashMultiplier = 0.7f;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;

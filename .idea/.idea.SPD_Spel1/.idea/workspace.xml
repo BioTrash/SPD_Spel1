@@ -29,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" afterDir="false" />
@@ -238,7 +237,7 @@
       <workItem from="1712845756707" duration="1535000" />
       <workItem from="1712849719721" duration="357000" />
       <workItem from="1713174133742" duration="18045000" />
-      <workItem from="1713341214618" duration="1315000" />
+      <workItem from="1713341214618" duration="6502000" />
     </task>
     <servers />
   </component>
