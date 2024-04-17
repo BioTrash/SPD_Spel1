@@ -22,10 +22,10 @@ protected:
 	virtual void BeginPlay() override;
 
 	//the health the player is initialized with (Rebecka)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float MaxHealth = 100;
 	//health for player (Rebecka)
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float Health;
 
 public:
