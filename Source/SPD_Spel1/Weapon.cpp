@@ -6,6 +6,8 @@
 #include "PlayerCharacter.h"
 #include "Projectile.h"
 #include "Camera/CameraComponent.h"
+#include "Camera/PlayerCameraManager.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -50,19 +52,18 @@ void AWeapon::Tick(float DeltaTime)
 	if(Recoil)
 	{
 		APlayerCharacter* Player = Cast<APlayerCharacter>(GetOwner());
-		if(!Player)
+		if(Player)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("PlayerCharacter not found or conversion failed"));
-			return;
+			PlayerCamera = Player->GetFPSCameraComponent();
+			if(!PlayerCamera)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("PlayerCamera not found, check if PlayerCharacter was found or converted"));
+				return;
+			}
 		}
 	
 		
-		PlayerCamera = Player->GetFPSCameraComponent();
-		if(!PlayerCamera)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("PlayerCamera not found"));
-			return;
-		}
+
 	}
 
 	if (Spread)
@@ -85,6 +86,38 @@ void AWeapon::Tick(float DeltaTime)
 		// End is max range (Rufus)
 		End = Location + Rotation.Vector() * MaxShootingRange;
 	}
+
+	if(RecoilRecovery)
+	{
+		
+		FQuat NewRotation = FQuat::Slerp(
+		
+				FQuat(FRotator(
+				PlayerCamera->GetComponentRotation().Pitch,
+				PlayerCamera->GetComponentRotation().Yaw,
+				PlayerCamera->GetComponentRotation().Roll)),
+				
+				FQuat(FRotator(
+				DefaultRotation.Pitch,
+				PlayerCamera->GetComponentRotation().Yaw,
+				PlayerCamera->GetComponentRotation().Roll)),
+				
+				1.0f);
+
+
+		PlayerCamera->SetWorldRotation(FRotator(NewRotation.Rotator()));
+		
+		//CameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
+
+		
+		//FRotator EvenNewerRotation;
+		//CameraManager->LimitViewPitch(EvenNewerRotation, CameraManager->ViewPitchMin - TotalRecoil, CameraManager->ViewPitchMax - TotalRecoil);
+		
+		DefaultRotation = FRotator::ZeroRotator;
+		TotalRecoil = 0.0f;
+		RecoilRecovery = false;
+	}
+
 }
 
 void AWeapon::PullTrigger(bool SprayShooting)
@@ -107,12 +140,16 @@ void AWeapon::PullTrigger(bool SprayShooting)
 	{
 		if(SprayShooting)
 		{
+			if(Recoil)
+			{
+				DefaultRotation.Pitch += PlayerCamera->GetComponentRotation().Pitch;
+			}
 			GetWorld()->GetTimerManager().SetTimer(SprayShootingTimer, this, &AWeapon::ShootWithoutProjectile, 0.1f, true, 0.0f);			
 		}
 		else
 		{
 			GetWorld()->GetTimerManager().ClearTimer(SprayShootingTimer);
-			//PlayerCamera->SetWorldRotation(FQuat(FRotator(PlayerCamera->GetComponentRotation().Pitch, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll)));
+			RecoilRecovery = true;
 		}
 	}
 }
@@ -137,19 +174,9 @@ void AWeapon::ShootWithoutProjectile()
 		{
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
-
-			// TIP FOR TMRWS BUG FIX: CAMERA'S PITCH DOESN'T LISTEN TO PLAYER INPUTS WHILE SHOOTING
-			// POSSIBLE SOLUTION: CURRENT PITCH += RECOILCAMERAOFFSET
-			
 			if(PlayerCamera)
 			{
-				// FQuat NewCameraQuat = PlayerCamera->GetComponentQuat();
-				// FQuat RecoilQuat = FQuat(FRotator(Rotation.Pitch, 0.0f, 0.0f));
-				// NewCameraQuat *= RecoilQuat;
-				// NewCameraQuat.Normalize();
-
-				float CurrentPitch = PlayerCamera->GetComponentRotation().Pitch;
-				PlayerCamera->SetWorldRotation(FRotator(CurrentPitch += RecoilCameraOffset, PlayerCamera->GetComponentRotation().Yaw, PlayerCamera->GetComponentRotation().Roll));
+				PlayerCamera->AddLocalRotation(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
 			}
 			
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
