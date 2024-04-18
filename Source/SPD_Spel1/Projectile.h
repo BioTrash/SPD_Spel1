@@ -24,6 +24,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	
 	UPROPERTY(EditDefaultsOnly, Category="Weaponry")
 	UStaticMeshComponent* ProjectileMesh;
 

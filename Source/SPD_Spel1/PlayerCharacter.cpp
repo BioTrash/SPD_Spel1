@@ -288,3 +288,9 @@ float APlayerCharacter::GetHealthPercent() const
 {
 	return Health/MaxHealth;
 }
+
+float APlayerCharacter::GetDashCooldownPercentage() const
+{
+	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());
+	return RemainingCooldown/DashCooldown;
+}
