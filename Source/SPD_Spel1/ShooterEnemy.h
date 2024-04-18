@@ -41,7 +41,7 @@ public:
 	TSubclassOf<AWeapon> WeaponClass;
 
 	UPROPERTY(EditAnywhere)
-	class AEnemyWeapon* TriggerWeapon;
+	class AWeapon* TriggerWeapon;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
