@@ -2,12 +2,10 @@
 
 
 #include "Weapon.h"
-
-#include "PlayerCharacter.h"
 #include "Projectile.h"
-#include "Camera/CameraComponent.h"
-#include "Camera/PlayerCameraManager.h"
-#include "Kismet/GameplayStatics.h"
+#include "Components/SceneComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/ActorComponent.h"
 
 
 // Sets default values
@@ -38,9 +36,12 @@ void AWeapon::BeginPlay()
 void AWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
+	// End is max range (Rufus)
+	End = Location + Rotation.Vector() * MaxShootingRange;
+
 	// Is needed in order to get controller (Rufus)
-	OwnerCharacter = Cast<APawn>(GetOwner());
+	APawn* OwnerCharacter = Cast<APawn>(GetOwner());
 	if(!OwnerCharacter) return;
 
 	// Is needed in order to get PlayerViewPort (Rufus)
@@ -49,90 +50,6 @@ void AWeapon::Tick(float DeltaTime)
 
 	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
 	OwnerController->GetPlayerViewPoint(Location, Rotation);
-
-	// The block of code below is unused as of camera-based old recoil system. Useful enough to be kept though. May be thrown into it's own class dedicated to camera effects such as shake (Rufus)  
-	if(Recoil)
-	{
-		APlayerCharacter* Player = Cast<APlayerCharacter>(GetOwner());
-		if(Player)
-		{
-			PlayerCamera = Player->GetFPSCameraComponent();
-			if(!PlayerCamera)
-			{
-				UE_LOG(LogTemp, Warning, TEXT("PlayerCamera not found, check if PlayerCharacter was found or converted"));
-				return;
-			}
-		}
-	
-		
-
-	}
-
-	if (Spread)
-	{
-		// Calculate spread for all axes
-		FVector SpreadAmount(
-			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along X
-			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along Y
-			FMath::RandRange(-SpreadSize, SpreadSize)    // Spread along Z
-		);
-
-		if(Recoil)
-		{
-			FVector RecoilAmount(
-				FMath::RandRange(-0,0),   // Spread along X
-				FMath::RandRange(-0,0),   // Spread along Y
-				FMath::RandRange(-0,RecoilPower)    // Spread along Z
-			);
-
-			FVector RecoilLocation = Location + (SpreadAmount + RecoilAmount);
-
-			End = RecoilLocation + Rotation.Vector() * MaxShootingRange;
-		}
-		else
-		{
-			FVector SpreadLocation = Location + SpreadAmount;
-
-			End = SpreadLocation + Rotation.Vector() * MaxShootingRange;
-		}
-		
-	}
-	else
-	{
-		// End is max range (Rufus)
-		End = Location + Rotation.Vector() * MaxShootingRange;
-	}
-
-	if(RecoilRecovery)
-	{
-		// THIS RECOIL IS BUGGED AND DEPRECATED (Rufus)
-		/*FQuat NewRotation = FQuat::Slerp(
-		
-				FQuat(FRotator(
-				PlayerCamera->GetComponentRotation().Pitch,
-				PlayerCamera->GetComponentRotation().Yaw,
-				PlayerCamera->GetComponentRotation().Roll)),
-				
-				FQuat(FRotator(
-				DefaultRotation.Pitch,
-				PlayerCamera->GetComponentRotation().Yaw,
-				PlayerCamera->GetComponentRotation().Roll)),
-				
-				1.0f);
-
-
-		PlayerCamera->SetWorldRotation(FRotator(NewRotation.Rotator()));
-		
-		//CameraManager = UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
-
-		
-		//FRotator EvenNewerRotation;
-		//CameraManager->LimitViewPitch(EvenNewerRotation, CameraManager->ViewPitchMin - TotalRecoil, CameraManager->ViewPitchMax - TotalRecoil);
-		
-		DefaultRotation = FRotator::ZeroRotator;
-		TotalRecoil = 0.0f;
-		RecoilRecovery = false;*/
-	}
 
 }
 
@@ -156,17 +73,11 @@ void AWeapon::PullTrigger(bool SprayShooting)
 	{
 		if(SprayShooting)
 		{
-			if(Recoil)
-			{
-				// PART OF DEPRECATED RECOIL (Rufus)
-				// DefaultRotation.Pitch += PlayerCamera->GetComponentRotation().Pitch;
-			}
 			GetWorld()->GetTimerManager().SetTimer(SprayShootingTimer, this, &AWeapon::ShootWithoutProjectile, 0.1f, true, 0.0f);			
 		}
 		else
 		{
 			GetWorld()->GetTimerManager().ClearTimer(SprayShootingTimer);
-			RecoilRecovery = true;
 		}
 	}
 }
@@ -187,24 +98,37 @@ void AWeapon::ShootWithoutProjectile()
 	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 	{
+		AActor* HitActor = Hit.GetActor();
+		if (HitActor && HitActor->ActorHasTag("Enemy"))
+		{
+			TArray<USphereComponent*> SphereComponents;
+			HitActor->GetComponents<USphereComponent>(SphereComponents);
+
+			for (USphereComponent* SphereComponent : SphereComponents)
+			{
+				if (SphereComponent->ComponentHasTag("Headshot"))
+				{
+					FString ComponentName = SphereComponent->GetName();
+					Damage += 20.0f;
+					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
+					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
+				}
+			}
+		}
+		
+		
 		if(UnlimitedAmmo || CurrentClip > 0)
 		{
+			//FMath::RandRange(int32 min, int32 max);
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
-			
-			if(PlayerCamera)
-			{
-				// PART OF DEPRECATED RECOIL (Rufus)
-				// PlayerCamera->AddLocalRotation(FRotator(RecoilCameraOffset, 0.0f, 0.0f));
-			}
-			
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
-			AActor* HitActor = Hit.GetActor();
+			AActor* HitActorHeadshot = Hit.GetActor();
 			//if we hit an actor, we make the actor take damage (Rebecka)
-			if(HitActor != nullptr)
+			if(HitActorHeadshot != nullptr)
 			{
 				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
-				HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
+				HitActorHeadshot->TakeDamage(Damage, DamageEvent, OwnerController, this);
 			}
 			
 			CurrentClip--;
@@ -257,18 +181,3 @@ FString AWeapon::GetAmmo() const
 {
 	return FString::Printf(TEXT("%d / %d"), TotalAmmo, CurrentClip);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

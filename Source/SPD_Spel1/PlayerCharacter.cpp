@@ -304,7 +304,8 @@ float APlayerCharacter::GetHealthPercent() const
 	return Health/MaxHealth;
 }
 
-UCameraComponent* APlayerCharacter::GetFPSCameraComponent()
+float APlayerCharacter::GetDashCooldownPercentage() const
 {
-	return FPSCamera;
+	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());
+	return RemainingCooldown/DashCooldown;
 }

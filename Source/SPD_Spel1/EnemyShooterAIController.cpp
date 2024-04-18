@@ -5,6 +5,7 @@
 #include "EnemyWeapon.h"
 #include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "NavigationSystem.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
@@ -14,7 +15,7 @@
 void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
-
+    
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -25,6 +26,7 @@ void AEnemyShooterAIController::BeginPlay()
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
 }
+
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
@@ -42,6 +44,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     MoveToActor(PlayerPawn, 500);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
+    
     if (Enemy)
     {
         FVector DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
@@ -72,17 +75,41 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        
                         EnemyWeapon->PullTrigger(true);
+                        
                         DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
+                        
                         FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
                         HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
+                        LastShotTime = 0.0f;
                     }
-                    //Resetta timern
+                    //Om Ray INTE Hit Player
                     else
                     {
+	                    UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAA"));
                         GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
+                        FHitResult ObstacleHitResult;
+                        //if (GetWorld()->LineTraceSingleByChannel(ObstacleHitResult, Enemy->GetActorLocation(), PlayerPawn->GetActorLocation(), ECC_Visibility))
+                        //{
+                            if (ObstacleHitResult.GetActor() != PlayerPawn)
+                            {
+                                FVector NewDestination = ObstacleHitResult.Location + ObstacleHitResult.ImpactNormal * 5;
+                                
+                                UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());
+                                if (NavSys)
+                                {
+                                    FNavLocation ProjectedNavLocation;
+                                    if (NavSys->GetRandomPointInNavigableRadius(NewDestination, 100.0f, ProjectedNavLocation))
+                                    {
+                                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), ProjectedNavLocation.Location);
+
+                                    }
+                                }
+                            }
+                        //}
                     }
-                    LastShotTime = 0.0f;
+                    
                 }
                 else
                 {
