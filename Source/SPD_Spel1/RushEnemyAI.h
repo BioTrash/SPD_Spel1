@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "RushEnemyAI.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEnemyDeathDelegate);
+
 UCLASS()
 class SPD_SPEL1_API ARushEnemyAI : public ACharacter
 {
@@ -24,6 +26,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(BlueprintAssignable, Category = "Enemy")
+	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
+	
 	void KillEnemy();
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
