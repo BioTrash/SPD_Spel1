@@ -25,6 +25,9 @@ public:
 	//declaration of function to connect WBP to the actual health of the player (Rebecka)
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetDashCooldownPercentage() const;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -38,7 +41,15 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	AWeapon* GetTriggerWeapon() const;
-
+	
+protected:
+	//the health the player is initialized with (Rebecka)
+	UPROPERTY(EditDefaultsOnly)
+	float MaxHealth = 100;
+	//health for player (Rebecka)
+	UPROPERTY(BlueprintReadWrite)
+	float Health;
+	
 private:
 	void Slide();
 	void StopSlide();
@@ -73,13 +84,6 @@ private:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
 	TArray<class AWeapon*> CurrentWeaponArray;
-
-	//the health the player is initialized with (Rebecka)
-	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 100;
-	//health for player (Rebecka)
-	UPROPERTY(VisibleAnywhere)
-	float Health;
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
