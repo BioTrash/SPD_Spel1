@@ -57,10 +57,6 @@ public:
 	UFUNCTION(BlueprintPure)
 	AWeapon* GetTriggerWeapon() const;
 
-	//Is needed for recoil in Weapon.cpp (Rufus)
-	UFUNCTION()
-	UCameraComponent* GetFPSCameraComponent();
-
 private:
 	void Slide();
 	void StopSlide();
