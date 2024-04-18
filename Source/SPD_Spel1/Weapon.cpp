@@ -93,8 +93,9 @@ void AWeapon::ShootWithoutProjectile()
 	Params.AddIgnoredActor(GetOwner()); // Ignores the actor that shot (Rufus)
 	//Params.AddIgnoredActor(Cast<AActor>(Projectile)); // Ignores the same projectiles (Rufus)
 	
-	//Makes it so when the player shoots at an enenmy it does extra damage if it hits it SphereComponent which is on the enemies head(Hanna)
-	//Basically a headshot implementation(Hanna)
+	// If this suddenly stops working or direct shots get stuck in air check whether the ECC_GameTraceChannel is still correct (Rufus)
+	// Messing around with order in 'Project Settings -> Engine -> Collision -> Trace Channels' may break it (Rufus)
+	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
 	{
 		AActor* HitActor = Hit.GetActor();
@@ -107,21 +108,13 @@ void AWeapon::ShootWithoutProjectile()
 			{
 				if (SphereComponent->ComponentHasTag("Headshot"))
 				{
-						FVector SphereCenter = SphereComponent->GetComponentLocation();
-						FVector HitToCenter = Hit.Location - SphereCenter;
-						//DrawDebugLine(GetWorld(), SphereCenter, Hit.Location, FColor::Blue, false, 1.0f, 0, 1.0f);
-					
-					if (HitToCenter.SizeSquared() <= FMath::Square(SphereComponent->GetScaledSphereRadius()))
-					{
 					FString ComponentName = SphereComponent->GetName();
 					Damage += 20.0f;
 					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
 					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
 				}
-				}
 			}
-			//I did this >:) (Hanna)
-		
+		}
 		
 		
 		if(UnlimitedAmmo || CurrentClip > 0)
@@ -151,7 +144,6 @@ void AWeapon::ShootWithoutProjectile()
 		}
 
 	}
-}
 }
 
 void AWeapon::ShootProjectile()
