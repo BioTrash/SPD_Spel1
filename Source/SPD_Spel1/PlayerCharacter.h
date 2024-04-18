@@ -60,6 +60,7 @@ public:
 private:
 	void Slide();
 	void StopSlide();
+	void PerformDash();
 
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
@@ -108,6 +109,7 @@ private:
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;
+	bool bHasDashed = false;
 	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
