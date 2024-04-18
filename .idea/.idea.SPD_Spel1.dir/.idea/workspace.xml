@@ -8,8 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_HealthPickUp.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Health.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Health.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +26,8 @@
     <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -47,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Uproject.SPD_Spel1.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;HannaBranch2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RebeckaBranchNEW&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -59,9 +59,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -71,37 +71,57 @@
       <configuration_2>
         <option name="CONFIGURATION" value="DebugGame Editor" />
         <option name="PLATFORM" value="Win64" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
         <option name="CONFIGURATION" value="DebugGame" />
         <option name="PLATFORM" value="Win64" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
         <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="Win64" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
         <option name="CONFIGURATION" value="Development" />
         <option name="PLATFORM" value="Win64" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
       <configuration_6>
         <option name="CONFIGURATION" value="Shipping" />
         <option name="PLATFORM" value="Win64" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_6>
       <method v="2">
         <option name="Build" />
@@ -137,29 +157,14 @@
       <workItem from="1712849528566" duration="711000" />
       <workItem from="1712854080962" duration="355000" />
       <workItem from="1712906173737" duration="93000" />
-      <workItem from="1713174280276" duration="9000" />
-      <workItem from="1713174307068" duration="2113000" />
-      <workItem from="1713273091861" duration="343000" />
+      <workItem from="1713254456884" duration="2913000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
