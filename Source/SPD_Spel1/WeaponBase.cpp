@@ -27,18 +27,5 @@ void AWeaponBase::Tick(float DeltaTime)
 
 }
 
-template <typename T>
-void AWeaponBase::PullTrigger(bool bRapidFire, T& Func)
-{
-	if(bRapidFire)
-	{
-		GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, this, Func, 0.1f, true, 0.0f);
-	}
-	else
-	{
-		GetWorld()->GetTimerManager().ClearTimer(RapidFireTimer);
-	}
-}
-
 
 

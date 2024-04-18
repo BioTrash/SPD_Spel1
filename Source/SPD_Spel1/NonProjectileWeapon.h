@@ -18,6 +18,7 @@ public:
 	
 	ANonProjectileWeapon();
 	virtual void Shoot() override;
+	virtual void InitiateTimer(bool bButtonHeld) override;
 	
 private:
 	UPROPERTY()

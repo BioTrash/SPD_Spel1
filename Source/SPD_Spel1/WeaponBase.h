@@ -13,8 +13,20 @@ class SPD_SPEL1_API AWeaponBase : public AActor
 public:
 	virtual void Tick(float DeltaTime) override;
 
-	template<typename T>
-	void PullTrigger(bool bRapidFire, T& Func);
+	template<typename T, typename U>
+	void PullTrigger(bool bRapidFire, T Func, U* Object)
+	{
+		if (bRapidFire)
+		{
+			GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, 0.1f, true, 0.0f);
+		}
+		else
+		{
+			GetWorld()->GetTimerManager().ClearTimer(RapidFireTimer);
+		}
+	}
+
+	virtual void InitiateTimer(bool bButtonHeld) {} 
 	virtual void Shoot() {}
 	virtual void Reload() {}
 	virtual void Spread() {}

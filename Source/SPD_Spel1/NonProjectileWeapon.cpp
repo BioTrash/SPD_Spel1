@@ -29,6 +29,12 @@ void ANonProjectileWeapon::Tick(float DeltaTime)
 
 }
 
+void ANonProjectileWeapon::InitiateTimer(bool bButtonHeld)
+{
+	Super::PullTrigger(bButtonHeld, &ANonProjectileWeapon::Shoot, this);
+}
+
+
 void ANonProjectileWeapon::Shoot()
 {
 	FVector ShotDirection;

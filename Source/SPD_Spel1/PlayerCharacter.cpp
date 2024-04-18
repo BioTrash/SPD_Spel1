@@ -115,13 +115,13 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void APlayerCharacter::Shoot()
 {
 	SprayShooting = true;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	TriggerWeapon->InitiateTimer(SprayShooting);
 }
 
 void APlayerCharacter::CancelShoot()
 {
 	SprayShooting = false;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	TriggerWeapon->InitiateTimer(SprayShooting);
 }
 
 void APlayerCharacter::ReloadWeapon()
