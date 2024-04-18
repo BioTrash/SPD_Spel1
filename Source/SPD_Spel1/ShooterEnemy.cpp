@@ -21,8 +21,6 @@ void AShooterEnemy::BeginPlay()
 	Super::BeginPlay();
 	Health = MaxHealth;
 
-	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
-	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
 	if (WeaponClass)
 	{
 		// Spawn the weapon

@@ -10,7 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
 #include "Weapon.h"
-#include "EnemyWeapon.h"
+//#include "EnemyWeapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
 {
