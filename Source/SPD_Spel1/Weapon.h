@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DamageEvents.h"
-#include "Components/SplineMeshComponent.h"
 #include "GameFramework/Actor.h"
 #include "Weapon.generated.h"
 
@@ -40,11 +39,21 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool UnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere)
+	bool Spread = false;
+	UPROPERTY(EditAnywhere)
+	bool Recoil = false;
+	UPROPERTY(EditAnywhere)
+	bool RecoilRecovery = false;
+	UPROPERTY(EditAnywhere)
 	int32 TotalAmmo;
 	UPROPERTY(EditAnywhere)
 	int32 CurrentClip;
 	UPROPERTY(EditAnywhere)
 	int32 ClipSize;
+	UPROPERTY(EditAnywhere)
+	int32 SpreadSize;
+	UPROPERTY(EditAnywhere)
+	int32 RecoilPower;
 	
 	UPROPERTY()
 	FVector Location;
@@ -52,6 +61,8 @@ private:
 	FRotator Rotation;
 	UPROPERTY()
 	FVector End;
+	UPROPERTY()
+	FRotator DefaultRotation;
 	
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
@@ -59,11 +70,27 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	USkeletalMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere)
-	class USplineMeshComponent* Spline;
-
 	UPROPERTY()
 	AController* OwnerController;
+
+	UPROPERTY()
+	APawn* OwnerCharacter;
+
+	UPROPERTY()
+	class UCameraComponent* PlayerCamera;
+
+	UPROPERTY()
+	APlayerCameraManager* CameraManager;
+
+	// RecoilOffset get reset when SprayShootingTimer resets (Rufus)
+	UPROPERTY(EditAnywhere, Category="Weaponry")
+	float RecoilCameraOffset = 1.0f;
+
+	UPROPERTY(EditAnywhere, Category="Weaponry")
+	float RecoilRecoverySpeed = 5.0f;
+
+	UPROPERTY()
+	float TotalRecoil = 0.0f;
 	
 	// Max range is applicable only when no projectile is found, in case of projectile max range should be regulated with physics (Rufus)
 	UPROPERTY(EditAnywhere, Category="Weaponry")
@@ -74,7 +101,7 @@ private:
 	TSubclassOf<class AProjectile> Projectile;
 
 	FTimerHandle SprayShootingTimer;
-
+	
 	// The default way of shooting if no projectile is specified in blueprints (Rufus)
 	void ShootWithoutProjectile();
 
