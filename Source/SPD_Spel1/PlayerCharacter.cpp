@@ -20,7 +20,7 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	//finding and assign the camera component
 	TArray<UCameraComponent*> CameraComponents;
 	GetComponents<UCameraComponent>(CameraComponents);
@@ -200,6 +200,7 @@ void APlayerCharacter::Dash()
 			
 			bIsDashing = true;
 			bHasDashed = true;
+
 			LastDashTime = GetWorld()->GetTimeSeconds();
 
 			// Sets a timer for how long the dash lasts
@@ -304,12 +305,11 @@ float APlayerCharacter::GetHealthPercent() const
 	return Health/MaxHealth;
 }
 
-float APlayerCharacter::GetDashCooldownPercentage() const
+float APlayerCharacter::GetDashCooldownPercentage() 
 {
 	if(!bHasDashed)
 	{
 		//if the player hasnt dashed yet, it returns 0 to indicate no cooldown
-		//DashCooldown = 0.0f;
 		return 0.0f;
 	}
 	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());

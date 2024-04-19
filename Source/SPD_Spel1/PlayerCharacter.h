@@ -42,7 +42,7 @@ public:
 
 	//function to connect WBP_DashCooldown and get the cooldown percentage for the dash
 	UFUNCTION(BlueprintPure, Category= "Cooldown")
-	float GetDashCooldownPercentage() const;
+	float GetDashCooldownPercentage();
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -120,7 +120,7 @@ private:
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 150.f;
+	float SlideCameraOffset = 0.5f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;
