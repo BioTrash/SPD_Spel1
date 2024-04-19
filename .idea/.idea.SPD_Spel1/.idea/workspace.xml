@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +201,7 @@
       <workItem from="1713424568270" duration="625000" />
       <workItem from="1713447802760" duration="2224000" />
       <workItem from="1713450073336" duration="152000" />
-      <workItem from="1713519331879" duration="1339000" />
+      <workItem from="1713519331879" duration="3224000" />
     </task>
     <servers />
   </component>
