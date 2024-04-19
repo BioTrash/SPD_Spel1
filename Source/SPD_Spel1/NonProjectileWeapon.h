@@ -19,19 +19,34 @@ public:
 	ANonProjectileWeapon();
 	virtual void Shoot() override;
 	virtual void InitiateTimer(bool bButtonHeld) override;
+
+	UFUNCTION(BlueprintPure)
+	FVector GetEnd() const;
+	UFUNCTION(BlueprintPure)
+	FVector GetShotDirection() const;
+	UFUNCTION(BlueprintPure)
+	FHitResult GetHitResult() const;
+	UFUNCTION(BlueprintPure)
+	float GetDamage() const;
+	UFUNCTION(BlueprintPure)
+	float GetMaxShootingRange() const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetDamage(float NewDamage);
+	UFUNCTION(BlueprintCallable)
+	void SetMaxShootingRange(float NewMaxShootingRange);
 	
 private:
 	UPROPERTY()
-	AController* OwnerController;
-
-	UPROPERTY()
-	APawn* OwnerCharacter;
-
-	UPROPERTY()
-	FVector Location;
-	UPROPERTY()
-	FRotator Rotation;
-	UPROPERTY()
 	FVector End;
+	UPROPERTY()
+	FVector ShotDirection;
+	UPROPERTY()
+	FHitResult Hit;
+	
+	UPROPERTY(EditAnywhere)
+	float Damage = 10.0f;
+	UPROPERTY(EditAnywhere)
+	float MaxShootingRange = 10000;
 	
 };

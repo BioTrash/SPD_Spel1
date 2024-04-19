@@ -4,6 +4,7 @@
 #include "NonProjectileWeapon.h"
 
 #include "Components/SphereComponent.h"
+#include "Engine/DamageEvents.h"
 
 ANonProjectileWeapon::ANonProjectileWeapon() 
 {
@@ -14,18 +15,7 @@ void ANonProjectileWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Is needed in order to get controller (Rufus)
-	OwnerCharacter = Cast<APawn>(GetOwner());
-	if(!OwnerCharacter) return;
-
-	// Is needed in order to get PlayerViewPort (Rufus)
-	OwnerController = OwnerCharacter->GetController();
-	if(!OwnerController) return;
-
-	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
-	OwnerController->GetPlayerViewPoint(Location, Rotation);
-
-	End = Location + Rotation.Vector() * 10000;
+	End = Super::GetLocation() + Super::GetRotation().Vector() * MaxShootingRange;
 
 }
 
@@ -37,8 +27,6 @@ void ANonProjectileWeapon::InitiateTimer(bool bButtonHeld)
 
 void ANonProjectileWeapon::Shoot()
 {
-	FVector ShotDirection;
-	FHitResult Hit;
 
 	// Is needed because direct shots get blocked by colliders at spawn, potentially damaging the actor that shot (Rufus)
 	FCollisionQueryParams Params;
@@ -46,28 +34,97 @@ void ANonProjectileWeapon::Shoot()
 	Params.AddIgnoredActor(GetOwner()); // Ignores the actor that shot (Rufus)
 	//Params.AddIgnoredActor(Cast<AActor>(Projectile)); // Ignores the same projectiles (Rufus)
 	
-	// If this suddenly stops working or direct shots get stuck in air check whether the ECC_GameTraceChannel is still correct (Rufus)
-	// Messing around with order in 'Project Settings -> Engine -> Collision -> Trace Channels' may break it (Rufus)
-	// Check current GameTraceChanel by going 'SPD_Spel1\Config\GameEngine.ini' and searching for the name of the channel in question as written in Project Settings. (Rufus)
-	if(GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECC_GameTraceChannel2, Params))
+	//Makes it so when the player shoots at an enemy it does extra damage if it hits it SphereComponent which is on the enemies head(Hanna)
+	//Basically a headshot implementation(Hanna)
+	if(GetWorld()->LineTraceSingleByChannel(Hit, Super::GetLocation(), End, ECC_GameTraceChannel2, Params))
 	{
 		AActor* HitActor = Hit.GetActor();
-		if (HitActor && HitActor->ActorHasTag("Enemy"))
-		{
-			TArray<USphereComponent*> SphereComponents;
-			HitActor->GetComponents<USphereComponent>(SphereComponents);
+		TArray<USphereComponent*> SphereComponents;
+		HitActor->GetComponents<USphereComponent>(SphereComponents);
 
-			for (USphereComponent* SphereComponent : SphereComponents)
+		for (USphereComponent* SphereComponent : SphereComponents)
+		{
+			if (SphereComponent->ComponentHasTag("Headshot"))
 			{
-				if (SphereComponent->ComponentHasTag("Headshot"))
+					FVector SphereCenter = SphereComponent->GetComponentLocation();
+					FVector HitToCenter = Hit.Location - SphereCenter;
+					//DrawDebugLine(GetWorld(), SphereCenter, Hit.Location, FColor::Blue, false, 1.0f, 0, 1.0f);
+				
+				if (HitToCenter.SizeSquared() <= FMath::Square(SphereComponent->GetScaledSphereRadius()))
 				{
-					FString ComponentName = SphereComponent->GetName();
-					//Damage += 20.0f;
-					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
-					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
+				FString ComponentName = SphereComponent->GetName();
+				Damage += 20.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
+				DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
 				}
 			}
 		}
-	}
+		//I did this >:) (Hanna)
+	
+	
+	
+		if(Super::GetbUnlimitedAmmo() || Super::GetCurrentClip() > 0)
+		{
+			//FMath::RandRange(int32 min, int32 max);
+			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
+
+			//NEW CHANGES; CAN REMOVE IF NOT WORKING
+ 			AActor* HitActorHeadshot = Hit.GetActor();
+ 			//if we hit an actor, we make the actor take damage (Rebecka)
+ 			if(HitActorHeadshot != nullptr)
+ 			{
+ 				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
+ 				HitActorHeadshot->TakeDamage(Damage, DamageEvent, Super::GetOwnerController(), this);
+ 			}
+ 			
+ 			Super::SetCurrentClip(Super::GetCurrentClip()-1);
+ 			
+ 			if(GetCurrentClip() == 0)
+ 			{
+ 				Super::Reload();
+ 			}
+ 		}
+ 		else
+ 		{
+ 			Super::Reload();
+ 		}
+ 	}
 }
+
+FVector ANonProjectileWeapon::GetEnd() const
+{
+	return End;
+}
+
+FVector ANonProjectileWeapon::GetShotDirection() const
+{
+	return ShotDirection;
+}
+
+FHitResult ANonProjectileWeapon::GetHitResult() const
+{
+	return Hit;
+}
+
+float ANonProjectileWeapon::GetDamage() const
+{
+	return Damage;
+}
+
+float ANonProjectileWeapon::GetMaxShootingRange() const
+{
+	return MaxShootingRange;
+}
+
+void ANonProjectileWeapon::SetMaxShootingRange(float NewMaxShootingRange)
+{
+	MaxShootingRange = NewMaxShootingRange;
+}
+
+void ANonProjectileWeapon::SetDamage(float NewDamage)
+{
+	Damage = NewDamage;
+}
+
+
 

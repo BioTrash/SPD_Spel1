@@ -37,13 +37,13 @@ public:
 	
 private:
 	UPROPERTY(EditAnywhere)
-	bool UnlimitedAmmo = false;
-	UPROPERTY(EditAnywhere)
 	bool Spread = false;
 	UPROPERTY(EditAnywhere)
 	bool Recoil = false;
 	UPROPERTY(EditAnywhere)
 	bool RecoilRecovery = false;
+	UPROPERTY(EditAnywhere)
+	bool UnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere)
 	int32 TotalAmmo;
 	UPROPERTY(EditAnywhere)
