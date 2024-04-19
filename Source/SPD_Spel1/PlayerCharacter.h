@@ -21,28 +21,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	//the health the player is initialized with (Rebecka)
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float MaxHealth = 100;
-	//health for player (Rebecka)
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	float Health;
-
-	UFUNCTION(BlueprintCallable)
-	void Dash();
-	UFUNCTION(BlueprintCallable)
-	void DashUp();
-	UFUNCTION(BlueprintCallable)
-	void StopDash();
-
 public:
 	//declaration of function to connect WBP to the actual health of the player (Rebecka)
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
-
-	//function to connect WBP_DashCooldown and get the cooldown percentage for the dash
-	UFUNCTION(BlueprintPure, Category= "Cooldown")
-	float GetDashCooldownPercentage() const;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -60,7 +42,9 @@ public:
 private:
 	void Slide();
 	void StopSlide();
-
+	void Dash();
+	void StopDash();
+	
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
 	// Controls right and left movement (Rufus)
@@ -90,35 +74,41 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
 	TArray<class AWeaponBase*> CurrentWeaponArray;
 
+	//the health the player is initialized with (Rebecka)
+	UPROPERTY(EditDefaultsOnly)
+	float MaxHealth = 100;
+	//health for player (Rebecka)
+	UPROPERTY(VisibleAnywhere)
+	float Health;
+
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashForce = 1000.0f;
+	float DashSpeed = 4000.0f;
 	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
 	//cooldown for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashCooldown = 2.0f;
+	float DashCooldown = 2.5f;
 	//keeping track of when the dash happened last (Rebecka)
 	float LastDashTime = 0.0f;
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.7f;
+	float AirDashMultiplier = 0.50f;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
-	float DashDelay = 0.01f;
-	
+
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
 	//how much the characters capsule gets rid of (Rebecka)
-	float NewHalfHeight = 60.f;
+	float NewHalfHeight = 10.f;
 	//keeping track of when the slide happened last (Rebecka)
 	float LastSlideTime = 0.0f;
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 150.f;
+	float SlideCameraOffset = 10.f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;
@@ -127,10 +117,13 @@ private:
 	float SlideDuration = 0.5f;
 	//how long you have to wait in order to slide again (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
-	float SlideCooldown = 0.0f;
+	float SlideCooldown = 2.5f;
+	//how fast you will walk after sliding (Rebecka)
+	float DefaultWalkSpeed = 600.f;
 
 	UPROPERTY()
 	FTimerHandle SliderTimerHandle;
-	
+
+	float DefaultCameraView=100.f;
 	
 };
