@@ -42,7 +42,7 @@ public:
 
 	//function to connect WBP_DashCooldown and get the cooldown percentage for the dash
 	UFUNCTION(BlueprintPure, Category= "Cooldown")
-	float GetDashCooldownPercentage();
+	float GetDashCooldownPercentage() const;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

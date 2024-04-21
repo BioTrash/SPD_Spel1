@@ -305,7 +305,7 @@ float APlayerCharacter::GetHealthPercent() const
 	return Health/MaxHealth;
 }
 
-float APlayerCharacter::GetDashCooldownPercentage() 
+float APlayerCharacter::GetDashCooldownPercentage() const 
 {
 	if(!bHasDashed)
 	{
