@@ -55,12 +55,11 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UFUNCTION(BlueprintPure)
-	AWeapon* GetTriggerWeapon() const;
+	class AWeaponBase* GetTriggerWeapon() const;
 
 private:
 	void Slide();
 	void StopSlide();
-	void PerformDash();
 
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
@@ -81,15 +80,15 @@ private:
 	
 	// Required for 'Shoot()'
 	UPROPERTY()
-	AWeapon* TriggerWeapon;
+	class AWeaponBase* TriggerWeapon;
 	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<TSubclassOf<class AWeapon>> InitialWeaponArray;
+	TArray<TSubclassOf<class AWeaponBase>> InitialWeaponArray;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<class AWeapon*> CurrentWeaponArray;
+	TArray<class AWeaponBase*> CurrentWeaponArray;
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
@@ -109,7 +108,6 @@ private:
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;
-	bool bHasDashed = false;
 	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
@@ -120,7 +118,7 @@ private:
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 0.5f;
+	float SlideCameraOffset = 150.f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;

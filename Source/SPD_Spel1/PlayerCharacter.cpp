@@ -2,7 +2,7 @@
 
 
 #include "PlayerCharacter.h"
-#include "Weapon.h"
+#include "WeaponBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
@@ -14,13 +14,14 @@ APlayerCharacter::APlayerCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	//finding and assign the camera component
 	TArray<UCameraComponent*> CameraComponents;
 	GetComponents<UCameraComponent>(CameraComponents);
@@ -39,10 +40,10 @@ void APlayerCharacter::BeginPlay()
 	if(!InitialWeaponArray.IsEmpty())
 	{
 		// Goes through the entire array of weapon blueprints (Rufus)
-		for(TSubclassOf<AWeapon>& Weapon : InitialWeaponArray) 
+		for(TSubclassOf<AWeaponBase>& Weapon : InitialWeaponArray) 
 		{
 			// Spawns in each weapon blue print at zero world position (Rufus)
-			AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
+			AWeaponBase* WeaponInstance = GetWorld()->SpawnActor<AWeaponBase>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
 
 			// Checks whether spawn was successful or not (Rufus)
 			if(WeaponInstance)
@@ -114,13 +115,13 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void APlayerCharacter::Shoot()
 {
 	SprayShooting = true;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	TriggerWeapon->InitiateTimer(SprayShooting);
 }
 
 void APlayerCharacter::CancelShoot()
 {
 	SprayShooting = false;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	TriggerWeapon->InitiateTimer(SprayShooting);
 }
 
 void APlayerCharacter::ReloadWeapon()
@@ -128,7 +129,7 @@ void APlayerCharacter::ReloadWeapon()
 	TriggerWeapon->Reload();
 }
 
-AWeapon* APlayerCharacter::GetTriggerWeapon() const
+AWeaponBase* APlayerCharacter::GetTriggerWeapon() const
 {
 	return TriggerWeapon;
 }
@@ -150,7 +151,7 @@ void APlayerCharacter::SwapWeapon()
 {
 	if(!CurrentWeaponArray.IsEmpty())
 	{
-		AWeapon* lastElement = CurrentWeaponArray.Last(); // Save the last element
+		AWeaponBase* lastElement = CurrentWeaponArray.Last(); // Save the last element
     
 		// Shift elements to the right
 		for (int i = CurrentWeaponArray.Num() - 1; i > 0; --i) {
@@ -199,8 +200,6 @@ void APlayerCharacter::Dash()
 			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
 			
 			bIsDashing = true;
-			bHasDashed = true;
-
 			LastDashTime = GetWorld()->GetTimeSeconds();
 
 			// Sets a timer for how long the dash lasts
@@ -305,13 +304,8 @@ float APlayerCharacter::GetHealthPercent() const
 	return Health/MaxHealth;
 }
 
-float APlayerCharacter::GetDashCooldownPercentage() const 
+float APlayerCharacter::GetDashCooldownPercentage() const
 {
-	if(!bHasDashed)
-	{
-		//if the player hasnt dashed yet, it returns 0 to indicate no cooldown
-		return 0.0f;
-	}
 	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());
 	return RemainingCooldown/DashCooldown;
 }
