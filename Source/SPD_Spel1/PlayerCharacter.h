@@ -55,7 +55,7 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UFUNCTION(BlueprintPure)
-	AWeaponBase* GetTriggerWeapon() const;
+	AWeapon* GetTriggerWeapon() const;
 
 private:
 	void Slide();
@@ -80,15 +80,15 @@ private:
 	
 	// Required for 'Shoot()'
 	UPROPERTY()
-	AWeaponBase* TriggerWeapon;
+	AWeapon* TriggerWeapon;
 	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<TSubclassOf<class AWeaponBase>> InitialWeaponArray;
+	TArray<TSubclassOf<class AWeapon>> InitialWeaponArray;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<class AWeaponBase*> CurrentWeaponArray;
+	TArray<class AWeapon*> CurrentWeaponArray;
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
