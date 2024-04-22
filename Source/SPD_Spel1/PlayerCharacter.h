@@ -60,6 +60,7 @@ public:
 private:
 	void Slide();
 	void StopSlide();
+	void PerformDash();
 
 	// Controls forward and backward movement (Rufus)
 	void FrontBackMove(float AxisValue);
@@ -108,6 +109,7 @@ private:
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;
+	bool bHasDashed = false;
 	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
@@ -118,7 +120,7 @@ private:
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 150.f;
+	float SlideCameraOffset = 0.5f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;

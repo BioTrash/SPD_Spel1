@@ -14,14 +14,13 @@ APlayerCharacter::APlayerCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	//finding and assign the camera component
 	TArray<UCameraComponent*> CameraComponents;
 	GetComponents<UCameraComponent>(CameraComponents);
@@ -200,6 +199,8 @@ void APlayerCharacter::Dash()
 			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
 			
 			bIsDashing = true;
+			bHasDashed = true;
+
 			LastDashTime = GetWorld()->GetTimeSeconds();
 
 			// Sets a timer for how long the dash lasts
@@ -304,8 +305,13 @@ float APlayerCharacter::GetHealthPercent() const
 	return Health/MaxHealth;
 }
 
-float APlayerCharacter::GetDashCooldownPercentage() const
+float APlayerCharacter::GetDashCooldownPercentage() const 
 {
+	if(!bHasDashed)
+	{
+		//if the player hasnt dashed yet, it returns 0 to indicate no cooldown
+		return 0.0f;
+	}
 	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());
 	return RemainingCooldown/DashCooldown;
 }
