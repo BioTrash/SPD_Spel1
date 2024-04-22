@@ -37,11 +37,8 @@ void AWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// End is max range (Rufus)
-	End = Location + Rotation.Vector() * MaxShootingRange;
-
 	// Is needed in order to get controller (Rufus)
-	APawn* OwnerCharacter = Cast<APawn>(GetOwner());
+	OwnerCharacter = Cast<APawn>(GetOwner());
 	if(!OwnerCharacter) return;
 
 	// Is needed in order to get PlayerViewPort (Rufus)
@@ -50,6 +47,41 @@ void AWeapon::Tick(float DeltaTime)
 
 	// Is needed in order to establish max range and direction for directs shots, i.e. non-projectile (Rufus)
 	OwnerController->GetPlayerViewPoint(Location, Rotation);
+
+	if (Spread)
+	{
+		// Calculate spread for all axes
+		FVector SpreadAmount(
+			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along X
+			FMath::RandRange(-SpreadSize, SpreadSize),   // Spread along Y
+			FMath::RandRange(-SpreadSize, SpreadSize)    // Spread along Z
+		);
+
+		if(Recoil)
+		{
+			FVector RecoilAmount(
+				FMath::RandRange(-0,0),   // Spread along X
+				FMath::RandRange(-0,0),   // Spread along Y
+				FMath::RandRange(-0,RecoilPower)    // Spread along Z
+			);
+
+			FVector RecoilLocation = Location + (SpreadAmount + RecoilAmount);
+
+			End = RecoilLocation + Rotation.Vector() * MaxShootingRange;
+		}
+		else
+		{
+			FVector SpreadLocation = Location + SpreadAmount;
+
+			End = SpreadLocation + Rotation.Vector() * MaxShootingRange;
+		}
+		
+	}
+	else
+	{
+		// End is max range (Rufus)
+		End = Location + Rotation.Vector() * MaxShootingRange;
+	}
 
 }
 
@@ -117,41 +149,40 @@ void AWeapon::ShootWithoutProjectile()
 					Damage += 20.0f;
 					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
 					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
-				}
+					}
 				}
 			}
 			//I did this >:) (Hanna)
 		
 		
 		
-		if(UnlimitedAmmo || CurrentClip > 0)
-		{
-			//FMath::RandRange(int32 min, int32 max);
-			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
-
-			//NEW CHANGES; CAN REMOVE IF NOT WORKING
-			AActor* HitActorHeadshot = Hit.GetActor();
-			//if we hit an actor, we make the actor take damage (Rebecka)
-			if(HitActorHeadshot != nullptr)
+			if(UnlimitedAmmo || CurrentClip > 0)
 			{
-				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
-				HitActorHeadshot->TakeDamage(Damage, DamageEvent, OwnerController, this);
-			}
-			
-			CurrentClip--;
-			
-			if(CurrentClip == 0)
-			{
-				Reload();
-			}
-		}
-		else
-		{
-			Reload();
-		}
+				//FMath::RandRange(int32 min, int32 max);
+				DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
+				//NEW CHANGES; CAN REMOVE IF NOT WORKING
+ 				AActor* HitActorHeadshot = Hit.GetActor();
+ 				//if we hit an actor, we make the actor take damage (Rebecka)
+ 				if(HitActorHeadshot != nullptr)
+ 				{
+ 					FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
+ 					HitActorHeadshot->TakeDamage(Damage, DamageEvent, OwnerController, this);
+ 				}
+ 				
+ 				CurrentClip--;
+ 				
+ 				if(CurrentClip == 0)
+ 				{
+ 					Reload();
+ 				}
+ 			}
+ 			else
+ 			{
+ 				Reload();
+ 			}
+ 		}
 	}
-}
 }
 
 void AWeapon::ShootProjectile()
