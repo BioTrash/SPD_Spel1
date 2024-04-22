@@ -2,7 +2,7 @@
 
 
 #include "PlayerCharacter.h"
-#include "WeaponBase.h"
+#include "Weapon.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
@@ -40,10 +40,10 @@ void APlayerCharacter::BeginPlay()
 	if(!InitialWeaponArray.IsEmpty())
 	{
 		// Goes through the entire array of weapon blueprints (Rufus)
-		for(TSubclassOf<AWeaponBase>& Weapon : InitialWeaponArray) 
+		for(TSubclassOf<AWeapon>& Weapon : InitialWeaponArray) 
 		{
 			// Spawns in each weapon blue print at zero world position (Rufus)
-			AWeaponBase* WeaponInstance = GetWorld()->SpawnActor<AWeaponBase>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
+			AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
 
 			// Checks whether spawn was successful or not (Rufus)
 			if(WeaponInstance)
@@ -115,13 +115,13 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void APlayerCharacter::Shoot()
 {
 	SprayShooting = true;
-	TriggerWeapon->InitiateTimer(SprayShooting);
+	TriggerWeapon->PullTrigger(SprayShooting);
 }
 
 void APlayerCharacter::CancelShoot()
 {
 	SprayShooting = false;
-	TriggerWeapon->InitiateTimer(SprayShooting);
+	TriggerWeapon->PullTrigger(SprayShooting);
 }
 
 void APlayerCharacter::ReloadWeapon()
@@ -129,7 +129,7 @@ void APlayerCharacter::ReloadWeapon()
 	TriggerWeapon->Reload();
 }
 
-AWeaponBase* APlayerCharacter::GetTriggerWeapon() const
+AWeapon* APlayerCharacter::GetTriggerWeapon() const
 {
 	return TriggerWeapon;
 }
@@ -151,7 +151,7 @@ void APlayerCharacter::SwapWeapon()
 {
 	if(!CurrentWeaponArray.IsEmpty())
 	{
-		AWeaponBase* lastElement = CurrentWeaponArray.Last(); // Save the last element
+		AWeapon* lastElement = CurrentWeaponArray.Last(); // Save the last element
     
 		// Shift elements to the right
 		for (int i = CurrentWeaponArray.Num() - 1; i > 0; --i) {

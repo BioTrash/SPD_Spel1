@@ -39,6 +39,7 @@ void ARushEnemyAI::KillEnemy()
 
 	OnEnemyDeathDelegate.Broadcast();
 
+	OnEnemyDeath();
 	Destroy();
 }
 
