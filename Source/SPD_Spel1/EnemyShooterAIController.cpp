@@ -22,6 +22,8 @@ void AEnemyShooterAIController::BeginPlay()
 
         APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
+        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+
     }
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
@@ -41,9 +43,10 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     }
 
     Super::Tick(DeltaSeconds);
-    MoveToActor(PlayerPawn, 2000);
+    //MoveToActor(PlayerPawn, 2000);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
+    EnemyLocation = Enemy->GetActorLocation();
     
     if (Enemy)
     {
@@ -54,8 +57,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         if (EnemyWeapon)
         {
             EnemyWeapon->SetActorRotation(WeaponRotation);
-            if (LastShotTime >= ShootCooldown)
-            {
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
@@ -72,56 +73,32 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
+                        UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-                        
-                        EnemyWeapon->PullTrigger(true);
-                        
-                        DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
-                        
-                        FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
-                        HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
-                        LastShotTime = 0.0f;
+
+                        if (LastShotTime >= ShootCooldown)
+                        {
+                            //Play sound
+                            OnEnemyShoot();
+                            
+                            EnemyWeapon->PullTrigger(true);
+                            DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
+                            FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
+                            HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
+                            LastShotTime = 0.0f;
+                        }
                     }
                     //Om Ray INTE Hit Player
-                    else
-                    {
-	                    //UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAA"));
-                        GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
-                        FHitResult ObstacleHitResult;
-                        //if (GetWorld()->LineTraceSingleByChannel(ObstacleHitResult, Enemy->GetActorLocation(), PlayerPawn->GetActorLocation(), ECC_Visibility))
-                        //{
-                            if (ObstacleHitResult.GetActor() != PlayerPawn)
-                            {
-                                FVector NewDestination = ObstacleHitResult.Location + ObstacleHitResult.ImpactNormal * 100;
-                                UE_LOG(LogTemp, Error, TEXT("NEW DESTINATION: %s"), *NewDestination.ToString());
-                                
-                                UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());
-                                if (NavSys)
-                                {
-                                    FNavLocation ProjectedNavLocation;
-                                    if (NavSys->GetRandomPointInNavigableRadius(NewDestination, 500.0f, ProjectedNavLocation))
-                                    {
-                                        UE_LOG(LogTemp, Warning, TEXT("Pejection Succeeded"));
-                                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), ProjectedNavLocation.Location);
-                                        MoveToLocation(ProjectedNavLocation.Location, 0);
-
-                                    }
-                                }
-                            }
-                        //}
+                        else
+                        {
+                            GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                        }
                     }
                     
-                }
-                else
-                {
-                    UE_LOG(LogTemp, Warning, TEXT("Should stop shooting"));
-                    GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-                    EnemyWeapon->PullTrigger(false);
-                }
+                
                 // Visualize the line trace
             }
         }
-    }
 }

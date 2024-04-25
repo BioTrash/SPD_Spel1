@@ -13,16 +13,24 @@ class SPD_SPEL1_API AWeaponBase : public AActor
 public:
 	virtual void Tick(float DeltaTime) override;
 
+	void DelaySwitch();
+
 	// This needs to be in the header because template needs to be available at initialization, i.e. before compilation. (Rufus)
 	template<typename T, typename U>
 	void PullTrigger(bool bRapidFire, T Func, U* Object)
 	{
 		if (bRapidFire)
 		{
-			GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, true, 0.0f);
+			if(bDelayed)
+			{
+				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, true, 0.0f);
+				bDelayed = false;
+				GetWorld()->GetTimerManager().SetTimer(FireDelayTimer, this, &AWeaponBase::DelaySwitch, FireDelay/2, false, FireDelay/2);
+			}
 		}
 		else
 		{
+			if(!bDelayed) return;
 			GetWorld()->GetTimerManager().ClearTimer(RapidFireTimer);
 		}
 	}
@@ -62,6 +70,9 @@ public:
 	void SetCurrentClip(int32 _CurrentClip);
 	UFUNCTION(BlueprintCallable)
 	void SetClipSize(int32 _ClipSize);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void WhenShot();
 
 
 	
@@ -76,9 +87,14 @@ private:
 	UStaticMeshComponent* Mesh;
 
 	FTimerHandle RapidFireTimer;
-
-	UPROPERTY(EditAnywhere)
+	FTimerHandle FireDelayTimer;
+	UPROPERTY()
+	bool bDelayed = true;
+	
+	UPROPERTY(EditAnywhere, Category="Fire Behaviour")
 	float FireRate = 0.1f;
+	UPROPERTY(EditAnywhere, Category="Fire Behaviour")
+	float FireDelay = 0.0f;
 	UPROPERTY(EditAnywhere, Category="Ammo")
 	bool bUnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere, Category="Ammo")
