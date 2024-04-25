@@ -5,6 +5,7 @@
 #include "EnemyWeapon.h"
 #include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "NavigationSystem.h"
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
@@ -40,9 +41,10 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     }
 
     Super::Tick(DeltaSeconds);
-    MoveToActor(PlayerPawn, 500);
+    MoveToActor(PlayerPawn, 2000);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
+    
     if (Enemy)
     {
         FVector DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
@@ -82,11 +84,33 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
                         LastShotTime = 0.0f;
                     }
-                    //Resetta timern
+                    //Om Ray INTE Hit Player
                     else
                     {
-	                    UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAA"));
+	                    //UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAA"));
                         GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
+                        FHitResult ObstacleHitResult;
+                        //if (GetWorld()->LineTraceSingleByChannel(ObstacleHitResult, Enemy->GetActorLocation(), PlayerPawn->GetActorLocation(), ECC_Visibility))
+                        //{
+                            if (ObstacleHitResult.GetActor() != PlayerPawn)
+                            {
+                                FVector NewDestination = ObstacleHitResult.Location + ObstacleHitResult.ImpactNormal * 100;
+                                UE_LOG(LogTemp, Warning, TEXT("NEW DESTINATION: ", NewDestination));
+                                
+                                UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());
+                                if (NavSys)
+                                {
+                                    FNavLocation ProjectedNavLocation;
+                                    if (NavSys->GetRandomPointInNavigableRadius(NewDestination, 500.0f, ProjectedNavLocation))
+                                    {
+                                        UE_LOG(LogTemp, Warning, TEXT("Pejection Succeeded"));
+                                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), ProjectedNavLocation.Location);
+                                        MoveToLocation(ProjectedNavLocation.Location, 0);
+
+                                    }
+                                }
+                            }
+                        //}
                     }
                     
                 }
