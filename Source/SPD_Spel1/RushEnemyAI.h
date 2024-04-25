@@ -33,7 +33,7 @@ public:
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 100;
+	float MaxHealth = 40.f;
 
 	UPROPERTY(VisibleAnywhere)
 	float Health;
