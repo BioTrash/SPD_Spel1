@@ -73,7 +73,7 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
-	USkeletalMeshComponent* Mesh;
+	UStaticMeshComponent* Mesh;
 
 	FTimerHandle RapidFireTimer;
 

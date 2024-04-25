@@ -10,7 +10,7 @@ AWeaponBase::AWeaponBase()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	SetRootComponent(Root);
 
-	Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Root);
 
 }
@@ -118,7 +118,7 @@ void AWeaponBase::Reload()
 
 FString AWeaponBase::GetAmmo() const
 {
-	return FString::Printf(TEXT("%d / %d"), TotalAmmo, CurrentClip);
+	return FString::Printf(TEXT("%d / %d"), CurrentClip ,TotalAmmo);
 }
 
 
