@@ -38,6 +38,12 @@ void AWeaponBase::Tick(float DeltaTime)
 
 }
 
+void AWeaponBase::DelaySwitch()
+{
+	bDelayed = true;
+}
+
+
 bool AWeaponBase::GetbUnlimitedAmmo() const
 {
 	return bUnlimitedAmmo;
