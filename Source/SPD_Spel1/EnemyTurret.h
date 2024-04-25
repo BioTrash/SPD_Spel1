@@ -26,4 +26,28 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+private:
+
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	class UCapsuleComponent* CapsuleComp;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	UStaticMeshComponent* BaseMesh;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	UStaticMeshComponent* TurretMesh;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	USceneComponent* ProjectileSpawn;
+	
+	UPROPERTY(EditAnywhere, Category="Turret")
+	float FireRange = 1000.f;
+
+	UPROPERTY(EditAnywhere, Category="Turret")
+	class APlayerCharacter* Player;
+
+	UPROPERTY(EditAnywhere, Blueprintable, Category="Combat")
+	float RotationSpeed = 5.f;
+
+	void RotateTurret(FVector TargetLocation);
+
+	
+	
 };

@@ -51,7 +51,6 @@ public:
 	
 private:
 	void PerformLineTrace();
-	void JumpLedge(const FVector& LedgeLocation);
 	UFUNCTION()
 	void DealDamageToPlayer(float Damage);
 	void Explode();
