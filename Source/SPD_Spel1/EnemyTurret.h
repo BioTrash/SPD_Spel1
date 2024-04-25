@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "EnemyTurret.generated.h"
 
+
 UCLASS()
 class SPD_SPEL1_API AEnemyTurret : public APawn
 {
@@ -50,7 +51,7 @@ public:
 private:
 
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	class UCapsuleComponent* CapsuleComp;
+	class UCapsuleComponent* CapsuleComponent;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	UStaticMeshComponent* BaseMesh;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
