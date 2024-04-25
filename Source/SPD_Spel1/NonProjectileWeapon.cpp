@@ -75,6 +75,7 @@ void ANonProjectileWeapon::Shoot()
  			{
  				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
  				HitActorHeadshot->TakeDamage(Damage, DamageEvent, Super::GetOwnerController(), this);
+ 				Super::WhenShot();
  			}
  			
  			Super::SetCurrentClip(Super::GetCurrentClip()-1);

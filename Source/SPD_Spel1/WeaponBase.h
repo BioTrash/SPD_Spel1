@@ -70,6 +70,9 @@ public:
 	void SetCurrentClip(int32 _CurrentClip);
 	UFUNCTION(BlueprintCallable)
 	void SetClipSize(int32 _ClipSize);
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void WhenShot();
 
 
 	
