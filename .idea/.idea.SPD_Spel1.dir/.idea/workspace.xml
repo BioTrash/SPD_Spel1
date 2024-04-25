@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
-    </list>
+    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,9 +48,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\jeva3947\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -65,7 +61,7 @@
         <option name="PLATFORM" value="Win64" />
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
@@ -79,7 +75,7 @@
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\haar9434\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
@@ -92,7 +88,7 @@
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\haar9434\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,7 +100,7 @@
         <option name="PLATFORM" value="Win64" />
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
@@ -117,7 +113,7 @@
         <option name="PLATFORM" value="Win64" />
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
         <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\jeva3947\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\haar9434\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
@@ -149,6 +145,7 @@
       <workItem from="1713789046878" duration="342000" />
       <workItem from="1714027039517" duration="836000" />
       <workItem from="1714036970865" duration="142000" />
+      <workItem from="1714037541170" duration="594000" />
     </task>
     <servers />
   </component>
