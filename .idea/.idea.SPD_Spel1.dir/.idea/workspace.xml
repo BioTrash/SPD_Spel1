@@ -9,14 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BB_EnemyRushAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BB_EnemyRushAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_TurretAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_TurretAIController.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BT_TurretAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BT_TurretAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +168,7 @@
       <workItem from="1714038028922" duration="2388000" />
       <workItem from="1714047091323" duration="181000" />
       <workItem from="1714047289051" duration="5607000" />
+      <workItem from="1714053015590" duration="6923000" />
     </task>
     <servers />
   </component>
