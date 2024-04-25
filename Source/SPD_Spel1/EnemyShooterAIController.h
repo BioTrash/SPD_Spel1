@@ -17,18 +17,25 @@ class SPD_SPEL1_API AEnemyShooterAIController : public AAIController
 public:
 
 	virtual void Tick(float DeltaSeconds) override;
+	UPROPERTY(BlueprintReadOnly)
+	FVector EnemyLocation;
+	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
+	void OnEnemyShoot();
+	
 	
 protected:
 
 	virtual void BeginPlay() override;
 
 private:
-
+	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
 	float LastShotTime = 0.0f;
 
 	// Cooldown duration between shots
 	float ShootCooldown = 5.0f;
+
+
 	
 };

@@ -46,6 +46,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     //MoveToActor(PlayerPawn, 2000);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
+    EnemyLocation = Enemy->GetActorLocation();
     
     if (Enemy)
     {
@@ -78,6 +79,9 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
                         if (LastShotTime >= ShootCooldown)
                         {
+                            //Play sound
+                            OnEnemyShoot();
+                            
                             EnemyWeapon->PullTrigger(true);
                             DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                             FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
@@ -98,4 +102,3 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
         }
 }
-
