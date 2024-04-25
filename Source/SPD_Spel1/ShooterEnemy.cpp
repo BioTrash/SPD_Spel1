@@ -31,8 +31,11 @@ void AShooterEnemy::BeginPlay()
 		// Check if spawn was successful
 		if (WeaponInstance)
 		{
-			// Attach the weapon to the mesh socket
-			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			// Attach the weapon to the mesh socket : IMPLEMENT WHEN SOCKET DONE
+			//WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+
+			//Attach the weapon to the mesh root
+			WeaponInstance->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
