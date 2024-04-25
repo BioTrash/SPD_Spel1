@@ -73,6 +73,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
+                        UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
@@ -93,7 +94,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         else
                         {
                             GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-                            
                         }
                     }
                     
