@@ -95,7 +95,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             if (ObstacleHitResult.GetActor() != PlayerPawn)
                             {
                                 FVector NewDestination = ObstacleHitResult.Location + ObstacleHitResult.ImpactNormal * 100;
-                                UE_LOG(LogTemp, Warning, TEXT("NEW DESTINATION: ", NewDestination));
+                                UE_LOG(LogTemp, Error, TEXT("NEW DESTINATION: %s"), *NewDestination.ToString());
                                 
                                 UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());
                                 if (NavSys)
