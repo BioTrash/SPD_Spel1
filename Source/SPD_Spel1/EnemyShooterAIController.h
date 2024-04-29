@@ -34,7 +34,7 @@ private:
 	float LastShotTime = 0.0f;
 
 	// Cooldown duration between shots
-	float ShootCooldown = 5.0f;
+	float ShootCooldown = 2.5f;
 
 
 	
