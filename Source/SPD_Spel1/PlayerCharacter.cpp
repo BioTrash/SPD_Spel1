@@ -63,7 +63,6 @@ void APlayerCharacter::BeginPlay()
 				// Required by 'PullTriger' in 'Weapon.cpp' (Rufus)
 				TriggerWeapon = WeaponInstance;
 				TriggerWeapon->SetOwner(this);
-				
 			}
 		}
 	}
@@ -71,6 +70,8 @@ void APlayerCharacter::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Weapon array is empty"));
 	}
+	
+	GetMesh()->AttachToComponent(this->FindComponentByClass<UCameraComponent>(), FAttachmentTransformRules::KeepRelativeTransform);
 	
 }
 
