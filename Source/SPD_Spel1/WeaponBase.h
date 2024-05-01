@@ -85,8 +85,10 @@ private:
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
-
+	
+	UPROPERTY()
 	FTimerHandle RapidFireTimer;
+	UPROPERTY()
 	FTimerHandle FireDelayTimer;
 	UPROPERTY()
 	bool bDelayed = true;
