@@ -6,7 +6,6 @@
 #include "MathUtil.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/SphereComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Engine/EngineTypes.h"
 
@@ -27,6 +26,7 @@ AEnemyTurret::AEnemyTurret()
 
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
 	ProjectileSpawn -> SetupAttachment(TurretMesh);
+	
 
 }
 
@@ -85,8 +85,8 @@ void AEnemyTurret::Tick(float DeltaTime)
 void AEnemyTurret::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
+
 float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
@@ -97,14 +97,15 @@ float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
+
 void AEnemyTurret::RotateTurret(FVector TargetLocation)
 {
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
 	LookAtRotation.Pitch = 0;
 	LookAtRotation.Roll = 0;
-	LookAtRotation.Yaw += -90.f;
+	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
-    
+	
 	UE_LOG(LogTemp, Warning, TEXT("Turret rotation updated"));
 	
 }
@@ -126,7 +127,7 @@ void AEnemyTurret::PerformLineTrace()
 		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(HitResult.GetActor()))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Player detected by line trace"));
-			ShootEnemy(5.0f);
+			ShootEnemy(10.0f);
 		}
 	}
 	else

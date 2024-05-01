@@ -77,8 +77,4 @@ private:
 	void RotateTurret(FVector TargetLocation);
 	void PerformLineTrace();
 	void ShootAgainCooldown();
-	
-	
-	
-	
 };
