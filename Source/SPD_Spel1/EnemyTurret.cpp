@@ -34,7 +34,9 @@ AEnemyTurret::AEnemyTurret()
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
-
+	FVector TurretMeshLocation = TurretMesh->GetRelativeLocation();
+	//TurretMeshLocation.Z += 20.f;
+	TurretMesh->SetRelativeLocation(TurretMeshLocation);
 	Health = MaxHealth;
 	
 	APlayerCharacter* FoundPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
