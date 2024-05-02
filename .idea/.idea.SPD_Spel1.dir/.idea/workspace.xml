@@ -9,12 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BB_EnemyShooterAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BB_EnemyShooterAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BT_EnemyShooterAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BT_EnemyShooterAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Music/SoundEffects/DoorMetal_Edited.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/DoorMetal_Edited.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPointEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPointEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemyOptimised.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemyOptimised.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LouisNewNew&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JeremyFinalNew&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -57,9 +57,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\logu5907\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\jeva3947\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -150,6 +150,8 @@
       <workItem from="1714465678878" duration="211000" />
       <workItem from="1714465938461" duration="12326000" />
       <workItem from="1714631239520" duration="5527000" />
+      <workItem from="1714639861304" duration="1596000" />
+      <workItem from="1714642149947" duration="4060000" />
     </task>
     <servers />
   </component>
