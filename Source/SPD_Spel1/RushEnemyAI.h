@@ -41,7 +41,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
-	float MaxTraceDistance = 60.f;
+	float MaxTraceDistance = 80.f;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageRadius = 300.0f;
@@ -61,4 +61,5 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
 };

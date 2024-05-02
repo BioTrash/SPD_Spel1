@@ -16,6 +16,7 @@ void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
 
+
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -42,7 +43,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     }
 
     Super::Tick(DeltaSeconds);
-    //MoveToActor(PlayerPawn, 2000);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
     EnemyLocation = Enemy->GetActorLocation();
@@ -72,7 +72,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
+                        //UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
@@ -80,12 +80,39 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         if (LastShotTime >= ShootCooldown)
                         {
                             //Play sound
+
+
+                            //KOMMENTERA UT DENNA OM INTE KLAR**
+                            FVector SpawnLocation = EnemyWeapon->GetActorLocation(); // Adjust this based on your weapon setup
+                            SpawnLocation.X -= 40;
+                            FRotator SpawnRotation = WeaponRotation;
+                            FActorSpawnParameters SpawnParams;
+                            SpawnParams.Owner = this;
+                            SpawnParams.Instigator = GetInstigator();
+
+
+                            AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+                            UE_LOG(LogTemp, Error, TEXT("BEFORE SHOOTING PROEJECTILE"));
+
+                            if (Projectile)
+                            {
+                                UE_LOG(LogTemp, Error, TEXT("SHOOTING PROEJECTILE"));
+                                // Apply damage to the projectile
+                                Projectile->SetDamage(10); // Set damage value as needed
+                            }
+                            //**FRAM TILL HIT
+
+                            
                             OnEnemyShoot();
                             
-                            EnemyWeapon->PullTrigger(true);
+                            //EnemyWeapon->PullTrigger(true);
+
+                            //Ska sitta i metod i projectile
+                            /*
                             DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
                             FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
                             HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
+                            */
                             LastShotTime = 0.0f;
                         }
                     }
