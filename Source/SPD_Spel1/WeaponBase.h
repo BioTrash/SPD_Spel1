@@ -38,8 +38,12 @@ public:
 	
 	void Reload()
 	{
-		bDelayed = false;
-		GetWorld()->GetTimerManager().SetTimer(ReloadDelayTimer, this, &AWeaponBase::InitiateReload, ReloadDelay/2, false, ReloadDelay/2);
+		if(!bReloading)
+		{
+			bReloading = true;
+			bDelayed = false;
+			GetWorld()->GetTimerManager().SetTimer(ReloadDelayTimer, this, &AWeaponBase::InitiateReload, ReloadDelay/2, false, ReloadDelay/2);
+		}
 	}
 	
 	virtual void InitiateTimer(bool bButtonHeld) {} 
@@ -93,12 +97,17 @@ private:
 	
 	UPROPERTY()
 	FTimerHandle RapidFireTimer;
+	
 	UPROPERTY()
 	FTimerHandle FireDelayTimer;
 	UPROPERTY()
+	bool bDelayed = true;
+	
+	UPROPERTY()
 	FTimerHandle ReloadDelayTimer;
 	UPROPERTY()
-	bool bDelayed = true;
+	bool bReloading = false;
+
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
 	float FireRate = 0.1f;
