@@ -15,7 +15,7 @@
 void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
-    
+
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -28,7 +28,6 @@ void AEnemyShooterAIController::BeginPlay()
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
 }
-
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
@@ -96,9 +95,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                         }
                     }
-                    
-                
-                // Visualize the line trace
             }
         }
 }
