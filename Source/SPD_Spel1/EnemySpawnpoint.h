@@ -27,7 +27,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	
 	UPROPERTY(EditAnywhere, Category="Enemy")
-	APawn* EnemyToSpawnClass;
+	ACharacter* EnemyToSpawnClass;
 	
 private:
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")

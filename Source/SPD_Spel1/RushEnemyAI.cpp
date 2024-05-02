@@ -10,6 +10,7 @@ struct FDamageEvent;
 ARushEnemyAI::ARushEnemyAI()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	
 }
 
 void ARushEnemyAI::BeginPlay()
@@ -88,7 +89,7 @@ void ARushEnemyAI::DealDamageToPlayer(float Damage)
 		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 5.0f);
+	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 2.0f);
 }
 
 void ARushEnemyAI::Explode()

@@ -4,7 +4,6 @@
 #include "EnemySpawnpoint.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/ArrowComponent.h"
-#include "Components/SceneComponent.h"
 #include "NiagaraComponent.h"
 
 // Sets default values
@@ -23,7 +22,7 @@ AEnemySpawnpoint::AEnemySpawnpoint()
 	PointDirection->SetupAttachment(CapsuleComponent);
 
 	SpawnEffect = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Spawn Effect"));
-	PointDirection->SetupAttachment(CapsuleComponent);
+	SpawnEffect->SetupAttachment(CapsuleComponent);
 
 	EnemyToSpawnClass = nullptr;
 }
