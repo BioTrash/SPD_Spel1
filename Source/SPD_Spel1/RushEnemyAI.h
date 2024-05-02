@@ -50,15 +50,8 @@ public:
 	float JumpForce = 1000.0f;
 	
 private:
-	void PerformLineTrace();
-	UFUNCTION()
-	void DealDamageToPlayer(float Damage);
-	void Explode();
-	void EndExplodeCooldown();
 
 	bool bCanAttack = true;
 	FTimerHandle ExplodeCooldown;
 
-	UPROPERTY(EditAnywhere)
-	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 };

@@ -18,12 +18,32 @@ public:
 
 	virtual void Tick(float DeltaSeconds) override;
 	
+	void Explode(float Damage);
+	void LaunchTowardsPlayer();
+	void KillEnemy();
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Damage")
+	float DamageRadius = 300.0f;
+	
 protected:
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	float AcceptanceRadius = 500.0f;
 
-	virtual void BeginPlay() override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	float JumpVelocity = 1500.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	float LaunchDistanceThreshold = 500.f;
 
 private:
 
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
+	float ExplosionDamage;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
+	float ExplosionRadius;
 };

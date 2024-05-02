@@ -21,7 +21,6 @@ void ARushEnemyAI::BeginPlay()
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	PerformLineTrace();
 	if(Health <= 0)
 	{
 		KillEnemy();
@@ -53,53 +52,10 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
-void ARushEnemyAI::PerformLineTrace()
-{
-	FVector StartLocation = GetActorLocation();
-	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
 
-	FHitResult HitResult;
-	FCollisionQueryParams Params;
-	Params.AddIgnoredActor(this); 
-	
-	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
-	//DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
-	if (bHit)
-	{
-		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
-		if (Player && bCanAttack)
-		{
-			DealDamageToPlayer(5.0f);
-			bCanAttack = false;
-			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 3.0f, false);
-		}
-	}
-	}
 
-void ARushEnemyAI::DealDamageToPlayer(float Damage)
-{
-	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	if (PlayerCharacter)
-	{
-		float DistanceToPlayer = FVector::Dist(GetActorLocation(), PlayerCharacter->GetActorLocation());
-		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
-		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetController(), this);
 
-		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
-	}
-	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 5.0f);
-}
 
-void ARushEnemyAI::Explode()
-{
-	DealDamageToPlayer(30.0f);
-	KillEnemy();
-}
-void ARushEnemyAI::EndExplodeCooldown()
-{
-	bCanAttack = true;
-}
 
 
 
