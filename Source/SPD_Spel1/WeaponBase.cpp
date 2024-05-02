@@ -100,7 +100,7 @@ void AWeaponBase::SetClipSize(int32 _ClipSize) {
 	ClipSize = _ClipSize;
 }
 
-void AWeaponBase::Reload()
+void AWeaponBase::InitiateReload()
 {
 	if(bUnlimitedAmmo)
 	{
@@ -119,6 +119,8 @@ void AWeaponBase::Reload()
 			TotalAmmo = 0;
 		}
 	}
+
+	bDelayed = true;
 }
 
 

@@ -63,7 +63,7 @@ void ANonProjectileWeapon::Shoot()
 	
 	
 	
-		if(Super::GetbUnlimitedAmmo() || Super::GetCurrentClip() > 0)
+		if(Super::GetCurrentClip() > 0)
 		{
 			//FMath::RandRange(int32 min, int32 max);
 			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
@@ -77,8 +77,10 @@ void ANonProjectileWeapon::Shoot()
  				HitActorHeadshot->TakeDamage(Damage, DamageEvent, Super::GetOwnerController(), this);
  				Super::WhenShot();
  			}
- 			
- 			Super::SetCurrentClip(Super::GetCurrentClip()-1);
+
+	
+			Super::SetCurrentClip(Super::GetCurrentClip()-1);
+			
  			
  			if(GetCurrentClip() == 0)
  			{

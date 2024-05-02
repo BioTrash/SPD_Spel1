@@ -62,4 +62,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 
+	UPROPERTY(EditAnywhere, Category="Enemy")
+	class UNiagaraSystem* ExplosionEffect;
+
 };
