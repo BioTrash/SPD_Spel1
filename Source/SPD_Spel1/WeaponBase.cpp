@@ -120,6 +120,7 @@ void AWeaponBase::InitiateReload()
 		}
 	}
 
+	bReloading = false;
 	bDelayed = true;
 }
 
