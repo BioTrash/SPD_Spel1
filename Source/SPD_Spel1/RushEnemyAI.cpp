@@ -6,11 +6,13 @@ struct FDamageEvent;
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
+#include "NiagaraComponent.h"
+#include "NiagaraFunctionLibrary.h"
+
 
 ARushEnemyAI::ARushEnemyAI()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	
 }
 
 void ARushEnemyAI::BeginPlay()
@@ -72,7 +74,7 @@ void ARushEnemyAI::PerformLineTrace()
 		{
 			DealDamageToPlayer(5.0f);
 			bCanAttack = false;
-			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 3.0f, false);
+			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 1.0f, false);
 		}
 	}
 	}
@@ -89,12 +91,18 @@ void ARushEnemyAI::DealDamageToPlayer(float Damage)
 		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 2.0f);
+	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 1.0f);
 }
 
 void ARushEnemyAI::Explode()
 {
 	DealDamageToPlayer(30.0f);
+	if(ExplosionEffect != nullptr)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, GetActorLocation(), FRotator(0), FVector(1), true, true);
+		
+	}
+	
 	KillEnemy();
 }
 void ARushEnemyAI::EndExplodeCooldown()
