@@ -39,7 +39,7 @@ void ARushEnemyAI::KillEnemy()
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
 
 	OnEnemyDeathDelegate.Broadcast();
-
+    
 	OnEnemyDeath();
 	Destroy();
 }
