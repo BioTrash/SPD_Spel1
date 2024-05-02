@@ -3,6 +3,7 @@
 
 #include "Projectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AProjectile::AProjectile()
@@ -16,8 +17,8 @@ AProjectile::AProjectile()
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 
 	// Default values, can simply be changed in BlueprintEditor, in ProjectileMovementComponent. Will Default back to this on every build(?), may need to be deleted. (Rufus)
-	ProjectileMovementComponent->MaxSpeed = 1300;
-	ProjectileMovementComponent->InitialSpeed = 1300;
+	//ProjectileMovementComponent->MaxSpeed = 1300;
+	//ProjectileMovementComponent->InitialSpeed = 1300;
 
 }
 
@@ -25,6 +26,17 @@ AProjectile::AProjectile()
 void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	if (ProjectileMovementComponent)
+	{
+		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+		if (PlayerPawn)
+		{
+			FVector Direction = (PlayerPawn->GetActorLocation() - GetActorLocation()).GetSafeNormal();
+			UE_LOG(LogTemp, Error, TEXT("VELOCITY EQUALS : %s"), *FString(Direction.ToString()));
+			ProjectileMovementComponent->Velocity = Direction * ProjectileMovementComponent->InitialSpeed;
+		}
+	}
 	
 }
 
@@ -39,9 +51,12 @@ void AProjectile::Tick(float DeltaTime)
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	
-	//Do all hit logic here
-	UE_LOG(LogTemp, Warning, TEXT("Hit Detected"));
+	if (OtherActor && OtherActor != this && OtherComp)
+	{
+		// Apply damage to the other actor if it's not the projectile itself
+		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
+		OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
+	}
 	Destroy();
 }
 

@@ -26,6 +26,9 @@ public:
 protected:
 
 	virtual void BeginPlay() override;
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+	TSubclassOf<class AProjectile> ProjectileClass;
+
 
 private:
 	
@@ -35,6 +38,8 @@ private:
 
 	// Cooldown duration between shots
 	float ShootCooldown = 2.5f;
+
+	
 
 
 	
