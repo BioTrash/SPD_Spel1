@@ -16,16 +16,16 @@ AEnemyTurret::AEnemyTurret()
 	PrimaryActorTick.bCanEverTick = true;
 
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
-	RootComponent = CapsuleComponent;
-
-	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
-	BaseMesh->SetupAttachment(CapsuleComponent);
-
-	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
-	TurretMesh ->SetupAttachment(BaseMesh);
-
-	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
-	ProjectileSpawn -> SetupAttachment(TurretMesh);
+    RootComponent = CapsuleComponent;
+    
+    BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
+    BaseMesh->SetupAttachment(CapsuleComponent);
+    
+    TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
+    TurretMesh ->SetupAttachment(BaseMesh);
+    
+    ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
+    ProjectileSpawn -> SetupAttachment(TurretMesh);
 	
 
 }
