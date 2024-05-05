@@ -26,8 +26,11 @@ public:
 private:
 	bool bCheckpointActive;
 	
-	UPROPERTY(VisibleAnywhere);
-	AActor* Player;
+	UPROPERTY(EditAnywhere);
+	class AActor* Player;
+
+	UPROPERTY(EditAnywhere);
+	class AGameModeBase* GameMode;
 	
 	UPROPERTY(EditAnywhere)
 	USceneComponent* Root;

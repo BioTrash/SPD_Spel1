@@ -26,12 +26,16 @@
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_CheckpointCode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_CheckpointCode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Checkpoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Checkpoint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Checkpoint.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Checkpoint.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemySpawnpoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemySpawnpoint.cpp" afterDir="false" />
@@ -210,6 +214,10 @@
       <workItem from="1714680486051" duration="198000" />
       <workItem from="1714680699980" duration="3866000" />
       <workItem from="1714927930214" duration="2359000" />
+      <workItem from="1714930438088" duration="184000" />
+      <workItem from="1714930641138" duration="1218000" />
+      <workItem from="1714931885560" duration="343000" />
+      <workItem from="1714932293472" duration="1821000" />
     </task>
     <servers />
   </component>

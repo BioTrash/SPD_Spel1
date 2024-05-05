@@ -73,12 +73,12 @@ void AEnemyTurret::Tick(float DeltaTime)
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Player is out of firing range")); // Debugging out of range
+			//UE_LOG(LogTemp, Warning, TEXT("Player is out of firing range")); // Debugging out of range
 		}
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Player reference is not valid")); // Debugging player reference
+		//UE_LOG(LogTemp, Warning, TEXT("Player reference is not valid")); // Debugging player reference
 	}
 	}
 

@@ -4,9 +4,10 @@
 #include "Checkpoint.h"
 #include "Components/ArrowComponent.h"
 #include "Components/BoxComponent.h"
-#include "GameFramework/PlayerController.h"
 #include "PlayerCharacter.h"
 #include "Components/TextRenderComponent.h"
+#include "GameFramework/GameMode.h"
+#include "GameFramework/GameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -42,6 +43,17 @@ void ACheckpoint::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Player character not found!"));
 	}
+	
+	// Hämtar gamemode.
+	if (AGameModeBase* FoundGameMode = Cast<AGameModeBase>(UGameplayStatics::GetGameMode(GetWorld())))
+	{
+		GameMode = FoundGameMode;
+		//UE_LOG(LogTemp, Warning, TEXT("Gamemode Name: %s"), *GameMode->GetName());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Gamemode not found!"));
+	}
 }
 
 // Called every frame
@@ -53,9 +65,12 @@ void ACheckpoint::Tick(float DeltaTime)
 // Körs när boxcollider overlappar.
 void ACheckpoint::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	
+	// Kollar om collidern overlappar med spelaren.
 	if(OtherActor == Player)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("PLAYER OVERLAP"));
+		//UE_LOG(LogTemp, Warning, TEXT("PLAYER OVERLAP"));
+		
 	}
 }
 
