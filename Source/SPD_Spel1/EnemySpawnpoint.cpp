@@ -4,7 +4,7 @@
 #include "EnemySpawnpoint.h"
 #include "Components/ArrowComponent.h"
 #include "NiagaraComponent.h"
-#include "Engine/World.h"
+//#include "Engine/World.h"
 
 // Sets default values
 AEnemySpawnpoint::AEnemySpawnpoint()
@@ -55,7 +55,7 @@ void AEnemySpawnpoint::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraCompone
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 		
 		// Spawnar fienden.
-		AActor* SpawnedActor = World->SpawnActor<AActor>(EnemyToSpawnClass, Location, Rotation, SpawnParams);
+		World->SpawnActor<AActor>(EnemyToSpawnClass, Location, Rotation, SpawnParams);
 
 	}
 }

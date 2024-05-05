@@ -26,9 +26,7 @@
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BP_RushEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BP_RushEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemySpawnpoint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_EnemySpawnpoint.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPointEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnPointEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
@@ -211,6 +209,7 @@
       <workItem from="1714676029648" duration="1705000" />
       <workItem from="1714680486051" duration="198000" />
       <workItem from="1714680699980" duration="3866000" />
+      <workItem from="1714927930214" duration="2359000" />
     </task>
     <servers />
   </component>

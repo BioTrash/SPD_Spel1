@@ -63,7 +63,7 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Player)
 	{
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
-		UE_LOG(LogTemp, Warning, TEXT("Distance to player: %f"), Distance);
+		//UE_LOG(LogTemp, Warning, TEXT("Distance to player: %f"), Distance);
 		//DrawDebugLine(GetWorld(), TurretMesh->GetComponentLocation(), Player->GetActorLocation(), FColor::Green, false, 0.1f, 0, 1);
 
 		if (Distance <= FireRange)
