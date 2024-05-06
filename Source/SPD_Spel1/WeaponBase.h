@@ -14,6 +14,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void DelaySwitch();
+	void InitiateReload();
 
 	// This needs to be in the header because template needs to be available at initialization, i.e. before compilation. (Rufus)
 	template<typename T, typename U>
@@ -35,8 +36,16 @@ public:
 		}
 	}
 	
-	virtual void Reload();
-
+	void Reload()
+	{
+		if(!bReloading)
+		{
+			bReloading = true;
+			bDelayed = false;
+			GetWorld()->GetTimerManager().SetTimer(ReloadDelayTimer, this, &AWeaponBase::InitiateReload, ReloadDelay/2, false, ReloadDelay/2);
+		}
+	}
+	
 	virtual void InitiateTimer(bool bButtonHeld) {} 
 	virtual void Shoot() {}
 	virtual void Spread() {}
@@ -88,15 +97,24 @@ private:
 	
 	UPROPERTY()
 	FTimerHandle RapidFireTimer;
+	
 	UPROPERTY()
 	FTimerHandle FireDelayTimer;
 	UPROPERTY()
 	bool bDelayed = true;
 	
-	UPROPERTY(EditAnywhere, Category="Fire Behaviour")
+	UPROPERTY()
+	FTimerHandle ReloadDelayTimer;
+	UPROPERTY()
+	bool bReloading = false;
+
+	
+	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
 	float FireRate = 0.1f;
-	UPROPERTY(EditAnywhere, Category="Fire Behaviour")
+	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
 	float FireDelay = 0.0f;
+	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
+	float ReloadDelay = 0.0f;
 	UPROPERTY(EditAnywhere, Category="Ammo")
 	bool bUnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere, Category="Ammo")
