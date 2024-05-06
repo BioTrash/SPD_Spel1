@@ -25,12 +25,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	
 	UPROPERTY(BlueprintAssignable, Category = "Enemy")
 	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
 	
-	void KillEnemy();
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	void KillEnemy();
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 40.f;
@@ -50,8 +50,14 @@ public:
 	float JumpForce = 1000.0f;
 	
 private:
-
+	bool bHasExploded;
 	bool bCanAttack = true;
 	FTimerHandle ExplodeCooldown;
+
+	void Explode(float Damage, bool bCollisionTriggered);
+	void PerformLineTrace();
+	
+	UPROPERTY(EditAnywhere, Category="Enemy")
+	class UNiagaraSystem* ExplosionEffect;
 
 };

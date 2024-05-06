@@ -16,34 +16,41 @@ class SPD_SPEL1_API ARushEnemyAIController : public AAIController
 	
 public:
 
+	ARushEnemyAIController();
 	virtual void Tick(float DeltaSeconds) override;
-	
-	void Explode(float Damage);
+	void BeginPlay();
 	void LaunchTowardsPlayer();
-	void KillEnemy();
+	bool EnemyGrounded();
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageRadius = 300.0f;
+
+	bool bHasBeenDamagedByExplosion; 
 	
 protected:
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float AcceptanceRadius = 500.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float JumpVelocity = 1500.0f;
+	float JumpVelocity = 1000.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float LaunchDistanceThreshold = 500.f;
+	float LaunchDistanceThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	float AnticipationDelay = 2.0f;
+
 
 private:
-
+	bool bHasLaunched;
+	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
 	float ExplosionDamage;
 
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
 	float ExplosionRadius;
 };

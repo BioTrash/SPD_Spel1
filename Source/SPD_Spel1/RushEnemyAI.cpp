@@ -6,10 +6,12 @@ struct FDamageEvent;
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
+#include "NiagaraFunctionLibrary.h"
 
 ARushEnemyAI::ARushEnemyAI()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	bHasExploded = false;
 }
 
 void ARushEnemyAI::BeginPlay()
@@ -21,15 +23,75 @@ void ARushEnemyAI::BeginPlay()
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if(Health <= 0)
+	if(Health > 0)
 	{
-		KillEnemy();
+		PerformLineTrace();
+	}
+	if(Health <= 0 && !bHasExploded)
+	{
+		Explode(30.f, true);
+		bHasExploded = true;
 	}
 }
-
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
+
+void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
+{
+	if (bCollisionTriggered && !bHasExploded)
+	{
+		TArray<AActor*> OverlappingActors;
+		FVector ExplosionLocation = GetActorLocation();
+
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
+
+		for (AActor* Actor : OverlappingActors)
+		{
+			APlayerCharacter* Player = Cast<APlayerCharacter>(Actor);
+			if (Player)
+			{
+				float DistanceToPlayer = FVector::Distance(ExplosionLocation, Player->GetActorLocation());
+				float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
+				float ActualDamage = Damage * DamageMultiplier;
+
+				Player->TakeDamage(ActualDamage, FDamageEvent(), GetController(), this);
+			}
+		}
+
+	if (ExplosionEffect)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
+	}
+		bHasExploded = true;
+		Destroy();
+	}
+}
+
+void ARushEnemyAI::PerformLineTrace()
+{
+	FVector StartLocation = GetActorLocation();
+	FVector EndLocation = StartLocation + GetActorForwardVector() * MaxTraceDistance; 
+
+	FHitResult HitResult;
+	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(this); 
+    
+	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params);
+
+	if (bHit)
+	{
+		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
+		if (Player)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("DEN EXPLODERAR >:)"));
+			Explode(30, true);
+		}else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Den missade :O"));
+		}
+	}
 }
 
 void ARushEnemyAI::KillEnemy()
@@ -37,7 +99,7 @@ void ARushEnemyAI::KillEnemy()
 	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
 
 	OnEnemyDeathDelegate.Broadcast();
-
+	Health = 0;
 	OnEnemyDeath();
 	Destroy();
 }
@@ -51,14 +113,3 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
-
-
-
-
-
-
-
-
-
-
-

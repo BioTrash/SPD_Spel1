@@ -7,8 +7,13 @@
 #include "Components/PrimitiveComponent.h"
 #include "GameFramework/Character.h"
 #include "DrawDebugHelpers.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 //Hanna
+ARushEnemyAIController::ARushEnemyAIController()
+{
+	bHasLaunched = false;
+}
 void ARushEnemyAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -19,11 +24,73 @@ void ARushEnemyAIController::BeginPlay()
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 		GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
+		GetBlackboardComponent()->SetValueAsBool(TEXT("Explode"), false);
+		
 	}
 
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	SetFocus(PlayerPawn);
 }
+
+void ARushEnemyAIController::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+    if (!PlayerPawn)
+    {
+        return; 
+    }
+
+    FVector EnemyLocation = GetPawn()->GetActorLocation();
+    FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
+    float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
+
+    bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
+    if (bIsLaunching)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Den launchar nu"));
+        LaunchTowardsPlayer();
+        bHasLaunched = true;
+    }
+    else
+    {
+        if (bHasLaunched) // If the enemy has launched towards the player
+        {
+            // Check if the enemy has reached the last seen player location
+            if (DistanceToPlayer < LaunchDistanceThreshold) // Adjust threshold as necessary
+            {
+                // Reset behavior to normal
+                GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
+                bHasLaunched = false;
+                // Add code here to reset any other behavior flags or values
+            }
+        }
+        else
+        {
+            // Normal behavior when not launching towards player
+            GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
+            if (AnticipationDelay > 0)    
+            {
+                AnticipationDelay -= DeltaSeconds;    
+            }
+            else
+            {
+                LaunchDistanceThreshold = FMath::RandRange(150.0f, 600.0f);
+                if (DistanceToPlayer <= LaunchDistanceThreshold)
+                {
+                    GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), true);
+                    UE_LOG(LogTemp, Warning, TEXT("Threshold: %f"), LaunchDistanceThreshold);
+                }
+                else
+                {
+                    UE_LOG(LogTemp, Warning, TEXT("Den flyttar på sig?"));
+                }
+            }
+        }
+    }
+}
+
+
 void ARushEnemyAIController::LaunchTowardsPlayer()
 {
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
@@ -31,78 +98,42 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 	{
 		return;
 	}
-
-	FVector PlayerLocation = PlayerPawn->GetActorLocation();
+	FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
+	UE_LOG(LogTemp, Error, TEXT("Location: %s"), *PlayerLocation.ToString());
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
-	
-	float LaunchSpeed = 600.f; 
+
+	float LaunchSpeed = 300.f;
 	FVector LaunchVelocity = LaunchDirection * LaunchSpeed;
-    
+
 	ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn());
 	if (EnemyCharacter)
 	{
 		EnemyCharacter->LaunchCharacter(LaunchVelocity, true, true);
-	}
-	
-	GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
-}
-
-void ARushEnemyAIController::Explode(float Damage)
-{
-	ACharacter* PlayerCharacter = Cast<ACharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	if (PlayerCharacter)
-	{
-		float DistanceToPlayer = FVector::Distance(GetPawn()->GetActorLocation(), PlayerCharacter->GetActorLocation());
-		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
-		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetPawn()->GetController(), this);
-
-		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
-	}
-	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-	DrawDebugSphere(GetWorld(), GetPawn()->GetActorLocation(), DamageRadius, 32, FColor::Red, false, 5.0f);
-}
-
-//Hanna
-//Sätter SetFocus på spelaren i världen, dvs att karakätren vänder på sig baserat på spelarens plats
-void ARushEnemyAIController::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	if (!PlayerPawn)
-	{
-		return; 
-	}
-
-	FVector EnemyLocation = GetPawn()->GetActorLocation();
-	FVector PlayerLocation = PlayerPawn->GetActorLocation();
-	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-
-	bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
-	UE_LOG(LogTemp, Error, TEXT("BOOL LAUNCHING : "), bIsLaunching);
-	if (bIsLaunching)
-	{
-		LaunchTowardsPlayer(); 
-	}
-	else
-	{
-		if (DistanceToPlayer <= LaunchDistanceThreshold)
+		if (EnemyLocation == PlayerLocation)
 		{
-			GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), true);
-			UE_LOG(LogTemp, Warning, TEXT("Launchar du nä?"));
-		}
-		else
-		{
-			MoveToActor(PlayerPawn); // Adjusted to use LaunchDistanceThreshold
-			UE_LOG(LogTemp, Warning, TEXT("Den flyttar på sig?"));
 		}
 	}
+
+	// Set the movement mode to "Falling" after launching towards the player
+	if (EnemyCharacter)
+	{
+		EnemyCharacter->GetCharacterMovement()->SetMovementMode(MOVE_Falling);
 	}
-void ARushEnemyAIController::KillEnemy()
-{
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
-	Destroy();
+
+	// GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
+	UE_LOG(LogTemp, Warning, TEXT("Nu borde IsLaunching va falskt"));
 }
+
+bool ARushEnemyAIController::EnemyGrounded()
+{
+	ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn());
+	if (EnemyCharacter)
+	{
+		return EnemyCharacter->GetCharacterMovement()->IsMovingOnGround();
+	}
+	return false;
+}
+
 
 
