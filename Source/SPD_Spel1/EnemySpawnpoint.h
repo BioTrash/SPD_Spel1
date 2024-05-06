@@ -31,24 +31,26 @@ public:
 	UPROPERTY(EditAnywhere, Category="Enemy")
 	UClass* EnemyToSpawnClass;
 
+	// Effect som spelas innan fiender spawnar.
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UNiagaraComponent* SpawnEffect;
+	
 	UFUNCTION()
 	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
 	
+	
+	
 private:
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* BaseMesh;
 
 	// Pil för att visa vart meshen pekar.
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(VisibleAnywhere)
 	UArrowComponent* ArrowComponent;
-
-	// Effect som spelas innan fiender spawnar.
-	UPROPERTY(EditAnywhere)
-	UNiagaraComponent* SpawnEffect;
 
 	UPROPERTY()
 	FVector Location;
