@@ -110,19 +110,35 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
 
 	PlayerInputComponent->BindAction(TEXT("Reload"), EInputEvent::IE_Pressed, this, &APlayerCharacter::ReloadWeapon);
+
+	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Pressed, this, &APlayerCharacter::OnButtonPress);
+	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Released, this, &APlayerCharacter::OnButtonRelease);
 	
 }
 
-void APlayerCharacter::Shoot()
+// Alternative Fire
+void APlayerCharacter::OnButtonPress()
 {
-	SprayShooting = true;
-	TriggerWeapon->InitiateTimer(SprayShooting);
+	TriggerWeapon->bButtonReleased = false;
+	TriggerWeapon->InitiateTimer(true, true);
+}
+// Alternative Fire
+void APlayerCharacter::OnButtonRelease()
+{
+	//TriggerWeapon->InitiateTimer(false, true);
+	TriggerWeapon->bButtonReleased = true;
 }
 
+// Normal Fire
+void APlayerCharacter::Shoot()
+{
+	TriggerWeapon->InitiateTimer(true, false);
+}
+
+// Normal Fire
 void APlayerCharacter::CancelShoot()
 {
-	SprayShooting = false;
-	TriggerWeapon->InitiateTimer(SprayShooting);
+	//TriggerWeapon->InitiateTimer(false, false);
 }
 
 void APlayerCharacter::ReloadWeapon()
@@ -134,7 +150,6 @@ AWeaponBase* APlayerCharacter::GetTriggerWeapon() const
 {
 	return TriggerWeapon;
 }
-
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
