@@ -72,17 +72,13 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        //UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
+                        //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
 
                         if (LastShotTime >= ShootCooldown)
                         {
-                            //Play sound
-
-
-                            //KOMMENTERA UT DENNA OM INTE KLAR**
                             FVector SpawnLocation = EnemyWeapon->GetActorLocation(); // Adjust this based on your weapon setup
                             SpawnLocation.X -= 40;
                             FRotator SpawnRotation = WeaponRotation;
@@ -100,9 +96,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                                 // Apply damage to the projectile
                                 Projectile->SetDamage(10); // Set damage value as needed
                             }
-                            //**FRAM TILL HIT
-
-                            
                             OnEnemyShoot();
                             
                             //EnemyWeapon->PullTrigger(true);
