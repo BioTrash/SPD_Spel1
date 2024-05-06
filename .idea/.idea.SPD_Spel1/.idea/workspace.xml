@@ -11,19 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_SlimePickUp.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_SlimeProjectile.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/WBP_SlimeAmmo.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/NonProjectileWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/NonProjectileWeapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/NonProjectileWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/NonProjectileWeapon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Effects/NS_MuzzleFlash.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Effects/NS_MuzzleFlash.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +217,7 @@
       <workItem from="1714571875664" duration="6974000" />
       <workItem from="1714581308233" duration="4191000" />
       <workItem from="1714638933646" duration="1321000" />
-      <workItem from="1715010684220" duration="785000" />
+      <workItem from="1715010684220" duration="1940000" />
     </task>
     <servers />
   </component>

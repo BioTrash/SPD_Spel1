@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "NiagaraSystem.h"
 #include "NonProjectileWeapon.h"
 #include "AlternativeFireMode.generated.h"
 
@@ -35,6 +36,10 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class ASlimeProjectile> Projectile;
+	//UPROPERTY(EditAnywhere)
+	//UNiagaraSystem* Muzzle;
+	//UPROPERTY(EditAnywhere)
+	//USceneComponent* Muzzle;
 	
 
 private:
