@@ -88,11 +88,11 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
 
                             AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
-                            UE_LOG(LogTemp, Error, TEXT("BEFORE SHOOTING PROEJECTILE"));
+                            //UE_LOG(LogTemp, Error, TEXT("BEFORE SHOOTING PROEJECTILE"));
 
                             if (Projectile)
                             {
-                                UE_LOG(LogTemp, Error, TEXT("SHOOTING PROEJECTILE"));
+                                //UE_LOG(LogTemp, Error, TEXT("SHOOTING PROEJECTILE"));
                                 // Apply damage to the projectile
                                 Projectile->SetDamage(10); // Set damage value as needed
                             }
