@@ -6,7 +6,6 @@ struct FDamageEvent;
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
-#include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 
 
