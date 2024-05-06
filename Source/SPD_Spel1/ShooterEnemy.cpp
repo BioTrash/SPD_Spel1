@@ -87,3 +87,9 @@ void AShooterEnemy::KillEnemy()
 	Destroy();
 }
 
+UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
+{
+	// Assuming the static mesh component is named "EnemyStaticMesh"
+	return FindComponentByClass<UStaticMeshComponent>();
+}
+

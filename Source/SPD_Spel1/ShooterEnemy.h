@@ -46,6 +46,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
-
+	UFUNCTION(BlueprintCallable, Category = "Mesh")
+	UStaticMeshComponent* GetStaticMeshComponent() const;
 
 };
