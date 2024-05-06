@@ -47,7 +47,7 @@ private:
 	UArrowComponent* ArrowComponent;
 
 	// Effect som spelas innan fiender spawnar.
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere)
 	UNiagaraComponent* SpawnEffect;
 
 	UPROPERTY()
