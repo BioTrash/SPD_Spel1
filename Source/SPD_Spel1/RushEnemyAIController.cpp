@@ -90,12 +90,13 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
 
-	float LaunchSpeed = 1200.f;
+	float LaunchSpeed = 800.f;
+	float JumpHeight = 500.f;
 
 	ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn());
 	if (EnemyCharacter)
 	{
-		EnemyCharacter->LaunchCharacter(LaunchDirection * LaunchSpeed, true, true);
+		EnemyCharacter->LaunchCharacter(LaunchDirection * LaunchSpeed + FVector::UpVector * JumpHeight, true, true);
 	}
 
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
@@ -119,7 +120,7 @@ void ARushEnemyAIController::ExplodeAfterLaunch()
 	{
 		RushEnemy->Explode(ExplosionDamage, true);
 		FVector ExplosionLocation = RushEnemy->GetActorLocation();
-		DrawDebugSphere(GetWorld(), ExplosionLocation, ExplosionDamage, 12, FColor::Red, false, 1.0f);
+		//DrawDebugSphere(GetWorld(), ExplosionLocation, ExplosionDamage, 12, FColor::Red, false, 1.0f);
 		if (ExplosionEffect)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Explosion?"));
