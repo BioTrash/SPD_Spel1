@@ -53,7 +53,7 @@ private:
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	class UCapsuleComponent* CapsuleComponent;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	USkeletalMeshComponent* BaseMesh;
+	UStaticMeshComponent* BaseMesh;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	USkeletalMeshComponent* TurretMesh;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")

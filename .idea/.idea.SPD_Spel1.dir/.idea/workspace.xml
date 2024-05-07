@@ -9,18 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BT_EnemyRushAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BT_EnemyRushAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Maps/Hanna_Test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Maps/Hanna_Test.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/5/7W/5TC97FQVCIY879Y433V59U.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/5/7W/5TC97FQVCIY879Y433V59U.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/6/N3/1OXMYORECX8H0BYKZURDOT.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/6/5M/FVX15HG0X629ZPX8638G2T.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/6/69/387IZLCMGWGTZYKYG9FZWE.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/6/69/387IZLCMGWGTZYKYG9FZWE.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/D/14/3CGT9PFNT50VK0UJVB6Y45.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/D/14/3CGT9PFNT50VK0UJVB6Y45.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/D/WE/FDKQXY2ZQE8ZOMUEBTLLS7.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Test/D/WE/FDKQXY2ZQE8ZOMUEBTLLS7.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

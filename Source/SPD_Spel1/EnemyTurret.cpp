@@ -17,7 +17,7 @@ AEnemyTurret::AEnemyTurret()
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
 	RootComponent = CapsuleComponent;
     
-	BaseMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Base Mesh"));
+	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
 	BaseMesh->SetupAttachment(CapsuleComponent);
     
 	TurretMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Turret Mesh"));
@@ -100,11 +100,13 @@ void AEnemyTurret::PerformLineTrace()
 
 	if (bHit)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Nu ska jag skjuta!"));
 		ShootEnemy(10.0f);
 	}
 }
-	void AEnemyTurret::ShootEnemy(float Damage)
-	{
+void AEnemyTurret::ShootEnemy(float Damage)
+{
+	UE_LOG(LogTemp, Warning, TEXT("KÖRS DU?!"));
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
@@ -113,10 +115,11 @@ void AEnemyTurret::PerformLineTrace()
 			float DistanceToPlayer = FVector::Distance(GetActorLocation(), PlayerCharacter->GetActorLocation());
 			float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer * DamageRadius), 0.0f, 1.0f);
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
+
+			PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
 			
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
-		
 		ShootAgainCooldown();
 		}
 	}
