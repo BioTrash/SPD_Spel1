@@ -81,7 +81,6 @@
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
         <option name="CONFIGURATION" value="DebugGame Editor" />
@@ -92,7 +91,6 @@
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
         <option name="CONFIGURATION" value="Development Editor" />
@@ -103,7 +101,6 @@
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
         <option name="CONFIGURATION" value="Development" />
@@ -114,7 +111,6 @@
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
       <configuration_6>
         <option name="CONFIGURATION" value="Shipping" />
@@ -125,7 +121,6 @@
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_6>
       <method v="2">
         <option name="Build" />
