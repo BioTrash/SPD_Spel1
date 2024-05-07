@@ -13,6 +13,9 @@ AWeaponBase::AWeaponBase()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Root);
 
+	MuzzlePoint = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzlePoint"));
+	MuzzlePoint->SetupAttachment(Root);
+
 }
 
 void AWeaponBase::BeginPlay()
@@ -89,6 +92,12 @@ FRotator AWeaponBase::GetRotation() const
 {
 	return Rotation;
 }
+
+USceneComponent* AWeaponBase::GetMuzzlePoint() const
+{
+	return MuzzlePoint;
+}
+
 
 void AWeaponBase::SetbUnlimitedAmmo(bool _bUnlimitedAmmo) {
 	bUnlimitedAmmo = _bUnlimitedAmmo;
