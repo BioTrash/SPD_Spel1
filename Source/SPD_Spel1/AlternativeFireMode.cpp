@@ -4,6 +4,7 @@
 #include "AlternativeFireMode.h"
 #include "SlimeProjectile.h"
 
+
 void AAlternativeFireMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -42,8 +43,8 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 void AAlternativeFireMode::FireWeapon()
 {
 	
-	GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetLocation() + GetOwner()->GetActorForwardVector()* 100, GetRotation());
-	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzleTransform().GetLocation(), GetMuzzleTransform().GetRotation());
+	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetLocation() + GetOwner()->GetActorForwardVector()* 100, GetRotation());
+	GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
 	SlimeAmmo--;
 }
 
