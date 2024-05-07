@@ -27,10 +27,10 @@ AEnemyTurret::AEnemyTurret()
 	ProjectileSpawn -> SetupAttachment(TurretMesh);
 	
 }
-
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
+	ShootingAnimation();
 	FVector TurretMeshLocation = TurretMesh->GetRelativeLocation();
 	TurretMesh->SetRelativeLocation(TurretMeshLocation);
 	Health = MaxHealth;
@@ -42,7 +42,6 @@ void AEnemyTurret::BeginPlay()
 		Player = FoundPlayer;
 	}
 }
-
 void AEnemyTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -50,14 +49,23 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Health <= 0)
 	{
 		Die();
+		return;
 	}
+
 	if (Player)
 	{
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
 		if (Distance <= FireRange)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Animation körs"));
+			//ShootingAnimation();
 			PerformLineTrace();
 			RotateTurret(Player->GetActorLocation());
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Animation körs"));
+			//IdleAnimation(); 
 		}
 	}
 }
@@ -76,7 +84,6 @@ float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
-
 void AEnemyTurret::RotateTurret(FVector TargetLocation)
 {
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
@@ -85,7 +92,6 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
 }
-
 void AEnemyTurret::PerformLineTrace()
 {
 	FVector StartLocation = TurretMesh->GetComponentLocation(); 
@@ -117,7 +123,6 @@ void AEnemyTurret::ShootEnemy(float Damage)
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
 
 			PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
-			
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
 		ShootAgainCooldown();

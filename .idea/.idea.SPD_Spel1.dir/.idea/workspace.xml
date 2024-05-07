@@ -9,8 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Turret/BP_Turret.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyTurret.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,62 +64,73 @@
 }</component>
   <component name="RunManager">
     <configuration name="SPD_Spel1" type="Uproject" factoryName="rider.uproject">
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
-      <configuration_2>
+      <configuration_1>
         <option name="CONFIGURATION" value="DebugGame" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXECUTABLE_PATH" value="C:\SchoolWork\SPM\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_1>
+      <configuration_2>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\SchoolWork\SPM\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
-        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\SchoolWork\SPM\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
-        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="CONFIGURATION" value="Development" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\SchoolWork\SPM\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\SchoolWork\SPM\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
-        <option name="CONFIGURATION" value="Development" />
+        <option name="CONFIGURATION" value="Shipping" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\SchoolWork\SPM\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\SchoolWork\SPM\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
-      <configuration_6>
-        <option name="CONFIGURATION" value="Shipping" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\SchoolWork\SPM\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-      </configuration_6>
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+      <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
         <option name="Build" />
       </method>

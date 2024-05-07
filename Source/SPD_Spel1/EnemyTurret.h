@@ -44,9 +44,17 @@ public:
 
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Animation")
+	void IdleAnimation();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Animation")
+	void ShootingAnimation();
+	
 	void Die();
 	
 	float MaxTraceDistance = 300.f;
+	UPROPERTY(BlueprintReadWrite, Category="Components")
+	USkeletalMeshComponent* TurretMesh;
 
 private:
 
@@ -54,8 +62,7 @@ private:
 	class UCapsuleComponent* CapsuleComponent;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	UStaticMeshComponent* BaseMesh;
-	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	USkeletalMeshComponent* TurretMesh;
+
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	USceneComponent* ProjectileSpawn;
 	
