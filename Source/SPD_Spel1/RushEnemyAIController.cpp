@@ -45,6 +45,8 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 
 	FVector PlayerLocation = PlayerPawn->GetActorLocation();
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
+	GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), PlayerLocation); 
+
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
 
@@ -56,13 +58,10 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 	}
 	else if (!bIsLaunching && bHasLaunched)
 	{
-		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), PlayerLocation);
 		bHasLaunched = false;
 	}
 	else
 	{
-		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), PlayerLocation);
-
 		if (AnticipationDelay > 0)
 		{
 			AnticipationDelay -= DeltaSeconds;
@@ -128,8 +127,3 @@ void ARushEnemyAIController::ExplodeAfterLaunch()
 		}
 		}
 }
-
-
-
-
-
