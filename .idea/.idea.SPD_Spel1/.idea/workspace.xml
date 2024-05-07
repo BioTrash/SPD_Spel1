@@ -10,11 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" afterDir="false" />
-    </list>
+    <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,9 +61,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\phila\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\phila\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\phila\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -83,6 +79,7 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_1>
       <configuration_2>
         <option name="CONFIGURATION" value="Shipping" />
@@ -94,6 +91,7 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
         <option name="CONFIGURATION" value="DebugGame" />
@@ -105,6 +103,7 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
         <option name="CONFIGURATION" value="Development Editor" />
@@ -116,6 +115,7 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
         <option name="CONFIGURATION" value="Development" />
@@ -127,8 +127,10 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/SPD_Spel1.vcxproj" />
+      <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -218,8 +220,7 @@
       <workItem from="1715010684220" duration="785000" />
       <workItem from="1715070911370" duration="409000" />
       <workItem from="1715071346466" duration="634000" />
-      <workItem from="1715082453554" duration="727000" />
-      <workItem from="1715086036866" duration="664000" />
+      <workItem from="1715082202584" duration="197000" />
     </task>
     <servers />
   </component>
