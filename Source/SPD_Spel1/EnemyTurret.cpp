@@ -63,7 +63,7 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Player)
 	{
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
-		UE_LOG(LogTemp, Warning, TEXT("Distance to player: %f"), Distance);
+		//UE_LOG(LogTemp, Warning, TEXT("Distance to player: %f"), Distance);
 		//DrawDebugLine(GetWorld(), TurretMesh->GetComponentLocation(), Player->GetActorLocation(), FColor::Green, false, 0.1f, 0, 1);
 
 		if (Distance <= FireRange)
@@ -73,12 +73,12 @@ void AEnemyTurret::Tick(float DeltaTime)
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Player is out of firing range")); // Debugging out of range
+			//UE_LOG(LogTemp, Warning, TEXT("Player is out of firing range")); // Debugging out of range
 		}
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Player reference is not valid")); // Debugging player reference
+		//UE_LOG(LogTemp, Warning, TEXT("Player reference is not valid")); // Debugging player reference
 	}
 	}
 

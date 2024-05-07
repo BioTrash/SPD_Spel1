@@ -6,7 +6,6 @@ struct FDamageEvent;
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
-#include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 
 
@@ -38,7 +37,7 @@ void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ARushEnemyAI::KillEnemy()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	//UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
 
 	OnEnemyDeathDelegate.Broadcast();
     
@@ -52,7 +51,7 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
-	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
 
@@ -88,9 +87,9 @@ void ARushEnemyAI::DealDamageToPlayer(float Damage)
 		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
 		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetController(), this);
 
-		UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
+		//UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
+	//UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
 	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 1.0f);
 }
 
