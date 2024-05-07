@@ -7,7 +7,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "Components/CapsuleComponent.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "Engine/EngineTypes.h"
 
 // Sets default values
 AEnemyTurret::AEnemyTurret()
@@ -16,26 +15,23 @@ AEnemyTurret::AEnemyTurret()
 	PrimaryActorTick.bCanEverTick = true;
 
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
-    RootComponent = CapsuleComponent;
+	RootComponent = CapsuleComponent;
     
-    BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
-    BaseMesh->SetupAttachment(CapsuleComponent);
+	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
+	BaseMesh->SetupAttachment(CapsuleComponent);
     
-    TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
-    TurretMesh ->SetupAttachment(BaseMesh);
+	TurretMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Turret Mesh"));
+	TurretMesh ->SetupAttachment(BaseMesh);
     
-    ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
-    ProjectileSpawn -> SetupAttachment(TurretMesh);
+	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
+	ProjectileSpawn -> SetupAttachment(TurretMesh);
 	
-
 }
 
-// Called when the game starts or when spawned
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
 	FVector TurretMeshLocation = TurretMesh->GetRelativeLocation();
-	//TurretMeshLocation.Z += 20.f;
 	TurretMesh->SetRelativeLocation(TurretMeshLocation);
 	Health = MaxHealth;
 	
@@ -45,13 +41,8 @@ void AEnemyTurret::BeginPlay()
 	{
 		Player = FoundPlayer;
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Player character not found!"));
-	}
 }
 
-// Called every frame
 void AEnemyTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -63,27 +54,13 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Player)
 	{
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
-		//UE_LOG(LogTemp, Warning, TEXT("Distance to player: %f"), Distance);
-		//DrawDebugLine(GetWorld(), TurretMesh->GetComponentLocation(), Player->GetActorLocation(), FColor::Green, false, 0.1f, 0, 1);
-
 		if (Distance <= FireRange)
 		{
 			PerformLineTrace();
 			RotateTurret(Player->GetActorLocation());
 		}
-		else
-		{
-			//UE_LOG(LogTemp, Warning, TEXT("Player is out of firing range")); // Debugging out of range
-		}
 	}
-	else
-	{
-		//UE_LOG(LogTemp, Warning, TEXT("Player reference is not valid")); // Debugging player reference
-	}
-	}
-
-
-// Called to bind functionality to input
+}
 void AEnemyTurret::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -107,15 +84,12 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 	LookAtRotation.Roll = 0;
 	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
-	
-	UE_LOG(LogTemp, Warning, TEXT("Turret rotation updated"));
-	
 }
 
 void AEnemyTurret::PerformLineTrace()
 {
-	FVector StartLocation = TurretMesh->GetComponentLocation(); // Start from the turret's position
-	FVector EndLocation = Player->GetActorLocation(); // Trace towards the player's position
+	FVector StartLocation = TurretMesh->GetComponentLocation(); 
+	FVector EndLocation = Player->GetActorLocation();
 
 	FHitResult HitResult;
 	FCollisionQueryParams Params;
@@ -126,20 +100,13 @@ void AEnemyTurret::PerformLineTrace()
 
 	if (bHit)
 	{
-		if (APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(HitResult.GetActor()))
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Player detected by line trace"));
-			ShootEnemy(10.0f);
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Line trace did not hit the player"));
+		UE_LOG(LogTemp, Warning, TEXT("Nu ska jag skjuta!"));
+		ShootEnemy(10.0f);
 	}
 }
-
-	void AEnemyTurret::ShootEnemy(float Damage)
-	{
+void AEnemyTurret::ShootEnemy(float Damage)
+{
+	UE_LOG(LogTemp, Warning, TEXT("KÖRS DU?!"));
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
@@ -148,17 +115,14 @@ void AEnemyTurret::PerformLineTrace()
 			float DistanceToPlayer = FVector::Distance(GetActorLocation(), PlayerCharacter->GetActorLocation());
 			float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer * DamageRadius), 0.0f, 1.0f);
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
-			float DamageApplied = PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetController(), this);
+
+			PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
 			
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
-
-		UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-		
 		ShootAgainCooldown();
+		}
 	}
-	}
-
 void AEnemyTurret::Die()
 {
 	OnEnemyDeath();
@@ -168,5 +132,3 @@ void AEnemyTurret::ShootAgainCooldown()
 {
 	NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 }
-
-
