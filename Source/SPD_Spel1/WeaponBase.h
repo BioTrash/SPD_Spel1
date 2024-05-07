@@ -78,7 +78,9 @@ public:
 	FRotator GetRotation() const;
 	UFUNCTION(BlueprintPure)
 	FString GetAmmo() const;
-
+	UFUNCTION(BlueprintPure)
+	USceneComponent* GetMuzzlePoint() const;
+	
 	UFUNCTION(BlueprintCallable)
 	void SetbUnlimitedAmmo(bool _bUnlimitedAmmo);
 	UFUNCTION(BlueprintCallable)
@@ -106,6 +108,8 @@ private:
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* MuzzlePoint;
 
 	
 	UPROPERTY()
