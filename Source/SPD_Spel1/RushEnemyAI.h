@@ -25,6 +25,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void Explode(float Damage, bool bCollisionTriggered);
+
+	bool bHasExploded;
 	
 	UPROPERTY(BlueprintAssignable, Category = "Enemy")
 	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
@@ -50,11 +53,10 @@ public:
 	float JumpForce = 1000.0f;
 	
 private:
-	bool bHasExploded;
+
 	bool bCanAttack = true;
 	FTimerHandle ExplodeCooldown;
-
-	void Explode(float Damage, bool bCollisionTriggered);
+	
 	void PerformLineTrace();
 	
 	UPROPERTY(EditAnywhere, Category="Enemy")

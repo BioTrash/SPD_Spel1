@@ -29,7 +29,7 @@ void ARushEnemyAI::Tick(float DeltaTime)
 	}
 	if(Health <= 0 && !bHasExploded)
 	{
-		Explode(30.f, true);
+		Explode(20.f, true);
 		bHasExploded = true;
 	}
 }
@@ -40,6 +40,7 @@ void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Exploderar i facet >:D"));
 	if (bCollisionTriggered && !bHasExploded)
 	{
 		TArray<AActor*> OverlappingActors;
@@ -65,6 +66,7 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
 	}
 		bHasExploded = true;
+		UE_LOG(LogTemp, Warning, TEXT("Destroyas"));
 		Destroy();
 	}
 }
