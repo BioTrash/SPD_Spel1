@@ -8,10 +8,10 @@ struct FDamageEvent;
 #include "Engine/EngineTypes.h"
 #include "NiagaraFunctionLibrary.h"
 
-
 ARushEnemyAI::ARushEnemyAI()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	bHasExploded = false;
 }
 
 void ARushEnemyAI::BeginPlay()
@@ -23,36 +23,53 @@ void ARushEnemyAI::BeginPlay()
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	PerformLineTrace();
-	if(Health <= 0)
+	if(Health > 0)
 	{
-		KillEnemy();
+		PerformLineTrace();
+	}
+	if(Health <= 0 && !bHasExploded)
+	{
+		Explode(10.f, true);
+		bHasExploded = true;
 	}
 }
-
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void ARushEnemyAI::KillEnemy()
+void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	UE_LOG(LogTemp, Warning, TEXT("Exploderar i facet >:D"));
+	if (bCollisionTriggered && !bHasExploded)
+	{
+		TArray<AActor*> OverlappingActors;
+		FVector ExplosionLocation = GetActorLocation();
 
-	OnEnemyDeathDelegate.Broadcast();
-    
-	OnEnemyDeath();
-	Destroy();
-}
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
 
-float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
-{
-	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
-	DamageToMake = FMath::Min(Health,DamageToMake);
-	Health -= DamageToMake;
-	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
-	return DamageToMake;
+		for (AActor* Actor : OverlappingActors)
+		{
+			APlayerCharacter* Player = Cast<APlayerCharacter>(Actor);
+			if (Player)
+			{
+				float DistanceToPlayer = FVector::Distance(ExplosionLocation, Player->GetActorLocation());
+				float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
+				float ActualDamage = Damage * DamageMultiplier;
+
+				Player->TakeDamage(ActualDamage, FDamageEvent(), GetController(), this);
+			}
+		}
+
+	if (ExplosionEffect)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
+	}
+		bHasExploded = true;
+		UE_LOG(LogTemp, Warning, TEXT("Destroyas"));
+		OnEnemyDeath();
+		Destroy();
+	}
 }
 
 void ARushEnemyAI::PerformLineTrace()
@@ -63,54 +80,39 @@ void ARushEnemyAI::PerformLineTrace()
 	FHitResult HitResult;
 	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this); 
-	
-	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
-	//DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0,2);
+    
+	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params);
+
 	if (bHit)
 	{
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
-		if (Player && bCanAttack)
+		if (Player)
 		{
-			DealDamageToPlayer(5.0f);
-			bCanAttack = false;
-			GetWorldTimerManager().SetTimer(ExplodeCooldown, this, &ARushEnemyAI::Explode, 1.0f, false);
+			UE_LOG(LogTemp, Warning, TEXT("DEN EXPLODERAR >:)"));
+			Explode(30, true);
+		}else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Den missade :O"));
 		}
 	}
-	}
-
-void ARushEnemyAI::DealDamageToPlayer(float Damage)
-{
-	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	if (PlayerCharacter)
-	{
-		float DistanceToPlayer = FVector::Dist(GetActorLocation(), PlayerCharacter->GetActorLocation());
-		float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
-		float ActualDamage = PlayerCharacter->TakeDamage(Damage * DistanceMultiplier, FDamageEvent(), GetController(), this);
-
-		//UE_LOG(LogTemp, Warning, TEXT("Damage done: %f"), ActualDamage);
-	}
-	//UE_LOG(LogTemp, Warning, TEXT("Enemy did damage!"));
-	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 32, FColor::Red, false, 1.0f);
 }
 
-void ARushEnemyAI::Explode()
+void ARushEnemyAI::KillEnemy()
 {
-	DealDamageToPlayer(30.0f);
-	if(ExplosionEffect != nullptr)
-	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, GetActorLocation(), FRotator(0), FVector(1), true, true);
-		
-	}
-	
-	KillEnemy();
-}
-void ARushEnemyAI::EndExplodeCooldown()
-{
-	bCanAttack = true;
+	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+
+	OnEnemyDeathDelegate.Broadcast();
+	Health = 0;
+	OnEnemyDeath();
+	Destroy();
 }
 
-
-
-
-
-
+float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
+	DamageToMake = FMath::Min(Health,DamageToMake);
+	Health -= DamageToMake;
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	return DamageToMake;
+}
