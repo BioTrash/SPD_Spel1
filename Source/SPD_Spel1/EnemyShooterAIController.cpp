@@ -80,6 +80,13 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        
+                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
+                        float Radius = 900.0f;
+                        FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
+                        FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
+
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
 
                         if (LastShotTime >= ShootCooldown)
                         {
