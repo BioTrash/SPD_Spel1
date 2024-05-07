@@ -57,6 +57,7 @@ void AShooterEnemy::Tick(float DeltaTime)
 	{
 		KillEnemy();
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Shot: %hhd"), isShooting)
 
 }
 

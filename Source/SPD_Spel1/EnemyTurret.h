@@ -55,7 +55,7 @@ private:
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	UStaticMeshComponent* BaseMesh;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	UStaticMeshComponent* TurretMesh;
+	USkeletalMeshComponent* TurretMesh;
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	USceneComponent* ProjectileSpawn;
 	

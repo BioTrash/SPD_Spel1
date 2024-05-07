@@ -25,12 +25,15 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void Explode(float Damage, bool bCollisionTriggered);
 
+	bool bHasExploded;
+	
 	UPROPERTY(BlueprintAssignable, Category = "Enemy")
 	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
 	
-	void KillEnemy();
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	void KillEnemy();
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 40.f;
@@ -41,7 +44,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
-	float MaxTraceDistance = 80.f;
+	float MaxTraceDistance = 60.f;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageRadius = 300.0f;
@@ -50,18 +53,12 @@ public:
 	float JumpForce = 1000.0f;
 	
 private:
-	void PerformLineTrace();
-	UFUNCTION()
-	void DealDamageToPlayer(float Damage);
-	void Explode();
-	void EndExplodeCooldown();
 
 	bool bCanAttack = true;
 	FTimerHandle ExplodeCooldown;
-
-	UPROPERTY(EditAnywhere)
-	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-
+	
+	void PerformLineTrace();
+	
 	UPROPERTY(EditAnywhere, Category="Enemy")
 	class UNiagaraSystem* ExplosionEffect;
 
