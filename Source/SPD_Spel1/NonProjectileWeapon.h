@@ -18,7 +18,7 @@ public:
 	
 	ANonProjectileWeapon();
 	virtual void Shoot() override;
-	virtual void InitiateTimer(bool bButtonHeld) override;
+	virtual void InitiateTimer(bool bButtonPressed, bool bAlternative) override;
 
 	UFUNCTION(BlueprintPure)
 	FVector GetEnd() const;

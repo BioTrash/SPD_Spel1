@@ -13,6 +13,9 @@ AWeaponBase::AWeaponBase()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(Root);
 
+	MuzzlePoint = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzlePoint"));
+	MuzzlePoint->SetupAttachment(Root);
+
 }
 
 void AWeaponBase::BeginPlay()
@@ -41,6 +44,12 @@ void AWeaponBase::Tick(float DeltaTime)
 void AWeaponBase::DelaySwitch()
 {
 	bDelayed = true;
+}
+
+void AWeaponBase::SlimeCharge()
+{
+	bSlimeCharged = true;
+	UE_LOG(LogTemp, Error, TEXT("SLIME CHARGED"));
 }
 
 
@@ -84,6 +93,12 @@ FRotator AWeaponBase::GetRotation() const
 	return Rotation;
 }
 
+USceneComponent* AWeaponBase::GetMuzzlePoint() const
+{
+	return MuzzlePoint;
+}
+
+
 void AWeaponBase::SetbUnlimitedAmmo(bool _bUnlimitedAmmo) {
 	bUnlimitedAmmo = _bUnlimitedAmmo;
 }
@@ -99,6 +114,12 @@ void AWeaponBase::SetCurrentClip(int32 _CurrentClip) {
 void AWeaponBase::SetClipSize(int32 _ClipSize) {
 	ClipSize = _ClipSize;
 }
+
+void AWeaponBase::SetFireRate(int32 _FireRate)
+{
+	FireRate = _FireRate;
+}
+
 
 void AWeaponBase::InitiateReload()
 {

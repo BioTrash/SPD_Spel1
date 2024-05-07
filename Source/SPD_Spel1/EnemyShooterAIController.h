@@ -9,6 +9,8 @@
 /**
  * 
  */
+class UNiagaraComponent;
+
 UCLASS()
 class SPD_SPEL1_API AEnemyShooterAIController : public AAIController
 {
@@ -21,6 +23,8 @@ public:
 	FVector EnemyLocation;
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyShoot();
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+	class UNiagaraSystem* ShootingEffect;
 	
 	
 protected:
@@ -34,13 +38,14 @@ private:
 	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+
+	UNiagaraComponent* NiagaraSystemComponent;
 	float LastShotTime = 0.0f;
 
 	// Cooldown duration between shots
 	float ShootCooldown = 2.5f;
 
-	
-
-
-	
+	bool EffectIsPlaying = false;
+	UPROPERTY(EditAnywhere, Category = "Mesh")
+	class UStaticMeshComponent* EnemyStaticMeshComponent;
 };

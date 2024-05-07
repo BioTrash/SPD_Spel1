@@ -19,9 +19,9 @@ void ANonProjectileWeapon::Tick(float DeltaTime)
 
 }
 
-void ANonProjectileWeapon::InitiateTimer(bool bButtonHeld)
+void ANonProjectileWeapon::InitiateTimer(bool bButtonPressed, bool bAlternative)
 {
-	Super::PullTrigger(bButtonHeld, &ANonProjectileWeapon::Shoot, this);
+	Super::PullTrigger(bButtonPressed, bAlternative, &ANonProjectileWeapon::Shoot, this);
 }
 
 

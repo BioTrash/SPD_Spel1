@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "WeaponBase.generated.h"
 
+
 UCLASS()
 class SPD_SPEL1_API AWeaponBase : public AActor
 {
@@ -14,25 +15,32 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void DelaySwitch();
+	void SlimeCharge();
 	void InitiateReload();
 
 	// This needs to be in the header because template needs to be available at initialization, i.e. before compilation. (Rufus)
 	template<typename T, typename U>
-	void PullTrigger(bool bRapidFire, T Func, U* Object)
+	void PullTrigger(bool bButtonPressed, bool bAlternative, T Func, U* Object)
 	{
-		if (bRapidFire)
+		if (bButtonPressed)
 		{
-			if(bDelayed)
+			if(bDelayed && !bAlternative)
 			{
-				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, true, 0.0f);
+				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, false, 0.0f);
 				bDelayed = false;
 				GetWorld()->GetTimerManager().SetTimer(FireDelayTimer, this, &AWeaponBase::DelaySwitch, FireDelay/2, false, FireDelay/2);
 			}
-		}
-		else
-		{
-			if(!bDelayed) return;
-			GetWorld()->GetTimerManager().ClearTimer(RapidFireTimer);
+			
+			if(bAlternative)
+			{
+				// Start charging slime alternative fire
+				if(!bSlimeCharged)
+				{
+					GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, MaxChargeTime/2, false, MaxChargeTime/2);
+					
+				}
+
+			}
 		}
 	}
 	
@@ -46,7 +54,7 @@ public:
 		}
 	}
 	
-	virtual void InitiateTimer(bool bButtonHeld) {} 
+	virtual void InitiateTimer(bool bButtonHeld, bool bAlternative) {} 
 	virtual void Shoot() {}
 	virtual void Spread() {}
 	virtual void Recoil() {}
@@ -70,7 +78,9 @@ public:
 	FRotator GetRotation() const;
 	UFUNCTION(BlueprintPure)
 	FString GetAmmo() const;
-
+	UFUNCTION(BlueprintPure)
+	USceneComponent* GetMuzzlePoint() const;
+	
 	UFUNCTION(BlueprintCallable)
 	void SetbUnlimitedAmmo(bool _bUnlimitedAmmo);
 	UFUNCTION(BlueprintCallable)
@@ -79,21 +89,28 @@ public:
 	void SetCurrentClip(int32 _CurrentClip);
 	UFUNCTION(BlueprintCallable)
 	void SetClipSize(int32 _ClipSize);
+	UFUNCTION(BlueprintCallable)
+	void SetFireRate(int32 _FireRate);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void WhenShot();
-
-
 	
+	bool bButtonReleased = false;
+	bool bSlimeCharged = false;
 protected:
 	AWeaponBase();
 	virtual void BeginPlay() override;
-
+	
+	UPROPERTY(EditAnywhere, Category="Weapon Beahviour") // Charge time for slime alternative fire
+	float MaxChargeTime = 2.0f;
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* MuzzlePoint;
+
 	
 	UPROPERTY()
 	FTimerHandle RapidFireTimer;
@@ -103,10 +120,16 @@ private:
 	UPROPERTY()
 	bool bDelayed = true;
 	
+	
 	UPROPERTY()
 	FTimerHandle ReloadDelayTimer;
 	UPROPERTY()
 	bool bReloading = false;
+
+	UPROPERTY()
+	FTimerHandle AlternativeFireTimer;
+
+	
 
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
