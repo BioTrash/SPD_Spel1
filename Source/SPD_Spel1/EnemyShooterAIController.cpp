@@ -12,6 +12,8 @@
 #include "NiagaraFunctionLibrary.h"
 #include "Components/SceneComponent.h"
 #include "NiagaraComponent.h"
+#include "EnemyCommunicationManager.h"
+
 
 #include "Weapon.h"
 //#include "EnemyWeapon.h"
@@ -20,7 +22,15 @@ void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
 
-
+    UEnemyCommunicationManager* CommunicationManager = UEnemyCommunicationManager::GetInstance();
+    if (CommunicationManager)
+    {
+        CommunicationManager->OnPlayerLocationUpdated.AddDynamic(this, &AEnemyShooterAIController::OnPlayerLocationUpdated);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to bind dynamic delegate: Communication manager instance is nullptr."));
+    }
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -78,8 +88,17 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     {
                         //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
+                        DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        Enemy->isShooting = true;
+                        
+                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
+                        float Radius = 900.0f;
+                        FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
+                        FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
+
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
 
                         if (LastShotTime >= ShootCooldown)
                         {
@@ -126,8 +145,22 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         else
                         {
                             GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                            Enemy->isShooting = false;
                         }
                     }
             }
         }
+}
+
+void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
+{
+    // Update player location in the player location manager
+    UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(PlayerLocation);
+}
+
+
+void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayerLocation)
+{
+    UE_LOG(LogTemp, Log, TEXT("Received updated player location: %s"), *NewPlayerLocation.ToString());
+    GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), NewPlayerLocation);
 }
