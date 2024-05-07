@@ -67,6 +67,7 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 	}
 		bHasExploded = true;
 		UE_LOG(LogTemp, Warning, TEXT("Destroyas"));
+		OnEnemyDeath();
 		Destroy();
 	}
 }
