@@ -91,6 +91,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        Enemy->isShooting = true;
                         
                         FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
                         float Radius = 900.0f;
@@ -144,6 +145,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         else
                         {
                             GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                            Enemy->isShooting = false;
                         }
                     }
             }
