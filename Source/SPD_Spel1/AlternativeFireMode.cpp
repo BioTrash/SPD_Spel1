@@ -30,6 +30,7 @@ void AAlternativeFireMode::InitiateTimer(bool bButtonPressed, bool bAlternative)
 	
 }
 
+
 int32 AAlternativeFireMode::GetCurrentSlimeAmmo() const
 {
 	return SlimeAmmo;
@@ -43,9 +44,10 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 void AAlternativeFireMode::FireWeapon()
 {
 	
-	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetLocation() + GetOwner()->GetActorForwardVector()* 100, GetRotation());
 	GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
 	SlimeAmmo--;
+
+	//bButtonReleased = false;
 }
 
 int32 AAlternativeFireMode::SetSlimeAmmo(int32 _SlimeAmmo)
