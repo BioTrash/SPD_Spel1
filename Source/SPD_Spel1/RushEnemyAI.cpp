@@ -29,7 +29,7 @@ void ARushEnemyAI::Tick(float DeltaTime)
 	}
 	if(Health <= 0 && !bHasExploded)
 	{
-		Explode(20.f, true);
+		Explode(10.f, true);
 		bHasExploded = true;
 	}
 }

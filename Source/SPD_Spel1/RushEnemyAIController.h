@@ -23,7 +23,7 @@ public:
 	void ExplodeAfterLaunch();
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageRadius = 1000.0f;
+	float DamageRadius = 300.0f;
 	bool bHasBeenDamagedByExplosion; 
 	
 protected:
@@ -51,7 +51,7 @@ private:
 	float LandingDistance = 200.0f;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
-	float ExplosionDamage = 300.f;
+	float ExplosionDamage = 10.f;
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
