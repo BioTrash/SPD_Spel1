@@ -43,6 +43,12 @@ void AWeaponBase::DelaySwitch()
 	bDelayed = true;
 }
 
+void AWeaponBase::SlimeCharge()
+{
+	bSlimeCharged = true;
+	UE_LOG(LogTemp, Error, TEXT("SLIME CHARGED"));
+}
+
 
 bool AWeaponBase::GetbUnlimitedAmmo() const
 {
@@ -99,6 +105,12 @@ void AWeaponBase::SetCurrentClip(int32 _CurrentClip) {
 void AWeaponBase::SetClipSize(int32 _ClipSize) {
 	ClipSize = _ClipSize;
 }
+
+void AWeaponBase::SetFireRate(int32 _FireRate)
+{
+	FireRate = _FireRate;
+}
+
 
 void AWeaponBase::InitiateReload()
 {
