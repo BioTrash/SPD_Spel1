@@ -7,6 +7,7 @@
 #include "EnemySpawnpoint.generated.h"
 
 
+class UNiagaraComponent;
 class UArrowComponent;
 
 UCLASS()
@@ -25,24 +26,36 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	
+
+	// Klassen som kommer spawnas via denna spawnpoint.
 	UPROPERTY(EditAnywhere, Category="Enemy")
-	ACharacter* EnemyToSpawnClass;
+	UClass* EnemyToSpawnClass;
+
+	// Effect som spelas innan fiender spawnar.
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UNiagaraComponent* SpawnEffect;
+	
+	UFUNCTION()
+	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
+	
+	
 	
 private:
-	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	class UCapsuleComponent* CapsuleComponent;
+
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* Root;
 	
-	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* BaseMesh;
 
-	UPROPERTY(VisibleAnywhere, Category="Components")
-	UArrowComponent* PointDirection;
-	
-	UPROPERTY(VisibleAnywhere, Category="Components")
-	class UNiagaraComponent* SpawnEffect;
+	// Pil för att visa vart meshen pekar.
+	UPROPERTY(VisibleAnywhere)
+	UArrowComponent* ArrowComponent;
 
-	UFUNCTION()
-	void OnNiagaraSystemFinished();
-	
+	UPROPERTY()
+	FVector Location;
+	UPROPERTY()
+	FRotator Rotation;
+	UPROPERTY()
+	UWorld* World;
 };

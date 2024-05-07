@@ -57,6 +57,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	class AWeaponBase* GetTriggerWeapon() const;
 
+	void OnButtonRelease();
+	void OnButtonPress();
+
 private:
 	void Slide();
 	void StopSlide();

@@ -9,6 +9,10 @@
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
+#include "NiagaraFunctionLibrary.h"
+#include "Components/SceneComponent.h"
+#include "NiagaraComponent.h"
+
 #include "Weapon.h"
 //#include "EnemyWeapon.h"
 
@@ -72,48 +76,50 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        //UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
+                        //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
 
                         if (LastShotTime >= ShootCooldown)
                         {
-                            //Play sound
-
-
-                            //KOMMENTERA UT DENNA OM INTE KLAR**
-                            FVector SpawnLocation = EnemyWeapon->GetActorLocation(); // Adjust this based on your weapon setup
-                            SpawnLocation.X -= 40;
-                            FRotator SpawnRotation = WeaponRotation;
-                            FActorSpawnParameters SpawnParams;
-                            SpawnParams.Owner = this;
-                            SpawnParams.Instigator = GetInstigator();
-
-
-                            AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
-                            UE_LOG(LogTemp, Error, TEXT("BEFORE SHOOTING PROEJECTILE"));
-
-                            if (Projectile)
+                            if (ShootingEffect && !EffectIsPlaying)
                             {
-                                UE_LOG(LogTemp, Error, TEXT("SHOOTING PROEJECTILE"));
-                                // Apply damage to the projectile
-                                Projectile->SetDamage(10); // Set damage value as needed
+                                FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
+                                //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
+                                NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+                                   GetWorld(),
+                                   ShootingEffect,
+                                   SocketLocation,
+                                   FRotator::ZeroRotator,
+                                   FVector::OneVector
+                               );
+                                EffectIsPlaying = true;
                             }
-                            //**FRAM TILL HIT
+                            if (NiagaraSystemComponent)
+                            {
+                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); // Adjust the offset as needed
+                            }
+                            const float EffectDuration = .9f;
 
-                            
-                            OnEnemyShoot();
-                            
-                            //EnemyWeapon->PullTrigger(true);
+                            if (LastShotTime >= ShootCooldown + EffectDuration)
+                            {
+                                FVector SpawnLocation = EnemyWeapon->GetActorLocation();
+                                SpawnLocation.X -= 40;
+                                FRotator SpawnRotation = WeaponRotation;
+                                FActorSpawnParameters SpawnParams;
+                                SpawnParams.Owner = this;
+                                SpawnParams.Instigator = GetInstigator();
 
-                            //Ska sitta i metod i projectile
-                            /*
-                            DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
-                            FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
-                            HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
-                            */
-                            LastShotTime = 0.0f;
+                                AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+                                if (Projectile)
+                                {
+                                    Projectile->SetDamage(10); 
+                                }
+                                OnEnemyShoot();
+                                LastShotTime = 0.0f;
+                                EffectIsPlaying = false;
+                            }
                         }
                     }
                     //Om Ray INTE Hit Player

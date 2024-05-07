@@ -33,7 +33,7 @@ void AProjectile::BeginPlay()
 		if (PlayerPawn)
 		{
 			FVector Direction = (PlayerPawn->GetActorLocation() - GetActorLocation()).GetSafeNormal();
-			UE_LOG(LogTemp, Error, TEXT("VELOCITY EQUALS : %s"), *FString(Direction.ToString()));
+			//UE_LOG(LogTemp, Error, TEXT("VELOCITY EQUALS : %s"), *FString(Direction.ToString()));
 			ProjectileMovementComponent->Velocity = Direction * ProjectileMovementComponent->InitialSpeed;
 		}
 	}
