@@ -30,7 +30,7 @@ public:
 	UFUNCTION(BlueprintPure)
 	FString GetSlimeAmmo() const;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 SlimeAmmo;
 	UPROPERTY(BlueprintReadWrite)
 	int32 TotalSlimeAmmo;

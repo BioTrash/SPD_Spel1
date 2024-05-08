@@ -9,13 +9,14 @@ void AAlternativeFireMode::BeginPlay()
 {
 	Super::BeginPlay();
 	Slime = GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
+	
 	Slime->SetActorHiddenInGame(true);
-        
-	// Disable collision for the actor
 	Slime->SetActorEnableCollision(false);
-        
-	// Optionally, you can also disable the actor's tick function
 	Slime->SetActorTickEnabled(false);
+
+	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
+	TempMove->SetActive(false);
+	Slime->SetProjectileMovementComponent(TempMove);
         
 }
 
@@ -58,8 +59,22 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 
 void AAlternativeFireMode::FireWeapon()
 {
+	Slime->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
+	Slime->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
+
+	Slime->SetActorHiddenInGame(false);
+	Slime->SetActorEnableCollision(true);
+	Slime->SetActorTickEnabled(true);
+
+	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
+	TempMove->SetActive(true);
+
+	FVector ViewportCenter(GetLocation().X * 0.5f, GetLocation().Y * 0.5f, 0.0f);
 	
-	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
+	TempMove->AddForce((Super::GetLocation() + Super::GetRotation().Vector() * 900000));
+	
+	Slime->SetProjectileMovementComponent(TempMove);
+	
 	SlimeAmmo--;
 	
 }

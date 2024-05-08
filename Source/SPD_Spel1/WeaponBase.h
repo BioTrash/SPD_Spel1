@@ -42,13 +42,16 @@ public:
 		}
 		else
 		{
-			// Stop the alternative fire timer when the button is released
-			if (bAlternative && bRightButtonPressed)
+			if (bAlternative)
 			{
-				StopAlternativeFireTimer();
-				bRightButtonPressed = false;
+				// Stop the alternative fire timer when the button is released
+				if (bRightButtonPressed)
+				{
+					StopAlternativeFireTimer();
+					bRightButtonPressed = false;
+				}
+				bButtonReleased = true;
 			}
-			bButtonReleased = true;
 		}
 	}
 	
