@@ -7,10 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="" />
+=======
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
     </list>
+>>>>>>> NewMain
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +46,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
+    "git-widget-placeholder": "NoraNewBranch",
+=======
     "git-widget-placeholder": "RebeckaBranchNEW",
+>>>>>>> NewMain
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,9 +62,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
+<<<<<<< HEAD
+      "C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\logu5907\\AppData\\Local\\Symbols\\src"
+=======
       "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
       "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
       "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
+>>>>>>> NewMain
     ]
   }
 }]]></component>
@@ -127,6 +141,19 @@
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
+      <configuration_6>
+        <option name="CONFIGURATION" value="" />
+        <option name="PLATFORM" value="" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
+      </configuration_6>
       <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
       <option name="AUTO_SELECT_PRIORITY" value="10010" />
       <method v="2">
@@ -175,8 +202,12 @@
       <workItem from="1715089494438" duration="1738000" />
       <workItem from="1715093076887" duration="570000" />
       <workItem from="1715150541472" duration="2952000" />
+<<<<<<< HEAD
+      <workItem from="1715155397351" duration="26000" />
+=======
       <workItem from="1715155119226" duration="4262000" />
       <workItem from="1715165642257" duration="9000" />
+>>>>>>> NewMain
     </task>
     <servers />
   </component>
