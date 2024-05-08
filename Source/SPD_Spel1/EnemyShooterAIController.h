@@ -38,6 +38,9 @@ private:
 	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+	
+	void DetectPlayer(const FVector& PlayerLocation);
+	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
 
 	UNiagaraComponent* NiagaraSystemComponent;
 	float LastShotTime = 0.0f;

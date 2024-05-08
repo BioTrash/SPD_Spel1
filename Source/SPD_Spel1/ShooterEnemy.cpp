@@ -57,6 +57,7 @@ void AShooterEnemy::Tick(float DeltaTime)
 	{
 		KillEnemy();
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Shot: %hhd"), isShooting)
 
 }
 
@@ -91,5 +92,10 @@ UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
 {
 	// Assuming the static mesh component is named "EnemyStaticMesh"
 	return FindComponentByClass<UStaticMeshComponent>();
+}
+
+bool AShooterEnemy::getIsShooting()
+{
+	return isShooting;
 }
 
