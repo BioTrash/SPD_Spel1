@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "NiagaraSystem.h"
 #include "NonProjectileWeapon.h"
 #include "AlternativeFireMode.generated.h"
 
@@ -16,6 +17,7 @@ class SPD_SPEL1_API AAlternativeFireMode : public ANonProjectileWeapon
 	
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
 	virtual void InitiateTimer(bool bButtonPressed, bool bAlternative) override;
 
 	void FireWeapon();
@@ -35,6 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class ASlimeProjectile> Projectile;
+
+	UPROPERTY(VisibleAnywhere)
+	ASlimeProjectile* Slime;
 	
 
 private:

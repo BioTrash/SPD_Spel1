@@ -193,24 +193,52 @@ void APlayerCharacter::Dash()
 	{
 		if (GetCharacterMovement())
 		{
-			//get the player's forward vector as the dash direction
-			FVector DashDirection = GetActorForwardVector();
+			// //get the player's forward vector as the dash direction
+			// FVector DashDirection = GetActorForwardVector();
+			//
+			// //normalize the dash direction
+			// DashDirection.Normalize();
+			//
+			// //apply constant dash force
+			// FVector DashForceVector = DashDirection * DashForce;
+			//
+			// //checks if the character is grounded
+			// bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+			//
+			// //if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
+			// float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
+			//
+			// //apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+			// //GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
+			// LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
 
-			//normalize the dash direction
-			DashDirection.Normalize();
+			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+			if (PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
+			{
+				FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashForce;
 
-			//apply constant dash force
-			FVector DashForceVector = DashDirection * DashForce;
+				//apply slide velocity to the character
+				GetCharacterMovement()->Launch(DashDirection);
+				
+			} else
+			{
+				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || !bIsGrounded)
+				{
+					FVector DashDirectionForward = GetActorForwardVector();
+					DashDirectionForward.Normalize();
+					FVector DashForceVector = DashDirectionForward * DashForce;
+					//checks if the character is grounded
+					//bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+				
+					//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
+					float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
 
-			//checks if the character is grounded
-			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
-			
-			//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
-			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
-			
-			//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
-			//GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
-			LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
+					//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+					GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
+					LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
+				}
+			}
 
 			FTimerHandle UnusedHandle;
 			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
