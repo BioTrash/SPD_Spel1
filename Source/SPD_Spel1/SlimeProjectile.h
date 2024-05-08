@@ -23,14 +23,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void SetDamage(float NewDamage) { Damage = NewDamage; }
-	void InitiateProjectile();
-	void ReturnToPool();
+
 
 private:
+
 	float Damage;
-	bool bIsInPool;
-	constexpr int32 PoolSize = 10;
-	
 	UPROPERTY(EditDefaultsOnly, Category="Weaponry")
 	UStaticMeshComponent* ProjectileMesh;
 

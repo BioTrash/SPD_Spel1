@@ -17,6 +17,7 @@ class SPD_SPEL1_API AAlternativeFireMode : public ANonProjectileWeapon
 	
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
 	virtual void InitiateTimer(bool bButtonPressed, bool bAlternative) override;
 
 	void FireWeapon();
@@ -36,10 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class ASlimeProjectile> Projectile;
-	//UPROPERTY(EditAnywhere)
-	//UNiagaraSystem* Muzzle;
-	//UPROPERTY(EditAnywhere)
-	//USceneComponent* Muzzle;
+
+	UPROPERTY(VisibleAnywhere)
+	ASlimeProjectile* Slime;
 	
 
 private:
