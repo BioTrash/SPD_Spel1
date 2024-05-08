@@ -51,6 +51,11 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Jump")
 	float JumpForce = 1000.0f;
+
+	bool IsLaunchingAnimation;
+	
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	bool GetIsLaunchingAnimation();
 	
 private:
 
