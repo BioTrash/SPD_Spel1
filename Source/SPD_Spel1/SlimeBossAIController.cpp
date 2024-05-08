@@ -23,7 +23,7 @@ void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 }
 void ASlimeBossAIController::FireCooldown()
 {
-	
+	UE_LOG(LogTemp, Warning, TEXT("HEJHEJ"));
 }
 
 
