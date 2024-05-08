@@ -52,4 +52,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Mesh")
 	UStaticMeshComponent* GetStaticMeshComponent() const;
 
+	UFUNCTION(BlueprintCallable, Category="Attacking")
+	bool getIsShooting();
+
 };
