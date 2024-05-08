@@ -48,8 +48,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
     LastShotTime += DeltaSeconds;
     //GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-
-    
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     if (PlayerPawn != nullptr)
     {
@@ -112,7 +110,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
-                        GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
+                        //GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                         Enemy->isShooting = true;
                         
@@ -187,6 +185,8 @@ void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 
 void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayerLocation)
 {
-    UE_LOG(LogTemp, Log, TEXT("Received updated player location: %s"), *NewPlayerLocation.ToString());
+    //UE_LOG(LogTemp, Log, TEXT("Received updated player location: %s"), *NewPlayerLocation.ToString());
     GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), NewPlayerLocation);
+    UE_LOG(LogTemp, Error, TEXT("MIN PLAYER POS ÄR: %s"), *GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation")).ToString());
+
 }
