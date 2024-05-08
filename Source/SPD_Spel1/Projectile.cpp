@@ -2,6 +2,8 @@
 
 
 #include "Projectile.h"
+
+#include "Engine/DamageEvents.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 
