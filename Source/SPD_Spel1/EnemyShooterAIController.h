@@ -40,6 +40,8 @@ private:
 	class UBehaviorTree* AIBehavior;
 	
 	void DetectPlayer(const FVector& PlayerLocation);
+
+	UFUNCTION()
 	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
 
 	UNiagaraComponent* NiagaraSystemComponent;
