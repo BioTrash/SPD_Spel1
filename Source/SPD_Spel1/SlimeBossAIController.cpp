@@ -5,9 +5,16 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "PlayerCharacter.h"
+#include "SlimeBossAI.h"
 
 void ASlimeBossAIController::BeginPlay()
 {
+	Super::BeginPlay();
+	if (APawn* ControlledPawn = GetPawn())
+	{
+		PawnMesh = ControlledPawn->FindComponentByClass<UStaticMeshComponent>();
+	}	
 	if (AIBehavior != nullptr)
 	{
 		RunBehaviorTree(AIBehavior);
@@ -25,16 +32,23 @@ void ASlimeBossAIController::BeginPlay()
 }
 void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
-	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
-	LookAtRotation.Pitch = 0;
-	LookAtRotation.Roll = 0;
-	LookAtRotation.Yaw += -90.f; 
-	HeadMesh->SetWorldRotation(LookAtRotation);
+	Super::Tick(DeltaSeconds);
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (PlayerPawn)
+	{
+		FVector PlayerLocation = PlayerPawn->GetActorLocation();
+		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
+	}
 }
+		
 
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 {
-	
+	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(PawnMesh->GetComponentLocation(), TargetLocation);
+	LookAtRotation.Pitch = 0;
+	LookAtRotation.Roll = 0;
+	LookAtRotation.Yaw += -90.f; 
+	PawnMesh->SetWorldRotation(LookAtRotation);
 }
 void ASlimeBossAIController::FireCooldown()
 {
