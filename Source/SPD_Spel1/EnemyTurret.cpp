@@ -25,9 +25,7 @@ AEnemyTurret::AEnemyTurret()
     
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
 	ProjectileSpawn -> SetupAttachment(TurretMesh);
-	
 }
-
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
@@ -36,13 +34,11 @@ void AEnemyTurret::BeginPlay()
 	Health = MaxHealth;
 	
 	APlayerCharacter* FoundPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	
 	if (FoundPlayer)
 	{
 		Player = FoundPlayer;
 	}
 }
-
 void AEnemyTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -50,7 +46,9 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Health <= 0)
 	{
 		Die();
+		return;
 	}
+
 	if (Player)
 	{
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
@@ -58,6 +56,9 @@ void AEnemyTurret::Tick(float DeltaTime)
 		{
 			PerformLineTrace();
 			RotateTurret(Player->GetActorLocation());
+		}
+		else
+		{
 		}
 	}
 }
@@ -76,7 +77,6 @@ float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return DamageToMake;
 }
 
-
 void AEnemyTurret::RotateTurret(FVector TargetLocation)
 {
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
@@ -85,7 +85,6 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
 }
-
 void AEnemyTurret::PerformLineTrace()
 {
 	FVector StartLocation = TurretMesh->GetComponentLocation(); 
@@ -101,6 +100,7 @@ void AEnemyTurret::PerformLineTrace()
 	if (bHit)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Nu ska jag skjuta!"));
+		IsShootingAnimation = true;
 		ShootEnemy(10.0f);
 	}
 }
@@ -117,11 +117,11 @@ void AEnemyTurret::ShootEnemy(float Damage)
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
 
 			PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
-			
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
 		ShootAgainCooldown();
 		}
+	IsShootingAnimation = false;
 	}
 void AEnemyTurret::Die()
 {
@@ -131,4 +131,8 @@ void AEnemyTurret::Die()
 void AEnemyTurret::ShootAgainCooldown()
 {
 	NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
+}
+bool AEnemyTurret::GetIsShootingAnimation()
+{
+	return IsShootingAnimation;
 }

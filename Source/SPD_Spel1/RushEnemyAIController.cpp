@@ -25,8 +25,6 @@ void ARushEnemyAIController::BeginPlay()
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 		GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
-		GetBlackboardComponent()->SetValueAsBool(TEXT("Explode"), false);
-		
 	}
 
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
@@ -36,7 +34,6 @@ void ARushEnemyAIController::BeginPlay()
 void ARushEnemyAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	if (!PlayerPawn)
 	{
@@ -44,13 +41,15 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 	}
 
 	FVector PlayerLocation = PlayerPawn->GetActorLocation();
+	UE_LOG(LogTemp, Warning, TEXT("PlayerLocation: %s"), *PlayerLocation.ToString());
+	//UE_LOG(LogTemp, Warning, TEXT("Spelarens location: %s"), *UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetActorLocation().ToString());
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
-	GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), PlayerLocation); 
 
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-
+	UE_LOG(LogTemp, Warning, TEXT("Enemy Location: %s"), *EnemyLocation.ToString());
 	bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
+	UE_LOG(LogTemp, Warning, TEXT("bIsLaunching: %s"), bIsLaunching ? TEXT("True") : TEXT("False"));
 	if (bIsLaunching && !bHasLaunched)
 	{
 		LaunchTowardsPlayer();
@@ -67,7 +66,7 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 			AnticipationDelay -= DeltaSeconds;
 		}
 		else
-		{
+		{ UE_LOG(LogTemp, Warning, TEXT("bHasLaunched: %s"), bHasLaunched ? TEXT("True") : TEXT("False"));
 			LaunchDistanceThreshold = FMath::RandRange(150.0f, 600.0f);
 			if (DistanceToPlayer <= LaunchDistanceThreshold)
 			{
@@ -85,12 +84,12 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 		return;
 	}
 
-	FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
+	FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
 
 	float LaunchSpeed = 800.f;
-	float JumpHeight = 500.f;
+	float JumpHeight = 600.f;
 
 	ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn());
 	if (EnemyCharacter)
