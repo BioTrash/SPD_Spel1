@@ -7,39 +7,67 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "PlayerCharacter.h"
 #include "SlimeBossAI.h"
+#include "Projectile.h"
 
 void ASlimeBossAIController::BeginPlay()
 {
 	Super::BeginPlay();
-	if (APawn* ControlledPawn = GetPawn())
+	SetPlayer();
+	if (Boss)
 	{
-		PawnMesh = ControlledPawn->FindComponentByClass<UStaticMeshComponent>();
+		PawnMesh = Boss->FindComponentByClass<UStaticMeshComponent>();
+		ProjectileSpawn = Boss->FindComponentByClass<USceneComponent>();
+		if (ProjectileSpawn)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("SPAWN FOUND" ));
+		}
 	}	
 	if (AIBehavior != nullptr)
 	{
 		RunBehaviorTree(AIBehavior);
-
-		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
+		
+		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
 		GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseOne"),true);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), false);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseThree"), false);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), false);
 	}
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	SetFocus(PlayerPawn);
+	SetFocus(Player);
 }
 void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	SetFocus(PlayerPawn);
-	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
-	if (PlayerPawn)
+	LastShotTime += DeltaSeconds;
+
+	UE_LOG(LogTemp, Warning, TEXT("THIS IS THE CLOCK: %f"), LastShotTime);
+	
+	SetFocus(Player);
+	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
+	
+	if (Player) 
 	{
-		FVector PlayerLocation = PlayerPawn->GetActorLocation();
+		FVector PlayerLocation = Player->GetActorLocation();
 		RotateHead(PlayerLocation);
+	}
+	if (LastShotTime >= ShootCooldown)
+	{
+		//Skapa projektil
+		FVector SpawnLocation =ProjectileSpawn->GetComponentLocation();
+		//SpawnLocation.X -= 100;
+		FRotator SpawnRotation = ProjectileSpawn-> GetComponentRotation();
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		//Spawnar projectile och skjuter den med damage
+		AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+		if (Projectile)
+		{
+			Projectile->SetDamage(ProjectileDamage);
+			UE_LOG(LogTemp, Log, TEXT("Heres the projectile: %s"), *SpawnLocation.ToString());
+		}
+		LastShotTime = 0.0f;
 	}
 }
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
@@ -55,4 +83,24 @@ void ASlimeBossAIController::FireCooldown()
 	UE_LOG(LogTemp, Warning, TEXT("HEJHEJ"));
 }
 
+void ASlimeBossAIController::SetPlayer()
+{
+	if (UGameplayStatics::GetPlayerPawn(GetWorld(), 0))
+	{
+		Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	}
+	if (Player == nullptr)
+	{
+		//Shrek ;)
+	}
+
+	if (Cast<ASlimeBossAI>(GetPawn()))
+	{
+		Boss = Cast<ASlimeBossAI>(GetPawn());
+	}
+
+	if (Boss == nullptr)
+	{
+	}
+}
 
