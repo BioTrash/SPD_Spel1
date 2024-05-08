@@ -31,6 +31,9 @@ public:
 
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
 
+	UPROPERTY(Blueprintable, EditAnywhere)
+	bool isShooting;
+
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 100;
 
@@ -46,6 +49,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
+	UFUNCTION(BlueprintCallable, Category = "Mesh")
+	UStaticMeshComponent* GetStaticMeshComponent() const;
 
+	UFUNCTION(BlueprintCallable, Category="Attacking")
+	bool getIsShooting();
 
 };

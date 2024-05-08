@@ -9,13 +9,28 @@
 #include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
+#include "NiagaraFunctionLibrary.h"
+#include "Components/SceneComponent.h"
+#include "NiagaraComponent.h"
+#include "EnemyCommunicationManager.h"
+
+
 #include "Weapon.h"
 //#include "EnemyWeapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
-    
+
+    UEnemyCommunicationManager* CommunicationManager = UEnemyCommunicationManager::GetInstance();
+    if (CommunicationManager)
+    {
+        CommunicationManager->OnPlayerLocationUpdated.AddDynamic(this, &AEnemyShooterAIController::OnPlayerLocationUpdated);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to bind dynamic delegate: Communication manager instance is nullptr."));
+    }
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
@@ -28,7 +43,6 @@ void AEnemyShooterAIController::BeginPlay()
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
 }
-
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
@@ -43,7 +57,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     }
 
     Super::Tick(DeltaSeconds);
-    //MoveToActor(PlayerPawn, 2000);
 
     AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
     EnemyLocation = Enemy->GetActorLocation();
@@ -73,32 +86,81 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        UE_LOG(LogTemp, Error, TEXT("SEEING PLAYER"));
+                        //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
+                        DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                        Enemy->isShooting = true;
+                        
+                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
+                        float Radius = 900.0f;
+                        FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
+                        FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
+
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
 
                         if (LastShotTime >= ShootCooldown)
                         {
-                            //Play sound
-                            OnEnemyShoot();
-                            
-                            EnemyWeapon->PullTrigger(true);
-                            DrawDebugPoint(GetWorld(), HitResult.Location, 50, FColor::Green, true);
-                            FPointDamageEvent DamageEvent(10, HitResult, HitResult.Location, nullptr);
-                            HitResult.GetActor()->TakeDamage(10, DamageEvent, Enemy->GetController(), this);
-                            LastShotTime = 0.0f;
+                            if (ShootingEffect && !EffectIsPlaying)
+                            {
+                                FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
+                                //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
+                                NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+                                   GetWorld(),
+                                   ShootingEffect,
+                                   SocketLocation,
+                                   FRotator::ZeroRotator,
+                                   FVector::OneVector
+                               );
+                                EffectIsPlaying = true;
+                            }
+                            if (NiagaraSystemComponent)
+                            {
+                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); // Adjust the offset as needed
+                            }
+                            const float EffectDuration = .9f;
+
+                            if (LastShotTime >= ShootCooldown + EffectDuration)
+                            {
+                                FVector SpawnLocation = EnemyWeapon->GetActorLocation();
+                                SpawnLocation.X -= 40;
+                                FRotator SpawnRotation = WeaponRotation;
+                                FActorSpawnParameters SpawnParams;
+                                SpawnParams.Owner = this;
+                                SpawnParams.Instigator = GetInstigator();
+
+                                AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+                                if (Projectile)
+                                {
+                                    Projectile->SetDamage(10); 
+                                }
+                                OnEnemyShoot();
+                                LastShotTime = 0.0f;
+                                EffectIsPlaying = false;
+                            }
                         }
                     }
                     //Om Ray INTE Hit Player
                         else
                         {
                             GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                            Enemy->isShooting = false;
                         }
                     }
-                    
-                
-                // Visualize the line trace
             }
         }
+}
+
+void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
+{
+    // Update player location in the player location manager
+    UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(PlayerLocation);
+}
+
+
+void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayerLocation)
+{
+    UE_LOG(LogTemp, Log, TEXT("Received updated player location: %s"), *NewPlayerLocation.ToString());
+    GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), NewPlayerLocation);
 }

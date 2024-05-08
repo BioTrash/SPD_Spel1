@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "EnemyTurret.generated.h"
 
+
 UCLASS()
 class SPD_SPEL1_API AEnemyTurret : public APawn
 {
@@ -26,4 +27,54 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
+	void OnEnemyDeath();
+
+	UPROPERTY(EditDefaultsOnly)
+	float MaxHealth = 40.f;
+	
+	UPROPERTY(VisibleAnywhere)
+	float Health;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Damage")
+	float DamageRadius = 10.0f;
+	
+	UFUNCTION(BlueprintCallable, Category="Enemy")
+	void ShootEnemy(float Damage);
+
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	void Die();
+	
+	float MaxTraceDistance = 300.f;
+
+private:
+
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	class UCapsuleComponent* CapsuleComponent;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	UStaticMeshComponent* BaseMesh;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	USkeletalMeshComponent* TurretMesh;
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
+	USceneComponent* ProjectileSpawn;
+	
+	UPROPERTY(EditAnywhere, Category="Turret")
+	float FireRange = 1000.f;
+
+	UPROPERTY(EditAnywhere, Category="Turret")
+	class APlayerCharacter* Player;
+
+	UPROPERTY(EditAnywhere, Blueprintable, Category="Combat")
+	float RotationSpeed = 5.f;
+
+	float NextShootTime = 0.f;
+	float ShootCooldown = 4.f;
+	
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
+	void RotateTurret(FVector TargetLocation);
+	void PerformLineTrace();
+	void ShootAgainCooldown();
 };
