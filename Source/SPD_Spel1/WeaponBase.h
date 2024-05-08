@@ -17,6 +17,7 @@ public:
 	void DelaySwitch();
 	void SlimeCharge();
 	void InitiateReload();
+	bool bRightButtonPressed;
 
 	// This needs to be in the header because template needs to be available at initialization, i.e. before compilation. (Rufus)
 	template<typename T, typename U>
@@ -24,24 +25,51 @@ public:
 	{
 		if (bButtonPressed)
 		{
-			if(bDelayed && !bAlternative)
+			// Start the timer for delayed fire
+			if (bDelayed && !bAlternative)
 			{
 				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, false, 0.0f);
 				bDelayed = false;
 				GetWorld()->GetTimerManager().SetTimer(FireDelayTimer, this, &AWeaponBase::DelaySwitch, FireDelay/2, false, FireDelay/2);
 			}
-			
-			if(bAlternative)
-			{
-				// Start charging slime alternative fire
-				if(!bSlimeCharged)
-				{
-					GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, MaxChargeTime/2, false, MaxChargeTime/2);
-					
-				}
-
-			}
 		}
+		// Start the alternative fire timer
+		if (bAlternative && !bRightButtonPressed)
+		{
+			StartAlternativeFireTimer(Func, Object);
+			bRightButtonPressed = true;
+
+		}
+		else
+		{
+			// Stop the alternative fire timer when the button is released
+			if (bAlternative && bRightButtonPressed)
+			{
+				StopAlternativeFireTimer();
+				bRightButtonPressed = false;
+			}
+			bButtonReleased = true;
+		}
+	}
+	
+	template<typename T, typename U>
+	void StartAlternativeFireTimer(T Func, U* Object)
+	{
+		if (!bSlimeCharged)
+		{
+			GetWorld()->GetTimerManager().SetTimer(AlternativeFireTimer, Object, Func, MaxChargeTime, false);
+			bAlternativeFireTimerActive = true;
+			bRightButtonPressed = true;
+		}
+	}
+
+	// Helper function to stop the alternative fire timer
+	void StopAlternativeFireTimer()
+	{
+		// Clear the timer if the right mouse button is released
+		GetWorld()->GetTimerManager().ClearTimer(AlternativeFireTimer);
+		bAlternativeFireTimerActive = false;
+		bButtonReleased = true;
 	}
 	
 	void Reload()
@@ -97,6 +125,7 @@ public:
 	
 	bool bButtonReleased = false;
 	bool bSlimeCharged = false;
+	bool bAlternativeFireTimerActive;
 protected:
 	AWeaponBase();
 	virtual void BeginPlay() override;
