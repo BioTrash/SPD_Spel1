@@ -22,8 +22,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void SetDamage(float NewDamage) { Damage = NewDamage; }
+
 
 private:
+
+	float Damage;
 	UPROPERTY(EditDefaultsOnly, Category="Weaponry")
 	UStaticMeshComponent* ProjectileMesh;
 

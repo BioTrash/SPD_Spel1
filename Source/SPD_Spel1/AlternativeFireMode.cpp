@@ -5,6 +5,21 @@
 #include "SlimeProjectile.h"
 
 
+void AAlternativeFireMode::BeginPlay()
+{
+	Super::BeginPlay();
+	Slime = GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
+	Slime->SetActorHiddenInGame(true);
+        
+	// Disable collision for the actor
+	Slime->SetActorEnableCollision(false);
+        
+	// Optionally, you can also disable the actor's tick function
+	Slime->SetActorTickEnabled(false);
+        
+}
+
+
 void AAlternativeFireMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -30,6 +45,7 @@ void AAlternativeFireMode::InitiateTimer(bool bButtonPressed, bool bAlternative)
 	
 }
 
+
 int32 AAlternativeFireMode::GetCurrentSlimeAmmo() const
 {
 	return SlimeAmmo;
@@ -43,9 +59,9 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 void AAlternativeFireMode::FireWeapon()
 {
 	
-	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetLocation() + GetOwner()->GetActorForwardVector()* 100, GetRotation());
-	GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
+	//GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
 	SlimeAmmo--;
+	
 }
 
 int32 AAlternativeFireMode::SetSlimeAmmo(int32 _SlimeAmmo)
