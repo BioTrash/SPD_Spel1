@@ -94,3 +94,8 @@ UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
 	return FindComponentByClass<UStaticMeshComponent>();
 }
 
+bool AShooterEnemy::getIsShooting()
+{
+	return isShooting;
+}
+
