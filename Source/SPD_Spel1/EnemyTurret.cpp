@@ -25,18 +25,15 @@ AEnemyTurret::AEnemyTurret()
     
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
 	ProjectileSpawn -> SetupAttachment(TurretMesh);
-	
 }
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
-	ShootingAnimation();
 	FVector TurretMeshLocation = TurretMesh->GetRelativeLocation();
 	TurretMesh->SetRelativeLocation(TurretMeshLocation);
 	Health = MaxHealth;
 	
 	APlayerCharacter* FoundPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	
 	if (FoundPlayer)
 	{
 		Player = FoundPlayer;
@@ -57,15 +54,11 @@ void AEnemyTurret::Tick(float DeltaTime)
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
 		if (Distance <= FireRange)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Animation körs"));
-			//ShootingAnimation();
 			PerformLineTrace();
 			RotateTurret(Player->GetActorLocation());
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Animation körs"));
-			//IdleAnimation(); 
 		}
 	}
 }
@@ -107,6 +100,7 @@ void AEnemyTurret::PerformLineTrace()
 	if (bHit)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Nu ska jag skjuta!"));
+		IsShootingAnimation = true;
 		ShootEnemy(10.0f);
 	}
 }
@@ -127,6 +121,7 @@ void AEnemyTurret::ShootEnemy(float Damage)
 		}
 		ShootAgainCooldown();
 		}
+	IsShootingAnimation = false;
 	}
 void AEnemyTurret::Die()
 {
@@ -136,4 +131,8 @@ void AEnemyTurret::Die()
 void AEnemyTurret::ShootAgainCooldown()
 {
 	NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
+}
+bool AEnemyTurret::GetIsShootingAnimation()
+{
+	return IsShootingAnimation;
 }

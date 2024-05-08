@@ -43,12 +43,6 @@ public:
 	void ShootEnemy(float Damage);
 
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Animation")
-	void IdleAnimation();
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Animation")
-	void ShootingAnimation();
 	
 	void Die();
 	
@@ -56,6 +50,12 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category="Components")
 	USkeletalMeshComponent* TurretMesh;
 
+	bool IsShootingAnimation;
+
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	bool GetIsShootingAnimation();
+
+	
 private:
 
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")

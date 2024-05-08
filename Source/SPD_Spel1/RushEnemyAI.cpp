@@ -116,3 +116,8 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
+bool ARushEnemyAI::GetIsLaunchingAnimation()
+{
+	return IsLaunchingAnimation;
+}
+
