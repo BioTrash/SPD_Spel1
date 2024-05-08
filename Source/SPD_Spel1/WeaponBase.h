@@ -162,11 +162,11 @@ private:
 
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
-	float FireRate = 0.1f;
+	float FireRate = 1.0f;
 	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
-	float FireDelay = 0.0f;
+	float FireDelay = 1.0f;
 	UPROPERTY(EditAnywhere, Category="Weapon Behaviour")
-	float ReloadDelay = 0.0f;
+	float ReloadDelay = 1.0f;
 	UPROPERTY(EditAnywhere, Category="Ammo")
 	bool bUnlimitedAmmo = false;
 	UPROPERTY(EditAnywhere, Category="Ammo")
