@@ -29,7 +29,7 @@ void AEnemyShooterAIController::BeginPlay()
     }
     else
     {
-        UE_LOG(LogTemp, Error, TEXT("Failed to bind dynamic delegate: Communication manager instance is nullptr."));
+        UE_LOG(LogTemp, Error, TEXT("Communication manager instance is nullptr."));
     }
     if (AIBehavior != nullptr)
     {
@@ -123,17 +123,20 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
                             if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
-                                FVector SpawnLocation = EnemyWeapon->GetActorLocation();
-                                SpawnLocation.X -= 40;
+                                FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
+                                SpawnLocation.X -= 100;
                                 FRotator SpawnRotation = WeaponRotation;
                                 FActorSpawnParameters SpawnParams;
                                 SpawnParams.Owner = this;
                                 SpawnParams.Instigator = GetInstigator();
 
+                                //Spawnar projectile och skjuter den med damage
                                 AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
                                 if (Projectile)
                                 {
-                                    Projectile->SetDamage(10); 
+                                    Projectile->SetDamage(15);
+                                    UE_LOG(LogTemp, Log, TEXT("Heres the projectile: %s"), *SpawnLocation.ToString());
+
                                 }
                                 OnEnemyShoot();
                                 LastShotTime = 0.0f;
