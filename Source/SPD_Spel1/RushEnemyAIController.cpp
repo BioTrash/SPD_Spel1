@@ -124,5 +124,5 @@ void ARushEnemyAIController::ExplodeAfterLaunch()
 			UE_LOG(LogTemp, Warning, TEXT("Explosion?"));
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
 		}
-		}
+	}
 }

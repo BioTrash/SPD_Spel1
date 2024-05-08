@@ -19,9 +19,14 @@ public:
 	void BeginPlay();
 	void RotateHead(FVector TargetLocation);
 	void FireCooldown();
+
 	
+
 private:
 
+	UPROPERTY()
+	UStaticMeshComponent* PawnMesh;
+	
 	UPROPERTY(EditAnywhere, Category="Turret")
 	class APlayerCharacter* Player;
 
@@ -39,5 +44,6 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+
 	
 };
