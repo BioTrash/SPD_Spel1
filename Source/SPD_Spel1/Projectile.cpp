@@ -10,32 +10,27 @@
 // Sets default values
 AProjectile::AProjectile()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 	ProjectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectile Mesh"));
 	RootComponent = ProjectileMesh;
-
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
-
-	// Default values, can simply be changed in BlueprintEditor, in ProjectileMovementComponent. Will Default back to this on every build(?), may need to be deleted. (Rufus)
-	//ProjectileMovementComponent->MaxSpeed = 1300;
-	//ProjectileMovementComponent->InitialSpeed = 1300;
-
 }
 
 // Called when the game starts or when spawned
 void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+	UE_LOG(LogTemp, Log, TEXT("Hej jag har spawnat!"));
+
 	if (ProjectileMovementComponent)
 	{
+		UE_LOG(LogTemp, Log, TEXT("Jag tycker MovementComponent funkar"));
 		APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		if (PlayerPawn)
 		{
+			UE_LOG(LogTemp, Log, TEXT("Jag tycker Playerpawn funkar funkar"));
 			FVector Direction = (PlayerPawn->GetActorLocation() - GetActorLocation()).GetSafeNormal();
-			//UE_LOG(LogTemp, Error, TEXT("VELOCITY EQUALS : %s"), *FString(Direction.ToString()));
 			ProjectileMovementComponent->Velocity = Direction * ProjectileMovementComponent->InitialSpeed;
 		}
 	}
@@ -46,21 +41,25 @@ void AProjectile::BeginPlay()
 void AProjectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	// Handles hits, no clue what happens under the surface here. May need to be remade in to our own function (Rufus)
-	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
 }
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor && OtherActor != this && OtherComp)
+	// Check if the other actor is the player pawn
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (OtherActor && PlayerPawn && OtherActor == PlayerPawn)
 	{
-		// Apply damage to the other actor if it's not the projectile itself
+		UE_LOG(LogTemp, Log, TEXT("Hit the player"));
+		// Apply damage to the player
 		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
-		OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
+		PlayerPawn->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
+    
+	// Destroy the projectile regardless of the hit actor
+	UE_LOG(LogTemp, Log, TEXT("Destroying the projectile"));
 	Destroy();
 }
+
 
 
 

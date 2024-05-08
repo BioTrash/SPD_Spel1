@@ -34,14 +34,14 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	SetFocus(PlayerPawn);
+	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	if (PlayerPawn)
 	{
 		FVector PlayerLocation = PlayerPawn->GetActorLocation();
-		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
+		RotateHead(PlayerLocation);
 	}
 }
-		
-
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 {
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(PawnMesh->GetComponentLocation(), TargetLocation);
