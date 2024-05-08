@@ -9,16 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_SlimeProjectile.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Whitebox_Lit1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeProjectile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeProjectile.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +178,7 @@
       <workItem from="1715150541472" duration="2952000" />
       <workItem from="1715155119226" duration="19723000" />
       <workItem from="1715180828599" duration="736000" />
-      <workItem from="1715182345494" duration="1183000" />
+      <workItem from="1715182345494" duration="3810000" />
     </task>
     <servers />
   </component>

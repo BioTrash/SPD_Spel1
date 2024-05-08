@@ -206,7 +206,7 @@ void APlayerCharacter::Dash()
 				//checks if the character is grounded
 				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 
-				if(PlayerVelocity.SizeSquared() < FMath::Square(0.1f))
+				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || !bIsGrounded)
 				{
 					FVector DashDirectionForward = GetActorForwardVector();
 					DashDirectionForward.Normalize();

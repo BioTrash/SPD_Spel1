@@ -25,54 +25,24 @@ public:
 	{
 		if (bButtonPressed)
 		{
-			// Start the timer for delayed fire
-			if (bDelayed && !bAlternative)
+			if(bDelayed && !bAlternative)
 			{
 				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, false, 0.0f);
 				bDelayed = false;
 				GetWorld()->GetTimerManager().SetTimer(FireDelayTimer, this, &AWeaponBase::DelaySwitch, FireDelay/2, false, FireDelay/2);
 			}
-		}
-		// Start the alternative fire timer
-		if (bAlternative && !bRightButtonPressed)
-		{
-			StartAlternativeFireTimer(Func, Object);
-			bRightButtonPressed = true;
-
-		}
-		else
-		{
-			if (bAlternative)
+			
+			if(bAlternative)
 			{
-				// Stop the alternative fire timer when the button is released
-				if (bRightButtonPressed)
+				// Start charging slime alternative fire
+				if(!bSlimeCharged)
 				{
-					StopAlternativeFireTimer();
-					bRightButtonPressed = false;
+					GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, MaxChargeTime/2, false, MaxChargeTime/2);
+					
 				}
-				bButtonReleased = true;
+
 			}
 		}
-	}
-	
-	template<typename T, typename U>
-	void StartAlternativeFireTimer(T Func, U* Object)
-	{
-		if (!bSlimeCharged)
-		{
-			GetWorld()->GetTimerManager().SetTimer(AlternativeFireTimer, Object, Func, MaxChargeTime, false);
-			bAlternativeFireTimerActive = true;
-			bRightButtonPressed = true;
-		}
-	}
-
-	// Helper function to stop the alternative fire timer
-	void StopAlternativeFireTimer()
-	{
-		// Clear the timer if the right mouse button is released
-		GetWorld()->GetTimerManager().ClearTimer(AlternativeFireTimer);
-		bAlternativeFireTimerActive = false;
-		bButtonReleased = true;
 	}
 	
 	void Reload()
@@ -134,7 +104,7 @@ protected:
 	virtual void BeginPlay() override;
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Beahviour") // Charge time for slime alternative fire
-	float MaxChargeTime = 2.0f;
+	float MaxChargeTime = 1.0f;
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
@@ -195,5 +165,3 @@ private:
 	//const AWeaponBase& operator = (const AWeaponBase&) = delete;
 
 };
-
-
