@@ -69,6 +69,29 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
         AEnemyWeapon* EnemyWeapon = Enemy->TriggerWeapon;
         if (EnemyWeapon)
         {
+            FVector PlayerLocation = PlayerPawn->GetActorLocation();
+
+            // Calculate distance between enemy and player
+            float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
+
+            // Check if player is within 5 meters radius
+            if (DistanceToPlayer < 500.0f) // 500 units = 5 meters assuming 1 unit = 1 cm
+            {
+                GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
+                // Calculate direction away from player
+                FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
+                DirectionAwayFromPlayer.Normalize();
+
+                // Calculate new destination for the enemy to maintain distance
+                FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f); // 500 units = 5 meters away
+                GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
+                // Move enemy to new destination
+               // Enemy->SetActorLocation(NewDestination);
+            }
+            else
+            {
+                GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), false);
+            }
             EnemyWeapon->SetActorRotation(WeaponRotation);
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
