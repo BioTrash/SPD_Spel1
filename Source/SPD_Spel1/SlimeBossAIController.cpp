@@ -9,7 +9,8 @@
 #include "SlimeBossAI.h"
 #include "PlayerCharacter.h"
 #include "Projectile.h"
-#include "EntitySystem/MovieSceneEntitySystemRunner.h"
+#include "NiagaraFunctionLibrary.h"
+
 
 ASlimeBossAIController::ASlimeBossAIController()
 {
@@ -21,6 +22,20 @@ void ASlimeBossAIController::BeginPlay()
 	Super::BeginPlay();
 	SetPlayer();
 	SpawnPointArray = Boss->SpawnPointsArray;
+	// Hämtar in slam effect niagara componenten.
+	TArray<UNiagaraComponent*> NiagaraComponents;
+	Boss->GetComponents<UNiagaraComponent>(NiagaraComponents);
+	for (UNiagaraComponent* NiagaraComponent : NiagaraComponents)
+	{
+		if (NiagaraComponent->GetName() == "Slam Effect")
+			{
+				SlamEffect = NiagaraComponent; 
+			}
+		if (NiagaraComponent->GetName() == "Shoot Effect")
+		{
+			ShootEffect = NiagaraComponent; 
+		}
+	}
 	
 	if (Boss)
 	{
@@ -45,6 +60,7 @@ void ASlimeBossAIController::BeginPlay()
 		GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), false);
 	}
 	SetFocus(Player);
+	ShootEffect->OnSystemFinished.AddDynamic(this, &ASlimeBossAIController::OnNiagaraSystemFinished);
 }
 void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
@@ -81,6 +97,7 @@ void ASlimeBossAIController::Shoot()
 	{
 		Projectile->SetDamage(ProjectileDamage);
 	}
+	
 }
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 {
@@ -99,6 +116,7 @@ void ASlimeBossAIController::SetPlayer()
 		Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	}
 	if (Player == nullptr)
+	
 	{
 		//Shrek ;)
 	}
@@ -152,10 +170,13 @@ void ASlimeBossAIController::BossPhaseOne()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
 	if (LastShotTime >= ShootCooldown)
 	{
-		Shoot();
+		if (ShootEffect)
+		{
+			ShootEffect->Activate();
+		}
+		//Shoot();
 		LastShotTime = 0;
 	}
-	
 }
 void ASlimeBossAIController::BossPhaseTwo()
 {
@@ -172,7 +193,10 @@ void ASlimeBossAIController::BossPhaseTwo()
 	
 	if (LastShotTime >= ShootCooldown)
 	{
-		Shoot();
+		if (ShootEffect)
+		{
+			ShootEffect->Activate();
+		}
 		LastShotTime = 0;
 	}
 	
@@ -181,9 +205,6 @@ void ASlimeBossAIController::BossPhaseTwo()
 		SpawnEnemies();
 		LastSpawnTime = 0;
 	}
-	
-	
-	
 }
 void ASlimeBossAIController::BossPhaseThree()
 {
@@ -232,7 +253,12 @@ void ASlimeBossAIController::SlamAttack()
 			}
 		}
 		UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
-		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		// Spela slam effekt.
+		if(SlamEffect)
+		{
+			SlamEffect->Activate();
+		}
+		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	}
@@ -264,5 +290,9 @@ void ASlimeBossAIController::SpawnEnemies()
 			NiagaraComponent->Activate();
 		}
 	}
+}
+void ASlimeBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent)
+{
+ 	Shoot();
 }
 

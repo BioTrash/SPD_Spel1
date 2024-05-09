@@ -7,6 +7,7 @@
 #include "SlimeBossAI.generated.h"
 
 class AEnemySpawnpoint;
+class UNiagaraSystem;
 
 UCLASS()
 class SPD_SPEL1_API ASlimeBossAI : public APawn
