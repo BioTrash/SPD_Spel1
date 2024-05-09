@@ -8,6 +8,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "SlimeBossAIController.generated.h"
 
+class AEnemySpawnpoint;
+
 /**
  * 
  */
@@ -16,19 +18,24 @@ class SPD_SPEL1_API ASlimeBossAIController : public AAIController
 {
 	GENERATED_BODY()
 public:
-	
+
+	 ASlimeBossAIController();
 	virtual void Tick(float DeltaSeconds) override;
 	void BeginPlay();
 	void RotateHead(FVector TargetLocation);
 	void Shoot();
-	void FireCooldown();
 	void SetPlayer();
 	void UpdateBossPhase();
 	void BossPhaseOne();
 	void BossPhaseTwo();
 	void BossPhaseThree();
-
-
+	void SlamAttack();
+	void SpawnEnemies();
+	void EndSlamAttack();
+protected:
+	
+	FVector OriginalLocation;
+	
 private:
 
 	UPROPERTY()
@@ -50,14 +57,27 @@ private:
 	float LastShotTime;
 
 	UPROPERTY(EditAnywhere)
+	float LastSlamTime;
+
+	UPROPERTY(EditAnywhere)
 	float ShootCooldown = 1.4f;
 
 	UPROPERTY(EditAnywhere)
+	float SlamCooldown = 2.0f;
+	
+	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+
+	
+	UPROPERTY(EditAnywhere)
+	TArray<AEnemySpawnpoint*> SpawnPointArray;
 
 	UPROPERTY()
 	ASlimeBossAI* Boss;
-
+	
+	bool bIsSlamming;
+	bool bActivatePhaseTwo = true;
+	
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;
 
@@ -65,6 +85,9 @@ private:
 	USceneComponent* ProjectileSpawn;
 	
 	float ProjectileDamage = 30;
+	FTimerHandle SlamAttackTimerHandle;
+	float DamageRadius = 1400.0f;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
 
