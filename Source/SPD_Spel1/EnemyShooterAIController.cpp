@@ -24,6 +24,7 @@ void AEnemyShooterAIController::BeginPlay()
     if (CommunicationManager)
     {
         CommunicationManager->OnPlayerLocationUpdated.AddDynamic(this, &AEnemyShooterAIController::OnPlayerLocationUpdated);
+        CommunicationManager->OnChaseUpdated.AddDynamic(this, &AEnemyShooterAIController::OnChaseUpdated);
     }
     else
     {
@@ -43,25 +44,27 @@ void AEnemyShooterAIController::BeginPlay()
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
+    Super::Tick(DeltaSeconds);
+    
     LastShotTime += DeltaSeconds;
-    EnemyWeapon = Enemy->TriggerWeapon; //OBS! Ska bort. Enbart för att AI skapas innan Shooterenemy och därav är triggerweapon null i första beginplay().
-
     //GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
     if (PlayerPawn != nullptr)
     {
         SetFocus(PlayerPawn);
     }
-
-    Super::Tick(DeltaSeconds);
-    
+    bool ChaseStatus = GetBlackboardComponent()->GetValueAsBool(TEXT("Chase"));
+    UE_LOG(LogTemp, Warning, TEXT("IS CHASING STATUS : %hhd"), ChaseStatus);
+    Enemy = Cast<AShooterEnemy>(GetPawn());
     if (Enemy)
     {
-        UE_LOG(LogTemp, Warning, TEXT("Enemy good"))
+        EnemyWeapon = Enemy->TriggerWeapon; //OBS! Ska bort. Enbart för att AI skapas innan Shooterenemy och därav är triggerweapon null i första beginplay().
+        DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
+        WeaponRotation = DirectionToPlayer.Rotation();
+
+        GetBlackboardComponent()->SetValueAsFloat(TEXT("Health"), Enemy->Health);
 
         if (EnemyWeapon)
         {
-            UE_LOG(LogTemp, Warning, TEXT("Weapon Good"))
-
             FVector PlayerLocation = PlayerPawn->GetActorLocation();
             EnemyLocation = Enemy->GetActorLocation();
 
@@ -105,7 +108,11 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     {
                         //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
                         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
+
+                        //Delegatuppdatering
+                        
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
+                        BeginChase(true);
                         //GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                         
@@ -143,6 +150,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                                 Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
+                                BeginChase(false);
                             }
                         }
                     }
@@ -174,6 +182,19 @@ void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayer
 
 }
 
+void AEnemyShooterAIController::OnChaseUpdated(const bool NewChaseStatus)
+{
+    GetBlackboardComponent()->SetValueAsBool(TEXT("Chase"), NewChaseStatus);
+    UE_LOG(LogTemp, Error, TEXT("CHASE!!!:"));
+}
+
+void AEnemyShooterAIController::BeginChase(bool ChaseStatus)
+{
+    // Update player location in the player location manager
+    UEnemyCommunicationManager::GetInstance()->SetIsChasing(ChaseStatus);
+    
+}
+
 void AEnemyShooterAIController::Shoot()
 {
     FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
@@ -194,15 +215,7 @@ void AEnemyShooterAIController::Shoot()
 void AEnemyShooterAIController::InitiateEnemy()
 {
     Enemy = Cast<AShooterEnemy>(GetPawn());
-    EnemyWeapon = Enemy->TriggerWeapon;
-    if (EnemyWeapon == nullptr)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Weapon failed:"));
-
-    }
-
-    DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
-    WeaponRotation = DirectionToPlayer.Rotation();
+    //EnemyWeapon = Enemy->TriggerWeapon;
 }
 
 void AEnemyShooterAIController::InitiatePlayer()
