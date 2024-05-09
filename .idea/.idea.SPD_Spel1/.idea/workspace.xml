@@ -12,10 +12,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Miscellaneous.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Miscellaneous.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_0.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_0.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_0_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_0_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_1_5.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_1_5.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_1_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_1_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_2.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_2.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_2_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_2_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_3.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_3.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_3_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_3_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_4.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_4.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_4_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_4_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/SpawnZone_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SpawnZone_1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Spawnzone_2.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Spawnzone_2.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Spawnzone_3.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Spawnzone_3.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/TrimSheets/M_WallPipeFloor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Materials/TrimSheets/M_WallPipeFloor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "HannasBranch",
+    "git-widget-placeholder": "RufusExtraordinaire",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,9 +87,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Olive_q06wytm\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Olive_q06wytm\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Olive_q06wytm\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -231,6 +250,7 @@
       <workItem from="1715092568359" duration="648000" />
       <workItem from="1715157279828" duration="4000" />
       <workItem from="1715177007815" duration="699000" />
+      <workItem from="1715253558870" duration="826000" />
     </task>
     <servers />
   </component>
