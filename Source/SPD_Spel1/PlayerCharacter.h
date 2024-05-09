@@ -43,6 +43,9 @@ public:
 	//function to connect WBP_DashCooldown and get the cooldown percentage for the dash
 	UFUNCTION(BlueprintPure, Category= "Cooldown")
 	float GetDashCooldownPercentage() const;
+
+	UFUNCTION(BlueprintPure, Category= "Cooldown")
+	float GetSlideCooldownPercentage() const;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
