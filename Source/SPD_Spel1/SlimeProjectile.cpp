@@ -3,7 +3,6 @@
 #include "SlimeProjectile.h"
 
 #include "Engine/DamageEvents.h"
-#include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -18,8 +17,8 @@ ASlimeProjectile::ASlimeProjectile()
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 
 	// Default values, can simply be changed in BlueprintEditor, in ProjectileMovementComponent. Will Default back to this on every build(?), may need to be deleted. (Rufus)
-	//ProjectileMovementComponent->MaxSpeed = 1300;
-	//ProjectileMovementComponent->InitialSpeed = 1300;
+	ProjectileMovementComponent->MaxSpeed = 1300;
+	ProjectileMovementComponent->InitialSpeed = 1300;
 
 }
 
@@ -27,6 +26,7 @@ ASlimeProjectile::ASlimeProjectile()
 void ASlimeProjectile::BeginPlay()
 {
 	Super::BeginPlay();
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
 	
 
 }
@@ -37,7 +37,7 @@ void ASlimeProjectile::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Handles hits, no clue what happens under the surface here. May need to be remade in to our own function (Rufus)
-	//ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
 	
 }
 
@@ -49,7 +49,22 @@ void ASlimeProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, U
 		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
 		OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
-	Destroy();
+	//Destroy();
+	this->SetActorHiddenInGame(true);
+	this->SetActorEnableCollision(false);
+	this->SetActorTickEnabled(false);
+	
+	ProjectileMovementComponent->SetActive(false);
+}
+
+UProjectileMovementComponent* ASlimeProjectile::GetProjectileMovementComponent()
+{
+	return ProjectileMovementComponent;
+}
+
+void ASlimeProjectile::SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove)
+{
+	ProjectileMovementComponent = ProjMove;
 }
 
 

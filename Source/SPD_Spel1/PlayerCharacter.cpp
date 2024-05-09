@@ -8,6 +8,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Tasks/Task.h"
+#include <conio.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -193,25 +194,6 @@ void APlayerCharacter::Dash()
 	{
 		if (GetCharacterMovement())
 		{
-			// //get the player's forward vector as the dash direction
-			// FVector DashDirection = GetActorForwardVector();
-			//
-			// //normalize the dash direction
-			// DashDirection.Normalize();
-			//
-			// //apply constant dash force
-			// FVector DashForceVector = DashDirection * DashForce;
-			//
-			// //checks if the character is grounded
-			// bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
-			//
-			// //if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
-			// float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
-			//
-			// //apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
-			// //GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
-			// LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
-
 			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
 			if (PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
 			{
@@ -220,16 +202,15 @@ void APlayerCharacter::Dash()
 				//apply slide velocity to the character
 				GetCharacterMovement()->Launch(DashDirection);
 				
-			} else
-			{
+			}
+				//checks if the character is grounded
 				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+
 				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || !bIsGrounded)
 				{
 					FVector DashDirectionForward = GetActorForwardVector();
 					DashDirectionForward.Normalize();
 					FVector DashForceVector = DashDirectionForward * DashForce;
-					//checks if the character is grounded
-					//bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 				
 					//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
 					float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
@@ -238,10 +219,9 @@ void APlayerCharacter::Dash()
 					GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
 					LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
 				}
-			}
 
-			FTimerHandle UnusedHandle;
-			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
+			FTimerHandle TimerForDashUp;
+			GetWorldTimerManager().SetTimer(TimerForDashUp, this, &APlayerCharacter::DashUp, DashDelay, false);
 			
 			bIsDashing = true;
 			LastDashTime = GetWorld()->GetTimeSeconds();
