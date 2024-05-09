@@ -47,6 +47,11 @@ float ASlimeBossAI::GetHealth() const
     return Health; 
 }
 
+void ASlimeBossAI::ResetHealth()
+{
+	Health = MaxHealth;
+}
+
 float ASlimeBossAI::GetHealthPercentage() const
 {
 	return Health / MaxHealth;
