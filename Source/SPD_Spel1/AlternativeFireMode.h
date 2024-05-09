@@ -32,8 +32,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 SlimeAmmo;
-	UPROPERTY(BlueprintReadWrite)
-	int32 TotalSlimeAmmo;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MaxSlimeAmmo;
 
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class ASlimeProjectile> Projectile;

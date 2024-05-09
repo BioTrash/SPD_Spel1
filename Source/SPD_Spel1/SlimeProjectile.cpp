@@ -37,7 +37,7 @@ void ASlimeProjectile::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Handles hits, no clue what happens under the surface here. May need to be remade in to our own function (Rufus)
-	ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
+	//ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
 	
 }
 
