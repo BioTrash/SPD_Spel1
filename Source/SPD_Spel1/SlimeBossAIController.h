@@ -102,4 +102,11 @@ private:
 	// Effect som spelas när bossen gör slam attack.
 	UPROPERTY();
 	UNiagaraComponent* SlamEffect;
+	
+	UPROPERTY()
+	UNiagaraComponent* ShootEffect;
+
+	UFUNCTION()
+	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
+	
 };

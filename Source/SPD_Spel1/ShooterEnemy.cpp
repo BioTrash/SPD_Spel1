@@ -50,6 +50,7 @@ void AShooterEnemy::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if(Health <= 0)
 	{
+		TriggerWeapon->Destroy();
 		KillEnemy();
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Shot: %hhd"), isShooting)
@@ -79,7 +80,6 @@ void AShooterEnemy::KillEnemy()
 	
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	OnEnemyDeath();
-	TriggerWeapon->Destroy();
 	Destroy();
 }
 
