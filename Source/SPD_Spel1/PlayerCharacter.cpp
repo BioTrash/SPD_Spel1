@@ -2,12 +2,13 @@
 
 
 #include "PlayerCharacter.h"
-#include "Weapon.h"
+#include "WeaponBase.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Tasks/Task.h"
+#include <conio.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -40,10 +41,10 @@ void APlayerCharacter::BeginPlay()
 	if(!InitialWeaponArray.IsEmpty())
 	{
 		// Goes through the entire array of weapon blueprints (Rufus)
-		for(TSubclassOf<AWeapon>& Weapon : InitialWeaponArray) 
+		for(TSubclassOf<AWeaponBase>& Weapon : InitialWeaponArray) 
 		{
 			// Spawns in each weapon blue print at zero world position (Rufus)
-			AWeapon* WeaponInstance = GetWorld()->SpawnActor<AWeapon>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
+			AWeaponBase* WeaponInstance = GetWorld()->SpawnActor<AWeaponBase>(*Weapon, FVector::ZeroVector, FRotator::ZeroRotator);
 
 			// Checks whether spawn was successful or not (Rufus)
 			if(WeaponInstance)
@@ -63,7 +64,6 @@ void APlayerCharacter::BeginPlay()
 				// Required by 'PullTriger' in 'Weapon.cpp' (Rufus)
 				TriggerWeapon = WeaponInstance;
 				TriggerWeapon->SetOwner(this);
-				
 			}
 		}
 	}
@@ -71,6 +71,8 @@ void APlayerCharacter::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Weapon array is empty"));
 	}
+	
+	GetMesh()->AttachToComponent(this->FindComponentByClass<UCameraComponent>(), FAttachmentTransformRules::KeepRelativeTransform);
 	
 }
 
@@ -109,19 +111,35 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
 
 	PlayerInputComponent->BindAction(TEXT("Reload"), EInputEvent::IE_Pressed, this, &APlayerCharacter::ReloadWeapon);
+
+	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Pressed, this, &APlayerCharacter::OnButtonPress);
+	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Released, this, &APlayerCharacter::OnButtonRelease);
 	
 }
 
-void APlayerCharacter::Shoot()
+// Alternative Fire
+void APlayerCharacter::OnButtonPress()
 {
-	SprayShooting = true;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	TriggerWeapon->bButtonReleased = false;
+	TriggerWeapon->InitiateTimer(true, true);
+}
+// Alternative Fire
+void APlayerCharacter::OnButtonRelease()
+{
+	//TriggerWeapon->InitiateTimer(false, true);
+	TriggerWeapon->bButtonReleased = true;
 }
 
+// Normal Fire
+void APlayerCharacter::Shoot()
+{
+	TriggerWeapon->InitiateTimer(true, false);
+}
+
+// Normal Fire
 void APlayerCharacter::CancelShoot()
 {
-	SprayShooting = false;
-	TriggerWeapon->PullTrigger(SprayShooting);
+	//TriggerWeapon->InitiateTimer(false, false);
 }
 
 void APlayerCharacter::ReloadWeapon()
@@ -129,11 +147,10 @@ void APlayerCharacter::ReloadWeapon()
 	TriggerWeapon->Reload();
 }
 
-AWeapon* APlayerCharacter::GetTriggerWeapon() const
+AWeaponBase* APlayerCharacter::GetTriggerWeapon() const
 {
 	return TriggerWeapon;
 }
-
 
 // AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
 void APlayerCharacter::FrontBackMove(float AxisValue)
@@ -151,7 +168,7 @@ void APlayerCharacter::SwapWeapon()
 {
 	if(!CurrentWeaponArray.IsEmpty())
 	{
-		AWeapon* lastElement = CurrentWeaponArray.Last(); // Save the last element
+		AWeaponBase* lastElement = CurrentWeaponArray.Last(); // Save the last element
     
 		// Shift elements to the right
 		for (int i = CurrentWeaponArray.Num() - 1; i > 0; --i) {
@@ -177,27 +194,34 @@ void APlayerCharacter::Dash()
 	{
 		if (GetCharacterMovement())
 		{
-			//get the player's forward vector as the dash direction
-			FVector DashDirection = GetActorForwardVector();
+			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+			if (PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
+			{
+				FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashForce;
 
-			//normalize the dash direction
-			DashDirection.Normalize();
+				//apply slide velocity to the character
+				GetCharacterMovement()->Launch(DashDirection);
+				
+			}
+				//checks if the character is grounded
+				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 
-			//apply constant dash force
-			FVector DashForceVector = DashDirection * DashForce;
+				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || !bIsGrounded)
+				{
+					FVector DashDirectionForward = GetActorForwardVector();
+					DashDirectionForward.Normalize();
+					FVector DashForceVector = DashDirectionForward * DashForce;
+				
+					//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
+					float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
 
-			//checks if the character is grounded
-			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
-			
-			//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
-			float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
-			
-			//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
-			//GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
-			LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
+					//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+					GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
+					LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
+				}
 
-			FTimerHandle UnusedHandle;
-			GetWorldTimerManager().SetTimer(UnusedHandle, this, &APlayerCharacter::DashUp, DashDelay, false);
+			FTimerHandle TimerForDashUp;
+			GetWorldTimerManager().SetTimer(TimerForDashUp, this, &APlayerCharacter::DashUp, DashDelay, false);
 			
 			bIsDashing = true;
 			LastDashTime = GetWorld()->GetTimeSeconds();

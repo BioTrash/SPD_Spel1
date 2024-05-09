@@ -21,8 +21,6 @@ void AShooterEnemy::BeginPlay()
 	Super::BeginPlay();
 	Health = MaxHealth;
 
-	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
-	//WeaponComponent = FindComponentByClass<UBP_Weapon_Component>();
 	if (WeaponClass)
 	{
 		// Spawn the weapon
@@ -33,8 +31,11 @@ void AShooterEnemy::BeginPlay()
 		// Check if spawn was successful
 		if (WeaponInstance)
 		{
-			// Attach the weapon to the mesh socket
-			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			// Attach the weapon to the mesh socket : IMPLEMENT WHEN SOCKET DONE
+			//WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+
+			//Attach the weapon to the mesh root
+			WeaponInstance->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
@@ -56,6 +57,7 @@ void AShooterEnemy::Tick(float DeltaTime)
 	{
 		KillEnemy();
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Shot: %hhd"), isShooting)
 
 }
 
@@ -72,17 +74,28 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
-	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
 
 void AShooterEnemy::KillEnemy()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
+	//UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
 	
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	OnEnemyDeath();
 	TriggerWeapon->Destroy();
 	Destroy();
+}
+
+UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
+{
+	// Assuming the static mesh component is named "EnemyStaticMesh"
+	return FindComponentByClass<UStaticMeshComponent>();
+}
+
+bool AShooterEnemy::getIsShooting()
+{
+	return isShooting;
 }
 

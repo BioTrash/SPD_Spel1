@@ -55,7 +55,10 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UFUNCTION(BlueprintPure)
-	AWeapon* GetTriggerWeapon() const;
+	class AWeaponBase* GetTriggerWeapon() const;
+
+	void OnButtonRelease();
+	void OnButtonPress();
 
 private:
 	void Slide();
@@ -80,19 +83,19 @@ private:
 	
 	// Required for 'Shoot()'
 	UPROPERTY()
-	AWeapon* TriggerWeapon;
+	class AWeaponBase* TriggerWeapon;
 	
 	//AActor should preferably be our own 'WeaponClass' instead (Rufus)
 	//Due to how TSubclass functions AActors cannot be pointers, this is solved in .cpp file vie use of references
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<TSubclassOf<class AWeapon>> InitialWeaponArray;
+	TArray<TSubclassOf<class AWeaponBase>> InitialWeaponArray;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weaponry", meta=(AllowPrivateAccess="True"))
-	TArray<class AWeapon*> CurrentWeaponArray;
+	TArray<class AWeaponBase*> CurrentWeaponArray;
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashForce = 1000.0f;
+	float DashForce = 2500.0f;
 	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
@@ -104,7 +107,7 @@ private:
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.7f;
+	float AirDashMultiplier = 0.5;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;
@@ -118,7 +121,7 @@ private:
 	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
 	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
-	float SlideCameraOffset = 150.f;
+	float SlideCameraOffset = 25.0f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideSpeed = 2000.f;

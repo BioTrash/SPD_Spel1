@@ -11,53 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditorSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditorSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Projectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Projectile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Projectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Projectile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SPD_Spel1.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemyCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemyCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemyCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemyCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SpikeTrap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SpikeTrap.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SpikeTrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SpikeTrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Weapon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1Editor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1Editor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,27 +21,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Runtime/MovieScene/Public/EntitySystem/RelativePtr.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1.Target.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/TurretEnemy.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/TurretEnemy.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2eocEdRVICgxxhakq9imyhGRefk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "C++ Project.SPD_Spel1.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "LouisBrancho",
+    "git-widget-placeholder": "AlexNewBranch",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,9 +63,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Rebecka\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Rebecka\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Rebecka\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\phila\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\phila\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\phila\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -117,7 +81,6 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_1>
       <configuration_2>
         <option name="CONFIGURATION" value="Shipping" />
@@ -129,7 +92,6 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
         <option name="CONFIGURATION" value="DebugGame" />
@@ -141,7 +103,6 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
         <option name="CONFIGURATION" value="Development Editor" />
@@ -153,7 +114,6 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
         <option name="CONFIGURATION" value="Development" />
@@ -165,10 +125,8 @@
         <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/SPD_Spel1.vcxproj" />
-      <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -181,7 +139,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$USER_HOME$/Program Files/Epic Games/UE_5.3/Engine/Source/Programs/AutomationTool/AutomationTool.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/AutomationTool/AutomationTool.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -199,7 +157,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$USER_HOME$/Program Files/Epic Games/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -210,7 +168,7 @@
       </method>
     </configuration>
     <configuration name="EpicGames.AspNet" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$USER_HOME$/Program Files/Epic Games/UE_5.3/Engine/Source/Programs/Shared/EpicGames.AspNet/EpicGames.AspNet.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/Shared/EpicGames.AspNet/EpicGames.AspNet.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="EpicGames.AspNet" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -245,6 +203,21 @@
       <workItem from="1713174133742" duration="18045000" />
       <workItem from="1713341214618" duration="6502000" />
       <workItem from="1713424568270" duration="625000" />
+      <workItem from="1713438366220" duration="11000" />
+      <workItem from="1713438950675" duration="339000" />
+      <workItem from="1713534265083" duration="292000" />
+      <workItem from="1714047053700" duration="587000" />
+      <workItem from="1714464715624" duration="7000" />
+      <workItem from="1714464813633" duration="752000" />
+      <workItem from="1714571417154" duration="347000" />
+      <workItem from="1714571875664" duration="6974000" />
+      <workItem from="1714581308233" duration="4191000" />
+      <workItem from="1714638933646" duration="1321000" />
+      <workItem from="1715010684220" duration="785000" />
+      <workItem from="1715070911370" duration="409000" />
+      <workItem from="1715071346466" duration="634000" />
+      <workItem from="1715082202584" duration="197000" />
+      <workItem from="1715092568359" duration="648000" />
     </task>
     <servers />
   </component>
@@ -253,6 +226,7 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

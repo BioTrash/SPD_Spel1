@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="">
+    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/RushEnemyAI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,19 +21,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.h" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/EnemyWeapon.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/NonProjectileWeapon.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="2eaWiQM0xPsSH3FAcEtTxJb4CM6" />
+  <component name="ProjectId" id="2fGrituQyoLcwhfhVSz2sCTSKrY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -45,9 +42,8 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Uproject.SPD_Spel1.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LouisBrancho&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RebeckaBranchNEW&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -59,50 +55,81 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\logu5907\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager">
     <configuration name="SPD_Spel1" type="Uproject" factoryName="rider.uproject">
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+      <configuration_1>
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_1>
       <configuration_2>
         <option name="CONFIGURATION" value="DebugGame Editor" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
-        <option name="CONFIGURATION" value="DebugGame" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      </configuration_3>
-      <configuration_4>
         <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      </configuration_4>
-      <configuration_5>
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_3>
+      <configuration_4>
         <option name="CONFIGURATION" value="Development" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      </configuration_5>
-      <configuration_6>
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_4>
+      <configuration_5>
         <option name="CONFIGURATION" value="Shipping" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      </configuration_6>
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_5>
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+      <option name="AUTO_SELECT_PRIORITY" value="10010" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -111,59 +138,55 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="da563b7f-5683-49df-82b8-f59e610f4a28" name="Changes" comment="" />
-      <created>1712143296240</created>
+      <changelist id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="" />
+      <created>1713438388269</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712143296240</updated>
-      <workItem from="1712143298212" duration="38000" />
-      <workItem from="1712143363356" duration="290000" />
-      <workItem from="1712143687799" duration="42000" />
-      <workItem from="1712233657402" duration="1466000" />
-      <workItem from="1712236478290" duration="128000" />
-      <workItem from="1712236670057" duration="141000" />
-      <workItem from="1712236835707" duration="68000" />
-      <workItem from="1712236988949" duration="66000" />
-      <workItem from="1712237062288" duration="14337000" />
-      <workItem from="1712312467521" duration="499000" />
-      <workItem from="1712313257801" duration="918000" />
-      <workItem from="1712314222503" duration="9520000" />
-      <workItem from="1712569720146" duration="370000" />
-      <workItem from="1712570209259" duration="2232000" />
-      <workItem from="1712662881908" duration="1983000" />
-      <workItem from="1712828710968" duration="6000" />
-      <workItem from="1712829494072" duration="6000" />
-      <workItem from="1712837058970" duration="4363000" />
-      <workItem from="1712849528566" duration="711000" />
-      <workItem from="1712854080962" duration="355000" />
-      <workItem from="1712906173737" duration="93000" />
-      <workItem from="1713254456884" duration="2913000" />
-      <workItem from="1713425387684" duration="690000" />
-      <workItem from="1713427687829" duration="2510000" />
+      <updated>1713438388269</updated>
+      <workItem from="1713438389833" duration="5000" />
+      <workItem from="1713443865829" duration="252000" />
+      <workItem from="1713444171993" duration="92000" />
+      <workItem from="1713444298561" duration="9808000" />
+      <workItem from="1713455583614" duration="663000" />
+      <workItem from="1713534563123" duration="7981000" />
+      <workItem from="1713789046878" duration="342000" />
+      <workItem from="1714027039517" duration="836000" />
+      <workItem from="1714036970865" duration="142000" />
+      <workItem from="1714038028922" duration="2388000" />
+      <workItem from="1714047677543" duration="5968000" />
+      <workItem from="1714059960439" duration="204000" />
+      <workItem from="1714116248798" duration="23000" />
+      <workItem from="1714465678878" duration="211000" />
+      <workItem from="1714465938461" duration="12326000" />
+      <workItem from="1714631239520" duration="5527000" />
+      <workItem from="1714637927137" duration="78000" />
+      <workItem from="1714638026582" duration="8144000" />
+      <workItem from="1714657382599" duration="2673000" />
+      <workItem from="1714676029648" duration="1705000" />
+      <workItem from="1714680486051" duration="198000" />
+      <workItem from="1714680699980" duration="3866000" />
+      <workItem from="1714927930214" duration="2359000" />
+      <workItem from="1714930438088" duration="184000" />
+      <workItem from="1714930641138" duration="1218000" />
+      <workItem from="1714931885560" duration="343000" />
+      <workItem from="1714932293472" duration="1821000" />
+      <workItem from="1714980853423" duration="4906000" />
+      <workItem from="1715071990380" duration="1313000" />
+      <workItem from="1715088027800" duration="1071000" />
+      <workItem from="1715089494438" duration="1738000" />
+      <workItem from="1715093076887" duration="570000" />
+      <workItem from="1715150541472" duration="2952000" />
+      <workItem from="1715155119226" duration="19723000" />
+      <workItem from="1715180828599" duration="736000" />
+      <workItem from="1715182345494" duration="3810000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />

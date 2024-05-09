@@ -1,5 +1,4 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 using UnrealBuildTool;
 
 public class SPD_Spel1 : ModuleRules
@@ -8,12 +7,9 @@ public class SPD_Spel1 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "NavigationSystem", "Niagara"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
-		
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem" });
-
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
