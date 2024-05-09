@@ -9,7 +9,8 @@
 #include "SlimeBossAI.h"
 #include "PlayerCharacter.h"
 #include "Projectile.h"
-#include "EntitySystem/MovieSceneEntitySystemRunner.h"
+#include "NiagaraFunctionLibrary.h"
+
 
 ASlimeBossAIController::ASlimeBossAIController()
 {
@@ -21,6 +22,7 @@ void ASlimeBossAIController::BeginPlay()
 	Super::BeginPlay();
 	SetPlayer();
 	SpawnPointArray = Boss->SpawnPointsArray;
+	SlamEffect = Boss->SlamEffect;
 	
 	if (Boss)
 	{
@@ -201,6 +203,7 @@ void ASlimeBossAIController::BossPhaseThree()
 		ResetSlamAttack();
 		SlamAttack();
 		SpawnEnemies();
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), SlamEffect, Boss->GetActorLocation());
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }

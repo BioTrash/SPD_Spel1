@@ -9,6 +9,7 @@
 #include "SlimeBossAIController.generated.h"
 
 class AEnemySpawnpoint;
+class UNiagaraSystem;
 
 /**
  * 
@@ -19,7 +20,7 @@ class SPD_SPEL1_API ASlimeBossAIController : public AAIController
 	GENERATED_BODY()
 public:
 
-	 ASlimeBossAIController();
+	ASlimeBossAIController();
 	virtual void Tick(float DeltaSeconds) override;
 	void BeginPlay();
 	void RotateHead(FVector TargetLocation);
@@ -33,6 +34,7 @@ public:
 	void SpawnEnemies();
 	void EndSlamAttack();
 	void ResetSlamAttack();
+	
 protected:
 	
 	FVector OriginalLocation;
@@ -97,5 +99,7 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
 
-	
+	// Effect som spelas när bossen gör slam attack.
+	UPROPERTY();
+	UNiagaraSystem* SlamEffect;
 };

@@ -27,14 +27,6 @@
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SaveGame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SaveGame.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_DoorUnlocked.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_DoorUnlocked.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_YouLost.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_YouLost.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level_1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" afterDir="false" />
@@ -256,7 +248,7 @@
       <workItem from="1715250339685" duration="567000" />
       <workItem from="1715256738691" duration="266000" />
       <workItem from="1715257167005" duration="1621000" />
-      <workItem from="1715262422183" duration="629000" />
+      <workItem from="1715262422183" duration="1497000" />
     </task>
     <servers />
   </component>

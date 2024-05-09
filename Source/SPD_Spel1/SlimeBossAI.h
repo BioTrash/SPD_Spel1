@@ -7,6 +7,7 @@
 #include "SlimeBossAI.generated.h"
 
 class AEnemySpawnpoint;
+class UNiagaraSystem;
 
 UCLASS()
 class SPD_SPEL1_API ASlimeBossAI : public APawn
@@ -39,6 +40,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	float GetHealthPercentage() const;
+
+	// Effect som spelas när bossen gör slam attack.
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UNiagaraSystem* SlamEffect;
 
 	UPROPERTY(EditAnywhere)
 	float MaxHealth = 1000.f;
