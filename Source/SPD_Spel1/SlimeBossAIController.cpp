@@ -124,7 +124,7 @@ void ASlimeBossAIController::UpdateBossPhase()
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
 			BossPhaseOne();
 		}
-		else if (Health <= 100 && Health > 50 && bActivatePhaseTwo)
+		else if (Health <= 100 && Health > 50)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
 			BossPhaseTwo();
@@ -147,15 +147,22 @@ void ASlimeBossAIController::BossPhaseOne()
 		Shoot();
 		LastShotTime = 0;
 	}
+	
 }
 void ASlimeBossAIController::BossPhaseTwo()
 {
 	//Andra bossfasen, den skjuter och spawnar in fiender
 	//Hanna
 	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), true);
-	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"),false);
+	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"),true);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
-	SpawnEnemies();
+	if (LastShotTime >= 7)
+	{
+		SpawnEnemies();
+		Shoot();
+		LastShotTime = 0;
+	}
+	
 }
 void ASlimeBossAIController::BossPhaseThree()
 {
@@ -166,13 +173,13 @@ void ASlimeBossAIController::BossPhaseThree()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseThree"), false);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
-	float DistanceToPlayer = FVector::Distance(Boss->GetActorLocation(), Player->GetActorLocation());
 	
-	if (LastSlamTime >= ShootCooldown && DistanceToPlayer <= 1400.f)
+	if (LastSlamTime >= SlamCooldown)
 	{
+		LastSlamTime = 0;
+		ResetSlamAttack();
 		SlamAttack();
 		SpawnEnemies();
-		LastSlamTime = 0;
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
@@ -184,7 +191,7 @@ void ASlimeBossAIController::SlamAttack()
 	{
 		bIsSlamming = true;
 		OriginalLocation = Boss->GetActorLocation();
-		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 170.0f);
+		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
 		Boss->SetActorLocation(GroundLocation);
 		
 		TArray<AActor*> OverlappingActors;
@@ -204,7 +211,7 @@ void ASlimeBossAIController::SlamAttack()
 			}
 		}
 		UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
-		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	}
@@ -212,12 +219,20 @@ void ASlimeBossAIController::SlamAttack()
 void ASlimeBossAIController::EndSlamAttack()
 {
 	bIsSlamming = false;
-	UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
+	//UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
 	if (Boss)
 	{
 		Boss->SetActorLocation(OriginalLocation);
 	}
+	UE_LOG(LogTemp, Warning, TEXT("SlamCooldown: %f"), SlamCooldown);
+	GetWorldTimerManager().SetTimer(SlamCooldownTimerHandle, this, &ASlimeBossAIController::ResetSlamAttack, SlamCooldown, false);
 }
+void ASlimeBossAIController::ResetSlamAttack()
+{
+	UE_LOG(LogTemp, Warning, TEXT("LastSlamTime: %f"), LastSlamTime);
+	LastSlamTime = 0;
+}
+
 void ASlimeBossAIController::SpawnEnemies()
 {
 	bActivatePhaseTwo = false;

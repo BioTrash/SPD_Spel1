@@ -41,15 +41,15 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 	}
 
 	FVector PlayerLocation = PlayerPawn->GetActorLocation();
-	UE_LOG(LogTemp, Warning, TEXT("PlayerLocation: %s"), *PlayerLocation.ToString());
+	//UE_LOG(LogTemp, Warning, TEXT("PlayerLocation: %s"), *PlayerLocation.ToString());
 	//UE_LOG(LogTemp, Warning, TEXT("Spelarens location: %s"), *UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)->GetActorLocation().ToString());
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
 
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-	UE_LOG(LogTemp, Warning, TEXT("Enemy Location: %s"), *EnemyLocation.ToString());
+	//UE_LOG(LogTemp, Warning, TEXT("Enemy Location: %s"), *EnemyLocation.ToString());
 	bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
-	UE_LOG(LogTemp, Warning, TEXT("bIsLaunching: %s"), bIsLaunching ? TEXT("True") : TEXT("False"));
+	//UE_LOG(LogTemp, Warning, TEXT("bIsLaunching: %s"), bIsLaunching ? TEXT("True") : TEXT("False"));
 	if (bIsLaunching && !bHasLaunched)
 	{
 		LaunchTowardsPlayer();
@@ -66,7 +66,7 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 			AnticipationDelay -= DeltaSeconds;
 		}
 		else
-		{ UE_LOG(LogTemp, Warning, TEXT("bHasLaunched: %s"), bHasLaunched ? TEXT("True") : TEXT("False"));
+		{ //UE_LOG(LogTemp, Warning, TEXT("bHasLaunched: %s"), bHasLaunched ? TEXT("True") : TEXT("False"));
 			LaunchDistanceThreshold = FMath::RandRange(150.0f, 600.0f);
 			if (DistanceToPlayer <= LaunchDistanceThreshold)
 			{
@@ -100,7 +100,7 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
 	if (!GetWorldTimerManager().IsTimerActive(ExplodeTimerHandle))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hit kom jag :)"));
+		//UE_LOG(LogTemp, Warning, TEXT("Hit kom jag :)"));
 		float TimeToReachPlayer = (PlayerLocation - EnemyLocation).Size() / LaunchSpeed;
 		float DelayBeforeExplode = FMath::Max(TimeToReachPlayer * 0.2f, 0.4f);
 		GetWorldTimerManager().SetTimer(ExplodeTimerHandle, this, &ARushEnemyAIController::ExplodeAfterLaunch, DelayBeforeExplode, false);
@@ -108,7 +108,7 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 
 	bHasLaunched = false;
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
-	UE_LOG(LogTemp, Warning, TEXT("Launching towards the player"));
+	//UE_LOG(LogTemp, Warning, TEXT("Launching towards the player"));
 }
 void ARushEnemyAIController::ExplodeAfterLaunch()
 {
