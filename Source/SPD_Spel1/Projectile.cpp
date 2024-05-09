@@ -56,8 +56,24 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 	}
     
 	// Destroy the projectile regardless of the hit actor
-	UE_LOG(LogTemp, Log, TEXT("Destroying the projectile"));
-	Destroy();
+	//UE_LOG(LogTemp, Log, TEXT("Destroying the projectile"));
+	//Destroy();
+
+	this->SetActorHiddenInGame(true);
+	this->SetActorEnableCollision(false);
+	this->SetActorTickEnabled(false);
+	
+	ProjectileMovementComponent->SetActive(false);
+}
+
+UProjectileMovementComponent* AProjectile::GetProjectileMovementComponent() const
+{
+	return ProjectileMovementComponent;
+}
+
+void AProjectile::SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove)
+{
+	ProjectileMovementComponent = ProjMove;
 }
 
 

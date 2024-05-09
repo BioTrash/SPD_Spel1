@@ -22,8 +22,15 @@ public:
 	void RotateHead(FVector TargetLocation);
 	void Shoot();
 	void FireCooldown();
-
 	void SetPlayer();
+	void UpdateBossPhase();
+	void BossPhaseOne();
+	void BossPhaseTwo();
+	void BossPhaseThree();
+	void SlamAttack();
+	void SpawnEnemies();
+	void EndSlamAttack();
+
 
 private:
 
@@ -55,9 +62,14 @@ private:
 	ASlimeBossAI* Boss;
 
 	UPROPERTY()
+	ASlimeBossAI* BossHealth;
+
+	UPROPERTY()
 	USceneComponent* ProjectileSpawn;
 	
 	float ProjectileDamage = 30;
+	FTimerHandle SlamAttackTimerHandle;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
 

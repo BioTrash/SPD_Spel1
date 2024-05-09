@@ -9,8 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BB_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BB_SlimeBossAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BT_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BT_SlimeBossAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BossBullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BossBullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Boss_Test/E/3P/PJ8W7QUE8PJ79RW79XVEO1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Boss_Test/E/3P/PJ8W7QUE8PJ79RW79XVEO1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" afterDir="false" />
     </list>
@@ -183,6 +187,7 @@
       <workItem from="1715168252833" duration="2103000" />
       <workItem from="1715170562628" duration="4295000" />
       <workItem from="1715175652051" duration="3191000" />
+      <workItem from="1715236885782" duration="4714000" />
     </task>
     <servers />
   </component>

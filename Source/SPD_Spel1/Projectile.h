@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -24,7 +25,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	void SetDamage(float NewDamage) { Damage = NewDamage; }
 
-
+	UProjectileMovementComponent* GetProjectileMovementComponent() const;
+	
+	void SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove);
 private:
 
 	float Damage;
