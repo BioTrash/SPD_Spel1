@@ -41,7 +41,7 @@ public:
 	float GetHealthPercentage() const;
 
 	UPROPERTY(EditAnywhere)
-	float MaxHealth = 150.f;
+	float MaxHealth = 1000.f;
 	
 	UPROPERTY(VisibleAnywhere)
 	float Health;

@@ -61,7 +61,10 @@ private:
 	float LastSlamTime;
 
 	UPROPERTY(EditAnywhere)
-	float ShootCooldown = 1.4f;
+	float LastSpawnTime;
+
+	UPROPERTY(EditAnywhere)
+	float ShootCooldown = 1.0f;
 
 	UPROPERTY(EditAnywhere)
 	float SlamCooldown = 6.0f;
@@ -79,6 +82,7 @@ private:
 	
 	bool bIsSlamming;
 	bool bActivatePhaseTwo = true;
+	bool bShouldSpawnEnemies = false;
 	
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;

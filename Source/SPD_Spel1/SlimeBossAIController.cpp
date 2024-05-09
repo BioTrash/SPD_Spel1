@@ -51,6 +51,8 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	LastShotTime += DeltaSeconds;
 	LastSlamTime += DeltaSeconds;
+	LastSpawnTime += DeltaSeconds;
+
 	UE_LOG(LogTemp, Warning, TEXT("LastSlamTime  %f"), LastSlamTime);
 
 	SetFocus(Player);
@@ -119,17 +121,23 @@ void ASlimeBossAIController::UpdateBossPhase()
 	if (SlimeBoss)
 	{
 		float Health = SlimeBoss->GetHealth();
-		if (Health <= 150 && Health > 100)
+		float MaxHealth = SlimeBoss->MaxHealth;
+		if (Health <= MaxHealth && Health > (MaxHealth - MaxHealth/3))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
 			BossPhaseOne();
 		}
-		else if (Health <= 100 && Health > 50)
+		else if (Health <= (MaxHealth - MaxHealth/3) && Health > MaxHealth/3)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
+			if(bActivatePhaseTwo)
+			{
+				bShouldSpawnEnemies = true;
+				bActivatePhaseTwo = false;
+			}
 			BossPhaseTwo();
 		}
-		else if (Health <= 50)
+		else if (Health <= MaxHealth/3)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase three"));
 			BossPhaseThree();
@@ -156,12 +164,25 @@ void ASlimeBossAIController::BossPhaseTwo()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), true);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"),true);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
-	if (LastShotTime >= 7)
+	if(bShouldSpawnEnemies)
 	{
 		SpawnEnemies();
+		bShouldSpawnEnemies = false;
+	}
+	
+	if (LastShotTime >= ShootCooldown)
+	{
 		Shoot();
 		LastShotTime = 0;
 	}
+	
+	if (LastSpawnTime >= 8)
+	{
+		SpawnEnemies();
+		LastSpawnTime = 0;
+	}
+	
+	
 	
 }
 void ASlimeBossAIController::BossPhaseThree()
@@ -235,7 +256,6 @@ void ASlimeBossAIController::ResetSlamAttack()
 
 void ASlimeBossAIController::SpawnEnemies()
 {
-	bActivatePhaseTwo = false;
 
 	for (AEnemySpawnpoint* Spawnpoint : SpawnPointArray)
 	{
