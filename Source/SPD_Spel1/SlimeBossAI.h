@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "SlimeBossAI.generated.h"
 
+class AEnemySpawnpoint;
+
 UCLASS()
 class SPD_SPEL1_API ASlimeBossAI : public APawn
 {
@@ -32,11 +34,20 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float GetHealth() const;
 
+	UFUNCTION(BlueprintCallable)
+	void ResetHealth();
+
+	UFUNCTION(BlueprintCallable)
+	float GetHealthPercentage() const;
+
 	UPROPERTY(EditAnywhere)
-	float MaxHealth = 150.f;
+	float MaxHealth = 1000.f;
 	
 	UPROPERTY(VisibleAnywhere)
 	float Health;
+
+	UPROPERTY(EditAnywhere)
+	TArray<AEnemySpawnpoint*> SpawnPointsArray;
 
 private:
 
