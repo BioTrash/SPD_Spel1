@@ -5,6 +5,9 @@
 #include "EnemyCommunicationManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPlayerLocationUpdatedDelegate, const FVector&, NewPlayerLocation);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FChaseUpdatedDelegate, const bool, Chase);
+
+
 
 UCLASS(Blueprintable, BlueprintType)
 class SPD_SPEL1_API UEnemyCommunicationManager : public UObject
@@ -29,14 +32,14 @@ public:
 	void SetPlayerLocation(const FVector& NewPlayerLocation);
 
 	UFUNCTION(BlueprintCallable, Category = "Enemy Communication")
-	void SetIsChasing(bool IsChasing);
+	void SetIsChasing(const bool& IsChasing);
 	
 	// Event delegate to notify when player location is updated
 	UPROPERTY(BlueprintAssignable, Category = "Enemy Communication")
 	FPlayerLocationUpdatedDelegate OnPlayerLocationUpdated;
 
 	UPROPERTY(BlueprintAssignable, Category = "Enemy Communication")
-	FPlayerLocationUpdatedDelegate OnChaseUpdated;
+	FChaseUpdatedDelegate OnChaseUpdated;
 
 private:
 	// Player location stored in the manager
