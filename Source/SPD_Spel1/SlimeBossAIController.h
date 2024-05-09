@@ -22,8 +22,12 @@ public:
 	void RotateHead(FVector TargetLocation);
 	void Shoot();
 	void FireCooldown();
-
 	void SetPlayer();
+	void UpdateBossPhase();
+	void BossPhaseOne();
+	void BossPhaseTwo();
+	void BossPhaseThree();
+
 
 private:
 
@@ -53,6 +57,9 @@ private:
 
 	UPROPERTY()
 	ASlimeBossAI* Boss;
+
+	UPROPERTY()
+	ASlimeBossAI* BossHealth;
 
 	UPROPERTY()
 	USceneComponent* ProjectileSpawn;

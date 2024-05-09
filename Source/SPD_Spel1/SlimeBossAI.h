@@ -29,8 +29,11 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 
-	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 40.f;
+	UFUNCTION(BlueprintCallable)
+	float GetHealth() const;
+
+	UPROPERTY(EditAnywhere)
+	float MaxHealth = 150.f;
 	
 	UPROPERTY(VisibleAnywhere)
 	float Health;

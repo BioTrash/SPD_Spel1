@@ -40,34 +40,33 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	LastShotTime += DeltaSeconds;
 
-	UE_LOG(LogTemp, Warning, TEXT("THIS IS THE CLOCK: %f"), LastShotTime);
-	
 	SetFocus(Player);
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
-	
-	if (Player) 
+
+	if (Player)
 	{
 		FVector PlayerLocation = Player->GetActorLocation();
 		RotateHead(PlayerLocation);
 	}
+	UpdateBossPhase();
 	if (LastShotTime >= ShootCooldown)
 	{
-		//Skapa projektil
-		FVector SpawnLocation =ProjectileSpawn->GetComponentLocation();
-		//SpawnLocation.X -= 100;
-		FRotator SpawnRotation = ProjectileSpawn-> GetComponentRotation();
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-
-		//Spawnar projectile och skjuter den med damage
-		AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
-		if (Projectile)
-		{
-			Projectile->SetDamage(ProjectileDamage);
-			UE_LOG(LogTemp, Log, TEXT("Heres the projectile: %s"), *SpawnLocation.ToString());
-		}
+		Shoot();
 		LastShotTime = 0.0f;
+	}
+}
+void ASlimeBossAIController::Shoot()
+{
+	FVector SpawnLocation = ProjectileSpawn->GetComponentLocation();
+	FRotator SpawnRotation = ProjectileSpawn->GetComponentRotation();
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	SpawnParams.Instigator = GetInstigator();
+
+	AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+	if (Projectile)
+	{
+		Projectile->SetDamage(ProjectileDamage);
 	}
 }
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
@@ -103,4 +102,44 @@ void ASlimeBossAIController::SetPlayer()
 	{
 	}
 }
-
+void ASlimeBossAIController::UpdateBossPhase()
+{
+	ASlimeBossAI* SlimeBoss = Cast<ASlimeBossAI>(GetPawn());
+	if (SlimeBoss)
+	{
+		float Health = SlimeBoss->GetHealth();
+		if (Health >= 150)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
+			BossPhaseOne();
+		}
+		else if (Health >= 100)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
+			BossPhaseTwo();
+		}
+		else if (Health >= 50)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase three"));
+			BossPhaseThree();
+		}
+	}
+}
+void ASlimeBossAIController::BossPhaseOne()
+{
+	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseOne"),true);
+  	//Bossen ska fokusera på att skjuta på spelaren
+ 	//Sätta phasetwo and three till falskt
+}
+void ASlimeBossAIController::BossPhaseTwo()
+{
+	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), true);
+	//Spawna in RushEnemy fiender 
+	//Sätta phaseone and three till falskt
+}
+void ASlimeBossAIController::BossPhaseThree()
+{
+	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseThree"), true);
+	//Göra en slam här där den spawnar in mer fiender pluys 
+	//Sätta phaseone and two till falskt
+}
