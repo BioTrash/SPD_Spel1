@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "SlimeProjectile.generated.h"
 
 UCLASS()
@@ -23,19 +24,22 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void SetDamage(float NewDamage) { Damage = NewDamage; }
+	
+	UProjectileMovementComponent* GetProjectileMovementComponent();
+	void SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove);
 
 
 private:
-
+	UPROPERTY(EditAnywhere)
 	float Damage;
 	UPROPERTY(EditDefaultsOnly, Category="Weaponry")
 	UStaticMeshComponent* ProjectileMesh;
 
 	// Sound like a custom component but is a part of Unreal, settings for it are found under any Projectile BlueprintEditor (Rufus)
 	UPROPERTY(VisibleAnywhere, Category="Weaponry")
-	class UProjectileMovementComponent* ProjectileMovementComponent;
+	UProjectileMovementComponent* ProjectileMovementComponent;
 
 	// Is a copy of an existing Unreal function. Ngl, this one confuses me. It is used in Begin() to detect hits (Rufus)
-	UFUNCTION()
+	UFUNCTION(BlueprintPure)
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 };
