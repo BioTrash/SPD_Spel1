@@ -34,6 +34,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float GetHealth() const;
 
+	UFUNCTION(BlueprintCallable)
+	void ResetHealth();
+
+	UFUNCTION(BlueprintCallable)
+	float GetHealthPercentage() const;
+
 	UPROPERTY(EditAnywhere)
 	float MaxHealth = 150.f;
 	
