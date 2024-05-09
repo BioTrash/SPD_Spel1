@@ -27,6 +27,9 @@ public:
 	void BossPhaseOne();
 	void BossPhaseTwo();
 	void BossPhaseThree();
+	void SlamAttack();
+	void SpawnEnemies();
+	void EndSlamAttack();
 
 
 private:
@@ -65,6 +68,8 @@ private:
 	USceneComponent* ProjectileSpawn;
 	
 	float ProjectileDamage = 30;
+	FTimerHandle SlamAttackTimerHandle;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
 
