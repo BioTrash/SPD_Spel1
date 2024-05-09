@@ -319,7 +319,7 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damag
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
 	//log to see how much health is left
-	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
 

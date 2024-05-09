@@ -54,7 +54,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Animations")
 	bool GetIsShootingAnimation();
-
 	
 private:
 

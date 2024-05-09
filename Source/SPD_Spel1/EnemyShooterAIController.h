@@ -1,9 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "ShooterEnemy.h"
+#include "ProjectileWeapon.h"
 #include "EnemyShooterAIController.generated.h"
 
 /**
@@ -38,13 +38,35 @@ private:
 	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
+
+	void Shoot();
+	UPROPERTY()
+	AShooterEnemy* Enemy;
+	
+	UPROPERTY()
+	APawn* PlayerPawn;
+
+	UPROPERTY()
+	AProjectileWeapon* EnemyWeapon;
+	
+	FVector DirectionToPlayer;
+	FRotator WeaponRotation;
 	
 	void DetectPlayer(const FVector& PlayerLocation);
+	void BeginChase(bool ChaseStatus);
+
+	UFUNCTION()
 	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
+
+	UFUNCTION()
+	void OnChaseUpdated(const bool NewChaseStatus);
 
 	UNiagaraComponent* NiagaraSystemComponent;
 	float LastShotTime = 0.0f;
 
+	void InitiateEnemy();
+	void InitiatePlayer();
+	
 	// Cooldown duration between shots
 	float ShootCooldown = 2.5f;
 

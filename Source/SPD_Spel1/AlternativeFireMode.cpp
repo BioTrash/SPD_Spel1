@@ -25,10 +25,15 @@ void AAlternativeFireMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(bSlimeCharged && bButtonReleased)
+	if(bButtonReleased && bSlimeCharged)
 	{
 		bSlimeCharged = false;
+		bAlternativeFireTimerActive = false;
 		FireWeapon();
+	}
+	else if(bButtonReleased && !bSlimeCharged)
+	{
+		InitiateTimer(false, true);
 	}
 }
 
@@ -54,7 +59,7 @@ int32 AAlternativeFireMode::GetCurrentSlimeAmmo() const
 
 FString AAlternativeFireMode::GetSlimeAmmo() const
 {
-	return FString::Printf(TEXT("%d"), SlimeAmmo);
+	return FString::Printf(TEXT("%d / %d"), SlimeAmmo, MaxSlimeAmmo);
 }
 
 void AAlternativeFireMode::FireWeapon()
@@ -71,7 +76,7 @@ void AAlternativeFireMode::FireWeapon()
 
 	FVector ViewportCenter(GetLocation().X * 0.5f, GetLocation().Y * 0.5f, 0.0f);
 	
-	TempMove->AddForce((Super::GetLocation() + Super::GetRotation().Vector() * 900000));
+	TempMove->AddForce((Super::GetLocation() + Super::GetRotation().Vector() * 200000));
 	
 	Slime->SetProjectileMovementComponent(TempMove);
 	
