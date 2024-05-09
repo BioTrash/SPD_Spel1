@@ -2,8 +2,13 @@
 
 
 #include "Spel1PlayerController.h"
+
+#include "AlternativeFireMode.h"
+#include "NonProjectileWeapon.h"
+#include "PlayerCharacter.h"
 #include "Blueprint/UserWidget.h"
 #include "Blueprint/WidgetTree.h"
+#include "Components/ProgressBar.h"
 #include "Components/TextBlock.h"
 
 void ASpel1PlayerController::BeginPlay()
@@ -19,12 +24,57 @@ void ASpel1PlayerController::BeginPlay()
 	Timer = CreateWidget(this, TimerClass);
 	if(TimerClass) Timer->AddToViewport();
 
+	SlimeCharge = CreateWidget(this, SlimeChargeClass);
+	if(SlimeChargeClass) SlimeCharge->AddToViewport();
+
 	GetWorld()->GetTimerManager().SetTimer(SinceStartTimer, this, &ASpel1PlayerController::AdvanceTime, 0.001f, true, 0.0f);
 }
 
 void ASpel1PlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(this->GetPawn());
+
+	if (PlayerCharacter)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("PlayeCharacter"));
+		AWeaponBase* TriggerWeapon = PlayerCharacter->GetTriggerWeapon();
+
+		if (TriggerWeapon)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("TriggerWeapon"));
+			ANonProjectileWeapon* NonProjectileWeapon = Cast<ANonProjectileWeapon>(TriggerWeapon);
+
+			if (NonProjectileWeapon)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("NonProjectileWeapon"));
+				AAlternativeFireMode* AlternativeFireMode = Cast<AAlternativeFireMode>(NonProjectileWeapon);
+				
+				if (AlternativeFireMode)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("AlternativeFireMode"));
+					if(AlternativeFireMode->bAlternativeFireTimerActive)
+					{
+						if(TimerActivate)
+						{
+							TimerActivate = false;
+							UE_LOG(LogTemp, Warning, TEXT("bAlternativeFireTimerActive"));
+							GetWorld()->GetTimerManager().SetTimer(ChargeSlimeTimer, this, &ASpel1PlayerController::SlimeChargeProgress, 0.001f, true, 0.0f);
+						}
+					}
+					else
+					{
+						UE_LOG(LogTemp, Warning, TEXT("ClearTimer"));
+						TimerActivate = true;
+						ChargeTimePassed = 0;
+						SlimeChargeProgress();
+						GetWorld()->GetTimerManager().ClearTimer(ChargeSlimeTimer);
+					}
+				}
+			}
+		}
+	}
 }
 
 void ASpel1PlayerController::AdvanceTime()
@@ -42,3 +92,17 @@ void ASpel1PlayerController::AdvanceTime()
 	UTextBlock* TotalTimeElapsed = Timer->WidgetTree->FindWidget<UTextBlock>(TEXT("TotalTimeElapsed"));
 	TotalTimeElapsed->SetText(TimeElapsedText);
 }
+
+void ASpel1PlayerController::SlimeChargeProgress()
+{
+	ChargeTimePassed += 2;
+	
+	float SlimeChargePercentage = FMath::Clamp((float)ChargeTimePassed / 2000.0f, 0.0f, 1.0f);
+	UE_LOG(LogTemp, Warning, TEXT("SlimeChargeProgress"));
+	if (UProgressBar* SlimeChargeBar = SlimeCharge->WidgetTree->FindWidget<UProgressBar>(TEXT("SlimeChargeBar")))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SlimeChargeBar REACHED"));
+		SlimeChargeBar->SetPercent(SlimeChargePercentage);
+	}
+}
+
