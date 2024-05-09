@@ -32,6 +32,7 @@ public:
 	void SlamAttack();
 	void SpawnEnemies();
 	void EndSlamAttack();
+	void ResetSlamAttack();
 protected:
 	
 	FVector OriginalLocation;
@@ -63,11 +64,12 @@ private:
 	float ShootCooldown = 1.4f;
 
 	UPROPERTY(EditAnywhere)
-	float SlamCooldown = 2.0f;
+	float SlamCooldown = 6.0f;
+	
+	FTimerHandle SlamCooldownTimerHandle;
 	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
-
 	
 	UPROPERTY(EditAnywhere)
 	TArray<AEnemySpawnpoint*> SpawnPointArray;

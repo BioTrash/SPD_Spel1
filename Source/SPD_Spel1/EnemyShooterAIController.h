@@ -53,9 +53,13 @@ private:
 	FRotator WeaponRotation;
 	
 	void DetectPlayer(const FVector& PlayerLocation);
+	void BeginChase(bool ChaseStatus);
 
 	UFUNCTION()
 	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
+
+	UFUNCTION()
+	void OnChaseUpdated(const bool NewChaseStatus);
 
 	UNiagaraComponent* NiagaraSystemComponent;
 	float LastShotTime = 0.0f;
