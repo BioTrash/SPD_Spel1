@@ -1,18 +1,27 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "SlimeBossAIController.h"
+#include "EnemySpawnpoint.h"
+#include "NiagaraComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "SlimeBossAI.h"
 #include "PlayerCharacter.h"
 #include "Projectile.h"
+#include "EntitySystem/MovieSceneEntitySystemRunner.h"
+
+ASlimeBossAIController::ASlimeBossAIController()
+{
+	OriginalLocation = FVector::ZeroVector;
+}
 
 void ASlimeBossAIController::BeginPlay()
 {
 	Super::BeginPlay();
 	SetPlayer();
+	SpawnPointArray = Boss->SpawnPointsArray;
+	
 	if (Boss)
 	{
 		PawnMesh = Boss->FindComponentByClass<UStaticMeshComponent>();
@@ -41,6 +50,8 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	LastShotTime += DeltaSeconds;
+	LastSlamTime += DeltaSeconds;
+	UE_LOG(LogTemp, Warning, TEXT("LastSlamTime  %f"), LastSlamTime);
 
 	SetFocus(Player);
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
@@ -79,11 +90,6 @@ void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 	LookAtRotation.Yaw += -90.f; 
 	PawnMesh->SetWorldRotation(LookAtRotation);
 }
-void ASlimeBossAIController::FireCooldown()
-{
-	UE_LOG(LogTemp, Warning, TEXT("HEJHEJ"));
-}
-
 void ASlimeBossAIController::SetPlayer()
 {
 	if (UGameplayStatics::GetPlayerPawn(GetWorld(), 0))
@@ -118,7 +124,7 @@ void ASlimeBossAIController::UpdateBossPhase()
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
 			BossPhaseOne();
 		}
-		else if (Health <= 100 && Health > 50)
+		else if (Health <= 100 && Health > 50 && bActivatePhaseTwo)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
 			BossPhaseTwo();
@@ -149,7 +155,7 @@ void ASlimeBossAIController::BossPhaseTwo()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), true);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"),false);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
-	
+	SpawnEnemies();
 }
 void ASlimeBossAIController::BossPhaseThree()
 {
@@ -160,39 +166,68 @@ void ASlimeBossAIController::BossPhaseThree()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseThree"), false);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
-	SlamAttack();
+	float DistanceToPlayer = FVector::Distance(Boss->GetActorLocation(), Player->GetActorLocation());
+	
+	if (LastSlamTime >= ShootCooldown && DistanceToPlayer <= 1400.f)
+	{
+		SlamAttack();
+		SpawnEnemies();
+		LastSlamTime = 0;
+	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
 void ASlimeBossAIController::SlamAttack()
 {
 	//Hanna
 	//slamattacken
-	FVector GroundLocation = FVector(Boss->GetActorLocation().X, Boss->GetActorLocation().Y, 0.0f);
-	Boss->SetActorLocation(GroundLocation);
-	FVector SlamCenter = Boss->GetActorLocation();
-	float DamageRadius = 500.0f; 
-	TArray<AActor*> OverlappingActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
-	for (AActor* Actor : OverlappingActors)
+	if(!bIsSlamming)
 	{
-		float Distance = FVector::Distance(Actor->GetActorLocation(), SlamCenter);
-		float Damage = FMath::Max(0.0f, 100.0f - Distance); 
-		Actor->TakeDamage(Damage, FDamageEvent(), nullptr, this);
+		bIsSlamming = true;
+		OriginalLocation = Boss->GetActorLocation();
+		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 170.0f);
+		Boss->SetActorLocation(GroundLocation);
+		
+		TArray<AActor*> OverlappingActors;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
+		for (AActor* Actor : OverlappingActors)
+		{
+			float Distance = FVector::Distance(Actor->GetActorLocation(), GroundLocation);
+			float MaxDamage = 100.0f;
+			float MinDamage = 0.0f;
+			float DamageRange = DamageRadius; 
+			float Damage = FMath::Clamp(MaxDamage * (1 - (Distance / DamageRange)), MinDamage, MaxDamage);
+			
+			APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(Actor);
+			if (PlayerCharacter)
+			{
+				PlayerCharacter->TakeDamage(Damage, FDamageEvent(), nullptr, this);
+			}
+		}
+		UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
+		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
+		}
 	}
-	
-	UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
-	GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
-}
+
 void ASlimeBossAIController::EndSlamAttack()
 {
-	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseOne"), true); 
-	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseTwo"), false); 
-	GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseThree"), false); 
-	GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), true);
+	bIsSlamming = false;
+	UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
+	if (Boss)
+	{
+		Boss->SetActorLocation(OriginalLocation);
+	}
 }
 void ASlimeBossAIController::SpawnEnemies()
 {
-	//Hanna
-	//spawna in fiender
+	bActivatePhaseTwo = false;
+
+	for (AEnemySpawnpoint* Spawnpoint : SpawnPointArray)
+	{
+		if (UNiagaraComponent* NiagaraComponent = Cast<UNiagaraComponent>(Spawnpoint->GetComponentByClass(UNiagaraComponent::StaticClass())))
+		{
+			NiagaraComponent->Activate();
+		}
+	}
 }
 
