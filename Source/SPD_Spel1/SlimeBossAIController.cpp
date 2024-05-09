@@ -31,6 +31,10 @@ void ASlimeBossAIController::BeginPlay()
 			{
 				SlamEffect = NiagaraComponent; 
 			}
+		if (NiagaraComponent->GetName() == "Shoot Effect")
+		{
+			ShootEffect = NiagaraComponent; 
+		}
 	}
 	
 	if (Boss)
@@ -56,6 +60,7 @@ void ASlimeBossAIController::BeginPlay()
 		GetBlackboardComponent()->SetValueAsBool(TEXT("ShouldSpawn"), false);
 	}
 	SetFocus(Player);
+	ShootEffect->OnSystemFinished.AddDynamic(this, &ASlimeBossAIController::OnNiagaraSystemFinished);
 }
 void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
@@ -92,6 +97,7 @@ void ASlimeBossAIController::Shoot()
 	{
 		Projectile->SetDamage(ProjectileDamage);
 	}
+	
 }
 void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 {
@@ -110,6 +116,7 @@ void ASlimeBossAIController::SetPlayer()
 		Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	}
 	if (Player == nullptr)
+	
 	{
 		//Shrek ;)
 	}
@@ -163,10 +170,13 @@ void ASlimeBossAIController::BossPhaseOne()
 	GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
 	if (LastShotTime >= ShootCooldown)
 	{
-		Shoot();
+		if (ShootEffect)
+		{
+			ShootEffect->Activate();
+		}
+		//Shoot();
 		LastShotTime = 0;
 	}
-	
 }
 void ASlimeBossAIController::BossPhaseTwo()
 {
@@ -183,7 +193,10 @@ void ASlimeBossAIController::BossPhaseTwo()
 	
 	if (LastShotTime >= ShootCooldown)
 	{
-		Shoot();
+		if (ShootEffect)
+		{
+			ShootEffect->Activate();
+		}
 		LastShotTime = 0;
 	}
 	
@@ -192,9 +205,6 @@ void ASlimeBossAIController::BossPhaseTwo()
 		SpawnEnemies();
 		LastSpawnTime = 0;
 	}
-	
-	
-	
 }
 void ASlimeBossAIController::BossPhaseThree()
 {
@@ -280,5 +290,9 @@ void ASlimeBossAIController::SpawnEnemies()
 			NiagaraComponent->Activate();
 		}
 	}
+}
+void ASlimeBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent)
+{
+ 	Shoot();
 }
 

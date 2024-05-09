@@ -1,17 +1,13 @@
-#include "EnemyShooterAIController.h"
 
+#include "EnemyShooterAIController.h"
 #include "EnemyWeapon.h"
-#include "KismetTraceUtils.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "NavigationSystem.h"
-#include "GameFramework/PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "ShooterEnemy.h"
 #include "NiagaraFunctionLibrary.h"
 #include "Components/SceneComponent.h"
 #include "NiagaraComponent.h"
 #include "EnemyCommunicationManager.h"
-
 
 #include "Weapon.h"
 //#include "EnemyWeapon.h"
@@ -37,7 +33,6 @@ void AEnemyShooterAIController::BeginPlay()
         RunBehaviorTree(AIBehavior);
         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-
     }
     SetFocus(PlayerPawn);
 }
