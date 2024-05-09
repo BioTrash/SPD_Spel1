@@ -333,3 +333,9 @@ float APlayerCharacter::GetDashCooldownPercentage() const
 	float RemainingCooldown = FMath::Max(0.0f, LastDashTime + DashCooldown - GetWorld()->GetTimeSeconds());
 	return RemainingCooldown/DashCooldown;
 }
+
+float APlayerCharacter::GetSlideCooldownPercentage() const
+{
+	float RemainingCooldown = FMath::Max(0.0f, LastSlideTime + SlideCooldown - GetWorld()->GetTimeSeconds());
+	return RemainingCooldown/SlideCooldown;
+}
