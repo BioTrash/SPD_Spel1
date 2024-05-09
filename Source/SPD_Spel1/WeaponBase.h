@@ -25,7 +25,7 @@ public:
 	{
 		if (bButtonPressed)
 		{
-			if(bDelayed && !bAlternative)
+			if(bDelayed && !bAlternative && !bSlimeCharged)
 			{
 				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, false, 0.0f);
 				bDelayed = false;
@@ -37,11 +37,16 @@ public:
 				// Start charging slime alternative fire
 				if(!bSlimeCharged)
 				{
-					GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, MaxChargeTime/2, false, MaxChargeTime/2);
+					bAlternativeFireTimerActive = true;
+					GetWorld()->GetTimerManager().SetTimer(AlternativeFireTimer, Object, Func, MaxChargeTime/2, false, MaxChargeTime/2);
 					
 				}
-
 			}
+		}
+
+		if(!bButtonPressed && bAlternative)
+		{
+			GetWorld()->GetTimerManager().ClearTimer(AlternativeFireTimer);
 		}
 	}
 	
@@ -98,7 +103,7 @@ public:
 	
 	bool bButtonReleased = false;
 	bool bSlimeCharged = false;
-	bool bAlternativeFireTimerActive;
+	bool bAlternativeFireTimerActive = false;
 protected:
 	AWeaponBase();
 	virtual void BeginPlay() override;
