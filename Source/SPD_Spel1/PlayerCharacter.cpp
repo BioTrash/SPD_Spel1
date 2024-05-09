@@ -23,6 +23,9 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//initialize lastDashTime to a large negative number indicating that the dash cooldown has already expired to prevent the cooldown ui to be shown at start (Rebecka)
+	LastDashTime = -1000.f;
+
 	//finding and assign the camera component
 	TArray<UCameraComponent*> CameraComponents;
 	GetComponents<UCameraComponent>(CameraComponents);
@@ -206,7 +209,7 @@ void APlayerCharacter::Dash()
 				//checks if the character is grounded
 				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 
-				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || !bIsGrounded)
+				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
 				{
 					FVector DashDirectionForward = GetActorForwardVector();
 					DashDirectionForward.Normalize();
