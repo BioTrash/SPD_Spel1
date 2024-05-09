@@ -22,7 +22,16 @@ void ASlimeBossAIController::BeginPlay()
 	Super::BeginPlay();
 	SetPlayer();
 	SpawnPointArray = Boss->SpawnPointsArray;
-	SlamEffect = Boss->SlamEffect;
+	// Hämtar in slam effect niagara componenten.
+	TArray<UNiagaraComponent*> NiagaraComponents;
+	Boss->GetComponents<UNiagaraComponent>(NiagaraComponents);
+	for (UNiagaraComponent* NiagaraComponent : NiagaraComponents)
+	{
+		if (NiagaraComponent->GetName() == "Slam Effect")
+			{
+				SlamEffect = NiagaraComponent; 
+			}
+	}
 	
 	if (Boss)
 	{
@@ -203,7 +212,6 @@ void ASlimeBossAIController::BossPhaseThree()
 		ResetSlamAttack();
 		SlamAttack();
 		SpawnEnemies();
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), SlamEffect, Boss->GetActorLocation());
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
@@ -235,7 +243,12 @@ void ASlimeBossAIController::SlamAttack()
 			}
 		}
 		UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
-		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		// Spela slam effekt.
+		if(SlamEffect)
+		{
+			SlamEffect->Activate();
+		}
+		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	}

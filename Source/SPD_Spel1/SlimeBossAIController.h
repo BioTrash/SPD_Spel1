@@ -8,8 +8,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "SlimeBossAIController.generated.h"
 
+class UNiagaraComponent;
 class AEnemySpawnpoint;
-class UNiagaraSystem;
 
 /**
  * 
@@ -101,5 +101,5 @@ private:
 
 	// Effect som spelas när bossen gör slam attack.
 	UPROPERTY();
-	UNiagaraSystem* SlamEffect;
+	UNiagaraComponent* SlamEffect;
 };

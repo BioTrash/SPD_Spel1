@@ -41,10 +41,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float GetHealthPercentage() const;
 
-	// Effect som spelas när bossen gör slam attack.
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	UNiagaraSystem* SlamEffect;
-
 	UPROPERTY(EditAnywhere)
 	float MaxHealth = 1000.f;
 	
