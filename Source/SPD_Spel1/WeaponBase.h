@@ -25,7 +25,7 @@ public:
 	{
 		if (bButtonPressed)
 		{
-			if(bDelayed && !bAlternative && !bSlimeCharged)
+			if(bDelayed && !bAlternative && !bSlimeCharged && !bAlternativeFireTimerActive)
 			{
 				GetWorld()->GetTimerManager().SetTimer(RapidFireTimer, Object, Func, FireRate, false, 0.0f);
 				bDelayed = false;
@@ -46,6 +46,7 @@ public:
 
 		if(!bButtonPressed && bAlternative)
 		{
+			bAlternativeFireTimerActive = false;
 			GetWorld()->GetTimerManager().ClearTimer(AlternativeFireTimer);
 		}
 	}
