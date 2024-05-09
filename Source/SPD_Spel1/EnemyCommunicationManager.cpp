@@ -31,3 +31,13 @@ void UEnemyCommunicationManager::SetPlayerLocation(const FVector& NewPlayerLocat
 	// Broadcast the player location update event
 	OnPlayerLocationUpdated.Broadcast(PlayerLocation);
 }
+
+void UEnemyCommunicationManager::SetIsChasing(bool IsChasing)
+{
+	Chase = IsChasing;
+}
+
+bool UEnemyCommunicationManager::GetSetIsChasing() const
+{
+	return Chase;
+}
