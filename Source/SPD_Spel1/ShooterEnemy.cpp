@@ -1,8 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ShooterEnemy.h"
-#include "EnemyWeapon.h"
+#include "ProjectileWeapon.h"
+#include "EnemyShooterAIController.h"
 #include "Weapon.h"
 
 
@@ -20,29 +18,28 @@ void AShooterEnemy::BeginPlay()
 	Super::BeginPlay();
 	Health = MaxHealth;
 
-	if (WeaponClass)
+	if (BP_EnemyWeaponClass)
 	{
-		// Spawn the weapon
-		AEnemyWeapon* WeaponInstance = GetWorld()->SpawnActor<AEnemyWeapon>(WeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
+		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
+		// Spawn the BP_EnemyProjectileWeapon
+		AProjectileWeapon* WeaponInstance = GetWorld()->SpawnActor<AProjectileWeapon>(BP_EnemyWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
-		//Assign projectile to projectile
-		
 		// Check if spawn was successful
 		if (WeaponInstance)
 		{
-			// Attach the weapon to the mesh socket : IMPLEMENT WHEN SOCKET DONE
-			//WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			UE_LOG(LogTemp, Error, TEXT("Instance good"));
 
-			//Attach the weapon to the mesh root
-			WeaponInstance->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-
+			// Attach the weapon to the mesh socket or root
+			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+            
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
-
-			// Store a reference to the weapon
 			TriggerWeapon = WeaponInstance;
-
 			TriggerWeapon->SetOwner(this);
+			if (TriggerWeapon)
+			{
+				UE_LOG(LogTemp, Error, TEXT("Instance TRIGGER good"));
+			}
 		}
 	}
 }
@@ -51,7 +48,6 @@ void AShooterEnemy::BeginPlay()
 void AShooterEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 	if(Health <= 0)
 	{
 		KillEnemy();
@@ -97,4 +93,3 @@ bool AShooterEnemy::getIsShooting()
 {
 	return isShooting;
 }
-

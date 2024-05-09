@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "EnemyShooterAIController.h"
 
 #include "EnemyWeapon.h"
@@ -31,43 +29,41 @@ void AEnemyShooterAIController::BeginPlay()
     {
         UE_LOG(LogTemp, Error, TEXT("Communication manager instance is nullptr."));
     }
+    InitiatePlayer();
+    InitiateEnemy();
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
-
-        APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 
     }
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     SetFocus(PlayerPawn);
 }
 
 void AEnemyShooterAIController::Tick(float DeltaSeconds)
 {
     LastShotTime += DeltaSeconds;
+    EnemyWeapon = Enemy->TriggerWeapon; //OBS! Ska bort. Enbart för att AI skapas innan Shooterenemy och därav är triggerweapon null i första beginplay().
+
     //GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     if (PlayerPawn != nullptr)
     {
         SetFocus(PlayerPawn);
     }
 
     Super::Tick(DeltaSeconds);
-
-    AShooterEnemy* Enemy = Cast<AShooterEnemy>(GetPawn());
-    EnemyLocation = Enemy->GetActorLocation();
     
     if (Enemy)
     {
-        FVector DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
-        FRotator WeaponRotation = DirectionToPlayer.Rotation();
+        UE_LOG(LogTemp, Warning, TEXT("Enemy good"))
 
-        AEnemyWeapon* EnemyWeapon = Enemy->TriggerWeapon;
         if (EnemyWeapon)
         {
+            UE_LOG(LogTemp, Warning, TEXT("Weapon Good"))
+
             FVector PlayerLocation = PlayerPawn->GetActorLocation();
+            EnemyLocation = Enemy->GetActorLocation();
 
             // Calculate distance between enemy and player
             float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
@@ -90,7 +86,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             {
                 GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), false);
             }
-            EnemyWeapon->SetActorRotation(WeaponRotation);
+                //EnemyWeapon->SetActorRotation(WeaponRotation);
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
@@ -112,7 +108,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         //GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-                        Enemy->isShooting = true;
                         
                         FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
                         float Radius = 900.0f;
@@ -138,28 +133,14 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             }
                             if (NiagaraSystemComponent)
                             {
-                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); // Adjust the offset as needed
+                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
                             }
                             const float EffectDuration = .9f;
 
                             if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
-                                FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
-                                SpawnLocation.X -= 100;
-                                FRotator SpawnRotation = WeaponRotation;
-                                FActorSpawnParameters SpawnParams;
-                                SpawnParams.Owner = this;
-                                SpawnParams.Instigator = GetInstigator();
-
-                                //Spawnar projectile och skjuter den med damage
-                                AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
-                                if (Projectile)
-                                {
-                                    Projectile->SetDamage(15);
-                                    UE_LOG(LogTemp, Log, TEXT("Heres the projectile: %s"), *SpawnLocation.ToString());
-
-                                }
-                                OnEnemyShoot();
+                                Shoot();
+                                Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
                             }
@@ -180,6 +161,8 @@ void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 {
     // Update player location in the player location manager
     UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(PlayerLocation);
+    UEnemyCommunicationManager::GetInstance()->SetIsChasing(true);
+    
 }
 
 
@@ -189,4 +172,40 @@ void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayer
     GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), NewPlayerLocation);
     UE_LOG(LogTemp, Error, TEXT("MIN PLAYER POS ÄR: %s"), *GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation")).ToString());
 
+}
+
+void AEnemyShooterAIController::Shoot()
+{
+    FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
+    SpawnLocation.X -= 100;
+    FRotator SpawnRotation = WeaponRotation;
+    FActorSpawnParameters SpawnParams;
+    SpawnParams.Owner = this;
+    SpawnParams.Instigator = GetInstigator();
+
+    //Spawnar projectile och skjuter den med damage
+    AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+    if (Projectile)
+    {
+        Projectile->SetDamage(15);
+    }
+}
+
+void AEnemyShooterAIController::InitiateEnemy()
+{
+    Enemy = Cast<AShooterEnemy>(GetPawn());
+    EnemyWeapon = Enemy->TriggerWeapon;
+    if (EnemyWeapon == nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("Weapon failed:"));
+
+    }
+
+    DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
+    WeaponRotation = DirectionToPlayer.Rotation();
+}
+
+void AEnemyShooterAIController::InitiatePlayer()
+{
+    PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 }
