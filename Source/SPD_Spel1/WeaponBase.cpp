@@ -148,7 +148,7 @@ void AWeaponBase::InitiateReload()
 
 FString AWeaponBase::GetAmmo() const
 {
-	return FString::Printf(TEXT("%d / %d"), CurrentClip ,TotalAmmo);
+	return FString::Printf(TEXT("%d / ∞"), CurrentClip);
 }
 
 

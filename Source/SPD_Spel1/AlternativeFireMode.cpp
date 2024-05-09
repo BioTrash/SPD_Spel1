@@ -59,7 +59,7 @@ int32 AAlternativeFireMode::GetCurrentSlimeAmmo() const
 
 FString AAlternativeFireMode::GetSlimeAmmo() const
 {
-	return FString::Printf(TEXT("%d"), SlimeAmmo);
+	return FString::Printf(TEXT("%d / %d"), SlimeAmmo, MaxSlimeAmmo);
 }
 
 void AAlternativeFireMode::FireWeapon()
