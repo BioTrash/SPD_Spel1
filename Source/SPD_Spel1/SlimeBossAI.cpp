@@ -46,6 +46,12 @@ float ASlimeBossAI::GetHealth() const
 {
     return Health; 
 }
+
+float ASlimeBossAI::GetHealthPercentage() const
+{
+	return Health / MaxHealth;
+}
+
 void ASlimeBossAI::KillEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("BOSSEN DOG!!"));
