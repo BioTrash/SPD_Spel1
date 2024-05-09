@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "NiagaraSystem.h"
 #include "NonProjectileWeapon.h"
 #include "AlternativeFireMode.generated.h"
 
@@ -46,7 +45,5 @@ private:
 	bool IsWeaponCharging;
 	
 	float CurrentChargeTime;
-
-
 	
 };

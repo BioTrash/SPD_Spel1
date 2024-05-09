@@ -16,6 +16,8 @@ class SPD_SPEL1_API ASpel1PlayerController : public APlayerController
 public:
 	UFUNCTION()
 	void AdvanceTime();
+	UFUNCTION()
+	void SlimeChargeProgress();
 
 protected:
 	virtual void BeginPlay() override;
@@ -30,18 +32,29 @@ private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> TimerClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> SlimeChargeClass;
+
 	UPROPERTY()
 	UUserWidget *Ammo;
 	UPROPERTY()
 	UUserWidget *Crosshair;
 	UPROPERTY()
 	UUserWidget *Timer;
+	UPROPERTY()
+	UUserWidget *SlimeCharge;
 	
 	UPROPERTY()
 	FTimerHandle SinceStartTimer;
 	UPROPERTY()
 	FTimerHandle SinceDeathTimer;
+	UPROPERTY()
+	FTimerHandle ChargeSlimeTimer;
 	
 	UPROPERTY()
 	int TimePassed = 0;
+	UPROPERTY()
+	int ChargeTimePassed = 0;
+
+	bool TimerActivate = true;
 };

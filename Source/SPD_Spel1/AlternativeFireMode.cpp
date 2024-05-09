@@ -17,7 +17,6 @@ void AAlternativeFireMode::BeginPlay()
 	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
 	TempMove->SetActive(false);
 	Slime->SetProjectileMovementComponent(TempMove);
-        
 }
 
 

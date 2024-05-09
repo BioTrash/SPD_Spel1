@@ -103,13 +103,15 @@ public:
 	
 	bool bButtonReleased = false;
 	bool bSlimeCharged = false;
+	
+	UPROPERTY(BlueprintReadWrite)
 	bool bAlternativeFireTimerActive = false;
 protected:
 	AWeaponBase();
 	virtual void BeginPlay() override;
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Beahviour") // Charge time for slime alternative fire
-	float MaxChargeTime = 1.0f;
+	float MaxChargeTime = 2.0f;
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
