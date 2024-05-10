@@ -2,7 +2,10 @@
 
 #include "SlimeProjectile.h"
 
+#include "NiagaraFunctionLibrary.h"
+#include "PlayerCharacter.h"
 #include "Engine/DamageEvents.h"
+#include "GameFramework/Character.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -38,6 +41,11 @@ void ASlimeProjectile::Tick(float DeltaTime)
 
 	// Handles hits, no clue what happens under the surface here. May need to be remade in to our own function (Rufus)
 	//ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
+
+	if(!Player && Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)))
+	{
+		Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	}
 	
 }
 
@@ -46,16 +54,46 @@ void ASlimeProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, U
 	if (OtherActor && OtherActor != this && OtherComp)
 	{
 		// Apply damage to the other actor if it's not the projectile itself
-		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
-		OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
+		//FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
+		//OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
 	//Destroy();
+	this->Explode();
 	this->SetActorHiddenInGame(true);
 	this->SetActorEnableCollision(false);
 	this->SetActorTickEnabled(false);
 	
 	ProjectileMovementComponent->SetActive(false);
 }
+
+void ASlimeProjectile::Explode()
+{
+	TArray<AActor*> OverlappingCharacters;
+	FVector ExplosionLocation = GetActorLocation();
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACharacter::StaticClass(), OverlappingCharacters);
+
+	for(AActor* Actor : OverlappingCharacters)
+	{
+		if(Cast<ACharacter>(Actor))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Enemy caught in explosion"));
+			float DistanceToActor = FVector::Distance(ExplosionLocation, Actor->GetActorLocation());
+			float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToActor / SlimeDamageRadius), 0.0f, 1.0f); 
+			float ActualDamage = Damage * DamageMultiplier;
+
+			if(!Cast<APlayerCharacter>(Actor))
+			{
+				Actor->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);	
+			}
+		}
+	}
+
+	if(ExplosionEffect)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
+	}
+}
+
 
 UProjectileMovementComponent* ASlimeProjectile::GetProjectileMovementComponent()
 {
