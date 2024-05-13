@@ -75,7 +75,7 @@ void AAlternativeFireMode::FireWeapon()
 
 	FVector ViewportCenter(GetLocation().X * 0.5f, GetLocation().Y * 0.5f, 0.0f);
 	
-	TempMove->AddForce((Super::GetLocation() + Super::GetRotation().Vector() * 200000));
+	TempMove->AddForce((Super::GetLocation() + Super::GetRotation().Vector() * 400000));
 	
 	Slime->SetProjectileMovementComponent(TempMove);
 	
