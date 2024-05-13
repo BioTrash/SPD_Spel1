@@ -3,6 +3,7 @@
 
 #include "NonProjectileWeapon.h"
 
+#include "ShooterEnemy.h"
 #include "Components/SphereComponent.h"
 #include "Engine/DamageEvents.h"
 
@@ -39,9 +40,19 @@ void ANonProjectileWeapon::Shoot()
 	if(GetWorld()->LineTraceSingleByChannel(Hit, Super::GetLocation(), End, ECC_GameTraceChannel2, Params))
 	{
 		AActor* HitActor = Hit.GetActor();
+
+		//Check if Hit actor is a Shooter, if so, log the hit bone and impulse direction (Used for ragdoll) [Louis]
+		AShooterEnemy* EnemyShooter = Cast<AShooterEnemy>(HitActor);
+		if (EnemyShooter)
+		{
+			FName BoneName = Hit.BoneName;
+			USkeletalMeshComponent* SkeletalMesh = Cast<USkeletalMeshComponent>(HitActor->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
+			FVector ImpulseDirection = SkeletalMesh->GetCenterOfMass() - Hit.Location;
+			ImpulseDirection.Normalize();
+			EnemyShooter->SetHitInformation(BoneName, ImpulseDirection);
+		}
 		TArray<USphereComponent*> SphereComponents;
 		HitActor->GetComponents<USphereComponent>(SphereComponents);
-
 		for (USphereComponent* SphereComponent : SphereComponents)
 		{
 			if (SphereComponent->ComponentHasTag("Headshot"))

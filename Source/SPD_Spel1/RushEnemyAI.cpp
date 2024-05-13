@@ -7,7 +7,7 @@ struct FDamageEvent;
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
 #include "NiagaraFunctionLibrary.h"
-#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/DamageType.h"
 
 ARushEnemyAI::ARushEnemyAI()
 {
@@ -51,8 +51,7 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 
 		for (AActor* Actor : OverlappingActors)
 		{
-			APlayerCharacter* Player = Cast<APlayerCharacter>(Actor);
-			if (Player)
+			if (APlayerCharacter* Player = Cast<APlayerCharacter>(Actor))
 			{
 				float DistanceToPlayer = FVector::Distance(ExplosionLocation, Player->GetActorLocation());
 				float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
@@ -81,31 +80,14 @@ void ARushEnemyAI::PerformLineTrace()
 	FHitResult HitResult;
 	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this); 
-    
-	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params);
-
-	if (bHit)
+	
+	if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params))
 	{
-		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
-		if (Player)
+		if (APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor()))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("DEN EXPLODERAR >:)"));
 			Explode(30, true);
-		}else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Den missade :O"));
 		}
 	}
-}
-
-void ARushEnemyAI::KillEnemy()
-{
-	UE_LOG(LogTemp, Warning, TEXT("ENEMY SHOULD DIE"));
-
-	OnEnemyDeathDelegate.Broadcast();
-	Health = 0;
-	OnEnemyDeath();
-	Destroy();
 }
 
 float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -114,16 +96,6 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
-	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
-
-	//Lägga till knockback(Hanna)
-	if(DamageToMake > 0 && GetCharacterMovement())
-	{
-		FVector KnockbackDirection = GetActorLocation() - DamageCauser->GetActorLocation();
-		KnockbackDirection.Normalize();
-		FVector KnockbackForce = KnockbackDirection * Knockback;
-		GetCharacterMovement()->AddImpulse(KnockbackForce, true);
-	}
 	return DamageToMake;
 }
 bool ARushEnemyAI::GetIsLaunchingAnimation()
