@@ -89,11 +89,7 @@ void ARushEnemyAI::PerformLineTrace()
 		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
 		if (Player)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("DEN EXPLODERAR >:)"));
 			Explode(30, true);
-		}else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Den missade :O"));
 		}
 	}
 }
@@ -115,15 +111,7 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
 	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
-
-	//Lägga till knockback(Hanna)
-	if(DamageToMake > 0 && GetCharacterMovement())
-	{
-		FVector KnockbackDirection = GetActorLocation() - DamageCauser->GetActorLocation();
-		KnockbackDirection.Normalize();
-		FVector KnockbackForce = KnockbackDirection * Knockback;
-		GetCharacterMovement()->AddImpulse(KnockbackForce, true);
-	}
+	
 	return DamageToMake;
 }
 bool ARushEnemyAI::GetIsLaunchingAnimation()
