@@ -38,34 +38,28 @@ void ASpel1PlayerController::Tick(float DeltaTime)
 
 	if (PlayerCharacter)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayeCharacter"));
 		AWeaponBase* TriggerWeapon = PlayerCharacter->GetTriggerWeapon();
 
 		if (TriggerWeapon)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("TriggerWeapon"));
 			ANonProjectileWeapon* NonProjectileWeapon = Cast<ANonProjectileWeapon>(TriggerWeapon);
 
 			if (NonProjectileWeapon)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("NonProjectileWeapon"));
 				AAlternativeFireMode* AlternativeFireMode = Cast<AAlternativeFireMode>(NonProjectileWeapon);
 				
 				if (AlternativeFireMode)
 				{
-					UE_LOG(LogTemp, Warning, TEXT("AlternativeFireMode"));
 					if(AlternativeFireMode->bAlternativeFireTimerActive)
 					{
 						if(TimerActivate)
 						{
 							TimerActivate = false;
-							UE_LOG(LogTemp, Warning, TEXT("bAlternativeFireTimerActive"));
 							GetWorld()->GetTimerManager().SetTimer(ChargeSlimeTimer, this, &ASpel1PlayerController::SlimeChargeProgress, 0.001f, true, 0.0f);
 						}
 					}
 					else
 					{
-						UE_LOG(LogTemp, Warning, TEXT("ClearTimer"));
 						TimerActivate = true;
 						ChargeTimePassed = 0;
 						SlimeChargeProgress();
@@ -98,10 +92,8 @@ void ASpel1PlayerController::SlimeChargeProgress()
 	ChargeTimePassed += 2;
 	
 	float SlimeChargePercentage = FMath::Clamp((float)ChargeTimePassed / 2000.0f, 0.0f, 1.0f);
-	UE_LOG(LogTemp, Warning, TEXT("SlimeChargeProgress"));
 	if (UProgressBar* SlimeChargeBar = SlimeCharge->WidgetTree->FindWidget<UProgressBar>(TEXT("SlimeChargeBar")))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("SlimeChargeBar REACHED"));
 		SlimeChargeBar->SetPercent(SlimeChargePercentage);
 	}
 }

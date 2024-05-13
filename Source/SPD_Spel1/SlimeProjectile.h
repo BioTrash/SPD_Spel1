@@ -23,6 +23,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void Explode();
 	void SetDamage(float NewDamage) { Damage = NewDamage; }
 	
 	UProjectileMovementComponent* GetProjectileMovementComponent();
@@ -30,10 +31,18 @@ public:
 
 
 private:
+	UPROPERTY()
+	class APlayerCharacter* Player;
+
+	UPROPERTY(EditAnywhere)
+	float SlimeDamageRadius;
+	
 	UPROPERTY(EditAnywhere)
 	float Damage;
 	UPROPERTY(EditDefaultsOnly, Category="Weaponry")
 	UStaticMeshComponent* ProjectileMesh;
+	UPROPERTY(EditAnywhere, Category="Weaponry")
+	class UNiagaraSystem* ExplosionEffect;
 
 	// Sound like a custom component but is a part of Unreal, settings for it are found under any Projectile BlueprintEditor (Rufus)
 	UPROPERTY(VisibleAnywhere, Category="Weaponry")
