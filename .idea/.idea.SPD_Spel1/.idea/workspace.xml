@@ -11,17 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Boss_Test/A/54/66F061IAR89Q9S499BCWWR.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_SlimePickUp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_SlimePickUp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_BossHealth.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Widgets/WBP_BossHealth.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level_1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Boss_Test/E/3P/PJ8W7QUE8PJ79RW79XVEO1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;HannasBranch&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RufusExtraordinaire&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -243,6 +241,7 @@
       <workItem from="1715254831492" duration="140000" />
       <workItem from="1715270592790" duration="819000" />
       <workItem from="1715271447958" duration="3649000" />
+      <workItem from="1715592018798" duration="239000" />
     </task>
     <servers />
   </component>
