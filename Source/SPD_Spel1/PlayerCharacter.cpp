@@ -98,8 +98,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis(TEXT("RightLeftMove"), this, &APlayerCharacter::RightLeftMove);
 
 	//Pitch is inverted, i.e. looking up is -1 and looking down is +1 (Rufus)
-	PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APlayerCharacter::CameraVertical);
+	PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APlayerCharacter::CameraHorizontal);
 	
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
@@ -167,6 +167,18 @@ void APlayerCharacter::RightLeftMove(float AxisValue)
 	AddMovementInput(GetActorRightVector() * AxisValue);
 }
 
+void APlayerCharacter::CameraHorizontal(float AxisValue)
+{
+	AddControllerYawInput(AxisValue * HorizontalMod);
+}
+
+void APlayerCharacter::CameraVertical(float AxisValue)
+{
+	AddControllerPitchInput(AxisValue * VerticalMod);
+}
+
+
+
 void APlayerCharacter::SwapWeapon()
 {
 	if(!CurrentWeaponArray.IsEmpty())
@@ -197,31 +209,31 @@ void APlayerCharacter::Dash()
 	{
 		if (GetCharacterMovement())
 		{
-			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
-			if (PlayerVelocity.SizeSquared() > FMath::Square(0.1f))
+			//creates a vector where the players last input of movement with WASD is stored. 
+			const FVector DashDirection = this->GetCharacterMovement()->GetLastInputVector();
+			//checking if the velocity of the player is not zero.
+			if(GetCharacterMovement()->Velocity != FVector::ZeroVector)
 			{
-				FVector DashDirection = PlayerVelocity.GetSafeNormal() * DashForce;
-
-				//apply slide velocity to the character
-				GetCharacterMovement()->Launch(DashDirection);
-				
+				LaunchCharacter(DashDirection * DashDistance * DashForce, true, true);
 			}
-				//checks if the character is grounded
-				bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
-
-				if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
-				{
-					FVector DashDirectionForward = GetActorForwardVector();
-					DashDirectionForward.Normalize();
-					FVector DashForceVector = DashDirectionForward * DashForce;
+			
+			//checks if the character is grounded
+			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
+			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
+			//if the character doesn't have any speed || is grounded and is not moving in the x and y axis. if true, I will get the forward vector and dash forward.
+			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
+			{
+				FVector DashDirectionForward = GetActorForwardVector();
+				DashDirectionForward.Normalize();
+				FVector DashForceVector = DashDirectionForward * DashForce;
 				
-					//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
-					float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
+				//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
+				float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
 
-					//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
-					GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
-					LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
-				}
+				//apply dash to the character. Depending on if its grounded or not it will have different speeds (can tweak the speed)
+				GetCharacterMovement()->Launch(DashForceVector * LaunchMultiplier);
+				LaunchCharacter(DashForceVector * LaunchMultiplier, false, true);
+			}
 
 			FTimerHandle TimerForDashUp;
 			GetWorldTimerManager().SetTimer(TimerForDashUp, this, &APlayerCharacter::DashUp, DashDelay, false);
@@ -317,13 +329,20 @@ void APlayerCharacter::StopSlide()
 //method for making damage to a character (Rebecka)
 float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	if(bIsDashing)
+	{
+		return 0.0f;
+	}
+	
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
+
 	//log to see how much health is left
 	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
+
 }
 
 float APlayerCharacter::GetHealthPercent() const

@@ -28,6 +28,12 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float Health;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HorizontalMod = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float VerticalMod = 1.0f;
+
 	UFUNCTION(BlueprintCallable)
 	void Dash();
 	UFUNCTION(BlueprintCallable)
@@ -72,6 +78,10 @@ private:
 	// Controls right and left movement (Rufus)
 	void RightLeftMove(float AxisValue);
 
+	void CameraVertical(float AxisValue);
+	
+	void CameraHorizontal(float AxisValue);
+
 	// Controls weapon swapping (Rufus)
 	void SwapWeapon();
 	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
@@ -110,10 +120,13 @@ private:
 	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
 	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
-	float AirDashMultiplier = 0.5;
+	float AirDashMultiplier = 0.6;
 	//handles the timer for the dash (Rebecka)
 	FTimerHandle DashTimerHandle;
 	float DashDelay = 0.01f;
+	UPROPERTY(EditAnywhere, Category="Dash")
+	//the distance i want to dash (Rebecka)
+	float DashDistance = 1.0f;
 	
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* FPSCamera;
