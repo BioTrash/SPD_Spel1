@@ -52,10 +52,10 @@ void ANonProjectileWeapon::Shoot()
 				
 				if (HitToCenter.SizeSquared() <= FMath::Square(SphereComponent->GetScaledSphereRadius()))
 				{
-				FString ComponentName = SphereComponent->GetName();
-				Damage += 20.0f;
-				UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
-				DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
+					FString ComponentName = SphereComponent->GetName();
+					Damage += 20.0f;
+					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
+					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
 				}
 			}
 		}
@@ -76,7 +76,7 @@ void ANonProjectileWeapon::Shoot()
  				FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
  				HitActorHeadshot->TakeDamage(Damage, DamageEvent, Super::GetOwnerController(), this);
  				Super::WhenShot();
- 				Damage = 10;
+ 				Damage = OriginalDamage;
  			}
 
 	
