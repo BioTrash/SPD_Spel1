@@ -43,6 +43,24 @@ private:
 
 	UPROPERTY()
 	UStaticMeshComponent* PawnMesh;
+
+	UPROPERTY()
+	UStaticMeshComponent* SlamMesh;
+
+	UPROPERTY()
+	FVector StartScale;
+	
+	UPROPERTY()
+	FVector EndScale;
+
+	UPROPERTY()
+	float Alpha = 0.0f;
+
+	UPROPERTY()
+	float InterpolationSpeed = 0.5f;
+
+	UPROPERTY()
+	float SlamDamage;
 	
 	UPROPERTY(EditAnywhere, Category="Turret")
 	class APawn* Player;
@@ -108,5 +126,8 @@ private:
 
 	UFUNCTION()
 	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	
 };
