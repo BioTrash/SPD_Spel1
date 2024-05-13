@@ -29,13 +29,10 @@ public:
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float JumpVelocity = 1500.0f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
 	float LaunchDistanceThreshold;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float AnticipationDelay = 2.0f;
+	float AnticipationDelay = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
 	float MinLaunchDistance = 300.0f;
@@ -46,18 +43,12 @@ private:
 	
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
-
-	UPROPERTY(EditAnywhere, Category = "AI")
-	float LandingDistance = 200.0f;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
 	float ExplosionDamage = 10.f;
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
-	float ExplosionRadius;
 
 	UPROPERTY(EditAnywhere, Category="Enemy")
 	class UNiagaraSystem* ExplosionEffect;
