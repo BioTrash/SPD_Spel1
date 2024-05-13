@@ -25,6 +25,8 @@ void ASlimeBossAI::Tick(float DeltaTime)
 	{
 		KillEnemy();
 	}
+
+	//UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
 }
 
 // Called to bind functionality to input
@@ -39,7 +41,7 @@ float ASlimeBossAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
     ActualDamage = FMath::Min(Health, ActualDamage);
     Health -= ActualDamage;
-    UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+    //UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
     return ActualDamage;
 }
 float ASlimeBossAI::GetHealth() const
@@ -59,7 +61,7 @@ float ASlimeBossAI::GetHealthPercentage() const
 
 void ASlimeBossAI::KillEnemy()
 {
-	UE_LOG(LogTemp, Warning, TEXT("BOSSEN DOG!!"));
+	//UE_LOG(LogTemp, Warning, TEXT("BOSSEN DOG!!"));
 	OnEnemyDeath();
 	Destroy();
 }
