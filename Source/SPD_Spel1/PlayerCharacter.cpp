@@ -98,8 +98,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis(TEXT("RightLeftMove"), this, &APlayerCharacter::RightLeftMove);
 
 	//Pitch is inverted, i.e. looking up is -1 and looking down is +1 (Rufus)
-	PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APlayerCharacter::CameraVertical);
+	PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APlayerCharacter::CameraHorizontal);
 	
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
@@ -166,6 +166,18 @@ void APlayerCharacter::RightLeftMove(float AxisValue)
 {
 	AddMovementInput(GetActorRightVector() * AxisValue);
 }
+
+void APlayerCharacter::CameraHorizontal(float AxisValue)
+{
+	AddControllerYawInput(AxisValue * HorizontalMod);
+}
+
+void APlayerCharacter::CameraVertical(float AxisValue)
+{
+	AddControllerPitchInput(AxisValue * VerticalMod);
+}
+
+
 
 void APlayerCharacter::SwapWeapon()
 {

@@ -10,6 +10,7 @@
 #include "EnemyCommunicationManager.h"
 
 #include "Weapon.h"
+#include "GameFramework/CharacterMovementComponent.h"
 //#include "EnemyWeapon.h"
 
 void AEnemyShooterAIController::BeginPlay()
@@ -84,6 +85,10 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             {
                 GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), false);
             }
+            if (Enemy->Health >= 30 && Enemy->Health < 50)
+            {
+                Enemy->GetCharacterMovement()->MaxWalkSpeed = 1000;
+            }
                 //EnemyWeapon->SetActorRotation(WeaponRotation);
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
@@ -93,7 +98,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                 FHitResult HitResult;
                 FCollisionQueryParams CollisionParams;
                 CollisionParams.AddIgnoredActor(Enemy);
-
                 // Perform a line trace to check if there's a clear line of sight to the player (Louis)
                 if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
                 {
@@ -159,6 +163,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
         }
 }
+
 
 void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 {

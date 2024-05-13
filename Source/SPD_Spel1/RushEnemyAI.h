@@ -14,18 +14,12 @@ class SPD_SPEL1_API ARushEnemyAI : public ACharacter
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
 	ARushEnemyAI();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	float Knockback = 400.0f;
-
 public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	void Explode(float Damage, bool bCollisionTriggered);
@@ -35,8 +29,7 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Enemy")
 	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
 	
-	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
-	void KillEnemy();
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 20.f;

@@ -1,5 +1,6 @@
 #include "ShooterEnemy.h"
 #include "ProjectileWeapon.h"
+#include "Components/PointLightComponent.h"
 #include "EnemyShooterAIController.h"
 #include "Weapon.h"
 
@@ -17,7 +18,7 @@ void AShooterEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
-
+	isAlive = true;
 	if (BP_EnemyWeaponClass)
 	{
 		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
@@ -48,13 +49,11 @@ void AShooterEnemy::BeginPlay()
 void AShooterEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if(Health <= 0)
+	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
 		KillEnemy();
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Shot: %hhd"), isShooting)
-
 }
 
 // Called to bind functionality to input
@@ -77,9 +76,27 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 void AShooterEnemy::KillEnemy()
 {
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	
+	SetRagdollPhysics();
 	OnEnemyDeath();
-	Destroy();
+	isAlive = false;
+	TriggerWeapon->SetActorTickEnabled(false);
+	TriggerWeapon->SetOwner(nullptr);
+	SetActorTickEnabled(false);
+	
+	AAIController* EnemyAIController = Cast<AAIController>(GetController());
+	if (EnemyAIController)
+	{
+		EnemyAIController->StopMovement();
+		EnemyAIController->UnPossess();
+		EnemyAIController->Destroy();
+		//EnemyAIController->SetControlledPawn(nullptr);
+	}
+	UPointLightComponent* PointLightComponent = FindComponentByClass<UPointLightComponent>();
+	if (PointLightComponent)
+	{
+		PointLightComponent->DestroyComponent();
+	}
+	//Destroy();
 }
 
 UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
@@ -88,7 +105,33 @@ UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
 	return FindComponentByClass<UStaticMeshComponent>();
 }
 
+void AShooterEnemy::SetRagdollPhysics()
+{
+	// Assuming SkeletalMeshComponent is the name of your skeletal mesh component
+	USkeletalMeshComponent* SkeletalMesh = GetMesh();
+	if (SkeletalMesh)
+	{
+		// Set collision presets to ragdoll
+		SkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+		SkeletalMesh->SetCollisionProfileName(TEXT("Ragdoll"));
+
+		// Enable physics simulation for each bone
+		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
+		SkeletalMesh->WakeAllRigidBodies();
+		
+		float ImpulseStrength = 5000;
+		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
+	}
+}
+
 bool AShooterEnemy::getIsShooting()
 {
 	return isShooting;
+}
+
+void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)
+{
+	HitBoneName = BoneName;
+	HitDirection = Direction;
+
 }

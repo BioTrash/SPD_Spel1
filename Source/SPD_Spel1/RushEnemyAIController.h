@@ -17,8 +17,8 @@ class SPD_SPEL1_API ARushEnemyAIController : public AAIController
 public:
 
 	ARushEnemyAIController();
-	virtual void Tick(float DeltaSeconds) override;
 	void BeginPlay();
+	virtual void Tick(float DeltaSeconds) override;
 	void LaunchTowardsPlayer();
 	void ExplodeAfterLaunch();
 	
