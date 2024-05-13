@@ -39,13 +39,19 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 	{
 		return;
 	}
-	
+
 	FVector PlayerLocation = PlayerPawn->GetActorLocation();
-	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
+	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation); 
+
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-
 	bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
+	if (bIsLaunching && bHasLaunched)
+	{
+		bHasLaunched = false;
+		GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
+	}
+
 	if (bIsLaunching && !bHasLaunched)
 	{
 		LaunchTowardsPlayer();
@@ -69,17 +75,11 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 				GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), true);
 			}
 		}
-    }
+	}
 }
 
 void ARushEnemyAIController::LaunchTowardsPlayer()
 {
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	if (!PlayerPawn)
-	{
-		return;
-	}
-
 	FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
