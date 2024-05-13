@@ -5,7 +5,7 @@ TWeakObjectPtr<UEnemyCommunicationManager> UEnemyCommunicationManager::Singleton
 UEnemyCommunicationManager::UEnemyCommunicationManager()
 {
 	PlayerLocation = FVector::ZeroVector;
-	UE_LOG(LogTemp, Error, TEXT("COMMUNICATION MANAGER ACTIVE"));
+	//UE_LOG(LogTemp, Error, TEXT("COMMUNICATION MANAGER ACTIVE"));
 }
 
 UEnemyCommunicationManager* UEnemyCommunicationManager::GetInstance()

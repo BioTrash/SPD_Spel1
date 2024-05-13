@@ -7,6 +7,7 @@ struct FDamageEvent;
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
 #include "NiagaraFunctionLibrary.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 ARushEnemyAI::ARushEnemyAI()
 {
@@ -29,7 +30,7 @@ void ARushEnemyAI::Tick(float DeltaTime)
 	}
 	if(Health <= 0 && !bHasExploded)
 	{
-		Explode(10.f, true);
+		Explode(30.f, true);
 		bHasExploded = true;
 	}
 }
@@ -114,6 +115,15 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
 	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+
+	//Lägga till knockback(Hanna)
+	if(DamageToMake > 0 && GetCharacterMovement())
+	{
+		FVector KnockbackDirection = GetActorLocation() - DamageCauser->GetActorLocation();
+		KnockbackDirection.Normalize();
+		FVector KnockbackForce = KnockbackDirection * Knockback;
+		GetCharacterMovement()->AddImpulse(KnockbackForce, true);
+	}
 	return DamageToMake;
 }
 bool ARushEnemyAI::GetIsLaunchingAnimation()
