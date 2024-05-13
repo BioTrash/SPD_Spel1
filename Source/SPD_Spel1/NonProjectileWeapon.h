@@ -46,6 +46,9 @@ private:
 	
 	UPROPERTY(EditAnywhere)
 	float Damage = 10.0f;
+
+	float OriginalDamage = Damage;
+	
 	UPROPERTY(EditAnywhere)
 	float MaxShootingRange = 10000;
 	
