@@ -21,6 +21,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	float Knockback = 400.0f;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -36,7 +39,7 @@ public:
 	void KillEnemy();
 
 	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 40.f;
+	float MaxHealth = 20.f;
 
 	UPROPERTY(VisibleAnywhere)
 	float Health;
