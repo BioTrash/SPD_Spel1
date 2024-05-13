@@ -25,10 +25,16 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	bool isAlive;
 	
 	void KillEnemy();
 
 	float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser);
+
+	void SetRagdollPhysics();
+
+	void SetHitInformation(FName BoneName, FVector Direction);
 
 	UPROPERTY(Blueprintable, EditAnywhere)
 	bool isShooting;
@@ -50,8 +56,13 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "Mesh")
 	UStaticMeshComponent* GetStaticMeshComponent() const;
-
+	
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
+
+private:
+
+	FName HitBoneName;
+	FVector HitDirection;
 
 };
