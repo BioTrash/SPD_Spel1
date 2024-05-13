@@ -84,12 +84,10 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
 
-	float LaunchSpeed = 800.f;
-	float JumpHeight = 600.f;
-
-	ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn());
-	if (EnemyCharacter)
+	float LaunchSpeed = 1000.f;
+	if (ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn()))
 	{
+		float JumpHeight = 600.f;
 		EnemyCharacter->LaunchCharacter(LaunchDirection * LaunchSpeed + FVector::UpVector * JumpHeight, true, true);
 	}
 
@@ -106,7 +104,6 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 }
 void ARushEnemyAIController::ExplodeAfterLaunch()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Det går bra här"));
 	ARushEnemyAI* RushEnemy = Cast<ARushEnemyAI>(GetPawn());
 	if (RushEnemy && !RushEnemy->bHasExploded)
 	{
@@ -114,7 +111,6 @@ void ARushEnemyAIController::ExplodeAfterLaunch()
 		FVector ExplosionLocation = RushEnemy->GetActorLocation();
 		if (ExplosionEffect)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Explosion?"));
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
 		}
 	}
