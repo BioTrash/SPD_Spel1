@@ -28,6 +28,12 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float Health;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HorizontalMod = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float VerticalMod = 1.0f;
+
 	UFUNCTION(BlueprintCallable)
 	void Dash();
 	UFUNCTION(BlueprintCallable)
@@ -71,6 +77,10 @@ private:
 	void FrontBackMove(float AxisValue);
 	// Controls right and left movement (Rufus)
 	void RightLeftMove(float AxisValue);
+
+	void CameraVertical(float AxisValue);
+	
+	void CameraHorizontal(float AxisValue);
 
 	// Controls weapon swapping (Rufus)
 	void SwapWeapon();
