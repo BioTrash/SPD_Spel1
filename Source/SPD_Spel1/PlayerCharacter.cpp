@@ -208,7 +208,7 @@ void APlayerCharacter::Dash()
 			//checks if the character is grounded
 			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
-			//if the character doesnt have any speed || is grounded and is not moving in the x and y axis. if true, I will get the forward vector and dash forward.
+			//if the character doesn't have any speed || is grounded and is not moving in the x and y axis. if true, I will get the forward vector and dash forward.
 			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
 			{
 				FVector DashDirectionForward = GetActorForwardVector();
@@ -317,13 +317,20 @@ void APlayerCharacter::StopSlide()
 //method for making damage to a character (Rebecka)
 float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	if(bIsDashing)
+	{
+		return 0.0f;
+	}
+	
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
+
 	//log to see how much health is left
 	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
+
 }
 
 float APlayerCharacter::GetHealthPercent() const
