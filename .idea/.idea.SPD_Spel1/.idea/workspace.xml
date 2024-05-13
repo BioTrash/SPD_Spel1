@@ -11,15 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Room_5_Light_Scene.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Spawnzone_4.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level_1.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/AlternativeFireMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,31 +48,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;C++ Project.SPD_Spel1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;RufusExtraordinaire&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;UnrealLinkOptionsId&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "C++ Project.SPD_Spel1.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "RebeckaBranchNEW",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "UnrealLinkOptionsId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\guerp\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\guerp\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\guerp\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C++ Project.SPD_Spel1">
     <configuration name="SPD_Spel1" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -242,6 +235,7 @@
       <workItem from="1715270592790" duration="819000" />
       <workItem from="1715271447958" duration="3649000" />
       <workItem from="1715592018798" duration="239000" />
+      <workItem from="1715600660722" duration="311000" />
     </task>
     <servers />
   </component>
