@@ -70,7 +70,11 @@ void ARushEnemyAIController::Tick(float DeltaSeconds)
 		else
 		{
 			LaunchDistanceThreshold = FMath::RandRange(150.0f, 600.0f);
-			if (DistanceToPlayer <= LaunchDistanceThreshold)
+			FHitResult HitResult;
+			FCollisionQueryParams CollisionParams;
+			CollisionParams.AddIgnoredActor(GetPawn()); 
+			bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, EnemyLocation, PlayerLocation, ECC_Visibility, CollisionParams);
+			if (!bHit && (DistanceToPlayer <= LaunchDistanceThreshold))
 			{
 				GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), true);
 			}
