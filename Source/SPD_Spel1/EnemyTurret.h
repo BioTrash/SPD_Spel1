@@ -45,9 +45,12 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 	
 	void Die();
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+	TSubclassOf<class AProjectile> ProjectileClass;
 	
 	float MaxTraceDistance = 300.f;
-	UPROPERTY(BlueprintReadWrite, Category="Components")
+	
+	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	USkeletalMeshComponent* TurretMesh;
 
 	bool IsShootingAnimation;
@@ -80,7 +83,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 
+	float ProjectileSpawnCooldown = 4.0f; 
+	float NextProjectileTime = 0.0f;
+	
 	void RotateTurret(FVector TargetLocation);
+	void ShootProjectiles();
 	void PerformLineTrace();
 	void ShootAgainCooldown();
 };

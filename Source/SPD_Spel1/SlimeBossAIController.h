@@ -34,6 +34,9 @@ public:
 	void SpawnEnemies();
 	void EndSlamAttack();
 	void ResetSlamAttack();
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 	
 protected:
 	
@@ -43,6 +46,24 @@ private:
 
 	UPROPERTY()
 	UStaticMeshComponent* PawnMesh;
+
+	UPROPERTY()
+	UStaticMeshComponent* SlamMesh;
+
+	UPROPERTY()
+	FVector StartScale;
+	
+	UPROPERTY()
+	FVector EndScale;
+
+	UPROPERTY()
+	float Alpha = 0.0f;
+
+	UPROPERTY()
+	float InterpolationSpeed = 0.5f;
+
+	UPROPERTY()
+	float SlamDamage;
 	
 	UPROPERTY(EditAnywhere, Category="Turret")
 	class APawn* Player;
@@ -85,6 +106,7 @@ private:
 	bool bIsSlamming;
 	bool bActivatePhaseTwo = true;
 	bool bShouldSpawnEnemies = false;
+	bool bSlamDealDamage = true;
 	
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;
@@ -108,5 +130,8 @@ private:
 
 	UFUNCTION()
 	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
+
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	
 };

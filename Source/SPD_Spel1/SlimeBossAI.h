@@ -47,11 +47,24 @@ public:
 	float Health;
 
 	UPROPERTY(EditAnywhere)
+	float SlamDamage = 10;
+
+	UPROPERTY(EditAnywhere)
 	TArray<AEnemySpawnpoint*> SpawnPointsArray;
 
+	UPROPERTY(EditAnywhere)
+	FVector StartScale;
+	
+	UPROPERTY(EditAnywhere)
+	FVector EndScale;
+	
 private:
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
+	
+
+	
 
 };
