@@ -28,10 +28,15 @@
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/Boss.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Boss.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mesh/Torus.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mesh/Torus.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" afterDir="false" />
@@ -262,6 +267,7 @@
       <workItem from="1715601705755" duration="2928000" />
       <workItem from="1715675002035" duration="484000" />
       <workItem from="1715675502072" duration="642000" />
+      <workItem from="1715676972816" duration="4358000" />
     </task>
     <servers />
   </component>

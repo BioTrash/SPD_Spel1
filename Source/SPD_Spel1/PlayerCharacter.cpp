@@ -84,6 +84,14 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	/* JEREMY
+	// GÖR SÅ SPELAREN RÖR PÅ SIG KONSTANT FÖR SLAM MESHENS COLLISION.
+	UTAN DETTA SÅ FUNKAR INTE SLAMMEN RÄTT.
+	*/
+	FVector CurrentLocation = GetActorLocation();
+	SetActorLocation(CurrentLocation + 0.0000001f);
+	SetActorLocation(CurrentLocation - 0.0000001f);
+
 }
 
 // Called to bind functionality to input

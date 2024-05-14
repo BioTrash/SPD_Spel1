@@ -34,6 +34,9 @@ public:
 	void SpawnEnemies();
 	void EndSlamAttack();
 	void ResetSlamAttack();
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 	
 protected:
 	
@@ -103,6 +106,7 @@ private:
 	bool bIsSlamming;
 	bool bActivatePhaseTwo = true;
 	bool bShouldSpawnEnemies = false;
+	bool bSlamDealDamage = true;
 	
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;

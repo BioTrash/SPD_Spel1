@@ -77,22 +77,12 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 	// JEREMY 
 	if(bIsSlamming)
 	{
-		// Increment interpolation alpha
 		Alpha += DeltaSeconds * InterpolationSpeed;
-
-		// Clamp alpha between 0 and 1
 		Alpha = FMath::Clamp(Alpha, 0.0f, 1.0f);
-
-		// Interpolate scale
 		FVector CurrentScale = FMath::Lerp(StartScale, EndScale, Alpha);
-
-		// Set the scale
 		SlamMesh->SetRelativeScale3D(CurrentScale);
-
-		// If interpolation is complete, you may want to reset Alpha or take other actions
 		if (Alpha >= 1.0f)
 		{
-			// Interpolation complete
 			Alpha = 0.0f;
 		}
 	}
@@ -250,7 +240,7 @@ void ASlimeBossAIController::BossPhaseThree()
 		LastSlamTime = 0;
 		ResetSlamAttack();
 		SlamAttack();
-		SpawnEnemies();
+		//SpawnEnemies();
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
@@ -282,13 +272,14 @@ void ASlimeBossAIController::SlamAttack()
 		{
 			SlamEffect->Activate();
 		}
-		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	
 		// JEREMY Show slam mesh and activate its collision for slam attack.
-		SlamMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-		SlamMesh->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
+		//SlamMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		//SlamMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
+		//SlamMesh->SetCollisionObjectType(TraceChannel);
 		SlamMesh->SetHiddenInGame(false);
 		
 	}
@@ -296,6 +287,7 @@ void ASlimeBossAIController::SlamAttack()
 void ASlimeBossAIController::EndSlamAttack()
 {
 	bIsSlamming = false;
+	bSlamDealDamage = true;
 	//UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
 	if (Boss)
 	{
@@ -306,8 +298,9 @@ void ASlimeBossAIController::EndSlamAttack()
 	
 	// JEREMY Reset slam mesh
 	SlamMesh->SetRelativeScale3D(StartScale);
-	SlamMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	//SlamMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	SlamMesh->SetHiddenInGame(true);
+	
 }
 void ASlimeBossAIController::ResetSlamAttack()
 {
@@ -334,10 +327,11 @@ void ASlimeBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraC
 void ASlimeBossAIController::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(OtherActor);
-	if (PlayerCharacter)
+	if (PlayerCharacter && bSlamDealDamage)
 	{
 		PlayerCharacter->TakeDamage(SlamDamage, FDamageEvent(), nullptr, this);
+		UE_LOG(LogTemp, Warning, TEXT("TRÄFFAD AV SLAM!"));
+		bSlamDealDamage = false;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("TRÄFFAD AV SLAM!"));
 }
 
