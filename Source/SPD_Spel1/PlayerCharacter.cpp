@@ -88,8 +88,8 @@ void APlayerCharacter::Tick(float DeltaTime)
 	UTAN DETTA SÅ FUNKAR INTE SLAMMEN RÄTT.
 	*/
 	FVector CurrentLocation = GetActorLocation();
-	SetActorLocation(CurrentLocation + 0.00001f);
-	SetActorLocation(CurrentLocation - 0.00001f);
+	SetActorLocation(FVector(CurrentLocation.X + 0.001f, CurrentLocation.Y, CurrentLocation.Z));
+	SetActorLocation(FVector(CurrentLocation.X - 0.001f, CurrentLocation.Y, CurrentLocation.Z));
 
 }
 
