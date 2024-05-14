@@ -259,7 +259,7 @@ void ASlimeBossAIController::SlamAttack()
 		OriginalLocation = Boss->GetActorLocation();
 		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
 		Boss->SetActorLocation(GroundLocation);
-		
+		/*
 		TArray<AActor*> OverlappingActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
 		for (AActor* Actor : OverlappingActors)
@@ -271,6 +271,7 @@ void ASlimeBossAIController::SlamAttack()
 			float Damage = FMath::Clamp(MaxDamage * (1 - (Distance / DamageRange)), MinDamage, MaxDamage);
 			
 		}
+		*/
 		//UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
 		// Spela slam effekt.
 		if(SlamEffect)
