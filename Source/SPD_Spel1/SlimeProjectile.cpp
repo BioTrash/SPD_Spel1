@@ -20,8 +20,8 @@ ASlimeProjectile::ASlimeProjectile()
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
 
 	// Default values, can simply be changed in BlueprintEditor, in ProjectileMovementComponent. Will Default back to this on every build(?), may need to be deleted. (Rufus)
-	ProjectileMovementComponent->MaxSpeed = 1300;
-	ProjectileMovementComponent->InitialSpeed = 1300;
+	//ProjectileMovementComponent->MaxSpeed = 1300;
+	//ProjectileMovementComponent->InitialSpeed = 1300;
 
 }
 

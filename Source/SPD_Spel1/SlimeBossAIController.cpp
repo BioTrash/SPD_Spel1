@@ -15,6 +15,7 @@
 ASlimeBossAIController::ASlimeBossAIController()
 {
 	OriginalLocation = FVector::ZeroVector;
+
 }
 
 void ASlimeBossAIController::BeginPlay()
@@ -36,14 +37,20 @@ void ASlimeBossAIController::BeginPlay()
 			ShootEffect = NiagaraComponent; 
 		}
 	}
+
 	
 	if (Boss)
 	{
 		PawnMesh = Boss->FindComponentByClass<UStaticMeshComponent>();
+		SlamMesh = Cast<UStaticMeshComponent>(Boss->FindComponentByTag(UStaticMeshComponent::StaticClass(), TEXT("SlamMesh")));
+		SlamMesh->OnComponentBeginOverlap.AddDynamic(this, &ASlimeBossAIController::OnOverlapBegin);
 		ProjectileSpawn = Boss->FindComponentByClass<USceneComponent>();
+		StartScale = Boss->StartScale;
+		EndScale = Boss->EndScale;
+		SlamDamage = Boss->SlamDamage;
 		if (ProjectileSpawn)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("SPAWN FOUND" ));
+			//UE_LOG(LogTemp, Warning, TEXT("SPAWN FOUND" ));
 		}
 	}
 	//Sätter dens olika behaviors i Beginplay från behaviortree och blackboard
@@ -68,20 +75,33 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 	LastShotTime += DeltaSeconds;
 	LastSlamTime += DeltaSeconds;
 	LastSpawnTime += DeltaSeconds;
-
-	UE_LOG(LogTemp, Warning, TEXT("LastSlamTime  %f"), LastSlamTime);
+	
+	// JEREMY 
+	if(bIsSlamming)
+	{
+		Alpha += DeltaSeconds * InterpolationSpeed;
+		Alpha = FMath::Clamp(Alpha, 0.0f, 1.0f);
+		FVector CurrentScale = FMath::Lerp(StartScale, EndScale, Alpha);
+		SlamMesh->SetRelativeScale3D(CurrentScale);
+		if (Alpha >= 1.0f)
+		{
+			Alpha = 0.0f;
+		}
+	}
+	// JEREMY SLUT
+	
+	//UE_LOG(LogTemp, Warning, TEXT("LastSlamTime  %f"), LastSlamTime);
 
 	SetFocus(Player);
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
 
-	if (Player)
+if (Player)
 	{
 		FVector PlayerLocation = Player->GetActorLocation();
 		RotateHead(PlayerLocation);
 	}
 	UpdateBossPhase();
 }
-
 void ASlimeBossAIController::Shoot()
 {
 	//Louis gjorde denna jag optimerade den och gjorde det till en egen metod
@@ -142,12 +162,12 @@ void ASlimeBossAIController::UpdateBossPhase()
 		float MaxHealth = SlimeBoss->MaxHealth;
 		if (Health <= MaxHealth && Health > (MaxHealth - MaxHealth/3))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
+			//UE_LOG(LogTemp, Warning, TEXT("nu börjar phase one"));
 			BossPhaseOne();
 		}
 		else if (Health <= (MaxHealth - MaxHealth/3) && Health > MaxHealth/3)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
+			//UE_LOG(LogTemp, Warning, TEXT("nu börjar phase two"));
 			if(bActivatePhaseTwo)
 			{
 				bShouldSpawnEnemies = true;
@@ -157,7 +177,7 @@ void ASlimeBossAIController::UpdateBossPhase()
 		}
 		else if (Health <= MaxHealth/3)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("nu börjar phase three"));
+			//UE_LOG(LogTemp, Warning, TEXT("nu börjar phase three"));
 			BossPhaseThree();
 		}
 	}
@@ -221,7 +241,7 @@ void ASlimeBossAIController::BossPhaseThree()
 		LastSlamTime = 0;
 		ResetSlamAttack();
 		SlamAttack();
-		SpawnEnemies();
+		//SpawnEnemies();
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
@@ -229,13 +249,17 @@ void ASlimeBossAIController::SlamAttack()
 {
 	//Hanna
 	//slamattacken
+	if(Boss)
+	{
+		Boss->SetShield(true);
+	}
 	if(!bIsSlamming)
 	{
 		bIsSlamming = true;
 		OriginalLocation = Boss->GetActorLocation();
 		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
 		Boss->SetActorLocation(GroundLocation);
-		
+		/*
 		TArray<AActor*> OverlappingActors;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
 		for (AActor* Actor : OverlappingActors)
@@ -246,37 +270,48 @@ void ASlimeBossAIController::SlamAttack()
 			float DamageRange = DamageRadius; 
 			float Damage = FMath::Clamp(MaxDamage * (1 - (Distance / DamageRange)), MinDamage, MaxDamage);
 			
-			APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(Actor);
-			if (PlayerCharacter)
-			{
-				PlayerCharacter->TakeDamage(Damage, FDamageEvent(), nullptr, this);
-			}
 		}
-		UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
+		*/
+		//UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
 		// Spela slam effekt.
 		if(SlamEffect)
 		{
 			SlamEffect->Activate();
 		}
-		DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
+		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
+	
+		// JEREMY Show slam mesh and activate its collision for slam attack.
+		SlamMesh->SetHiddenInGame(false);
+		
 	}
 
 void ASlimeBossAIController::EndSlamAttack()
 {
+	if(Boss)
+	{
+		Boss->SetShield(false);
+	}
 	bIsSlamming = false;
+	bSlamDealDamage = true;
 	//UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
 	if (Boss)
 	{
 		Boss->SetActorLocation(OriginalLocation);
 	}
-	UE_LOG(LogTemp, Warning, TEXT("SlamCooldown: %f"), SlamCooldown);
+	//UE_LOG(LogTemp, Warning, TEXT("SlamCooldown: %f"), SlamCooldown);
 	GetWorldTimerManager().SetTimer(SlamCooldownTimerHandle, this, &ASlimeBossAIController::ResetSlamAttack, SlamCooldown, false);
+	
+	// JEREMY Reset slam mesh
+	SlamMesh->SetRelativeScale3D(StartScale);
+	SlamMesh->SetHiddenInGame(true);
+	Alpha = 0;
+	
 }
 void ASlimeBossAIController::ResetSlamAttack()
 {
-	UE_LOG(LogTemp, Warning, TEXT("LastSlamTime: %f"), LastSlamTime);
+	//UE_LOG(LogTemp, Warning, TEXT("LastSlamTime: %f"), LastSlamTime);
 	LastSlamTime = 0;
 }
 
@@ -295,4 +330,16 @@ void ASlimeBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraC
 {
  	Shoot();
 }
+
+void ASlimeBossAIController::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(OtherActor);
+	if (PlayerCharacter && bSlamDealDamage)
+	{
+		PlayerCharacter->TakeDamage(SlamDamage, FDamageEvent(), nullptr, this);
+		UE_LOG(LogTemp, Warning, TEXT("TRÄFFAD AV SLAM!"));
+		bSlamDealDamage = false;
+	}
+}
+
 
