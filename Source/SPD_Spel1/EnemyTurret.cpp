@@ -6,6 +6,7 @@
 #include "MathUtil.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/CapsuleComponent.h"
+#include "Projectile.h"
 #include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
@@ -85,24 +86,31 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
 }
+void AEnemyTurret::ShootProjectiles()
+{
+	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
+	{
+		if (ProjectileClass)
+		{
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.Instigator = GetInstigator();
+			FVector SpawnLocation = ProjectileSpawn->GetComponentLocation();
+			FRotator SpawnRotation = ProjectileSpawn->GetComponentRotation();
+			AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+			if (Projectile)
+			{
+				Projectile->SetOwner(this);
+			}
+		}
+		NextProjectileTime = GetWorld()->GetTimeSeconds() + ProjectileSpawnCooldown;
+	}
+}
+
 void AEnemyTurret::PerformLineTrace()
 {
-	FVector StartLocation = TurretMesh->GetComponentLocation(); 
-	FVector EndLocation = Player->GetActorLocation();
-
-	FHitResult HitResult;
-	FCollisionQueryParams Params;
-	Params.AddIgnoredActor(this); 
-
-	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, TraceChannel, Params);
-	DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, false, 0.1f, 0, 2);
-
-	if (bHit)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Nu ska jag skjuta!"));
-		IsShootingAnimation = true;
-		ShootEnemy(10.0f);
-	}
+	ShootEnemy(10.0f);
+	ShootProjectiles();
 }
 void AEnemyTurret::ShootEnemy(float Damage)
 {
