@@ -75,7 +75,7 @@ void AAlternativeFireMode::FireWeapon()
 	
 	// Limited by Projectile Component Max Movement Speed, editable in SlimeProjectile (Rufus)
 	// To change in what direction projectile flies change the muzzle point rotation, easiest in blueprints (Rufus)
-	TempMove->AddForce(GetMuzzlePoint()->GetComponentRotation().Vector() * 500000);
+	TempMove->AddForce(GetMuzzlePoint()->GetComponentRotation().Vector() * 600000);
 	
 	
 	Slime->SetProjectileMovementComponent(TempMove);
