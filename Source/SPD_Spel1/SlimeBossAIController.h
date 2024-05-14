@@ -43,7 +43,7 @@ protected:
 	FVector OriginalLocation;
 	
 private:
-
+	
 	UPROPERTY()
 	UStaticMeshComponent* PawnMesh;
 
@@ -58,7 +58,7 @@ private:
 
 	UPROPERTY()
 	float Alpha = 0.0f;
-
+	
 	UPROPERTY()
 	float InterpolationSpeed = 0.5f;
 
@@ -107,7 +107,7 @@ private:
 	bool bActivatePhaseTwo = true;
 	bool bShouldSpawnEnemies = false;
 	bool bSlamDealDamage = true;
-	
+
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;
 

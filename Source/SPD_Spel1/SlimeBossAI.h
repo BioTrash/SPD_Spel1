@@ -17,6 +17,9 @@ class SPD_SPEL1_API ASlimeBossAI : public APawn
 public:
 
 	ASlimeBossAI();
+	void SetShield(bool bIsShielded);
+	bool IsShielded() const;
+	void DisableShield();
 
 protected:
 
@@ -59,7 +62,10 @@ public:
 	FVector EndScale;
 	
 private:
-
+	
+	bool bShield;
+	FTimerHandle ShieldTimerHandle;
+	
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 

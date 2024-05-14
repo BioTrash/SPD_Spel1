@@ -15,6 +15,7 @@
 ASlimeBossAIController::ASlimeBossAIController()
 {
 	OriginalLocation = FVector::ZeroVector;
+
 }
 
 void ASlimeBossAIController::BeginPlay()
@@ -36,6 +37,7 @@ void ASlimeBossAIController::BeginPlay()
 			ShootEffect = NiagaraComponent; 
 		}
 	}
+
 	
 	if (Boss)
 	{
@@ -93,14 +95,13 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 	SetFocus(Player);
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
 
-	if (Player)
+if (Player)
 	{
 		FVector PlayerLocation = Player->GetActorLocation();
 		RotateHead(PlayerLocation);
 	}
 	UpdateBossPhase();
 }
-
 void ASlimeBossAIController::Shoot()
 {
 	//Louis gjorde denna jag optimerade den och gjorde det till en egen metod
@@ -248,6 +249,10 @@ void ASlimeBossAIController::SlamAttack()
 {
 	//Hanna
 	//slamattacken
+	if(Boss)
+	{
+		Boss->SetShield(true);
+	}
 	if(!bIsSlamming)
 	{
 		bIsSlamming = true;
@@ -286,6 +291,10 @@ void ASlimeBossAIController::SlamAttack()
 
 void ASlimeBossAIController::EndSlamAttack()
 {
+	if(Boss)
+	{
+		Boss->SetShield(false);
+	}
 	bIsSlamming = false;
 	bSlamDealDamage = true;
 	//UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
@@ -334,4 +343,5 @@ void ASlimeBossAIController::OnOverlapBegin(UPrimitiveComponent* OverlappedCompo
 		bSlamDealDamage = false;
 	}
 }
+
 
