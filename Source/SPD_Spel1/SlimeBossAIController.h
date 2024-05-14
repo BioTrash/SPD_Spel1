@@ -59,7 +59,7 @@ private:
 	UPROPERTY()
 	float Alpha = 0.0f;
 	
-	UPROPERTY()
+	UPROPERTY(EditAnywhere)
 	float InterpolationSpeed = 0.5f;
 
 	UPROPERTY()

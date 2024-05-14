@@ -283,9 +283,6 @@ void ASlimeBossAIController::SlamAttack()
 		}
 	
 		// JEREMY Show slam mesh and activate its collision for slam attack.
-		//SlamMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-		//SlamMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
-		//SlamMesh->SetCollisionObjectType(TraceChannel);
 		SlamMesh->SetHiddenInGame(false);
 		
 	}
@@ -308,8 +305,8 @@ void ASlimeBossAIController::EndSlamAttack()
 	
 	// JEREMY Reset slam mesh
 	SlamMesh->SetRelativeScale3D(StartScale);
-	//SlamMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	SlamMesh->SetHiddenInGame(true);
+	Alpha = 0;
 	
 }
 void ASlimeBossAIController::ResetSlamAttack()
