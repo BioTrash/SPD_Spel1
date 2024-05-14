@@ -40,9 +40,15 @@
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/.idea/.idea.Blueprints.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_Checkpoint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_DoorSpawnzone.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SaveGame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SaveGame.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_SpawnzoneEnemy.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_MainMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.uproject.DotSettings.user" afterDir="false" />
@@ -636,7 +642,7 @@
       <workItem from="1715676972816" duration="4358000" />
       <workItem from="1715686746156" duration="775000" />
       <workItem from="1715687552021" duration="206000" />
-      <workItem from="1715691976160" duration="238000" />
+      <workItem from="1715691976160" duration="861000" />
     </task>
     <servers />
   </component>
