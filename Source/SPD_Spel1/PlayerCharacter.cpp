@@ -8,7 +8,6 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Tasks/Task.h"
-#include <conio.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
