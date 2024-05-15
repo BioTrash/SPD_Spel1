@@ -241,7 +241,7 @@ void ASlimeBossAIController::BossPhaseThree()
 		LastSlamTime = 0;
 		ResetSlamAttack();
 		SlamAttack();
-		//SpawnEnemies();
+		SpawnEnemies();
 	}
 	//Göra en slam här där den spawnar in mer fiender 
 }
@@ -283,7 +283,7 @@ void ASlimeBossAIController::SlamAttack()
 		}
 	
 		// JEREMY Show slam mesh and activate its collision for slam attack.
-		SlamMesh->SetHiddenInGame(false);
+		//SlamMesh->SetHiddenInGame(false);
 		
 	}
 

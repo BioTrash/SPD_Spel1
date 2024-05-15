@@ -17,7 +17,9 @@ class SPD_SPEL1_API ASlimeBossAI : public APawn
 public:
 
 	ASlimeBossAI();
+	UFUNCTION(BlueprintCallable)
 	void SetShield(bool bIsShielded);
+	UFUNCTION(BlueprintCallable)
 	bool IsShielded() const;
 	void DisableShield();
 
@@ -60,6 +62,11 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	FVector EndScale;
+
+	bool IsSlammingAnimation;
+
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	bool GetIsSlammingAnimation();
 	
 private:
 	
