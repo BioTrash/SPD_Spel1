@@ -47,6 +47,22 @@ void AProjectileWeapon::Shoot()
 	
 	SpawnedProjectile->SetProjectileMovementComponent(TempMove);
 }
+void AProjectileWeapon::ShootEnemyProjectile()
+{
+	FVector SpawnLocation = GetMuzzlePoint()->GetComponentLocation(); //Byt ut till skeleton mesh senare
+	FRotator SpawnRotation = GetMuzzlePoint()->GetComponentRotation();
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = this;
+	SpawnParams.Instigator = GetInstigator();
+	
+	//Spawnar projectile och skjuter den med damage
+	AProjectile* Bullet = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+	if (Bullet)
+	{
+		Bullet->SetDamage(15);
+	}
+}
+
 
 void AProjectileWeapon::InitiateTimer(bool bButtonPressed, bool bAlternative)
 {
