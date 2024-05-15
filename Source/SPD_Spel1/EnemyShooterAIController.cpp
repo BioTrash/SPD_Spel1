@@ -198,18 +198,20 @@ void AEnemyShooterAIController::BeginChase(bool ChaseStatus)
 void AEnemyShooterAIController::Shoot()
 {
     FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
-    SpawnLocation.X -= 100;
+    //SpawnLocation.X -= 100;
     FRotator SpawnRotation = WeaponRotation;
     FActorSpawnParameters SpawnParams;
     SpawnParams.Owner = this;
     SpawnParams.Instigator = GetInstigator();
 
+    EnemyWeapon->Shoot();
+
     //Spawnar projectile och skjuter den med damage
-    AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+  /*  AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
     if (Projectile)
     {
         Projectile->SetDamage(15);
-    }
+    }*/
 }
 
 void AEnemyShooterAIController::InitiateEnemy()
