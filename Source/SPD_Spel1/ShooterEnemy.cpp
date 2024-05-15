@@ -31,7 +31,7 @@ void AShooterEnemy::BeginPlay()
 			UE_LOG(LogTemp, Error, TEXT("Instance good"));
 
 			// Attach the weapon to the mesh socket or root
-			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("EnemyWeaponSocket"));
             
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
@@ -108,7 +108,7 @@ void AShooterEnemy::KillEnemy()
 		EnemyCapsuleComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		USphereComponent* HeadshotComponent = nullptr;
 		TArray<USceneComponent*> ChildrenList;
-		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList); // Include all children recursively
+		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList);
 		for (USceneComponent* Child : ChildrenList)
 		{
 			if (USphereComponent* SphereChild = Cast<USphereComponent>(Child))
@@ -147,7 +147,7 @@ void AShooterEnemy::SetRagdollPhysics()
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
-		float ImpulseStrength = 5000;
+		float ImpulseStrength = 6000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 	}
 }
