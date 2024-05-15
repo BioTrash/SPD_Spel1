@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Animation/Player/BP_Player_AnimatinoBlueprint.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Animation/Player/BP_Player_AnimatinoBlueprint.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "NoraNewBranch",
+    "git-widget-placeholder": "RufusExtraordinaire",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,9 +67,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -241,7 +241,7 @@
       <workItem from="1715685758374" duration="465000" />
       <workItem from="1715686245775" duration="4432000" />
       <workItem from="1715764440744" duration="139000" />
-      <workItem from="1715771787497" duration="470000" />
+      <workItem from="1715765251808" duration="640000" />
     </task>
     <servers />
   </component>
