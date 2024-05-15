@@ -21,12 +21,14 @@ protected:
 
 public:
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaSeconds) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	bool isAlive;
+	
+	void DestroyActor();
 	
 	void KillEnemy();
 
@@ -64,5 +66,8 @@ private:
 
 	FName HitBoneName;
 	FVector HitDirection;
+
+	float DeathTime;
+	float DespawnCooldown = 3.0;
 
 };
