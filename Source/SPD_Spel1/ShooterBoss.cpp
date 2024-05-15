@@ -1,12 +1,12 @@
-#include "ShooterEnemy.h"
+#include "ShooterBoss.h"
 #include "ProjectileWeapon.h"
 #include "Components/PointLightComponent.h"
 #include "EnemyShooterAIController.h"
-#include "Components/CapsuleComponent.h"
-#include "Components/SphereComponent.h"
+#include "Weapon.h"
+
 
 // Sets default values
-AShooterEnemy::AShooterEnemy()
+AShooterBoss::AShooterBoss()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -14,7 +14,7 @@ AShooterEnemy::AShooterEnemy()
 }
 
 // Called when the game starts or when spawned
-void AShooterEnemy::BeginPlay()
+void AShooterBoss::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
@@ -46,30 +46,24 @@ void AShooterEnemy::BeginPlay()
 }
 
 // Called every frame
-void AShooterEnemy::Tick(float DeltaSeconds)
+void AShooterBoss::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaSeconds);
-	DeathTime += DeltaSeconds;
-	UE_LOG(LogTemp, Warning, TEXT("TIMER: %f"), DeathTime);
+	Super::Tick(DeltaTime);
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
-		KillEnemy();
-	}
-	if (DeathTime >= DespawnCooldown && !isAlive)
-	{
-		Destroy();
+		//KillEnemy();
 	}
 }
 
 // Called to bind functionality to input
-void AShooterEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AShooterBoss::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
 
-float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+float AShooterBoss::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
@@ -79,15 +73,16 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 	return DamageToMake;
 }
 
-void AShooterEnemy::KillEnemy()
+void AShooterBoss::KillEnemy()
 {
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
-	DeathTime = 0;
 	TriggerWeapon->SetActorTickEnabled(false);
 	TriggerWeapon->SetOwner(nullptr);
+	SetActorTickEnabled(false);
+	
 	AAIController* EnemyAIController = Cast<AAIController>(GetController());
 	if (EnemyAIController)
 	{
@@ -101,49 +96,26 @@ void AShooterEnemy::KillEnemy()
 	{
 		PointLightComponent->DestroyComponent();
 	}
-	UPrimitiveComponent* EnemyRootComponent = Cast<UPrimitiveComponent>(GetRootComponent());
-	UCapsuleComponent* EnemyCapsuleComponent = GetCapsuleComponent();
-	if (EnemyCapsuleComponent)
-	{
-		EnemyCapsuleComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		USphereComponent* HeadshotComponent = nullptr;
-		TArray<USceneComponent*> ChildrenList;
-		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList); // Include all children recursively
-		for (USceneComponent* Child : ChildrenList)
-		{
-			if (USphereComponent* SphereChild = Cast<USphereComponent>(Child))
-			{
-				if (SphereChild->GetName() == "Headshot")
-				{
-					HeadshotComponent = SphereChild;
-					break;
-				}
-			}
-		}
-
-		if (HeadshotComponent)
-		{
-			HeadshotComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		}
-	}
-	
 	//Destroy();
 }
 
-UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
+UStaticMeshComponent* AShooterBoss::GetStaticMeshComponent() const
 {
 	// Assuming the static mesh component is named "EnemyStaticMesh"
 	return FindComponentByClass<UStaticMeshComponent>();
 }
 
-void AShooterEnemy::SetRagdollPhysics()
+void AShooterBoss::SetRagdollPhysics()
 {
+	// Assuming SkeletalMeshComponent is the name of your skeletal mesh component
 	USkeletalMeshComponent* SkeletalMesh = GetMesh();
 	if (SkeletalMesh)
 	{
+		// Set collision presets to ragdoll
 		SkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 		SkeletalMesh->SetCollisionProfileName(TEXT("Ragdoll"));
 
+		// Enable physics simulation for each bone
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
@@ -152,17 +124,12 @@ void AShooterEnemy::SetRagdollPhysics()
 	}
 }
 
-bool AShooterEnemy::getIsShooting()
+bool AShooterBoss::getIsShooting()
 {
 	return isShooting;
 }
 
-void AShooterEnemy::DestroyActor()
-{
-	
-}
-
-void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)
+void AShooterBoss::SetHitInformation(FName BoneName, FVector Direction)
 {
 	HitBoneName = BoneName;
 	HitDirection = Direction;
