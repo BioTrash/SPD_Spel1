@@ -4,16 +4,16 @@
 #include "ProjectileWeapon.h"
 #include "Weapon.h"
 #include "GameFramework/Character.h"
-#include "ShooterEnemy.generated.h"
+#include "ShooterBoss.generated.h"
 
 UCLASS()
-class SPD_SPEL1_API AShooterEnemy : public ACharacter
+class SPD_SPEL1_API AShooterBoss : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AShooterEnemy();
+	AShooterBoss();
 
 protected:
 	// Called when the game starts or when spawned
@@ -21,14 +21,12 @@ protected:
 
 public:
 	// Called every frame
-	virtual void Tick(float DeltaSeconds) override;
+	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	bool isAlive;
-	
-	void DestroyActor();
 	
 	void KillEnemy();
 
@@ -66,8 +64,5 @@ private:
 
 	FName HitBoneName;
 	FVector HitDirection;
-
-	float DeathTime;
-	float DespawnCooldown = 3.0;
 
 };
