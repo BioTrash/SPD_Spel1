@@ -51,7 +51,7 @@ public:
 	float MaxTraceDistance = 300.f;
 	
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	UStaticMeshComponent* TurretMesh;
+	USkeletalMeshComponent* TurretMesh;
 
 	bool IsShootingAnimation;
 
