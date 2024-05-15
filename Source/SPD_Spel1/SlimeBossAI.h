@@ -62,6 +62,11 @@ public:
 	
 	UPROPERTY(EditAnywhere)
 	FVector EndScale;
+
+	bool IsSlammingAnimation;
+
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	bool GetIsSlammingAnimation();
 	
 private:
 	
