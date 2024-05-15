@@ -21,7 +21,7 @@ AEnemyTurret::AEnemyTurret()
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
 	BaseMesh->SetupAttachment(CapsuleComponent);
     
-	TurretMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Turret Mesh"));
+	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
 	TurretMesh ->SetupAttachment(BaseMesh);
     
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
@@ -114,7 +114,7 @@ void AEnemyTurret::PerformLineTrace()
 }
 void AEnemyTurret::ShootEnemy(float Damage)
 {
-	UE_LOG(LogTemp, Warning, TEXT("KÖRS DU?!"));
+	//UE_LOG(LogTemp, Warning, TEXT("KÖRS DU?!"));
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));

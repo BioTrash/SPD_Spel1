@@ -89,8 +89,6 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 		}
 	}
 	// JEREMY SLUT
-	
-	//UE_LOG(LogTemp, Warning, TEXT("LastSlamTime  %f"), LastSlamTime);
 
 	SetFocus(Player);
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
@@ -138,7 +136,7 @@ void ASlimeBossAIController::SetPlayer()
 	if (Player == nullptr)
 	
 	{
-		//Shrek ;)
+
 	}
 
 	if (Cast<ASlimeBossAI>(GetPawn()))
@@ -177,7 +175,6 @@ void ASlimeBossAIController::UpdateBossPhase()
 		}
 		else if (Health <= MaxHealth/3)
 		{
-			//UE_LOG(LogTemp, Warning, TEXT("nu börjar phase three"));
 			BossPhaseThree();
 		}
 	}
@@ -220,7 +217,7 @@ void ASlimeBossAIController::BossPhaseTwo()
 		LastShotTime = 0;
 	}
 	
-	if (LastSpawnTime >= 8)
+	if (LastSpawnTime >= 14)
 	{
 		SpawnEnemies();
 		LastSpawnTime = 0;
@@ -259,26 +256,10 @@ void ASlimeBossAIController::SlamAttack()
 		OriginalLocation = Boss->GetActorLocation();
 		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
 		Boss->SetActorLocation(GroundLocation);
-		/*
-		TArray<AActor*> OverlappingActors;
-		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
-		for (AActor* Actor : OverlappingActors)
-		{
-			float Distance = FVector::Distance(Actor->GetActorLocation(), GroundLocation);
-			float MaxDamage = 100.0f;
-			float MinDamage = 0.0f;
-			float DamageRange = DamageRadius; 
-			float Damage = FMath::Clamp(MaxDamage * (1 - (Distance / DamageRange)), MinDamage, MaxDamage);
-			
-		}
-		*/
-		//UE_LOG(LogTemp, Warning, TEXT("Slam Attack"));
-		// Spela slam effekt.
 		if(SlamEffect)
 		{
 			SlamEffect->Activate();
 		}
-		//DrawDebugSphere(GetWorld(), GroundLocation, DamageRadius, 32, FColor::Red, false, 1.0f);
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	
@@ -295,7 +276,6 @@ void ASlimeBossAIController::EndSlamAttack()
 	}
 	bIsSlamming = false;
 	bSlamDealDamage = true;
-	//UE_LOG(LogTemp, Warning, TEXT("ORIGINALLOCATION: X=%f, Y=%f, Z=%f"), OriginalLocation.X, OriginalLocation.Y, OriginalLocation.Z);
 	if (Boss)
 	{
 		Boss->SetActorLocation(OriginalLocation);
@@ -311,7 +291,6 @@ void ASlimeBossAIController::EndSlamAttack()
 }
 void ASlimeBossAIController::ResetSlamAttack()
 {
-	//UE_LOG(LogTemp, Warning, TEXT("LastSlamTime: %f"), LastSlamTime);
 	LastSlamTime = 0;
 }
 
