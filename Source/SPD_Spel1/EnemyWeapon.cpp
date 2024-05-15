@@ -3,8 +3,6 @@
 
 #include "EnemyWeapon.h"
 
-#include <UIAutomationCore.h>
-
 void AEnemyWeapon::FireAtPlayer(float DamageDone)
 {
 	

@@ -8,7 +8,6 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Tasks/Task.h"
-#include <conio.h>
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -83,6 +82,14 @@ void APlayerCharacter::BeginPlay()
 void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	/* JEREMY
+	// GÖR SÅ SPELAREN RÖR PÅ SIG KONSTANT FÖR SLAM MESHENS COLLISION.
+	UTAN DETTA SÅ FUNKAR INTE SLAMMEN RÄTT.
+	*/
+	FVector CurrentLocation = GetActorLocation();
+	SetActorLocation(FVector(CurrentLocation.X + 0.001f, CurrentLocation.Y, CurrentLocation.Z));
+	SetActorLocation(FVector(CurrentLocation.X - 0.001f, CurrentLocation.Y, CurrentLocation.Z));
 
 }
 

@@ -38,6 +38,10 @@ void ASlimeBossAI::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 float ASlimeBossAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	if(IsShielded())
+	{
+		return 0.0f;
+	}
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
     ActualDamage = FMath::Min(Health, ActualDamage);
     Health -= ActualDamage;
@@ -65,3 +69,27 @@ void ASlimeBossAI::KillEnemy()
 	OnEnemyDeath();
 	Destroy();
 }
+void ASlimeBossAI::SetShield(bool bShielded)
+{
+	bShield = bShielded;
+	if(bShield)
+	{
+		GetWorldTimerManager().SetTimer(ShieldTimerHandle, this, &ASlimeBossAI::DisableShield, 2.0f, false);
+	}
+	else
+	{
+		GetWorldTimerManager().ClearTimer(ShieldTimerHandle);
+	}
+}
+
+bool ASlimeBossAI::IsShielded() const
+{
+	return bShield;
+}
+void ASlimeBossAI::DisableShield()
+{
+	bShield = false;
+}
+
+
+

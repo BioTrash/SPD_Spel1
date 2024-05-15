@@ -17,6 +17,9 @@ class SPD_SPEL1_API ASlimeBossAI : public APawn
 public:
 
 	ASlimeBossAI();
+	void SetShield(bool bIsShielded);
+	bool IsShielded() const;
+	void DisableShield();
 
 protected:
 
@@ -47,11 +50,27 @@ public:
 	float Health;
 
 	UPROPERTY(EditAnywhere)
-	TArray<AEnemySpawnpoint*> SpawnPointsArray;
-
-private:
+	float SlamDamage = 10;
 
 	UPROPERTY(EditAnywhere)
+	TArray<AEnemySpawnpoint*> SpawnPointsArray;
+
+	UPROPERTY(EditAnywhere)
+	FVector StartScale;
+	
+	UPROPERTY(EditAnywhere)
+	FVector EndScale;
+	
+private:
+	
+	bool bShield;
+	FTimerHandle ShieldTimerHandle;
+	
+	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
+	
+
+	
 
 };
