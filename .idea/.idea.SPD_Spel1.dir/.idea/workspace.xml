@@ -15,10 +15,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BP_RushEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/RushEnemy/BP_RushEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
