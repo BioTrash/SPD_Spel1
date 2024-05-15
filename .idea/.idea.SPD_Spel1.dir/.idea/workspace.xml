@@ -18,10 +18,12 @@
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_SlimeDoor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_SlimeDoor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/Boss.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Boss.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_BossHealth.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_BossHealth.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
