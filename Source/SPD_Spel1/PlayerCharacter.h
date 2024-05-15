@@ -66,6 +66,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	class AWeaponBase* GetTriggerWeapon() const;
 
+	UFUNCTION(BlueprintPure)
+	bool GetIsShootingNormal() const;
+
 	void OnButtonRelease();
 	void OnButtonPress();
 
@@ -147,6 +150,9 @@ private:
 	//how long you have to wait in order to slide again (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
 	float SlideCooldown = 0.0f;
+	
+	UPROPERTY(VisibleAnywhere)
+	bool IsShootingNormal = false;
 
 	UPROPERTY()
 	FTimerHandle SliderTimerHandle;

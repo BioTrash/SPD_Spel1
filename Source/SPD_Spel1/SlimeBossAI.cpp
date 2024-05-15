@@ -90,6 +90,10 @@ void ASlimeBossAI::DisableShield()
 {
 	bShield = false;
 }
+bool ASlimeBossAI::GetIsSlammingAnimation()
+{
+	return IsSlammingAnimation;
+}
 
 
 
