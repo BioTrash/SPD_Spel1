@@ -143,14 +143,12 @@ void APlayerCharacter::OnButtonRelease()
 // Normal Fire
 void APlayerCharacter::Shoot()
 {
-	IsShootingNormal = true;
 	TriggerWeapon->InitiateTimer(true, false);
 }
 
 // Normal Fire
 void APlayerCharacter::CancelShoot()
 {
-	IsShootingNormal = false;
 	//TriggerWeapon->InitiateTimer(false, false);
 }
 
@@ -370,9 +368,3 @@ float APlayerCharacter::GetSlideCooldownPercentage() const
 	float RemainingCooldown = FMath::Max(0.0f, LastSlideTime + SlideCooldown - GetWorld()->GetTimeSeconds());
 	return RemainingCooldown/SlideCooldown;
 }
-
-bool APlayerCharacter::GetIsShootingNormal() const
-{
-	return IsShootingNormal;
-}
-
