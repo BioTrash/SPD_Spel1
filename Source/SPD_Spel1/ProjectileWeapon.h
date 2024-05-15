@@ -19,6 +19,7 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 	virtual void Shoot() override;
+	void ShootEnemyProjectile();
 
 	// The inbuilt but NOT obligatory way of shooting, more info in the .cpp file. Made initially for player shooting but can be adapted for AI (Rufus)
 	virtual void InitiateTimer(bool bButtonPressed, bool bAlternative) override;
@@ -29,4 +30,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	AProjectile* SpawnedProjectile;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+	TSubclassOf<class AProjectile> ProjectileClass;
 };
