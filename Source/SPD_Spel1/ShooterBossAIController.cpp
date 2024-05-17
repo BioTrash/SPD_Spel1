@@ -46,61 +46,59 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
 
         if (EnemyWeapon)
         {
-            UE_LOG(LogTemp, Warning, TEXT("Spamtimer: %f"), LastSpamShotTime);
-            //UE_LOG(LogTemp, Warning, TEXT("WEAPONGOOD"));
-            SpamAttack();
+                FVector StartTrace = EnemyWeapon->GetActorLocation();
+                FVector EndTrace = PlayerPawn->GetActorLocation();
 
-            FVector PlayerLocation = PlayerPawn->GetActorLocation();
-            EnemyLocation = Enemy->GetActorLocation();
-            float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-            
-            // Vectors where trace is happening (Louis)
-            FVector StartTrace = EnemyWeapon->GetActorLocation();
-            FVector EndTrace = PlayerPawn->GetActorLocation();
-
-            //Params for linetrace (Louis)
-            FHitResult HitResult;
-            FCollisionQueryParams CollisionParams;
-            CollisionParams.AddIgnoredActor(Enemy);
-            // Perform a line trace to check if there's a clear line of sight to the player (Louis)
-            if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
-            {
-                    
-                // If the ray hits the player, shoot (Louis)
-                if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
+                //Params for linetrace (Louis)
+                FHitResult HitResult;
+                FCollisionQueryParams CollisionParams;
+                CollisionParams.AddIgnoredActor(Enemy);
+                // Perform a line trace to check if there's a clear line of sight to the player (Louis)
+                if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
                 {
-                    //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
-                    GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
-
-                    if (LastShotTime >= ShootCooldown)
+                    
+                    // If the ray hits the player, shoot (Louis)
+                    if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        if (ShootingEffect && !EffectIsPlaying)
+                        if (LastShotTime >= ShootCooldown)
                         {
-                            FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
-                            //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
-                            NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-                               GetWorld(),
-                               ShootingEffect,
-                               SocketLocation,
-                               FRotator::ZeroRotator,
-                               FVector::OneVector
-                           );
-                            EffectIsPlaying = true;
-                        }
-                        if (NiagaraSystemComponent)
-                        {
-                            NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
+                            if (ShootingEffect && !EffectIsPlaying)
+                            {
+                                FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
+                                //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
+                                NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+                                   GetWorld(),
+                                   ShootingEffect,
+                                   EnemyWeapon->GetMuzzlePoint()->GetComponentLocation(),
+                                   FRotator::ZeroRotator,
+                                   FVector::OneVector
+                               );
+                                EffectIsPlaying = true;
+                            }
+                            if (NiagaraSystemComponent)
+                            {
+                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
+                            }
+                            //const float EffectDuration = 1.5f;
+
+                            if (LastShotTime >= ShootCooldown + 1.5f)
+                            {
+                                Shoot();
+                                Enemy->isShooting = true;
+                                LastShotTime = 0.0f;
+                                EffectIsPlaying = false;
+                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                            }
                         }
                     }
                     //Om Ray INTE Hit Player
-                    else
-                    {
-                        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-                        Enemy->isShooting = false;
+                        else
+                        {
+                            GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                            Enemy->isShooting = false;
+                        }
                     }
-                }
             }
-        }
     }
 }
 
