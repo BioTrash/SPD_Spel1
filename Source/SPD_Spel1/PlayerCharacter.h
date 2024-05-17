@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InputAction.h"
 #include "GameFramework/Character.h"
 #include "Camera/CameraComponent.h"
 #include "PlayerCharacter.generated.h"
@@ -58,6 +59,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void Move(const FInputActionValue& Value);
+	void Look(const FInputActionValue& Value);
 
 	//Taking damage method (Rebecka)
 	UFUNCTION(BlueprintPure)
@@ -72,21 +75,40 @@ public:
 	void OnButtonRelease();
 	void OnButtonPress();
 
+	// Input actions
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* JumpAction;
+	
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* DashAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* SlideAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* ShootAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* ReloadAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* ChargeSlimeAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* MoveAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* LookAction;
+
 private:
+	// Reference to the Input Mapping Context asset
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputMappingContext* DefaultMappingContext;
+	
 	void Slide();
 	void StopSlide();
-
-	// Controls forward and backward movement (Rufus)
-	void FrontBackMove(float AxisValue);
-	// Controls right and left movement (Rufus)
-	void RightLeftMove(float AxisValue);
-
-	void CameraVertical(float AxisValue);
 	
-	void CameraHorizontal(float AxisValue);
-
-	// Controls weapon swapping (Rufus)
-	void SwapWeapon();
 	// Controls weapon being fired, triggers 'PullTriger()' in 'Weapon.h'
 	void Shoot();
 
