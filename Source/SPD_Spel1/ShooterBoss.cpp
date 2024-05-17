@@ -3,6 +3,8 @@
 #include "Components/PointLightComponent.h"
 #include "EnemyShooterAIController.h"
 #include "Weapon.h"
+#include "Components/SphereComponent.h"
+#include "Components/CapsuleComponent.h"
 
 
 // Sets default values
@@ -46,15 +48,18 @@ void AShooterBoss::BeginPlay()
 }
 
 // Called every frame
-void AShooterBoss::Tick(float DeltaTime)
+void AShooterBoss::Tick(float DeltaSeconds)
 {
-	Super::Tick(DeltaTime);
-
-	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
+	Super::Tick(DeltaSeconds);
+	DeathTime += DeltaSeconds;
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
-		//KillEnemy();
+		KillEnemy();
+	}
+	if (DeathTime >= DespawnCooldown && !isAlive)
+	{
+		Destroy();
 	}
 }
 
@@ -81,10 +86,9 @@ void AShooterBoss::KillEnemy()
 	SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
+	DeathTime = 0;
 	TriggerWeapon->SetActorTickEnabled(false);
 	TriggerWeapon->SetOwner(nullptr);
-	SetActorTickEnabled(false);
-	
 	AAIController* EnemyAIController = Cast<AAIController>(GetController());
 	if (EnemyAIController)
 	{
@@ -98,6 +102,32 @@ void AShooterBoss::KillEnemy()
 	{
 		PointLightComponent->DestroyComponent();
 	}
+	UPrimitiveComponent* EnemyRootComponent = Cast<UPrimitiveComponent>(GetRootComponent());
+	UCapsuleComponent* EnemyCapsuleComponent = GetCapsuleComponent();
+	if (EnemyCapsuleComponent)
+	{
+		EnemyCapsuleComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		USphereComponent* HeadshotComponent = nullptr;
+		TArray<USceneComponent*> ChildrenList;
+		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList);
+		for (USceneComponent* Child : ChildrenList)
+		{
+			if (USphereComponent* SphereChild = Cast<USphereComponent>(Child))
+			{
+				if (SphereChild->GetName() == "Headshot")
+				{
+					HeadshotComponent = SphereChild;
+					break;
+				}
+			}
+		}
+
+		if (HeadshotComponent)
+		{
+			HeadshotComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		}
+	}
+	
 	//Destroy();
 }
 
@@ -109,19 +139,16 @@ UStaticMeshComponent* AShooterBoss::GetStaticMeshComponent() const
 
 void AShooterBoss::SetRagdollPhysics()
 {
-	// Assuming SkeletalMeshComponent is the name of your skeletal mesh component
 	USkeletalMeshComponent* SkeletalMesh = GetMesh();
 	if (SkeletalMesh)
 	{
-		// Set collision presets to ragdoll
 		SkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 		SkeletalMesh->SetCollisionProfileName(TEXT("Ragdoll"));
 
-		// Enable physics simulation for each bone
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
-		float ImpulseStrength = 5000;
+		float ImpulseStrength = 6000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 	}
 }

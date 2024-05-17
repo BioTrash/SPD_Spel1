@@ -142,7 +142,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             }
                             if (NiagaraSystemComponent)
                             {
-                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
+                                NiagaraSystemComponent->SetWorldLocation(EnemyWeapon->GetMuzzlePoint()->GetComponentLocation()); 
                             }
                             //const float EffectDuration = 1.5f;
 
