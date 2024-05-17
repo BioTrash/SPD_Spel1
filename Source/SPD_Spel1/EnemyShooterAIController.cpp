@@ -89,13 +89,9 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
             if (Enemy->Health >= 30 && Enemy->Health < 50)
             {
-                Enemy->GetCharacterMovement()->MaxWalkSpeed = 1400;
                 GetBlackboardComponent()->SetValueAsBool(TEXT("HasRushed"), true);
             }
-            if (GetBlackboardComponent()->GetValueAsBool(TEXT("HasRushed")))
-            {
-                Enemy->GetCharacterMovement()->MaxWalkSpeed = 7000;
-            }
+
                 //EnemyWeapon->SetActorRotation(WeaponRotation);
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
@@ -148,9 +144,9 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             {
                                 NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
                             }
-                            const float EffectDuration = 1.5f;
+                            //const float EffectDuration = 1.5f;
 
-                            if (LastShotTime >= ShootCooldown + EffectDuration)
+                            if (LastShotTime >= ShootCooldown + 1.5f)
                             {
                                 Shoot();
                                 Enemy->isShooting = true;
@@ -222,7 +218,18 @@ void AEnemyShooterAIController::Shoot()
 void AEnemyShooterAIController::InitiateEnemy()
 {
     Enemy = Cast<AShooterEnemy>(GetPawn());
-    //EnemyWeapon = Enemy->TriggerWeapon;
+    if (Enemy) // Ensure Enemy is not null
+    {
+        EnemyWeapon = Enemy->TriggerWeapon;
+        if (!EnemyWeapon)
+        {
+            UE_LOG(LogTemp, Error, TEXT("EnemyWeapon is null"));
+        }
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Enemy is null"));
+    }
 }
 
 void AEnemyShooterAIController::InitiatePlayer()

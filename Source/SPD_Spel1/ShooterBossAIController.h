@@ -5,6 +5,7 @@
 #include "ShooterEnemy.h"
 #include "ProjectileWeapon.h"
 #include "NiagaraComponent.h"
+#include "ShooterBoss.h"
 #include "ShooterBossAIController.generated.h"
 
 /**
@@ -47,7 +48,7 @@ private:
 	int SpamAmount = 3.0f;
 	
 	UPROPERTY()
-	AShooterEnemy* Enemy;
+	AShooterBoss* Enemy;
 	
 	UPROPERTY()
 	APawn* PlayerPawn;

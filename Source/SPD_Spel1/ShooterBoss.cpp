@@ -49,6 +49,8 @@ void AShooterBoss::BeginPlay()
 void AShooterBoss::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
