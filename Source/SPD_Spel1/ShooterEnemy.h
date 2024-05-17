@@ -21,14 +21,12 @@ protected:
 
 public:
 	// Called every frame
-	virtual void Tick(float DeltaSeconds) override;
+	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	bool isAlive;
-	
-	void DestroyActor();
 	
 	void KillEnemy();
 
@@ -41,7 +39,7 @@ public:
 	UPROPERTY(Blueprintable, EditAnywhere)
 	bool isShooting;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 100;
 
 	UPROPERTY(VisibleAnywhere)
@@ -66,8 +64,5 @@ private:
 
 	FName HitBoneName;
 	FVector HitDirection;
-
-	float DeathTime;
-	float DespawnCooldown = 3.0;
 
 };

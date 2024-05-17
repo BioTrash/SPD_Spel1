@@ -70,18 +70,18 @@ void ASlimeProjectile::Explode()
 {
 	TArray<AActor*> OverlappingCharacters;
 	FVector ExplosionLocation = GetActorLocation();
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APawn::StaticClass(), OverlappingCharacters);
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACharacter::StaticClass(), OverlappingCharacters);
 
 	for(AActor* Actor : OverlappingCharacters)
 	{
-		if(Cast<APawn>(Actor))
+		if(Cast<ACharacter>(Actor))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Enemy caught in explosion"));
 			float DistanceToActor = FVector::Distance(ExplosionLocation, Actor->GetActorLocation());
 			float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToActor / SlimeDamageRadius), 0.0f, 1.0f); 
 			float ActualDamage = Damage * DamageMultiplier;
 
-			if(!Cast<APlayerCharacter>(Cast<ACharacter>(Actor)))
+			if(!Cast<APlayerCharacter>(Actor))
 			{
 				Actor->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);	
 			}

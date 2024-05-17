@@ -3,11 +3,17 @@
 
 #include "PlayerCharacter.h"
 #include "WeaponBase.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/InputComponent.h"
+
 #include "Tasks/Task.h"
+
+
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -34,6 +40,14 @@ void APlayerCharacter::BeginPlay()
 	} else
 	{
 		UE_LOG(LogTemp, Error, TEXT("No camera component found on PlayerCharacter"));
+	}
+	// Add Input Mapping Context
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+		{
+			Subsystem->AddMappingContext(DefaultMappingContext, 0);
+		}
 	}
 
 	//Start with the MaxHealth when starting the level (Rebecka)
@@ -98,35 +112,55 @@ void APlayerCharacter::Tick(float DeltaTime)
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	// TEXT field has to have the exact same name as the AxisMapping, functions have to references - '&' (Rufus)
-	// 'this' refers to this, player, object but could theoretically be any object; possible mechanic for controlling several objects at once (Rufus)
-	PlayerInputComponent->BindAxis(TEXT("FrontBackMove"), this, &APlayerCharacter::FrontBackMove);
-	PlayerInputComponent->BindAxis(TEXT("RightLeftMove"), this, &APlayerCharacter::RightLeftMove);
-
-	//Pitch is inverted, i.e. looking up is -1 and looking down is +1 (Rufus)
-	PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APlayerCharacter::CameraVertical);
-	PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APlayerCharacter::CameraHorizontal);
+	UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
 	
-	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction(TEXT("SwapWeapon"), EInputEvent::IE_Pressed, this, &APlayerCharacter::SwapWeapon);
+	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
-	//Binding for dash (Rebecka)
-	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
-	//Binding for lide (Rebecka)
-	PlayerInputComponent->BindAction(TEXT("Slide"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Slide);
-	
-	
-	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
-	PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
 
-	PlayerInputComponent->BindAction(TEXT("Reload"), EInputEvent::IE_Pressed, this, &APlayerCharacter::ReloadWeapon);
+	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
 
-	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Pressed, this, &APlayerCharacter::OnButtonPress);
-	PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Released, this, &APlayerCharacter::OnButtonRelease);
+	EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
+		
+	EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Started, this, &APlayerCharacter::Dash);
+
+	EnhancedInputComponent->BindAction(SlideAction, ETriggerEvent::Started, this, &APlayerCharacter::Slide);
+
+	EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &APlayerCharacter::Shoot);
+	EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Completed, this, &APlayerCharacter::CancelShoot);
+
+	EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &APlayerCharacter::ReloadWeapon);
+
+	EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Started, this, &APlayerCharacter::OnButtonPress);
+	EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Completed, this, &APlayerCharacter::OnButtonRelease);
 	
 }
 
+void APlayerCharacter::Move(const FInputActionValue& Value)
+{
+	// input is a Vector2D
+	FVector2D MovementVector = Value.Get<FVector2D>();
+
+	if (Controller != nullptr)
+	{
+		// add movement 
+		AddMovementInput(GetActorForwardVector(), MovementVector.Y);
+		AddMovementInput(GetActorRightVector(), MovementVector.X);
+	}
+}
+
+void APlayerCharacter::Look(const FInputActionValue& Value)
+{
+	// input is a Vector2D
+	FVector2D LookAxisVector = Value.Get<FVector2D>();
+
+	if (Controller != nullptr)
+	{
+		// add yaw and pitch input to controller
+		AddControllerYawInput(LookAxisVector.X * HorizontalMod);
+		AddControllerPitchInput(LookAxisVector.Y * VerticalMod);
+	}
+}
 // Alternative Fire
 void APlayerCharacter::OnButtonPress()
 {
@@ -143,14 +177,12 @@ void APlayerCharacter::OnButtonRelease()
 // Normal Fire
 void APlayerCharacter::Shoot()
 {
-	IsShootingNormal = true;
 	TriggerWeapon->InitiateTimer(true, false);
 }
 
 // Normal Fire
 void APlayerCharacter::CancelShoot()
 {
-	IsShootingNormal = false;
 	//TriggerWeapon->InitiateTimer(false, false);
 }
 
@@ -162,51 +194,6 @@ void APlayerCharacter::ReloadWeapon()
 AWeaponBase* APlayerCharacter::GetTriggerWeapon() const
 {
 	return TriggerWeapon;
-}
-
-// AxisValue is +1 if moving forward and -1 if moving backwards (Rufus)
-void APlayerCharacter::FrontBackMove(float AxisValue)
-{
-	AddMovementInput(GetActorForwardVector() * AxisValue);
-}
-
-// AxisValue is +1 if moving right and -1 if moving left (Rufus)
-void APlayerCharacter::RightLeftMove(float AxisValue)
-{
-	AddMovementInput(GetActorRightVector() * AxisValue);
-}
-
-void APlayerCharacter::CameraHorizontal(float AxisValue)
-{
-	AddControllerYawInput(AxisValue * HorizontalMod);
-}
-
-void APlayerCharacter::CameraVertical(float AxisValue)
-{
-	AddControllerPitchInput(AxisValue * VerticalMod);
-}
-
-
-
-void APlayerCharacter::SwapWeapon()
-{
-	if(!CurrentWeaponArray.IsEmpty())
-	{
-		AWeaponBase* lastElement = CurrentWeaponArray.Last(); // Save the last element
-    
-		// Shift elements to the right
-		for (int i = CurrentWeaponArray.Num() - 1; i > 0; --i) {
-			CurrentWeaponArray[0]->SetActorHiddenInGame(true);
-			CurrentWeaponArray[i] = CurrentWeaponArray[i - 1];
-			
-		}
-
-		// Move the last element to the beginning
-		CurrentWeaponArray[0] = lastElement;
-		CurrentWeaponArray[0]->SetActorHiddenInGame(false);
-		TriggerWeapon = CurrentWeaponArray[0];
-		
-	}
 }
 
 //method for dashing (Rebecka)
@@ -370,9 +357,3 @@ float APlayerCharacter::GetSlideCooldownPercentage() const
 	float RemainingCooldown = FMath::Max(0.0f, LastSlideTime + SlideCooldown - GetWorld()->GetTimeSeconds());
 	return RemainingCooldown/SlideCooldown;
 }
-
-bool APlayerCharacter::GetIsShootingNormal() const
-{
-	return IsShootingNormal;
-}
-
