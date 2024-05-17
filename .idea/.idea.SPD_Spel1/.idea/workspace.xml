@@ -12,16 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Audio/Collapse01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +242,8 @@
       <workItem from="1715764440744" duration="139000" />
       <workItem from="1715765251808" duration="640000" />
       <workItem from="1715775187090" duration="655000" />
+      <workItem from="1715776520410" duration="16000" />
+      <workItem from="1715776547751" duration="679000" />
     </task>
     <servers />
   </component>
