@@ -54,6 +54,7 @@ public:
 	bool GetIsLaunchingAnimation();
 	
 private:
+
 	bool bCanAttack = true;
 	FTimerHandle ExplodeCooldown;
 	

@@ -13,14 +13,18 @@ class SPD_SPEL1_API AEnemyTurret : public APawn
 	GENERATED_BODY()
 
 public:
+	// Sets default values for this pawn's properties
 	AEnemyTurret();
 
 protected:
+	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
+	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
@@ -55,9 +59,9 @@ public:
 	bool GetIsShootingAnimation();
 	
 private:
+
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	class UCapsuleComponent* CapsuleComponent;
-	
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
 	UStaticMeshComponent* BaseMesh;
 
@@ -84,5 +88,6 @@ private:
 	
 	void RotateTurret(FVector TargetLocation);
 	void ShootProjectiles();
+	void PerformLineTrace();
 	void ShootAgainCooldown();
 };

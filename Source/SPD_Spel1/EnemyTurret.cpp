@@ -9,9 +9,10 @@
 #include "Projectile.h"
 #include "Kismet/KismetMathLibrary.h"
 
-//Hanna
+// Sets default values
 AEnemyTurret::AEnemyTurret()
 {
+ 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
@@ -20,20 +21,25 @@ AEnemyTurret::AEnemyTurret()
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
 	BaseMesh->SetupAttachment(CapsuleComponent);
     
-	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
+	TurretMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Turret Mesh"));
 	TurretMesh ->SetupAttachment(BaseMesh);
     
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
 	ProjectileSpawn -> SetupAttachment(TurretMesh);
 }
-//Körs när spelet startar eller spawnas in
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
+	FVector TurretMeshLocation = TurretMesh->GetRelativeLocation();
+	TurretMesh->SetRelativeLocation(TurretMeshLocation);
 	Health = MaxHealth;
-	Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	
+	APlayerCharacter* FoundPlayer = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	if (FoundPlayer)
+	{
+		Player = FoundPlayer;
+	}
 }
-//Körs varje frame
 void AEnemyTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -49,26 +55,29 @@ void AEnemyTurret::Tick(float DeltaTime)
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
 		if (Distance <= FireRange)
 		{
-			ShootEnemy(10.0f);
-			ShootProjectiles();
+			PerformLineTrace();
 			RotateTurret(Player->GetActorLocation());
+		}
+		else
+		{
 		}
 	}
 }
-//Bind functionality to input
 void AEnemyTurret::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
-//Gör att spelaren kan ta skada
+
 float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
+	UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
-//Rotarerar turretens huvud för att alltid kolla på target location vilket är spelaren
+
 void AEnemyTurret::RotateTurret(FVector TargetLocation)
 {
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
@@ -77,7 +86,6 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 	LookAtRotation.Yaw += -90.f; 
 	TurretMesh->SetWorldRotation(LookAtRotation);
 }
-//Skjuter projectiler från turreten
 void AEnemyTurret::ShootProjectiles()
 {
 	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
@@ -89,8 +97,8 @@ void AEnemyTurret::ShootProjectiles()
 			SpawnParams.Instigator = GetInstigator();
 			FVector SpawnLocation = ProjectileSpawn->GetComponentLocation();
 			FRotator SpawnRotation = ProjectileSpawn->GetComponentRotation();
-			
-			if (AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams))
+			AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+			if (Projectile)
 			{
 				Projectile->SetOwner(this);
 			}
@@ -98,36 +106,40 @@ void AEnemyTurret::ShootProjectiles()
 		NextProjectileTime = GetWorld()->GetTimeSeconds() + ProjectileSpawnCooldown;
 	}
 }
-//Skjuter på spelaren med insant-hit
+
+void AEnemyTurret::PerformLineTrace()
+{
+	ShootEnemy(10.0f);
+	ShootProjectiles();
+}
 void AEnemyTurret::ShootEnemy(float Damage)
 {
+	UE_LOG(LogTemp, Warning, TEXT("KÖRS DU?!"));
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
-		if (Player)
+		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+		if (PlayerCharacter)
 		{
-			float DistanceToPlayer = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
+			float DistanceToPlayer = FVector::Distance(GetActorLocation(), PlayerCharacter->GetActorLocation());
 			float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer * DamageRadius), 0.0f, 1.0f);
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
 
-			Player->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
+			PlayerCharacter->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
 		ShootAgainCooldown();
 		}
 	IsShootingAnimation = false;
 	}
-//Ser till att spelaren dör
 void AEnemyTurret::Die()
 {
 	OnEnemyDeath();
 	Destroy();
 }
-//Resettar cooldownen på när spelaren ska skjuta igen
 void AEnemyTurret::ShootAgainCooldown()
 {
 	NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 }
-//Animatoner för Nora
 bool AEnemyTurret::GetIsShootingAnimation()
 {
 	return IsShootingAnimation;

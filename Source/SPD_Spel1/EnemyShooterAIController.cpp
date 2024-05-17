@@ -32,10 +32,8 @@ void AEnemyShooterAIController::BeginPlay()
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
-        //GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
+        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-        GetBlackboardComponent()->SetValueAsBool(TEXT("HasRushed"), false);
-
     }
     SetFocus(PlayerPawn);
 }
@@ -89,9 +87,8 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
             if (Enemy->Health >= 30 && Enemy->Health < 50)
             {
-                GetBlackboardComponent()->SetValueAsBool(TEXT("HasRushed"), true);
+                Enemy->GetCharacterMovement()->MaxWalkSpeed = 1000;
             }
-
                 //EnemyWeapon->SetActorRotation(WeaponRotation);
                 // Vectors where trace is happening (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
@@ -109,7 +106,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
                         //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
-                        //GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
 
                         //Delegatuppdatering
                         
@@ -134,7 +131,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
                                    GetWorld(),
                                    ShootingEffect,
-                                   EnemyWeapon->GetMuzzlePoint()->GetComponentLocation(),
+                                   SocketLocation,
                                    FRotator::ZeroRotator,
                                    FVector::OneVector
                                );
@@ -142,18 +139,17 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             }
                             if (NiagaraSystemComponent)
                             {
-                                NiagaraSystemComponent->SetWorldLocation(EnemyWeapon->GetMuzzlePoint()->GetComponentLocation()); 
+                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
                             }
-                            //const float EffectDuration = 1.5f;
+                            const float EffectDuration = .9f;
 
-                            if (LastShotTime >= ShootCooldown + 1.5f)
+                            if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
                                 Shoot();
                                 Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
                                 BeginChase(false);
-                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                             }
                         }
                     }
@@ -171,21 +167,10 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
 void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 {
-    // Get the get ID of the enemy
-    FString EnemyID = FString::Printf(TEXT("%d"), GetUniqueID());
-
-    // Use the ID to make a unique position by hash
-    uint32 Seed = FCrc::StrCrc32(*EnemyID);
-    FMath::RandInit(Seed);
-
-    // Generate a random offset within a certain radius
-    float Radius = 1500.0f; // Adjust this radius as needed
-    FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
-    FVector RandomPlayerLocation = PlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
-
     // Update player location in the player location manager
-    UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(RandomPlayerLocation);
+    UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(PlayerLocation);
     UEnemyCommunicationManager::GetInstance()->SetIsChasing(true);
+    
 }
 
 
@@ -212,24 +197,25 @@ void AEnemyShooterAIController::BeginChase(bool ChaseStatus)
 
 void AEnemyShooterAIController::Shoot()
 {
-    EnemyWeapon->ShootEnemyProjectile();
+    FVector SpawnLocation = EnemyWeapon->GetActorLocation(); //Byt ut till skeleton mesh senare
+    SpawnLocation.X -= 100;
+    FRotator SpawnRotation = WeaponRotation;
+    FActorSpawnParameters SpawnParams;
+    SpawnParams.Owner = this;
+    SpawnParams.Instigator = GetInstigator();
+
+    //Spawnar projectile och skjuter den med damage
+    AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation+100, SpawnRotation, SpawnParams);
+    if (Projectile)
+    {
+        Projectile->SetDamage(15);
+    }
 }
 
 void AEnemyShooterAIController::InitiateEnemy()
 {
     Enemy = Cast<AShooterEnemy>(GetPawn());
-    if (Enemy) // Ensure Enemy is not null
-    {
-        EnemyWeapon = Enemy->TriggerWeapon;
-        if (!EnemyWeapon)
-        {
-            UE_LOG(LogTemp, Error, TEXT("EnemyWeapon is null"));
-        }
-    }
-    else
-    {
-        UE_LOG(LogTemp, Error, TEXT("Enemy is null"));
-    }
+    //EnemyWeapon = Enemy->TriggerWeapon;
 }
 
 void AEnemyShooterAIController::InitiatePlayer()

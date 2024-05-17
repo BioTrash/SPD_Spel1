@@ -9,20 +9,18 @@ struct FDamageEvent;
 #include "NiagaraFunctionLibrary.h"
 #include "GameFramework/DamageType.h"
 
-//Hanna
 ARushEnemyAI::ARushEnemyAI()
 {
-	//Konstruktor, sätter bool till falskt och sätter igång tick
 	PrimaryActorTick.bCanEverTick = true;
 	bHasExploded = false;
 }
-//Körs i början av spelet, sätter health till maxhealth
+
 void ARushEnemyAI::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
 }
-//hanterar fiendes beteende och explosion, så om hälsan är under 0 ska den explodera om inte kallar den på performlinetrace
+
 void ARushEnemyAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -36,14 +34,14 @@ void ARushEnemyAI::Tick(float DeltaTime)
 		bHasExploded = true;
 	}
 }
-//Spelarinputkomponent
 void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
-//Utför själva explosionen, om spelaren är inom radiusen kommer den att skada av explosionen
+
 void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Exploderar i facet >:D"));
 	if (bCollisionTriggered && !bHasExploded)
 	{
 		TArray<AActor*> OverlappingActors;
@@ -62,17 +60,18 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 				Player->TakeDamage(ActualDamage, FDamageEvent(), GetController(), this);
 			}
 		}
-	//Effekten för explosionen
+
 	if (ExplosionEffect)
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
 	}
 		bHasExploded = true;
+		UE_LOG(LogTemp, Warning, TEXT("Destroyas"));
 		OnEnemyDeath();
 		Destroy();
 	}
 }
-//Utför linetrace för att se om fienden har kolliderat med spelaren
+
 void ARushEnemyAI::PerformLineTrace()
 {
 	FVector StartLocation = GetActorLocation();
@@ -84,22 +83,21 @@ void ARushEnemyAI::PerformLineTrace()
 	
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params))
 	{
-		Explode(30, true);
+		if (APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor()))
+		{
+			Explode(30, true);
+		}
 	}
 }
-//Ser till att spelaren tar skada
+
 float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float DamageToMake = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
-	if (Health <= 0 && !bHasExploded)
-	{
-		Explode(30.f, true);
-	}
 	return DamageToMake;
 }
-//För Noras animationer
 bool ARushEnemyAI::GetIsLaunchingAnimation()
 {
 	return IsLaunchingAnimation;
