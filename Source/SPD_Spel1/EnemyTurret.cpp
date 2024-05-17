@@ -120,7 +120,11 @@ void AEnemyTurret::ShootEnemy(float Damage)
 void AEnemyTurret::Die()
 {
 	OnEnemyDeath();
-	Destroy();
+	// Gömmer turret istället för att destroya.
+	SetActorEnableCollision(false);
+	SetActorHiddenInGame(true);
+	SetActorTickEnabled(false);
+	//Destroy();
 }
 //Resettar cooldownen på när spelaren ska skjuta igen
 void AEnemyTurret::ShootAgainCooldown()
