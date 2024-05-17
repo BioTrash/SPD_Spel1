@@ -2,8 +2,8 @@
 #include "ProjectileWeapon.h"
 #include "Components/PointLightComponent.h"
 #include "EnemyShooterAIController.h"
-#include "Weapon.h"
-
+#include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
 
 // Sets default values
 AShooterEnemy::AShooterEnemy()
@@ -31,7 +31,7 @@ void AShooterEnemy::BeginPlay()
 			UE_LOG(LogTemp, Error, TEXT("Instance good"));
 
 			// Attach the weapon to the mesh socket or root
-			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("EnemyWeaponSocket"));
             
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
@@ -46,13 +46,19 @@ void AShooterEnemy::BeginPlay()
 }
 
 // Called every frame
-void AShooterEnemy::Tick(float DeltaTime)
+void AShooterEnemy::Tick(float DeltaSeconds)
 {
-	Super::Tick(DeltaTime);
+	Super::Tick(DeltaSeconds);
+	DeathTime += DeltaSeconds;
+	UE_LOG(LogTemp, Warning, TEXT("TIMER: %f"), DeathTime);
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
 		KillEnemy();
+	}
+	if (DeathTime >= DespawnCooldown && !isAlive)
+	{
+		Destroy();
 	}
 }
 
@@ -79,10 +85,9 @@ void AShooterEnemy::KillEnemy()
 	SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
+	DeathTime = 0;
 	TriggerWeapon->SetActorTickEnabled(false);
 	TriggerWeapon->SetOwner(nullptr);
-	SetActorTickEnabled(false);
-	
 	AAIController* EnemyAIController = Cast<AAIController>(GetController());
 	if (EnemyAIController)
 	{
@@ -96,6 +101,32 @@ void AShooterEnemy::KillEnemy()
 	{
 		PointLightComponent->DestroyComponent();
 	}
+	UPrimitiveComponent* EnemyRootComponent = Cast<UPrimitiveComponent>(GetRootComponent());
+	UCapsuleComponent* EnemyCapsuleComponent = GetCapsuleComponent();
+	if (EnemyCapsuleComponent)
+	{
+		EnemyCapsuleComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		USphereComponent* HeadshotComponent = nullptr;
+		TArray<USceneComponent*> ChildrenList;
+		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList);
+		for (USceneComponent* Child : ChildrenList)
+		{
+			if (USphereComponent* SphereChild = Cast<USphereComponent>(Child))
+			{
+				if (SphereChild->GetName() == "Headshot")
+				{
+					HeadshotComponent = SphereChild;
+					break;
+				}
+			}
+		}
+
+		if (HeadshotComponent)
+		{
+			HeadshotComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		}
+	}
+	
 	//Destroy();
 }
 
@@ -107,19 +138,16 @@ UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
 
 void AShooterEnemy::SetRagdollPhysics()
 {
-	// Assuming SkeletalMeshComponent is the name of your skeletal mesh component
 	USkeletalMeshComponent* SkeletalMesh = GetMesh();
 	if (SkeletalMesh)
 	{
-		// Set collision presets to ragdoll
 		SkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 		SkeletalMesh->SetCollisionProfileName(TEXT("Ragdoll"));
 
-		// Enable physics simulation for each bone
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
-		float ImpulseStrength = 5000;
+		float ImpulseStrength = 6000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 	}
 }
@@ -127,6 +155,11 @@ void AShooterEnemy::SetRagdollPhysics()
 bool AShooterEnemy::getIsShooting()
 {
 	return isShooting;
+}
+
+void AShooterEnemy::DestroyActor()
+{
+	
 }
 
 void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)

@@ -15,41 +15,45 @@ class SPD_SPEL1_API ARushEnemyAIController : public AAIController
 	GENERATED_BODY()
 	
 public:
-
 	ARushEnemyAIController();
-	void BeginPlay();
+	
+protected:
+	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
+
+private:
+	void UpdatePlayerLocation();
+	void LaunchLogic(float DeltaSeconds);
+	void AnticipationLaunch(float DeltaSeconds, const FVector& EnemyLocation, const FVector& PlayerLocation, float DistanceToPlayer);
 	void LaunchTowardsPlayer();
 	void ExplodeAfterLaunch();
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageRadius = 300.0f;
-	bool bHasBeenDamagedByExplosion; 
-	
-protected:
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float LaunchDistanceThreshold;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float AnticipationDelay = 0.0f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	float MinLaunchDistance = 300.0f;
-
-private:
-	bool bHasLaunched;
-	FTimerHandle ExplodeTimerHandle;
-	
 	UPROPERTY(EditAnywhere)
-	class UBehaviorTree* AIBehavior;
+	UBehaviorTree* AIBehavior;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
 	float ExplosionDamage = 10.f;
 
-	UPROPERTY(EditAnywhere)
-	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-
 	UPROPERTY(EditAnywhere, Category="Enemy")
 	class UNiagaraSystem* ExplosionEffect;
+
+	UPROPERTY(EditAnywhere, Category = "AI")
+	float LaunchDistanceThreshold;
+
+	UPROPERTY(EditAnywhere, Category = "AI")
+	float AnticipationDelay = 0.0f;
+
+	UPROPERTY(EditAnywhere, Category = "AI")
+	float MinLaunchDistance = 300.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Damage")
+	float DamageRadius = 300.0f;
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+	
+	bool bHasLaunched;
+	bool bHasBeenDamagedByExplosion;
+
+	FTimerHandle ExplodeTimerHandle;
 };

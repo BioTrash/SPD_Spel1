@@ -39,7 +39,7 @@ public:
 	UPROPERTY(Blueprintable, EditAnywhere)
 	bool isShooting;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	float MaxHealth = 100;
 
 	UPROPERTY(VisibleAnywhere)
