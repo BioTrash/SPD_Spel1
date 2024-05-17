@@ -263,7 +263,7 @@ void ASlimeBossAIController::SlamAttack()
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
 	
-		// JEREMY Show slam mesh and activate its collision for slam attack.
+		// JEREMY Show slam mesh. (For debugging)
 		//SlamMesh->SetHiddenInGame(false);
 		
 	}
@@ -287,6 +287,7 @@ void ASlimeBossAIController::EndSlamAttack()
 	SlamMesh->SetRelativeScale3D(StartScale);
 	SlamMesh->SetHiddenInGame(true);
 	Alpha = 0;
+	UE_LOG(LogTemp, Warning, TEXT("Startscale: %s"), *StartScale.ToString());
 	
 }
 void ASlimeBossAIController::ResetSlamAttack()
