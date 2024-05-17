@@ -12,6 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1PlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1PlayerController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_MouseSensitivity.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_MouseSensitivity.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_OptionsMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_OptionsMenu.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_PauseOptionsMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_PauseOptionsMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SPD_Spel1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SPD_Spel1.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "RebeckaBranch",
+    "git-widget-placeholder": "RufusExtraordinaire",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,9 +71,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -237,6 +241,7 @@
       <workItem from="1715758901953" duration="271000" />
       <workItem from="1715759232540" duration="468000" />
       <workItem from="1715947097653" duration="385000" />
+      <workItem from="1715949173184" duration="727000" />
     </task>
     <servers />
   </component>
