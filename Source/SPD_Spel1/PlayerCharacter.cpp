@@ -112,51 +112,27 @@ void APlayerCharacter::Tick(float DeltaTime)
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	if(UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
-	{
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+	UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent);
+	
+	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
+	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Move);
 
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
+	EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Look);
 		
-		EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Started, this, &APlayerCharacter::Dash);
+	EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Started, this, &APlayerCharacter::Dash);
 
-		EnhancedInputComponent->BindAction(SlideAction, ETriggerEvent::Started, this, &APlayerCharacter::Slide);
+	EnhancedInputComponent->BindAction(SlideAction, ETriggerEvent::Started, this, &APlayerCharacter::Slide);
 
-		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &APlayerCharacter::Shoot);
-		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Completed, this, &APlayerCharacter::CancelShoot);
+	EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &APlayerCharacter::Shoot);
+	EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Completed, this, &APlayerCharacter::CancelShoot);
 
-		EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &APlayerCharacter::ReloadWeapon);
+	EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &APlayerCharacter::ReloadWeapon);
 
-		EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Started, this, &APlayerCharacter::OnButtonPress);
-		EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Completed, this, &APlayerCharacter::OnButtonRelease);
-	}
-
-	// // TEXT field has to have the exact same name as the AxisMapping, functions have to references - '&' (Rufus)
-	// // 'this' refers to this, player, object but could theoretically be any object; possible mechanic for controlling several objects at once (Rufus)
-	// PlayerInputComponent->BindAxis(TEXT("FrontBackMove"), this, &APlayerCharacter::FrontBackMove);
-	// PlayerInputComponent->BindAxis(TEXT("RightLeftMove"), this, &APlayerCharacter::RightLeftMove);
-	//
-	// //Pitch is inverted, i.e. looking up is -1 and looking down is +1 (Rufus)
-	// PlayerInputComponent->BindAxis(TEXT("LookUpDown"), this, &APlayerCharacter::CameraVertical);
-	// PlayerInputComponent->BindAxis(TEXT("LookRightLeft"), this, &APlayerCharacter::CameraHorizontal);
-	//
-	// //Binding for dash (Rebecka)
-	// PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Dash);
-	// //Binding for lide (Rebecka)
-	// PlayerInputComponent->BindAction(TEXT("Slide"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Slide);
-	//
-	//
-	// PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Pressed, this, &APlayerCharacter::Shoot);
-	// PlayerInputComponent->BindAction(TEXT("Shoot"), EInputEvent::IE_Released, this, &APlayerCharacter::CancelShoot);
-	//
-	// PlayerInputComponent->BindAction(TEXT("Reload"), EInputEvent::IE_Pressed, this, &APlayerCharacter::ReloadWeapon);
-	//
-	// PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Pressed, this, &APlayerCharacter::OnButtonPress);
-	// PlayerInputComponent->BindAction(TEXT("ChargeSlime"), IE_Released, this, &APlayerCharacter::OnButtonRelease);
+	EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Started, this, &APlayerCharacter::OnButtonPress);
+	EnhancedInputComponent->BindAction(ChargeSlimeAction, ETriggerEvent::Completed, this, &APlayerCharacter::OnButtonRelease);
 	
 }
 
