@@ -25,8 +25,6 @@ void ASlimeBossAI::Tick(float DeltaTime)
 	{
 		KillEnemy();
 	}
-
-	//UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
 }
 
 // Called to bind functionality to input
@@ -45,7 +43,6 @@ float ASlimeBossAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
     ActualDamage = FMath::Min(Health, ActualDamage);
     Health -= ActualDamage;
-    //UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
     return ActualDamage;
 }
 float ASlimeBossAI::GetHealth() const
@@ -69,23 +66,31 @@ void ASlimeBossAI::KillEnemy()
 	OnEnemyDeath();
 	Destroy();
 }
+//Aktiverar och inaktiverar skölden som bossen har, används för slam också för iframes
 void ASlimeBossAI::SetShield(bool bShielded)
 {
+	//Sätter skölden til det angivna värdet
 	bShield = bShielded;
+	//Om skölden är aktiverad
 	if(bShield)
 	{
+		//Sätter igång en timer för att inaktivera den efter 2 sekunder
 		GetWorldTimerManager().SetTimer(ShieldTimerHandle, this, &ASlimeBossAI::DisableShield, 2.0f, false);
 	}
-	else
+	else //Inte är aktiverad
 	{
+		//Rensar timern för att undvika att skölden inaktiveras
 		GetWorldTimerManager().ClearTimer(ShieldTimerHandle);
 	}
 }
-
+//Returnerar true om bossen är sköldad annars false
+//Hanna
 bool ASlimeBossAI::IsShielded() const
 {
 	return bShield;
 }
+//Inaktiverar skölden för bossen
+//Hanna
 void ASlimeBossAI::DisableShield()
 {
 	bShield = false;
