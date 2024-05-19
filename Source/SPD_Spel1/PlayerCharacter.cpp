@@ -177,12 +177,14 @@ void APlayerCharacter::OnButtonRelease()
 // Normal Fire
 void APlayerCharacter::Shoot()
 {
+	IsShootingNormal = true;
 	TriggerWeapon->InitiateTimer(true, false);
 }
 
 // Normal Fire
 void APlayerCharacter::CancelShoot()
 {
+	IsShootingNormal = false;
 	//TriggerWeapon->InitiateTimer(false, false);
 }
 
