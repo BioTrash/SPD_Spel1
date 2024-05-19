@@ -14,6 +14,7 @@ AEnemyTurret::AEnemyTurret()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	//Skapar alla components för turreten och sätter de som attachments där de behövs
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
 	RootComponent = CapsuleComponent;
     
@@ -30,25 +31,32 @@ AEnemyTurret::AEnemyTurret()
 void AEnemyTurret::BeginPlay()
 {
 	Super::BeginPlay();
+	//Sätter turretens health till maxhealth
 	Health = MaxHealth;
+	//Hittar spelarens karaktär och lägger en referens till den
 	Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 }
 //Körs varje frame
 void AEnemyTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	//Kollar om health är noll eller lägre 
 	if (Health <= 0)
 	{
+		//Anropar diefunktionen och returnerar
 		Die();
 		return;
 	}
 
+	//Kollar om spelaren existerar
 	if (Player)
 	{
+		//Beräknar avståndet mellan turreten och spelaren
 		float Distance = FVector::Dist(GetActorLocation(), Player->GetActorLocation());
+		//Kollar om spelaren är inom firerange(skjutavstånd)
 		if (Distance <= FireRange)
 		{
+			//Skjuter på spelaren med projektiler och roterar även turretens huvud mot spelaren
 			ShootEnemy(10.0f);
 			ShootProjectiles();
 			RotateTurret(Player->GetActorLocation());
@@ -71,51 +79,71 @@ float AEnemyTurret::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 //Rotarerar turretens huvud för att alltid kolla på target location vilket är spelaren
 void AEnemyTurret::RotateTurret(FVector TargetLocation)
 {
+	//Beräknar ut rotationen för att hitta targetlocation
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(TurretMesh->GetComponentLocation(), TargetLocation);
+	//nollställer Pitch och roll, justera yaw så den kan kolla på spelaren hela tiden
 	LookAtRotation.Pitch = 0;
 	LookAtRotation.Roll = 0;
-	LookAtRotation.Yaw += -90.f; 
+	LookAtRotation.Yaw += -90.f;
+	//Sätter turretens rotation till den beröknande rotationen
 	TurretMesh->SetWorldRotation(LookAtRotation);
 }
 //Skjuter projectiler från turreten
 void AEnemyTurret::ShootProjectiles()
 {
+	//Kollar cooldown tiden innan den skjuter
 	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
 	{
+		//Kontrollerar om projektilklassen är satt
 		if (ProjectileClass)
 		{
+			//Ställer in parametrar för att spawna in projektiler
 			FActorSpawnParameters SpawnParams;
 			SpawnParams.Owner = this;
 			SpawnParams.Instigator = GetInstigator();
+			//Hämtar spawn positionen och rotationen 
 			FVector SpawnLocation = ProjectileSpawn->GetComponentLocation();
 			FRotator SpawnRotation = ProjectileSpawn->GetComponentRotation();
-			
+
+			//Spawnar in projektiler i världen
 			if (AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams))
 			{
+				//Sätter projektiles ägare till turreten själv(this)
 				Projectile->SetOwner(this);
 			}
 		}
+		//Sätter nästa tid som en projektil ska skjutas
 		NextProjectileTime = GetWorld()->GetTimeSeconds() + ProjectileSpawnCooldown;
 	}
 }
 //Skjuter på spelaren med insant-hit
 void AEnemyTurret::ShootEnemy(float Damage)
 {
+	//Kontrollerar om cooldown tiden har gått
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
+		//Kontrollerar om player finns
 		if (Player)
 		{
+			//Beröknar avståndet till spelaren
 			float DistanceToPlayer = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
+			//Beräknar skadans multiplier beroende på avståndet
 			float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer * DamageRadius), 0.0f, 1.0f);
+			//Beräknar sedan den faktiska skadan som ska göras
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
 
+			//Gör skada på spelaren
 			Player->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
+			//Sätter tiden som nästa skott ska göras
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 		}
+		//resettar cooldown-tiden för skjutandet
 		ShootAgainCooldown();
 		}
+	//Sätter animationen till false
 	IsShootingAnimation = false;
 	}
+
 //Ser till att spelaren dör
 void AEnemyTurret::Die()
 {
