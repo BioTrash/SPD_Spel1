@@ -41,7 +41,7 @@ void ANonProjectileWeapon::Shoot()
 	{
 		AActor* HitActor = Hit.GetActor();
 
-		//Check if Hit actor is a Shooter, if so, log the hit bone and impulse direction (Used for ragdoll) [Louis]
+		// Check om den träffade är en Shooter, och uppdatera HitInformation [Louis]
 		AShooterEnemy* EnemyShooter = Cast<AShooterEnemy>(HitActor);
 		if (EnemyShooter)
 		{

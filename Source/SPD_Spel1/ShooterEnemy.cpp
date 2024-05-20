@@ -5,15 +5,11 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SphereComponent.h"
 
-// Sets default values
 AShooterEnemy::AShooterEnemy()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
-// Called when the game starts or when spawned
 void AShooterEnemy::BeginPlay()
 {
 	Super::BeginPlay();
@@ -21,19 +17,16 @@ void AShooterEnemy::BeginPlay()
 	isAlive = true;
 	if (BP_EnemyWeaponClass)
 	{
-		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
-		// Spawn the BP_EnemyProjectileWeapon
+		// Spawna vapnet
 		AProjectileWeapon* WeaponInstance = GetWorld()->SpawnActor<AProjectileWeapon>(BP_EnemyWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
-		// Check if spawn was successful
+		// Checka spawnen
 		if (WeaponInstance)
 		{
-			UE_LOG(LogTemp, Error, TEXT("Instance good"));
-
-			// Attach the weapon to the mesh socket or root
+			// Attacha vapnet i rätt socket
 			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("EnemyWeaponSocket"));
             
-			// Set the owner of the weapon
+			// Set ägare fär vapnet
 			WeaponInstance->SetOwner(this);
 			TriggerWeapon = WeaponInstance;
 			TriggerWeapon->SetOwner(this);
@@ -45,24 +38,26 @@ void AShooterEnemy::BeginPlay()
 	}
 }
 
-// Called every frame
 void AShooterEnemy::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	
+	// Används för att rensa fiende
 	DeathTime += DeltaSeconds;
-	UE_LOG(LogTemp, Warning, TEXT("TIMER: %f"), DeathTime);
+
+	// Om död
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();
 		KillEnemy();
 	}
+	// Om död och dags att rensa
 	if (DeathTime >= DespawnCooldown && !isAlive)
 	{
-		Destroy();
+		Destroy(); // Att byta ut mot Object Pooling-logik
 	}
 }
 
-// Called to bind functionality to input
 void AShooterEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -75,13 +70,11 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
-	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
 	return DamageToMake;
 }
 
 void AShooterEnemy::KillEnemy()
 {
-	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
@@ -94,7 +87,6 @@ void AShooterEnemy::KillEnemy()
 		EnemyAIController->StopMovement();
 		EnemyAIController->UnPossess();
 		EnemyAIController->Destroy();
-		//EnemyAIController->SetControlledPawn(nullptr);
 	}
 	UPointLightComponent* PointLightComponent = FindComponentByClass<UPointLightComponent>();
 	if (PointLightComponent)
@@ -126,13 +118,10 @@ void AShooterEnemy::KillEnemy()
 			HeadshotComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		}
 	}
-	
-	//Destroy();
 }
 
 UStaticMeshComponent* AShooterEnemy::GetStaticMeshComponent() const
 {
-	// Assuming the static mesh component is named "EnemyStaticMesh"
 	return FindComponentByClass<UStaticMeshComponent>();
 }
 
@@ -157,11 +146,7 @@ bool AShooterEnemy::getIsShooting()
 	return isShooting;
 }
 
-void AShooterEnemy::DestroyActor()
-{
-	
-}
-
+// Används vid varje träff från spelare för att logga vad som träffats. Används i Ragdolling
 void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)
 {
 	HitBoneName = BoneName;
