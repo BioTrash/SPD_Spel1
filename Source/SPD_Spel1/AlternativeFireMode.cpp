@@ -12,7 +12,6 @@ void AAlternativeFireMode::BeginPlay()
 	
 	Slime->SetActorHiddenInGame(true);
 	Slime->SetActorEnableCollision(false);
-	Slime->SetActorTickEnabled(false);
 
 	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
 	TempMove->SetActive(false);
@@ -63,12 +62,12 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 
 void AAlternativeFireMode::FireWeapon()
 {
+	Slime->bHasHit = false; // Precaution if there's no sound on explosion as it is where bHasHit is set to false (Rufus) 
 	Slime->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
 	Slime->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
 
 	Slime->SetActorHiddenInGame(false);
 	Slime->SetActorEnableCollision(true);
-	Slime->SetActorTickEnabled(true);
 
 	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
 	TempMove->SetActive(true);

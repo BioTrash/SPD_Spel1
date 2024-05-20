@@ -30,8 +30,6 @@ void ASlimeProjectile::BeginPlay()
 {
 	Super::BeginPlay();
 	ProjectileMesh->OnComponentHit.AddDynamic(this, &ASlimeProjectile::OnHit);
-	
-
 }
 
 // Called every frame
@@ -58,10 +56,10 @@ void ASlimeProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, U
 		//OtherActor->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
 	//Destroy();
+	bHasHit = true;
 	this->Explode();
 	this->SetActorHiddenInGame(true);
 	this->SetActorEnableCollision(false);
-	this->SetActorTickEnabled(false);
 	
 	ProjectileMovementComponent->SetActive(false);
 }
@@ -90,6 +88,7 @@ void ASlimeProjectile::Explode()
 
 	if(ExplosionEffect)
 	{
+		
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ExplosionEffect, ExplosionLocation, FRotator::ZeroRotator, FVector::OneVector, true, true);
 	}
 }

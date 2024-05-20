@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditAnywhere, Category="Weaponry")
 	TSubclassOf<class ASlimeProjectile> Projectile;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	ASlimeProjectile* Slime;
 	
 
