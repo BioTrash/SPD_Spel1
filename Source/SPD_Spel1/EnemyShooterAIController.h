@@ -67,7 +67,6 @@ private:
 	void InitiateEnemy();
 	void InitiatePlayer();
 	
-	// Cooldown duration between shots
 	float ShootCooldown = 2.5f;
 
 	bool EffectIsPlaying = false;
