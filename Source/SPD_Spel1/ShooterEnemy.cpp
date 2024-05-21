@@ -75,7 +75,13 @@ float AShooterEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEv
 	//to make sure that the DamageToMake is not greater than the health we have left, therefore we make the DamageToMake to be the amount we have left (Rebecka) 
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
+
+	if(Health > 0)
+	{
+		IsTakingDamage = true;
+	}
 	//UE_LOG(LogTemp, Warning, TEXT("Health left: %f"), Health);
+	IsTakingDamage = false;
 	return DamageToMake;
 }
 
@@ -156,6 +162,12 @@ bool AShooterEnemy::getIsShooting()
 {
 	return isShooting;
 }
+
+bool AShooterEnemy::GetIsTakingDamage()
+{
+	return IsTakingDamage;
+}
+
 
 void AShooterEnemy::DestroyActor()
 {
