@@ -51,7 +51,7 @@ protected:
 private:
 	
 	UPROPERTY()
-	UStaticMeshComponent* PawnMesh;
+	USkeletalMeshComponent* PawnMesh;
 
 	UPROPERTY()
 	UStaticMeshComponent* SlamMesh;
