@@ -112,7 +112,7 @@ protected:
 	virtual void BeginPlay() override;
 	
 	UPROPERTY(EditAnywhere, Category="Weapon Beahviour") // Charge time for slime alternative fire
-	float MaxChargeTime = 2.0f;
+	float MaxChargeTime = 5.0f;
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
