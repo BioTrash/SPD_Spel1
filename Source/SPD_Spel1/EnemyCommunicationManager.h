@@ -17,36 +17,40 @@ class SPD_SPEL1_API UEnemyCommunicationManager : public UObject
 public:
 	UEnemyCommunicationManager();
 
-	// Singleton pattern to access the instance
+	// Get-metod för instans
 	static UEnemyCommunicationManager* GetInstance();
 
-	// Get the current player location
+	// Get-metod för PlayerLocation
 	UFUNCTION(BlueprintPure, Category = "Enemy Communication")
 	FVector GetPlayerLocation() const;
-
+	
+	//Get-metod för Chase
 	UFUNCTION(BlueprintPure, Category = "Enemy Communication")
 	bool GetSetIsChasing() const;
 
-	// Set the player location and broadcast the update
+	// Set-metod för Location och broadcasta denna
 	UFUNCTION(BlueprintCallable, Category = "Enemy Communication")
 	void SetPlayerLocation(const FVector& NewPlayerLocation);
 
+	// Set-metod för Chase och broadcasta denna
 	UFUNCTION(BlueprintCallable, Category = "Enemy Communication")
 	void SetIsChasing(const bool& IsChasing);
 	
-	// Event delegate to notify when player location is updated
+	// Event-delegat: Notifierar när PlayerLocation ändrats
 	UPROPERTY(BlueprintAssignable, Category = "Enemy Communication")
 	FPlayerLocationUpdatedDelegate OnPlayerLocationUpdated;
 
+	// Event-delegat: Notifierar när Chase ändrats
 	UPROPERTY(BlueprintAssignable, Category = "Enemy Communication")
 	FChaseUpdatedDelegate OnChaseUpdated;
 
 private:
-	// Player location stored in the manager
+	// Spelarens location
 	FVector PlayerLocation;
-
+	
+	// Chase-variabeln
 	bool Chase;
     
-	// Weak pointer to the singleton instance
+	// Singleton-instansen
 	static TWeakObjectPtr<UEnemyCommunicationManager> SingletonInstance;
 };
