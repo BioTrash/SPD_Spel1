@@ -54,6 +54,8 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
 		PlayerPawn->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
+
+	
     
 	// Destroy the projectile regardless of the hit actor
 	//UE_LOG(LogTemp, Log, TEXT("Destroying the projectile"));
@@ -62,6 +64,8 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 	this->SetActorHiddenInGame(true);
 	this->SetActorEnableCollision(false);
 	this->SetActorTickEnabled(false);
+	Destroy();
+	
 	
 	ProjectileMovementComponent->SetActive(false);
 }
