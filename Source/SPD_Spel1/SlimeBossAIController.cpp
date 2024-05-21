@@ -44,7 +44,7 @@ void ASlimeBossAIController::BeginPlay()
 	if (Boss)
 	{
 		//Hittar och sätter referenser till olika komponenter och attribut på bossen
-		PawnMesh = Boss->FindComponentByClass<UStaticMeshComponent>();
+		PawnMesh = Boss->FindComponentByClass<USkeletalMeshComponent>();
 		SlamMesh = Cast<UStaticMeshComponent>(Boss->FindComponentByTag(UStaticMeshComponent::StaticClass(), TEXT("SlamMesh")));
 		SlamMesh->OnComponentBeginOverlap.AddDynamic(this, &ASlimeBossAIController::OnOverlapBegin);
 		ProjectileSpawn = Boss->FindComponentByClass<USceneComponent>();
