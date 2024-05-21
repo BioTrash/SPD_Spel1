@@ -44,6 +44,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     Super::Tick(DeltaSeconds);
     
     LastShotTime += DeltaSeconds;
+    UE_LOG(LogTemp, Warning, TEXT("LASTSHOTTIME: %f"), LastShotTime);
     if (PlayerPawn != nullptr)
     {
         SetFocus(PlayerPawn);
@@ -107,9 +108,6 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         BeginChase(true);
 
-                        // Har en fiende ett klart skott ska denna skjuta, aktivera därför IsShooting för att stoppa andra noder i BT
-                        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-
                         //Skapa ett random Reposition-location som kan användas 
 
                         UpdateRePositionLocation();
@@ -120,6 +118,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             if (ShootingEffect && !EffectIsPlaying)
                             {
                                 //Spawna effekten
+                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
                                    GetWorld(),
                                    ShootingEffect,
@@ -137,33 +136,16 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             
                             if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
-                                UE_LOG(LogTemp, Warning, TEXT("Inside LastShotTime check"));
-    
-                                if (EnemyWeapon) {
-                                    Shoot();
-                                } else {
-                                    UE_LOG(LogTemp, Error, TEXT("EnemyWeapon is null"));
-                                }
-
+                                //Skjut-logik
+                                Shoot();
                                 UpdateRePositionLocation();
 
-                                if (Enemy) {
-                                    Enemy->isShooting = true;
-                                } else {
-                                    UE_LOG(LogTemp, Error, TEXT("Enemy is null"));
-                                }
-
+                                //Används bl.a för animation
+                                Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
                                 BeginChase(false);
-    
-                                auto BlackboardComponent = GetBlackboardComponent();
-                                if (BlackboardComponent) {
-                                    BlackboardComponent->SetValueAsBool(TEXT("IsShooting"), false);
-                                } else {
-                                    UE_LOG(LogTemp, Error, TEXT("BlackboardComponent is null"));
-                                }
-
+                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                                 ShootTime = false;
                             }
                         }
