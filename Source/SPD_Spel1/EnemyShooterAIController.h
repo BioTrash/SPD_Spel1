@@ -68,7 +68,7 @@ private:
 	void InitiatePlayer();
 	
 	// Cooldown duration between shots
-	float ShootCooldown = 2.5f;
+	float ShootCooldown = 1.5f;
 
 	bool EffectIsPlaying = false;
 	UPROPERTY(EditAnywhere, Category = "Mesh")
