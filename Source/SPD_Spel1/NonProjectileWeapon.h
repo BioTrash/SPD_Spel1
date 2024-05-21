@@ -47,6 +47,9 @@ private:
 	UPROPERTY(EditAnywhere)
 	float Damage = 10.0f;
 
+	UPROPERTY(EditAnywhere)
+	float HeadShotDamage = 30.0f;
+
 	float OriginalDamage = Damage;
 	
 	UPROPERTY(EditAnywhere)
