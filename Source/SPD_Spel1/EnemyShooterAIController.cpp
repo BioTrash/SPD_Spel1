@@ -32,7 +32,6 @@ void AEnemyShooterAIController::BeginPlay()
     if (AIBehavior != nullptr)
     {
         RunBehaviorTree(AIBehavior);
-        //GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
         GetBlackboardComponent()->SetValueAsBool(TEXT("HasRushed"), false);
 
@@ -45,13 +44,12 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     Super::Tick(DeltaSeconds);
     
     LastShotTime += DeltaSeconds;
-    //GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
     if (PlayerPawn != nullptr)
     {
         SetFocus(PlayerPawn);
     }
     bool ChaseStatus = GetBlackboardComponent()->GetValueAsBool(TEXT("Chase"));
-    UE_LOG(LogTemp, Warning, TEXT("IS CHASING STATUS : %hhd"), ChaseStatus);
+    //UE_LOG(LogTemp, Warning, TEXT("IS CHASING STATUS : %hhd"), ChaseStatus);
     Enemy = Cast<AShooterEnemy>(GetPawn());
     if (Enemy)
     {
@@ -63,74 +61,69 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
         if (EnemyWeapon)
         {
+            //Räknar ut avståndet mellan spelaren och fienden
             FVector PlayerLocation = PlayerPawn->GetActorLocation();
             EnemyLocation = Enemy->GetActorLocation();
-
-            // Calculate distance between enemy and player
             float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-
-            // Check if player is within 5 meters radius
-            if (DistanceToPlayer < 500.0f) // 500 units = 5 meters assuming 1 unit = 1 cm
+            
+            if (DistanceToPlayer < 500.0f)
             {
+                //Logik bakom ny position att röra sig mot om fienden befinner sig för nära
                 GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
-                // Calculate direction away from player
                 FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
                 DirectionAwayFromPlayer.Normalize();
 
-                // Calculate new destination for the enemy to maintain distance
-                FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f); // 500 units = 5 meters away
+                FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f);
                 GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
-                // Move enemy to new destination
-               // Enemy->SetActorLocation(NewDestination);
             }
             else
             {
                 GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), false);
             }
+
+            // "Rage"-läge vid specifikt HP
             if (Enemy->Health >= 30 && Enemy->Health < 50)
             {
                 GetBlackboardComponent()->SetValueAsBool(TEXT("HasRushed"), true);
             }
-
-                //EnemyWeapon->SetActorRotation(WeaponRotation);
-                // Vectors where trace is happening (Louis)
+            
+                // Vektorer för Trace (Louis)
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
 
-                //Params for linetrace (Louis)
+                //Parametrar för linetrace (Louis)
                 FHitResult HitResult;
                 FCollisionQueryParams CollisionParams;
                 CollisionParams.AddIgnoredActor(Enemy);
-                // Perform a line trace to check if there's a clear line of sight to the player (Louis)
+            
+                // Line trace (Louis)
                 if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
                 {
                     
-                    // If the ray hits the player, shoot (Louis)
+                    // Check ray träffar spelare (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-                        //Enemy updates position for PlayerLocation, LastKnownPlayerLocation, and signals it's shooting (Louis)
-                        //GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
 
-                        //Delegatuppdatering
-                        
+                        // Delegatuppdatering för andra shooters
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         BeginChase(true);
-                        //GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"), HitResult.GetActor()->GetActorLocation());
+
+                        // Har en fiende ett klart skott ska denna skjuta, aktivera därför IsShooting för att stoppa andra noder i BT
                         GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-                        
-                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("LastKnownPlayerLocation"));
+
+                        //Skapa ett random Reposition-location som kan användas 
+                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
                         float Radius = 900.0f;
                         FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
                         FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
-
                         GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
 
+                        //Check för skottcooldowns samt effekt
                         if (LastShotTime >= ShootCooldown)
                         {
                             if (ShootingEffect && !EffectIsPlaying)
                             {
-                                FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
-                                //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
+                                //Spawna effekten
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
                                    GetWorld(),
                                    ShootingEffect,
@@ -144,11 +137,14 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             {
                                 NiagaraSystemComponent->SetWorldLocation(EnemyWeapon->GetMuzzlePoint()->GetComponentLocation()); 
                             }
-                            //const float EffectDuration = 1.5f;
-
-                            if (LastShotTime >= ShootCooldown + 1.5f)
+                            const float EffectDuration = 1.5f;
+                            
+                            if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
+                                //Skjut-logik
                                 Shoot();
+
+                                //Används bl.a för animation
                                 Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
@@ -171,19 +167,19 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
 
 void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 {
-    // Get the get ID of the enemy
+    // Få ett unikt ID för Enemy-objektet via GetUniqueID
     FString EnemyID = FString::Printf(TEXT("%d"), GetUniqueID());
 
-    // Use the ID to make a unique position by hash
+    // Få ett random Hash baserat på ID-t. Används för att fienden ska få en slumpmässig men återskaplig randomlocation 
     uint32 Seed = FCrc::StrCrc32(*EnemyID);
     FMath::RandInit(Seed);
 
-    // Generate a random offset within a certain radius
-    float Radius = 1500.0f; // Adjust this radius as needed
+    // Generera ny slumpmässig position att uppdatera PlayerLocation med för andra
+    float Radius = 1500.0f;
     FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
     FVector RandomPlayerLocation = PlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
 
-    // Update player location in the player location manager
+    // Uppdatera PlayerLocation genom delegatet
     UEnemyCommunicationManager::GetInstance()->SetPlayerLocation(RandomPlayerLocation);
     UEnemyCommunicationManager::GetInstance()->SetIsChasing(true);
 }
@@ -191,7 +187,6 @@ void AEnemyShooterAIController::DetectPlayer(const FVector& PlayerLocation)
 
 void AEnemyShooterAIController::OnPlayerLocationUpdated(const FVector& NewPlayerLocation)
 {
-    //UE_LOG(LogTemp, Log, TEXT("Received updated player location: %s"), *NewPlayerLocation.ToString());
     GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), NewPlayerLocation);
     UE_LOG(LogTemp, Error, TEXT("MIN PLAYER POS ÄR: %s"), *GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation")).ToString());
 
@@ -205,9 +200,7 @@ void AEnemyShooterAIController::OnChaseUpdated(const bool NewChaseStatus)
 
 void AEnemyShooterAIController::BeginChase(bool ChaseStatus)
 {
-    // Update player location in the player location manager
     UEnemyCommunicationManager::GetInstance()->SetIsChasing(ChaseStatus);
-    
 }
 
 void AEnemyShooterAIController::Shoot()
@@ -215,10 +208,11 @@ void AEnemyShooterAIController::Shoot()
     EnemyWeapon->ShootEnemyProjectile();
 }
 
+// Säkerställ att fiende har referens till en själv. Fiende måste ha ett vapen och instans för att initieras
 void AEnemyShooterAIController::InitiateEnemy()
 {
     Enemy = Cast<AShooterEnemy>(GetPawn());
-    if (Enemy) // Ensure Enemy is not null
+    if (Enemy)
     {
         EnemyWeapon = Enemy->TriggerWeapon;
         if (!EnemyWeapon)
@@ -232,6 +226,7 @@ void AEnemyShooterAIController::InitiateEnemy()
     }
 }
 
+// Säkerställ att fiende har referens till spelaren
 void AEnemyShooterAIController::InitiatePlayer()
 {
     PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
