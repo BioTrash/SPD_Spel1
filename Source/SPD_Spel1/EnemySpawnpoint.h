@@ -28,8 +28,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Klassen som kommer spawnas via denna spawnpoint.
-	UPROPERTY(EditAnywhere, Category="Enemy")
-	UClass* EnemyToSpawnClass;
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Enemy")
+	TSubclassOf<AActor> EnemyToSpawnClass;
 
 	// Effect som spelas innan fiender spawnar.
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
@@ -37,7 +37,6 @@ public:
 	
 	UFUNCTION()
 	void OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent);
-	
 	
 	
 private:
