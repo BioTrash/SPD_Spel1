@@ -7,8 +7,8 @@
 #include "NiagaraFunctionLibrary.h"
 #include "Components/SceneComponent.h"
 #include "NiagaraComponent.h"
-#include "EnemyCommunicationManager.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "EnemyCommunicationManager.h"
 //#include "EnemyWeapon.h"
 
 void AShooterBossAIController::BeginPlay()
@@ -26,7 +26,7 @@ void AShooterBossAIController::BeginPlay()
     {
         SetFocus(PlayerPawn);
     }
-    ShootEffect->OnSystemFinished.AddDynamic(this, &ASlimeBossAIController::OnNiagaraSystemFinished);
+    //ShootEffect->OnSystemFinished.AddDynamic(this, &ASlimeBossAIController::OnNiagaraSystemFinished);
 }
 
 void AShooterBossAIController::Tick(float DeltaSeconds)
@@ -36,7 +36,8 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
     if (PlayerPawn != nullptr)
     {
         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
-        GetBlackboardComponent()->SetValueAsFloat(TEXT("Health"), Enemy ? Enemy->Health : 0.0f);
+        GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), false);
+        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
         
         LastShotTime += DeltaSeconds;
         LastSpamShotTime += DeltaSeconds;
@@ -47,29 +48,40 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
             EnemyWeapon = Enemy->TriggerWeapon; // Ensure TriggerWeapon is set
             DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
             WeaponRotation = DirectionToPlayer.Rotation();
+            GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), Enemy->getIsShooting());
+
 
             if (EnemyWeapon)
             {
                 FVector PlayerLocation = PlayerPawn->GetActorLocation();
-                EnemyLocation = Enemy->GetActorLocation();
-                float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-            
-                if (DistanceToPlayer < 900.0f)
+                EnemyLocation = EnemyWeapon->GetMuzzlePoint()->GetComponentLocation();
+                FVector EnemyBoundsOrigin;
+                FVector EnemyBoundsExtent;
+                Enemy->GetActorBounds(true, EnemyBoundsOrigin, EnemyBoundsExtent);
+
+                FVector PlayerBoundsOrigin;
+                FVector PlayerBoundsExtent;
+                PlayerPawn->GetActorBounds(true, PlayerBoundsOrigin, PlayerBoundsExtent);
+
+                float DistanceToPlayer = FVector::Dist(EnemyBoundsOrigin, PlayerBoundsOrigin) - (EnemyBoundsExtent.Size() + PlayerBoundsExtent.Size());
+                UE_LOG(LogTemp, Warning, TEXT("RANGE TO PLAYER: %f"), DistanceToPlayer);
+                if (DistanceToPlayer < 200.0f)
                 {
-                    //Logik bakom ny position att röra sig mot om fienden befinner sig för nära
+                    // Logic for new position to move towards if the enemy is too close
                     GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
                     FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
                     DirectionAwayFromPlayer.Normalize();
 
                     FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f);
                     GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
+                    Enemy->GetCharacterMovement()->MaxWalkSpeed = NewWalkSpeed;
 
-                    if (DistanceToPlayer < 500.0f)
+                    if (DistanceToPlayer < 100.0f)
                     {
-                        GetBlackboardComponent()->SetValueAsBool(TEXT("RageShot"), true);
                         SpamAttack();
                     }
                 }
+                Enemy->GetCharacterMovement()->MaxWalkSpeed = OriginalWalkSpeed;
                 
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
@@ -123,16 +135,19 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
 
 void AShooterBossAIController::SpamAttack()
 {
-    if (LastSpamShotTime >= SpamShotCooldown && SpamAmount < 5)
-    {
-        Shoot();
-        LastSpamShotTime = 0;
-        SpamAmount++;
-    }
-    if (SpamAmount <= 5)
-    {
-        SpamAmount = 0;
-    }
+    //JumpBack();
+        if (LastSpamShotTime >= SpamShotCooldown && SpamAmount < 5)
+        {
+            Shoot();
+            UE_LOG(LogTemp, Warning, TEXT("SpamFiring!"))
+            LastSpamShotTime = 0;
+            SpamAmount++;
+        }
+        if (SpamAmount <= 5)
+        {
+            SpamAmount = 0;
+            InPositionSpam = false;
+        }
 }
 
 void AShooterBossAIController::Shoot()
@@ -146,6 +161,9 @@ void AShooterBossAIController::InitiateEnemy()
     if (Enemy) // Ensure Enemy is not null
     {
         EnemyWeapon = Enemy->TriggerWeapon;
+        OriginalWalkSpeed = Enemy->GetCharacterMovement()->MaxWalkSpeed;
+        NewWalkSpeed = OriginalWalkSpeed + 300;
+
         if (!EnemyWeapon)
         {
             UE_LOG(LogTemp, Error, TEXT("EnemyWeapon is null"));
@@ -157,12 +175,18 @@ void AShooterBossAIController::InitiateEnemy()
     }
 }
 
+void AShooterBossAIController::JumpBack()
+{
+    FVector DirectionAwayFromPlayer = EnemyLocation - PlayerPawn->GetActorLocation();
+    DirectionAwayFromPlayer.Normalize();
+    FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 700.0f);
+
+    Enemy->SetActorLocation(NewDestination);
+    InPositionSpam = true;
+    
+}
+
 void AShooterBossAIController::InitiatePlayer()
 {
     PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-}
-
-void AShooterBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent)
-{
-
 }

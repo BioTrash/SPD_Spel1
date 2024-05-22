@@ -148,7 +148,7 @@ void AShooterBoss::SetRagdollPhysics()
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
-		float ImpulseStrength = 6000;
+		float ImpulseStrength = 12000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 	}
 }

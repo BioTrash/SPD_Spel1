@@ -20,30 +20,7 @@
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BB_ShooterBossAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BB_ShooterBossAIController.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BT_ShooterBossAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BT_ShooterBossAIController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/AI/EnemyAI/Bosses/ShooterBoss/Hanna_Test1/D/IW/XMIBPMREZ04J492AJCW2NB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/AI/EnemyAI/Bosses/ShooterBoss/Hanna_Test1/D/IW/XMIBPMREZ04J492AJCW2NB.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/0/N7/9O5SR1M5K3S5MBSVIF4EFA.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/0/O4/FP0A0VW6SIUE0PSUFGNSFG.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/0/VI/UIM5EH406THV07DRPTVVLW.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/3/0Z/4Y4BX6A0PAGWLT1YEBBP02.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/3/L5/VYC0648FWDVH1PFOGG1GBE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/3/MT/KS5A2IQME7KV8LK4O42176.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/4/Q0/6UK053V09B0EGDBQ22R8PI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/5/NI/MWC6C2FW5WCXEBWFHPCTYM.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/5/PS/9DXTDNADGRIH0HC5HDQ9WY.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/6/RU/I2KNM26BP4JY42A2T61PNI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/7/8Y/FH2D4IQ9IUEAW5CPGLRJ8H.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/7/HL/V9FHBYUPQPPTMF9CNSVDTQ.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/7/WN/ZCICJAGQNYJC1LO09OCH3O.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/9/X6/T2YIMS2UP3LZH1KSBVYXOJ.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/A/TD/7STZTYFB3EEMIW4Y1E0CDE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/B/61/V8V8Z154TVDSB9V33IBGCS.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/B/7M/5ZC02PDHVLGPG0QD49OBMG.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/B/EW/KZLWNBN25UJYDOPBUPO25V.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/B/FW/YM4ZLR9U2DWJJV3B9ECPGO.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/C/IK/DAT679CBSPABH5WBKJ56QT.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/F/5D/TWUU0Y1D14G1RWDM2Y1VB2.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/3/55/FC0FK5MMM15MZAWRET5H7N.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/FirstPerson/Maps/Hanna_Louis1/3/55/FC0FK5MMM15MZAWRET5H7N.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.h" afterDir="false" />
@@ -79,30 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Louis__AAAAAAAAAAHGGGGHG",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Louis__AAAAAAAAAAHGGGGHG&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\logu5907\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\logu5907\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\logu5907\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SPD_Spel1" type="Uproject" factoryName="rider.uproject">
       <configuration_1>
@@ -717,7 +694,8 @@
       <workItem from="1716279309852" duration="339000" />
       <workItem from="1716296686882" duration="327000" />
       <workItem from="1716299997732" duration="594000" />
-      <workItem from="1716362324965" duration="4451000" />
+      <workItem from="1716362324965" duration="8690000" />
+      <workItem from="1716376141625" duration="5062000" />
     </task>
     <servers />
   </component>
