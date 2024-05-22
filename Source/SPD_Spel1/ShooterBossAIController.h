@@ -45,7 +45,10 @@ private:
 
 	//Attacks
 	void SpamAttack();
+	void JumpBack();
 	int SpamAmount = 3.0f;
+	float OriginalWalkSpeed;
+	float NewWalkSpeed;
 	
 	UPROPERTY()
 	AShooterBoss* Enemy;
@@ -59,6 +62,8 @@ private:
 	FVector DirectionToPlayer;
 	FRotator WeaponRotation;
 
+	bool InPositionSpam = false;
+
 	UNiagaraComponent* NiagaraSystemComponent;
 
 	//Timers
@@ -69,7 +74,7 @@ private:
 	void InitiatePlayer();
 	
 	// Cooldown duration between shots
-	float ShootCooldown = 2.5f;
+	float ShootCooldown = 4.5f;
 	float SpamShotCooldown = 0.3;
 
 	bool EffectIsPlaying = false;
