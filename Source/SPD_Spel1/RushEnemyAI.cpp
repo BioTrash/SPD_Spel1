@@ -118,7 +118,7 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
 
-	//Kontrollerar om dens hölsa är mindre eller lika med 0 och fienden inte har exploderat
+	//Kontrollerar om dens hälsa är mindre eller lika med 0 och fienden inte har exploderat
 	if (Health <= 0 && !bHasExploded)
 	{
 		//Utför explosionen

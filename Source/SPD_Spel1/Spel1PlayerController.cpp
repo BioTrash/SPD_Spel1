@@ -25,7 +25,7 @@ void ASpel1PlayerController::BeginPlay()
 	if(TimerClass) Timer->AddToViewport();
 
 	SlimeCharge = CreateWidget(this, SlimeChargeClass);
-	if(SlimeChargeClass) SlimeCharge->AddToViewport();
+	//if(SlimeChargeClass) SlimeCharge->AddToViewport();
 
 	FadeIn = CreateWidget(this, FadeInClass);
 	if(FadeInClass) FadeIn->AddToViewport();

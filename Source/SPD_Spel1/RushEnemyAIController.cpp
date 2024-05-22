@@ -24,7 +24,7 @@ void ARushEnemyAIController::BeginPlay()
 	//Kontroller om AIBehavior är satt då själva behavior tree
 	if (AIBehavior)
 	{
-		//Kör behaviortree som finns i AIBehavior
+		//Kör behavior-tree som finns i AIBehavior
 		RunBehaviorTree(AIBehavior);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
 	}
@@ -46,51 +46,44 @@ void ARushEnemyAIController::UpdatePlayerLocation()
 	//Hämtar spelarens pawn
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	//Kollar om PlayerPawn är giltig 
-	if (!PlayerPawn)
+	if (PlayerPawn)
 	{
-		return;
+		//Hämtar spelarens position
+		FVector PlayerLocation = PlayerPawn->GetActorLocation();
+		//Sätter sedan positionen i blackboard
+		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
 	}
-	//Hämtar spelarens position
-	FVector PlayerLocation = PlayerPawn->GetActorLocation();
-	//Sätter sedan positionen i blackboard
-	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
 }
 //Hanterar launchlogiken baserat på distansen på spelaren
 void ARushEnemyAIController::LaunchLogic(float DeltaSeconds)
 {
 	//Hämtar fiendens position
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
-	//Hämtar spelarens position från blackboarden
+	//Hämtar spelarens position från blackboard
 	FVector PlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
 
 	//Beräknar avståndet mellan fienden och spelaren
 	float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
-	//Hömtar om fienden launchas mot spelaren
+	//Hämtar om fienden launchas mot spelaren
 	bool bIsLaunching = GetBlackboardComponent()->GetValueAsBool(TEXT("IsLaunching"));
 
 	//Kollar om fienden launchas och redan har launchar
-	if (bIsLaunching && bHasLaunched)
+	if (bIsLaunching)
 	{
-		//Sätter den till false
-		bHasLaunched = false;
-		GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
-	}
-	//Kollar om den launchas och ännu inte har launchats
-	if (bIsLaunching && !bHasLaunched)
-	{
-		//Launchas mot spelaren
-		LaunchTowardsPlayer();
-		bHasLaunched = true;
-	}
-	else if (!bIsLaunching && bHasLaunched)
-	{
-		//återställer till false
-		bHasLaunched = false;
+		if (bHasLaunched)
+		{
+			bHasLaunched = false;
+			GetBlackboardComponent()->SetValueAsBool(TEXT("IsLaunching"), false);
+		}
+		else
+		{
+			LaunchTowardsPlayer();
+			bHasLaunched = true;
+		}
 	}
 	else
 	{
-		//Anticipatar launch för fienden om den inte launchas
-		AnticipationLaunch(5, EnemyLocation, PlayerLocation, DistanceToPlayer);
+		AnticipationLaunch(DeltaSeconds, EnemyLocation, PlayerLocation, DistanceToPlayer);
 	}
 }
 //Anticipatar launchen mot spelaren
