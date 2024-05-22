@@ -110,6 +110,9 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite)
 	bool bAlternativeFireTimerActive = false;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bReloading = false;
 protected:
 	AWeaponBase();
 	virtual void BeginPlay() override;
@@ -136,8 +139,7 @@ private:
 	
 	UPROPERTY()
 	FTimerHandle ReloadDelayTimer;
-	UPROPERTY()
-	bool bReloading = false;
+
 
 	UPROPERTY()
 	FTimerHandle AlternativeFireTimer;
