@@ -51,9 +51,13 @@ private:
 	
 	FVector DirectionToPlayer;
 	FRotator WeaponRotation;
+
+	void UpdateRePositionLocation();
 	
 	void DetectPlayer(const FVector& PlayerLocation);
 	void BeginChase(bool ChaseStatus);
+
+	bool ShootTime = false;
 
 	UFUNCTION()
 	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
