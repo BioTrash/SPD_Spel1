@@ -50,7 +50,6 @@ void AShooterEnemy::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	DeathTime += DeltaSeconds;
-	UE_LOG(LogTemp, Warning, TEXT("TIMER: %f"), DeathTime);
 	if(Health <= 0 && isAlive)
 	{
 		TriggerWeapon->Destroy();

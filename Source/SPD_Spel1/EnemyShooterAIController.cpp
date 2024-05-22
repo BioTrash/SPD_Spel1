@@ -44,12 +44,12 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
     Super::Tick(DeltaSeconds);
     
     LastShotTime += DeltaSeconds;
+    UE_LOG(LogTemp, Warning, TEXT("LASTSHOTTIME: %f"), LastShotTime);
     if (PlayerPawn != nullptr)
     {
         SetFocus(PlayerPawn);
     }
     bool ChaseStatus = GetBlackboardComponent()->GetValueAsBool(TEXT("Chase"));
-    //UE_LOG(LogTemp, Warning, TEXT("IS CHASING STATUS : %hhd"), ChaseStatus);
     Enemy = Cast<AShooterEnemy>(GetPawn());
     if (Enemy)
     {
@@ -103,27 +103,22 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     // Check ray träffar spelare (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
-
+                    
                         // Delegatuppdatering för andra shooters
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
                         BeginChase(true);
 
-                        // Har en fiende ett klart skott ska denna skjuta, aktivera därför IsShooting för att stoppa andra noder i BT
-                        GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-
                         //Skapa ett random Reposition-location som kan användas 
-                        FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
-                        float Radius = 900.0f;
-                        FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
-                        FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
-                        GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
 
+                        UpdateRePositionLocation();
+                        ShootTime = true;
                         //Check för skottcooldowns samt effekt
-                        if (LastShotTime >= ShootCooldown)
+                        if (LastShotTime >= ShootCooldown && ShootTime)
                         {
                             if (ShootingEffect && !EffectIsPlaying)
                             {
                                 //Spawna effekten
+                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
                                    GetWorld(),
                                    ShootingEffect,
@@ -143,6 +138,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             {
                                 //Skjut-logik
                                 Shoot();
+                                UpdateRePositionLocation();
 
                                 //Används bl.a för animation
                                 Enemy->isShooting = true;
@@ -150,6 +146,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                                 EffectIsPlaying = false;
                                 BeginChase(false);
                                 GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
+                                ShootTime = false;
                             }
                         }
                     }
@@ -224,6 +221,16 @@ void AEnemyShooterAIController::InitiateEnemy()
     {
         UE_LOG(LogTemp, Error, TEXT("Enemy is null"));
     }
+}
+
+void AEnemyShooterAIController::UpdateRePositionLocation()
+{
+    FVector LastKnownPlayerLocation = GetBlackboardComponent()->GetValueAsVector(TEXT("PlayerLocation"));
+    float Radius = 900.0f;
+    FVector2D RandomOffset = FMath::RandPointInCircle(Radius);
+    FVector RePositionLocation = LastKnownPlayerLocation + FVector(RandomOffset.X, RandomOffset.Y, 0.0f);
+    GetBlackboardComponent()->SetValueAsVector(TEXT("RePositionLocation"), RePositionLocation);
+
 }
 
 // Säkerställ att fiende har referens till spelaren

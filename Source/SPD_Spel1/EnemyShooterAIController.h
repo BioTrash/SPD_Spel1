@@ -51,9 +51,13 @@ private:
 	
 	FVector DirectionToPlayer;
 	FRotator WeaponRotation;
+
+	void UpdateRePositionLocation();
 	
 	void DetectPlayer(const FVector& PlayerLocation);
 	void BeginChase(bool ChaseStatus);
+
+	bool ShootTime = false;
 
 	UFUNCTION()
 	void OnPlayerLocationUpdated(const FVector& NewPlayerLocation);
@@ -67,7 +71,7 @@ private:
 	void InitiateEnemy();
 	void InitiatePlayer();
 	
-	float ShootCooldown = 2.5f;
+	float ShootCooldown = 1.5f;
 
 	bool EffectIsPlaying = false;
 	UPROPERTY(EditAnywhere, Category = "Mesh")
