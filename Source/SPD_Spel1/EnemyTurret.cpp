@@ -148,7 +148,7 @@ void AEnemyTurret::ShootEnemy(float Damage)
 void AEnemyTurret::Die()
 {
 	OnEnemyDeath();
-	Destroy();
+	//Destroy();
 }
 //Resettar cooldownen på när spelaren ska skjuta igen
 void AEnemyTurret::ShootAgainCooldown()
@@ -159,4 +159,10 @@ void AEnemyTurret::ShootAgainCooldown()
 bool AEnemyTurret::GetIsShootingAnimation()
 {
 	return IsShootingAnimation;
+}
+
+// Resetta HP (Jeremy)
+void AEnemyTurret::ResetHealth()
+{
+	Health = MaxHealth;
 }
