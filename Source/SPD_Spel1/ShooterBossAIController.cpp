@@ -21,84 +21,103 @@ void AShooterBossAIController::BeginPlay()
     {
         RunBehaviorTree(AIBehavior);
     }
-    SetFocus(PlayerPawn);
+    // Set the initial focus to the player pawn
+    if (PlayerPawn != nullptr)
+    {
+        SetFocus(PlayerPawn);
+    }
+    ShootEffect->OnSystemFinished.AddDynamic(this, &ASlimeBossAIController::OnNiagaraSystemFinished);
 }
 
 void AShooterBossAIController::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 
-    GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
-    LastShotTime += DeltaSeconds;
-    LastSpamShotTime += DeltaSeconds;
     if (PlayerPawn != nullptr)
     {
-        SetFocus(PlayerPawn);
-    }
-    Enemy = Cast<AShooterBoss>(GetPawn());
-    if (Enemy)
-    {
-        EnemyWeapon = Enemy->TriggerWeapon; //OBS! Ska bort. Enbart för att AI skapas innan Shooterenemy och därav är triggerweapon null i första beginplay().
-        DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
-        WeaponRotation = DirectionToPlayer.Rotation();
+        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
+        GetBlackboardComponent()->SetValueAsFloat(TEXT("Health"), Enemy ? Enemy->Health : 0.0f);
+        
+        LastShotTime += DeltaSeconds;
+        LastSpamShotTime += DeltaSeconds;
 
-        GetBlackboardComponent()->SetValueAsFloat(TEXT("Health"), Enemy->Health);
-
-        if (EnemyWeapon)
+        Enemy = Cast<AShooterBoss>(GetPawn());
+        if (Enemy)
         {
+            EnemyWeapon = Enemy->TriggerWeapon; // Ensure TriggerWeapon is set
+            DirectionToPlayer = PlayerPawn->GetActorLocation() - Enemy->GetActorLocation();
+            WeaponRotation = DirectionToPlayer.Rotation();
+
+            if (EnemyWeapon)
+            {
+                FVector PlayerLocation = PlayerPawn->GetActorLocation();
+                EnemyLocation = Enemy->GetActorLocation();
+                float DistanceToPlayer = FVector::Distance(EnemyLocation, PlayerLocation);
+            
+                if (DistanceToPlayer < 900.0f)
+                {
+                    //Logik bakom ny position att röra sig mot om fienden befinner sig för nära
+                    GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
+                    FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
+                    DirectionAwayFromPlayer.Normalize();
+
+                    FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f);
+                    GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
+
+                    if (DistanceToPlayer < 500.0f)
+                    {
+                        GetBlackboardComponent()->SetValueAsBool(TEXT("RageShot"), true);
+                        SpamAttack();
+                    }
+                }
+                
                 FVector StartTrace = EnemyWeapon->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
 
-                //Params for linetrace (Louis)
                 FHitResult HitResult;
                 FCollisionQueryParams CollisionParams;
                 CollisionParams.AddIgnoredActor(Enemy);
-                // Perform a line trace to check if there's a clear line of sight to the player (Louis)
+
                 if (GetWorld()->LineTraceSingleByChannel(HitResult, StartTrace, EndTrace, ECC_GameTraceChannel1, CollisionParams))
                 {
-                    
-                    // If the ray hits the player, shoot (Louis)
                     if (HitResult.GetActor() == PlayerPawn && !HitResult.GetActor()->ActorHasTag("Enemy"))
                     {
                         if (LastShotTime >= ShootCooldown)
                         {
                             if (ShootingEffect && !EffectIsPlaying)
                             {
-                                FVector SocketLocation = Enemy->GetStaticMeshComponent()->GetSocketLocation(TEXT("ProjectileSocket"));
-                                //UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ShootingEffect, EnemyWeapon->GetActorLocation()+100);
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-                                   GetWorld(),
-                                   ShootingEffect,
-                                   EnemyWeapon->GetMuzzlePoint()->GetComponentLocation(),
-                                   FRotator::ZeroRotator,
-                                   FVector::OneVector
-                               );
+                                    GetWorld(),
+                                    ShootingEffect,
+                                    EnemyWeapon->GetMuzzlePoint()->GetComponentLocation(),
+                                    FRotator::ZeroRotator,
+                                    FVector::OneVector
+                                );
                                 EffectIsPlaying = true;
                             }
+
                             if (NiagaraSystemComponent)
                             {
-                                NiagaraSystemComponent->SetWorldLocation(Enemy->GetActorLocation() + FVector(0, 0, 100)); 
+                                NiagaraSystemComponent->SetWorldLocation(EnemyWeapon->GetMuzzlePoint()->GetComponentLocation()); 
                             }
-                            //const float EffectDuration = 1.5f;
 
-                            if (LastShotTime >= ShootCooldown + 1.5f)
+                            const float EffectDuration = 1.5f;
+                            if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
                                 Shoot();
                                 Enemy->isShooting = true;
                                 LastShotTime = 0.0f;
                                 EffectIsPlaying = false;
-                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                             }
                         }
                     }
-                    //Om Ray INTE Hit Player
-                        else
-                        {
-                            GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
-                            Enemy->isShooting = false;
-                        }
+                    else
+                    {
+                        Enemy->isShooting = false;
                     }
+                }
             }
+        }
     }
 }
 
@@ -141,4 +160,9 @@ void AShooterBossAIController::InitiateEnemy()
 void AShooterBossAIController::InitiatePlayer()
 {
     PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+}
+
+void AShooterBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent)
+{
+
 }

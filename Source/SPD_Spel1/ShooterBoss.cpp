@@ -33,7 +33,7 @@ void AShooterBoss::BeginPlay()
 			UE_LOG(LogTemp, Error, TEXT("Instance good"));
 
 			// Attach the weapon to the mesh socket or root
-			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+			WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("EnemyWeaponSocket"));
             
 			// Set the owner of the weapon
 			WeaponInstance->SetOwner(this);
