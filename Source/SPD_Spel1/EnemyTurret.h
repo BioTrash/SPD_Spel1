@@ -29,7 +29,7 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 40.f;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
 	float Health;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
@@ -53,6 +53,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Animations")
 	bool GetIsShootingAnimation();
+
+	// Jeremy :)
+	UFUNCTION(BlueprintCallable)
+	void ResetHealth();
 	
 private:
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
