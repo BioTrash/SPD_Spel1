@@ -133,7 +133,9 @@ private:
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashForce = 2500.0f;
+	float DashForce = 3500.0f;
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashForceForward = 4500.0f;
 	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
