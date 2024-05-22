@@ -64,9 +64,8 @@ void ANonProjectileWeapon::Shoot()
 				if (HitToCenter.SizeSquared() <= FMath::Square(SphereComponent->GetScaledSphereRadius()))
 				{
 					FString ComponentName = SphereComponent->GetName();
-					Damage += 20.0f;
-					UE_LOG(LogTemp, Warning, TEXT("Headshot works: %s"), *ComponentName);
-					DrawDebugSphere(GetWorld(), Hit.Location, 20.0f, 32, FColor::Green, false, 1.0f);
+					Damage += HeadShotDamage;
+					UE_LOG(LogTemp, Warning, TEXT("HEADSHOT ! SHOULD ONE SHOT! %f"), Damage);
 				}
 			}
 		}
@@ -77,7 +76,7 @@ void ANonProjectileWeapon::Shoot()
 		if(Super::GetCurrentClip() > 0)
 		{
 			//FMath::RandRange(int32 min, int32 max);
-			DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
+			//DrawDebugPoint(GetWorld(), Hit.Location, 20, FColor::Red, false, 1.0f);
 
 			//NEW CHANGES; CAN REMOVE IF NOT WORKING
  			AActor* HitActorHeadshot = Hit.GetActor();

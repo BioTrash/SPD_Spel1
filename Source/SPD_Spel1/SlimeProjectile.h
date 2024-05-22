@@ -29,6 +29,9 @@ public:
 	UProjectileMovementComponent* GetProjectileMovementComponent();
 	void SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove);
 
+	UPROPERTY(BlueprintReadWrite)
+	bool bHasHit = false;
+
 
 private:
 	UPROPERTY()

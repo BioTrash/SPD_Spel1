@@ -27,6 +27,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	bool isAlive;
+	bool IsTakingDamage;
 	
 	void DestroyActor();
 	
@@ -61,6 +62,10 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
+
+	UFUNCTION(BlueprintCallable, Category="Damage")
+	bool GetIsTakingDamage();
+
 
 private:
 

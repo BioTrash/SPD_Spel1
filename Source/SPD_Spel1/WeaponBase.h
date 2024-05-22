@@ -102,7 +102,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void WhenShot();
 	
+	UPROPERTY(BlueprintReadWrite)
 	bool bButtonReleased = false;
+	
+	UPROPERTY(BlueprintReadWrite)
 	bool bSlimeCharged = false;
 	
 	UPROPERTY(BlueprintReadWrite)

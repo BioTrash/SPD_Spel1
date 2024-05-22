@@ -27,8 +27,6 @@ FVector UEnemyCommunicationManager::GetPlayerLocation() const
 void UEnemyCommunicationManager::SetPlayerLocation(const FVector& NewPlayerLocation)
 {
 	PlayerLocation = NewPlayerLocation;
-	UE_LOG(LogTemp, Log, TEXT("Player location updated: %s"), *PlayerLocation.ToString());
-	// Broadcast the player location update event
 	OnPlayerLocationUpdated.Broadcast(PlayerLocation);
 }
 

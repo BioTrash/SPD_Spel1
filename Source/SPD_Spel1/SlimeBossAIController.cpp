@@ -44,7 +44,7 @@ void ASlimeBossAIController::BeginPlay()
 	if (Boss)
 	{
 		//Hittar och sätter referenser till olika komponenter och attribut på bossen
-		PawnMesh = Boss->FindComponentByClass<UStaticMeshComponent>();
+		PawnMesh = Boss->FindComponentByClass<USkeletalMeshComponent>();
 		SlamMesh = Cast<UStaticMeshComponent>(Boss->FindComponentByTag(UStaticMeshComponent::StaticClass(), TEXT("SlamMesh")));
 		SlamMesh->OnComponentBeginOverlap.AddDynamic(this, &ASlimeBossAIController::OnOverlapBegin);
 		ProjectileSpawn = Boss->FindComponentByClass<USceneComponent>();
@@ -78,9 +78,13 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	//Uppdaterar de olika tiderna för slam, skott och spawn
-	LastShotTime += DeltaSeconds;
 	LastSlamTime += DeltaSeconds;
 	LastSpawnTime += DeltaSeconds;
+	
+	if (!bIsShooting)
+	{
+		LastShotTime += DeltaSeconds;
+	}
 	
 	// JEREMY 
 	if(bIsSlamming)
@@ -120,6 +124,7 @@ void ASlimeBossAIController::Shoot()
 	SpawnParams.Owner = this;
 	SpawnParams.Instigator = GetInstigator();
 
+	
 	//Skapar och skjuter en projektil
 	AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
 	if (Projectile)
@@ -190,8 +195,9 @@ void ASlimeBossAIController::BossPhaseOne()
 		if (ShootEffect)
 		{
 			ShootEffect->Activate();
+			bIsShooting = true;
+
 		}
-		Shoot();
 		LastShotTime = 0;
 	}
 }
@@ -213,6 +219,7 @@ void ASlimeBossAIController::BossPhaseTwo()
 		if (ShootEffect)
 		{
 			ShootEffect->Activate();
+			bIsShooting = true;
 		}
 		LastShotTime = 0;
 	}
@@ -299,8 +306,6 @@ void ASlimeBossAIController::EndSlamAttack()
 	SlamMesh->SetRelativeScale3D(StartScale);
 	SlamMesh->SetHiddenInGame(true);
 	Alpha = 0;
-	UE_LOG(LogTemp, Warning, TEXT("Startscale: %s"), *StartScale.ToString());
-	
 }
 //Återställer slamattackens timer
 //Hanna
@@ -322,6 +327,7 @@ void ASlimeBossAIController::SpawnEnemies()
 }
 void ASlimeBossAIController::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraComponent)
 {
+	bIsShooting = false;
  	Shoot();
 }
 
@@ -335,4 +341,13 @@ void ASlimeBossAIController::OnOverlapBegin(UPrimitiveComponent* OverlappedCompo
 	}
 }
 
+bool ASlimeBossAIController::GetIsSlamming()
+{
+	return bIsSlamming;
+}
+
+bool ASlimeBossAIController::GetIsShooting()
+{
+	return bIsShooting;
+}
 

@@ -34,6 +34,12 @@ public:
 	void SpawnEnemies();
 	void EndSlamAttack();
 	void ResetSlamAttack();
+	
+	UFUNCTION(BlueprintCallable, Category="Damage")
+	bool GetIsSlamming();
+	
+	UFUNCTION(BlueprintCallable, Category="Damage")
+	bool GetIsShooting();
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
@@ -45,7 +51,7 @@ protected:
 private:
 	
 	UPROPERTY()
-	UStaticMeshComponent* PawnMesh;
+	USkeletalMeshComponent* PawnMesh;
 
 	UPROPERTY()
 	UStaticMeshComponent* SlamMesh;
@@ -107,7 +113,8 @@ private:
 	bool bActivatePhaseTwo = true;
 	bool bShouldSpawnEnemies = false;
 	bool bSlamDealDamage = true;
-
+	bool bIsShooting = false;
+	
 	UPROPERTY()
 	ASlimeBossAI* BossHealth;
 
