@@ -218,12 +218,13 @@ void APlayerCharacter::Dash()
 			//checks if the character is grounded
 			bool bIsGrounded = GetCharacterMovement()->IsMovingOnGround();
 			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
-			//if the character doesn't have any speed || is grounded and is not moving in the x and y axis. if true, I will get the forward vector and dash forward.
-			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
+			
+			//if the character barely has any speed || is grounded and is barely moving in the x and y axis. if true, I will get the forward vector and dash forward.
+			if(PlayerVelocity.SizeSquared() < 10 || (!bIsGrounded && (PlayerVelocity.X < 10) && (PlayerVelocity.Y < 10)))
 			{
 				FVector DashDirectionForward = GetActorForwardVector();
 				DashDirectionForward.Normalize();
-				FVector DashForceVector = DashDirectionForward * DashForce;
+				FVector DashForceVector = DashDirectionForward * DashForceForward;
 				
 				//if the character is grounded, the value for LaunchMultiplier will be 1.6, if its not grounded it will be the value of AirDashMulitplier
 				float LaunchMultiplier = bIsGrounded ? 1.0f : AirDashMultiplier;
