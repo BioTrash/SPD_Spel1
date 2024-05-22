@@ -133,7 +133,9 @@ private:
 
 	//speed for the dash (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
-	float DashForce = 2500.0f;
+	float DashForce = 3500.0f;
+	UPROPERTY(EditAnywhere, Category="Dash")
+	float DashForceForward = 4500.0f;
 	//how long the dash lasts (can be changed in blueprints for the player) (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Dash")
 	float DashDuration = 0.4f;
@@ -165,7 +167,7 @@ private:
 	float SlideCameraOffset = 25.0f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
-	float SlideSpeed = 2000.f;
+	float SlideSpeed = 4000.f;
 	//how long the slide lasts (Rebecka)
 	UPROPERTY(EditAnywhere, Category = "Slide")
 	float SlideDuration = 0.5f;
