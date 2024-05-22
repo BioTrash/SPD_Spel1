@@ -35,6 +35,9 @@ private:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> SlimeChargeClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> FadeInClass;
+
 	UPROPERTY()
 	UUserWidget *Ammo;
 	UPROPERTY()
@@ -43,6 +46,8 @@ private:
 	UUserWidget *Timer;
 	UPROPERTY()
 	UUserWidget *SlimeCharge;
+	UPROPERTY()
+	UUserWidget *FadeIn;
 	
 	UPROPERTY()
 	FTimerHandle SinceStartTimer;
