@@ -8,6 +8,8 @@
 
 class AEnemySpawnpoint;
 class UNiagaraSystem;
+class ASlimeBossAIController;
+
 
 UCLASS()
 class SPD_SPEL1_API ASlimeBossAI : public APawn
@@ -65,6 +67,15 @@ public:
 
 	bool IsSlammingAnimation;
 
+	UPROPERTY()
+	ASlimeBossAIController* BossAIController;
+
+	//För Animation /Louis
+	UFUNCTION(BlueprintCallable, Category="Damage")
+	bool IsShooting();
+	UFUNCTION(BlueprintCallable, Category="Damage")
+	bool IsSlamming();
+	
 	UFUNCTION(BlueprintCallable, Category="Animations")
 	bool GetIsSlammingAnimation();
 	
