@@ -115,7 +115,6 @@ bool ASlimeBossAI::IsShooting()
 
 bool ASlimeBossAI::IsSlamming()
 {
-	UE_LOG(LogTemp, Warning, TEXT("IS SLAMMING!"), );
 	if (BossAIController)
 	{
 		return BossAIController->GetIsSlamming();
