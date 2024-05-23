@@ -27,7 +27,7 @@ public:
 	void OnEnemyDeath();
 
 	UPROPERTY(EditDefaultsOnly)
-	float MaxHealth = 40.f;
+	float MaxHealth = 30.f;
 	
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
 	float Health;
@@ -44,10 +44,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
 	
-	float MaxTraceDistance = 300.f;
+	float MaxTraceDistance = 500.f;
 	
 	UPROPERTY(VisibleAnywhere, Blueprintable, Category="Components")
-	UStaticMeshComponent* TurretMesh;
+	USkeletalMeshComponent* TurretMesh;
 
 	bool IsShootingAnimation;
 
@@ -69,7 +69,7 @@ private:
 	USceneComponent* ProjectileSpawn;
 	
 	UPROPERTY(EditAnywhere, Category="Turret")
-	float FireRange = 1000.f;
+	float FireRange = 1200.f;
 
 	UPROPERTY(EditAnywhere, Category="Turret")
 	class APlayerCharacter* Player;
@@ -83,7 +83,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
 
-	float ProjectileSpawnCooldown = 4.0f; 
+	float ProjectileSpawnCooldown = 2.0f; 
 	float NextProjectileTime = 0.0f;
 	
 	void RotateTurret(FVector TargetLocation);

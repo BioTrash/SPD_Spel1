@@ -14,6 +14,8 @@ AProjectile::AProjectile()
 	ProjectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectile Mesh"));
 	RootComponent = ProjectileMesh;
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
+	ProjectileMesh->SetVisibility(true); // Ensure visibility is set to true
+	ProjectileMesh->SetHiddenInGame(false); // Ensure it is not hidden in game
 }
 
 // Called when the game starts or when spawned
