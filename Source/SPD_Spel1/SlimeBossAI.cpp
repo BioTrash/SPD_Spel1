@@ -2,6 +2,7 @@
 
 
 #include "SlimeBossAI.h"
+#include "SlimeBossAIController.h"
 
 // Sets default values
 ASlimeBossAI::ASlimeBossAI()
@@ -15,12 +16,15 @@ void ASlimeBossAI::BeginPlay()
 {
 	Super::BeginPlay();
 	Health = MaxHealth;
+	BossAIController = Cast<ASlimeBossAIController>(GetController());
+	
 }
 
 // Called every frame
 void ASlimeBossAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	if(Health <= 0)
 	{
 		KillEnemy();
@@ -99,6 +103,25 @@ bool ASlimeBossAI::GetIsSlammingAnimation()
 {
 	return IsSlammingAnimation;
 }
+
+bool ASlimeBossAI::IsShooting()
+{
+	if (BossAIController)
+	{
+		return BossAIController->GetIsShooting();
+	}
+	return false;
+}
+
+bool ASlimeBossAI::IsSlamming()
+{
+	if (BossAIController)
+	{
+		return BossAIController->GetIsSlamming();
+	}
+	return false;
+}
+
 
 
 
