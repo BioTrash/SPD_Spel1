@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "AIController.h"
 #include "SlimeBossAI.h"
-#include "Kismet/GameplayStatics.h"
 #include "SlimeBossAIController.generated.h"
 
 class UNiagaraComponent;
@@ -43,6 +42,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
+
+	UPROPERTY(EditAnywhere)
+	FTimerHandle SlamAttackTimerHandle;
 	
 protected:
 	
@@ -122,7 +124,7 @@ private:
 	USceneComponent* ProjectileSpawn;
 	
 	float ProjectileDamage = 30;
-	FTimerHandle SlamAttackTimerHandle;
+	
 	float DamageRadius = 1400.0f;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
