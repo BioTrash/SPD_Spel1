@@ -103,12 +103,15 @@ void ARushEnemyAI::PerformLineTrace()
 	FCollisionQueryParams Params;
 	//Ignorerar sig själv vid linetrace
 	Params.AddIgnoredActor(this); 
-
-	//Utgör själva linetracen och kontroller om den träffat något
+	// Utgör själva linetracen och kontroller om den träffat något
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params))
 	{
-		//Om den då träffat kallar den på Explode funktionen
-		Explode(30, true);
+		// Kontrollera om det träffade objektet är spelaren
+		if (APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor()))
+		{
+			// Om den då träffat spelaren kallar den på Explode funktionen
+			Explode(30, true);
+		}
 	}
 }
 //Ser till att spelaren tar skada(Rebecka)
