@@ -52,7 +52,7 @@ void AEnemySpawnpoint::OnNiagaraSystemFinished(UNiagaraComponent* NiagaraCompone
 	{
 		// Sätter collision params till att alltid spawna.
 		FActorSpawnParameters SpawnParams;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		
 		// Spawnar fienden.
 		World->SpawnActor<AActor>(EnemyToSpawnClass, Location, Rotation, SpawnParams);
