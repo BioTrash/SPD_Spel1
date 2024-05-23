@@ -20,12 +20,14 @@ AEnemyTurret::AEnemyTurret()
     
 	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
 	BaseMesh->SetupAttachment(CapsuleComponent);
-    
-	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
+        
+	TurretMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Turret Mesh"));
 	TurretMesh ->SetupAttachment(BaseMesh);
-    
+    	
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
-	ProjectileSpawn -> SetupAttachment(TurretMesh);
+	ProjectileSpawn->SetupAttachment(TurretMesh);
+	
+
 }
 //Körs när spelet startar eller spawnas in
 void AEnemyTurret::BeginPlay()
@@ -57,7 +59,7 @@ void AEnemyTurret::Tick(float DeltaTime)
 		if (Distance <= FireRange)
 		{
 			//Skjuter på spelaren med projektiler och roterar även turretens huvud mot spelaren
-			ShootEnemy(10.0f);
+			//ShootEnemy(10.0f);
 			ShootProjectiles();
 			RotateTurret(Player->GetActorLocation());
 		}
@@ -110,6 +112,7 @@ void AEnemyTurret::ShootProjectiles()
 			{
 				//Sätter projektiles ägare till turreten själv(this)
 				Projectile->SetOwner(this);
+				Projectile->SetDamage(10);
 			}
 		}
 		//Sätter nästa tid som en projektil ska skjutas
@@ -160,7 +163,6 @@ bool AEnemyTurret::GetIsShootingAnimation()
 {
 	return IsShootingAnimation;
 }
-
 // Resetta HP (Jeremy)
 void AEnemyTurret::ResetHealth()
 {
