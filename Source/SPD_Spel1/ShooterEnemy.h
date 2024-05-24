@@ -66,7 +66,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
 
-	UFUNCTION(BlueprintCallable, Category="Attacking")
+	UFUNCTION(BlueprintCallable, Category="Attacking") //Used for FX
 	bool GetIsCharging();
 
 	UFUNCTION(BlueprintCallable, Category="Damage")
