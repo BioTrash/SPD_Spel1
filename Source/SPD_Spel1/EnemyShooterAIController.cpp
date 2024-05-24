@@ -119,6 +119,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             {
                                 //Spawna effekten
                                 GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
+                                Enemy->IsCharging = true;
                                 NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
                                    GetWorld(),
                                    ShootingEffect,
@@ -137,6 +138,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                             if (LastShotTime >= ShootCooldown + EffectDuration)
                             {
                                 //Skjut-logik
+                                Enemy->IsCharging = false;
                                 Shoot();
                                 UpdateRePositionLocation();
 

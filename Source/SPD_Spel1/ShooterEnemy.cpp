@@ -174,6 +174,11 @@ bool AShooterEnemy::getIsShooting()
 	return isShooting;
 }
 
+bool AShooterEnemy::GetIsCharging()
+{
+	return IsCharging;
+}
+
 bool AShooterEnemy::GetIsTakingDamage()
 {
 	return IsTakingDamage;
