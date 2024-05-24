@@ -152,7 +152,7 @@ void AShooterEnemy::SetRagdollPhysics()
 		SkeletalMesh->SetAllBodiesSimulatePhysics(true);
 		SkeletalMesh->WakeAllRigidBodies();
 		
-		float ImpulseStrength = 6000;
+		float ImpulseStrength = 8000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 	}
 }
@@ -167,15 +167,8 @@ bool AShooterEnemy::GetIsTakingDamage()
 	return IsTakingDamage;
 }
 
-
-void AShooterEnemy::DestroyActor()
-{
-	
-}
-
 void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)
 {
 	HitBoneName = BoneName;
 	HitDirection = Direction;
-
 }
