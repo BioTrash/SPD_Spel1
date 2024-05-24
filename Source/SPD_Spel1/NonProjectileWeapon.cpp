@@ -49,7 +49,7 @@ void ANonProjectileWeapon::Shoot()
 			USkeletalMeshComponent* SkeletalMesh = Cast<USkeletalMeshComponent>(HitActor->GetComponentByClass(USkeletalMeshComponent::StaticClass()));
 			FVector ImpulseDirection = SkeletalMesh->GetCenterOfMass() - Hit.Location;
 			ImpulseDirection.Normalize();
-			EnemyShooter->SetHitInformation(BoneName, ImpulseDirection);
+			EnemyShooter->SetHitInformation(BoneName, ImpulseDirection, false);
 		}
 		TArray<USphereComponent*> SphereComponents;
 		HitActor->GetComponents<USphereComponent>(SphereComponents);

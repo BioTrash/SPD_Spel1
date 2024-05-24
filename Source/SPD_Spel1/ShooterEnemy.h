@@ -37,7 +37,7 @@ public:
 
 	void SetRagdollPhysics();
 
-	void SetHitInformation(FName BoneName, FVector Direction);
+	void SetHitInformation(FName BoneName, FVector Direction, bool SlimeShot);
 
 	UPROPERTY(Blueprintable, EditAnywhere)
 	bool isShooting;
@@ -71,6 +71,7 @@ private:
 
 	FName HitBoneName;
 	FVector HitDirection;
+	bool HitBySlime;
 
 	float DeathTime;
 	float DespawnCooldown = 3.0;
