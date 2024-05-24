@@ -69,6 +69,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float GetHealthPercentage() const;
 
+	UFUNCTION(BlueprintCallable)
+	AProjectileWeapon* GetTriggerWeapon() const;
+
+	UFUNCTION(BlueprintCallable)
+	AProjectileWeapon* GetWeaponInstance() const;
+
 private:
 
 	FName HitBoneName;
