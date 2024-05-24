@@ -164,3 +164,18 @@ void AShooterBoss::SetHitInformation(FName BoneName, FVector Direction)
 	HitDirection = Direction;
 
 }
+
+void AShooterBoss::ResetHealth()
+{
+	Health = MaxHealth;
+}
+
+float AShooterBoss::GetHealth() const
+{
+	return Health; 
+}
+
+float AShooterBoss::GetHealthPercentage() const
+{
+	return Health / MaxHealth;
+}
