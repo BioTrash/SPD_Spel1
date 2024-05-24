@@ -12,15 +12,6 @@ AShooterBoss::AShooterBoss()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-}
-
-// Called when the game starts or when spawned
-void AShooterBoss::BeginPlay()
-{
-	Super::BeginPlay();
-	Health = MaxHealth;
-	isAlive = true;
 	if (BP_EnemyWeaponClass)
 	{
 		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
@@ -45,6 +36,14 @@ void AShooterBoss::BeginPlay()
 			}
 		}
 	}
+}
+
+// Called when the game starts or when spawned
+void AShooterBoss::BeginPlay()
+{
+	Super::BeginPlay();
+	Health = MaxHealth;
+	isAlive = true;
 }
 
 // Called every frame
@@ -179,3 +178,15 @@ float AShooterBoss::GetHealthPercentage() const
 {
 	return Health / MaxHealth;
 }
+
+AProjectileWeapon* AShooterBoss::GetTriggerWeapon() const
+{
+	if(TriggerWeapon)
+	{
+		return TriggerWeapon;
+	}
+	return nullptr;
+}
+
+
+
