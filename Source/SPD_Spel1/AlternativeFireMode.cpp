@@ -8,6 +8,7 @@
 void AAlternativeFireMode::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	Slime = GetWorld()->SpawnActor<ASlimeProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
 	
 	Slime->SetActorHiddenInGame(true);
@@ -62,25 +63,37 @@ FString AAlternativeFireMode::GetSlimeAmmo() const
 
 void AAlternativeFireMode::FireWeapon()
 {
-	Slime->bHasHit = false; // Precaution if there's no sound on explosion as it is where bHasHit is set to false (Rufus) 
-	Slime->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
-	Slime->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
+	Slime->bHasHit = false; // Precaution if there's no sound on explosion as it is where bHasHit is set to false (Rufus)
 
-	Slime->SetActorHiddenInGame(false);
-	Slime->SetActorEnableCollision(true);
+	// Is needed because direct shots get blocked by colliders at spawn, potentially damaging the actor that shot (Rufus)
+	Params.AddIgnoredActor(this); // Ignores the weapon collision (Rufus)
+	Params.AddIgnoredActor(GetOwner()); // Ignores the actor that shot (Rufus)
+	//Params.AddIgnoredActor(Cast<AActor>(Projectile)); // Ignores the same projectiles (Rufus)
 
-	UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
-	TempMove->SetActive(true);
+	if(GetWorld()->LineTraceSingleByChannel(Hit, GetMuzzlePoint()->GetComponentLocation(), End, ECC_GameTraceChannel2, Params))
+	{
+		Slime->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
+		Slime->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
+
+		Slime->SetActorHiddenInGame(false);
+		Slime->SetActorEnableCollision(true);
+
+		UProjectileMovementComponent* TempMove = Slime->GetProjectileMovementComponent();
+		TempMove->SetActive(true);
 	
-	// Limited by Projectile Component Max Movement Speed, editable in SlimeProjectile (Rufus)
-	// To change in what direction projectile flies change the muzzle point rotation, easiest in blueprints (Rufus)
-	TempMove->AddForce(GetMuzzlePoint()->GetComponentRotation().Vector() * 500000);
+		// Limited by Projectile Component Max Movement Speed, editable in SlimeProjectile (Rufus)
+		// To change in what direction projectile flies change the muzzle point rotation, easiest in blueprints (Rufus)
+		//TempMove->AddForce(GetMuzzlePoint()->GetComponentRotation().Vector() * 500000);
+		
+
+		FVector LaunchDirection = (Hit.Location - GetMuzzlePoint()->GetComponentLocation()).GetSafeNormal();
+		TempMove->Velocity = LaunchDirection * TempMove->InitialSpeed;
+		Slime->SetProjectileMovementComponent(TempMove);
+
+		//DrawDebugLine(GetWorld(), GetMuzzlePoint()->GetComponentLocation(), Hit.Location, FColor::Red, true, 1, 0, 1);
 	
-	
-	Slime->SetProjectileMovementComponent(TempMove);
-	
-	SlimeAmmo--;
-	
+		SlimeAmmo--;
+	}
 }
 
 int32 AAlternativeFireMode::SetSlimeAmmo(int32 _SlimeAmmo)

@@ -15,6 +15,7 @@ class SPD_SPEL1_API ANonProjectileWeapon : public AWeaponBase
 	GENERATED_BODY()
 public:
 	virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
 	
 	ANonProjectileWeapon();
 	virtual void Shoot() override;
@@ -35,24 +36,28 @@ public:
 	void SetDamage(float NewDamage);
 	UFUNCTION(BlueprintCallable)
 	void SetMaxShootingRange(float NewMaxShootingRange);
-	
-private:
-	UPROPERTY()
-	FVector End;
-	UPROPERTY()
-	FVector ShotDirection;
-	UPROPERTY()
-	FHitResult Hit;
-	
+protected:
 	UPROPERTY(EditAnywhere)
 	float Damage = 10.0f;
 
 	UPROPERTY(EditAnywhere)
 	float HeadShotDamage = 30.0f;
 
+	UPROPERTY()
+	FHitResult Hit;
+
+	FCollisionQueryParams Params;
+
+	UPROPERTY()
+	FVector End;
+private:
+
+	UPROPERTY()
+	FVector ShotDirection;
+
 	float OriginalDamage = Damage;
 	
 	UPROPERTY(EditAnywhere)
-	float MaxShootingRange = 10000;
+	float MaxShootingRange = 100000;
 	
 };
