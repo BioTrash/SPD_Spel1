@@ -115,24 +115,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         //Check för skottcooldowns samt effekt
                         if (LastShotTime >= ShootCooldown && ShootTime)
                         {
-                            if (ShootingEffect && !EffectIsPlaying)
-                            {
-                                //Spawna effekten
-                                GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), true);
-                                Enemy->IsCharging = true;
-                                NiagaraSystemComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-                                   GetWorld(),
-                                   ShootingEffect,
-                                   EnemyWeapon->GetMuzzlePoint()->GetComponentLocation(),
-                                   FRotator::ZeroRotator,
-                                   FVector::OneVector
-                               );
-                                EffectIsPlaying = true;
-                            }
-                            if (NiagaraSystemComponent)
-                            {
-                                NiagaraSystemComponent->SetWorldLocation(EnemyWeapon->GetMuzzlePoint()->GetComponentLocation()); 
-                            }
+                            Enemy->IsCharging = true;
                             const float EffectDuration = 1.5f;
                             
                             if (LastShotTime >= ShootCooldown + EffectDuration)
