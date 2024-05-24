@@ -51,6 +51,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	AProjectileWeapon* TriggerWeapon;
 
+	UPROPERTY(EditAnywhere)
+	AProjectileWeapon* WeaponInstance;
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	

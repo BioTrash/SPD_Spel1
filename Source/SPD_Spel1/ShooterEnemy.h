@@ -41,6 +41,9 @@ public:
 
 	UPROPERTY(Blueprintable, EditAnywhere)
 	bool isShooting;
+	
+	UPROPERTY(Blueprintable, EditAnywhere)
+	bool IsCharging;
 
 	UPROPERTY(EditAnywhere)
 	float MaxHealth = 100;
@@ -62,6 +65,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
+
+	UFUNCTION(BlueprintCallable, Category="Attacking")
+	bool GetIsCharging();
 
 	UFUNCTION(BlueprintCallable, Category="Damage")
 	bool GetIsTakingDamage();
