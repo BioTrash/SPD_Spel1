@@ -19,6 +19,9 @@ public:
 	UFUNCTION()
 	void SlimeChargeProgress();
 
+	UPROPERTY(BlueprintReadWrite)
+	int TimePassed = 0;
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
@@ -56,8 +59,7 @@ private:
 	UPROPERTY()
 	FTimerHandle ChargeSlimeTimer;
 	
-	UPROPERTY()
-	int TimePassed = 0;
+	
 	UPROPERTY()
 	int ChargeTimePassed = 0;
 
