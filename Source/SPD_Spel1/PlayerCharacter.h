@@ -75,6 +75,13 @@ public:
 	void OnButtonRelease();
 	void OnButtonPress();
 
+	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
+	UPROPERTY(BlueprintReadWrite)
+	bool bIsDashing = false;
+	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
+	UPROPERTY(BlueprintReadWrite)
+	bool bIsSliding = false;
+
 	// Input actions
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* JumpAction;
@@ -144,8 +151,6 @@ private:
 	float DashCooldown = 2.0f;
 	//keeping track of when the dash happened last (Rebecka)
 	float LastDashTime = 0.0f;
-	//useful for if-statement to keep track if the player is dashing or not (Rebecka)
-	bool bIsDashing = false;
 	//how much it slows the character down when dashing in the air
 	float AirDashMultiplier = 0.6;
 	//handles the timer for the dash (Rebecka)
@@ -161,8 +166,6 @@ private:
 	float NewHalfHeight = 60.f;
 	//keeping track of when the slide happened last (Rebecka)
 	float LastSlideTime = 0.0f;
-	//useful for if-statement to keep track if the player is sliding or not (Rebecka)
-	bool bIsSliding = false;
 	//how much the camera should move in Z when sliding (Rebecka)
 	float SlideCameraOffset = 25.0f;
 	//how fast i will be moving when sliding (Rebecka)
