@@ -4,6 +4,7 @@
 
 #include "NiagaraFunctionLibrary.h"
 #include "PlayerCharacter.h"
+#include "ShooterEnemy.h"
 #include "Engine/DamageEvents.h"
 #include "GameFramework/Character.h"
 #include "Kismet/GameplayStatics.h"
@@ -81,7 +82,14 @@ void ASlimeProjectile::Explode()
 
 			if(!Cast<APlayerCharacter>(Cast<ACharacter>(Actor)))
 			{
-				Actor->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);	
+				Actor->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
+
+				if (AShooterEnemy* Enemy = Cast<AShooterEnemy>(Actor))
+				{
+					FName Hitbone = "tail_base";
+					FVector ImpulseDirection = (Enemy->GetActorLocation() - ExplosionLocation).GetSafeNormal();
+					Enemy->SetHitInformation(Hitbone, ImpulseDirection, true);
+				}
 			}
 		}
 	}
