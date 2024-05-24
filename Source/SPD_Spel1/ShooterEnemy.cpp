@@ -153,7 +153,19 @@ void AShooterEnemy::SetRagdollPhysics()
 		SkeletalMesh->WakeAllRigidBodies();
 		
 		float ImpulseStrength = 8000;
-		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
+		float UpwardImpulseStrength = 1000;
+		if(HitBySlime)
+		{
+			FVector TotalImpulse = HitDirection * ImpulseStrength + FVector(0, 0, UpwardImpulseStrength);
+			SkeletalMesh->AddImpulse(TotalImpulse , NAME_None, true);
+			UE_LOG(LogTemp, Warning, TEXT("HIT BY SLIME"));
+		}
+		else
+		{
+			SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
+			UE_LOG(LogTemp, Warning, TEXT("HIT BY SHOT"));
+
+		}
 	}
 }
 
@@ -167,8 +179,9 @@ bool AShooterEnemy::GetIsTakingDamage()
 	return IsTakingDamage;
 }
 
-void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction)
+void AShooterEnemy::SetHitInformation(FName BoneName, FVector Direction, bool SlimeShot)
 {
 	HitBoneName = BoneName;
 	HitDirection = Direction;
+	HitBySlime = SlimeShot;
 }
