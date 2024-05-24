@@ -59,6 +59,15 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
+	
+	UFUNCTION(BlueprintCallable)
+	void ResetHealth();
+
+	UFUNCTION(BlueprintCallable)
+	float GetHealth() const;
+
+	UFUNCTION(BlueprintCallable)
+	float GetHealthPercentage() const;
 
 private:
 
