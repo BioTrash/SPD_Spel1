@@ -16,7 +16,7 @@ AShooterBoss::AShooterBoss()
 	{
 		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
 		// Spawn the BP_EnemyProjectileWeapon
-		WeaponInstance = GetWorld()->SpawnActor<AProjectileWeapon>(BP_EnemyWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
+		AProjectileWeapon* WeaponInstance = GetWorld()->SpawnActor<AProjectileWeapon>(BP_EnemyWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator);
 
 		// Check if spawn was successful
 		if (WeaponInstance)
