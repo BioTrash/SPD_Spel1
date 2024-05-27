@@ -16,15 +16,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/UIAssets/Slime_Background_new.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UIAssets/Slime_Frame_new.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/UIAssets/Slime_SlimeFill_new.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/ShooterEnemy/BP_ShooterEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BossBullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BossBullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_BossProjectileWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_BossProjectileWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MySlimeProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_MySlimeProjectile.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Spel1GameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level2/L2_Boss.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_Boss.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_BossHealth2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_BossHealth2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level2/L2_SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_FadeIn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_FadeIn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_SlimeAmmo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_SlimeAmmo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/Spel1PlayerController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,484 +71,567 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Jeremy",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Jeremy&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\haar9434\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\haar9434\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SPD_Spel1" type="Uproject" factoryName="rider.uproject">
-      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
-      <configuration_2>
+      <configuration_1>
         <option name="CONFIGURATION" value="DebugGame" />
         <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
         <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-DebugGame.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+      </configuration_1>
+      <configuration_2>
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Win64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_2>
       <configuration_3>
-        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_3>
       <configuration_4>
-        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="CONFIGURATION" value="Development" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\SPD_Spel1.uproject&quot;" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_4>
       <configuration_5>
-        <option name="CONFIGURATION" value="Development" />
+        <option name="CONFIGURATION" value="Shipping" />
         <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
       <configuration_6>
-        <option name="CONFIGURATION" value="Shipping" />
-        <option name="PLATFORM" value="Win64" />
-        <option name="EXECUTABLE_PATH" value="C:\Users\rehs8543\Documents\GitHub\SPD_Spel1\Binaries\Win64\SPD_Spel1-Win64-Shipping.exe" />
-        <option name="WORKING_DIRECTORY" value="C:\Program Files\Epic Games\UE_5.3" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_6>
       <configuration_7>
-        <option name="CONFIGURATION" value="Development Editor" />
+        <option name="CONFIGURATION" value="Debug Client" />
         <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_7>
       <configuration_8>
         <option name="CONFIGURATION" value="Debug Client" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_8>
       <configuration_9>
-        <option name="CONFIGURATION" value="Debug Client" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Debug Editor" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_9>
       <configuration_10>
         <option name="CONFIGURATION" value="Debug Editor" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor-LinuxArm64-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_10>
       <configuration_11>
-        <option name="CONFIGURATION" value="Debug Editor" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor-LinuxArm64-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Debug Server" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_11>
       <configuration_12>
         <option name="CONFIGURATION" value="Debug Server" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_12>
       <configuration_13>
-        <option name="CONFIGURATION" value="Debug Server" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="DebugGame Client" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_13>
       <configuration_14>
         <option name="CONFIGURATION" value="DebugGame Client" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_14>
       <configuration_15>
-        <option name="CONFIGURATION" value="DebugGame Client" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="DebugGame Editor" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_15>
       <configuration_16>
         <option name="CONFIGURATION" value="DebugGame Editor" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor-LinuxArm64-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_16>
       <configuration_17>
-        <option name="CONFIGURATION" value="DebugGame Editor" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor-LinuxArm64-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="DebugGame Server" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_17>
       <configuration_18>
         <option name="CONFIGURATION" value="DebugGame Server" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_18>
       <configuration_19>
-        <option name="CONFIGURATION" value="DebugGame Server" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
+        <option name="CONFIGURATION" value="DebugGame" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-DebugGame" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_19>
       <configuration_20>
         <option name="CONFIGURATION" value="DebugGame" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-DebugGame" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_20>
       <configuration_21>
-        <option name="CONFIGURATION" value="DebugGame" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-DebugGame" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Debug" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_21>
       <configuration_22>
         <option name="CONFIGURATION" value="Debug" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Debug" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_22>
       <configuration_23>
-        <option name="CONFIGURATION" value="Debug" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Debug" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CONFIGURATION" value="Development Client" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_23>
       <configuration_24>
         <option name="CONFIGURATION" value="Development Client" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_24>
       <configuration_25>
-        <option name="CONFIGURATION" value="Development Client" />
+        <option name="CONFIGURATION" value="Development Editor" />
         <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_25>
       <configuration_26>
-        <option name="CONFIGURATION" value="Development Editor" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$USER_HOME$/Git/UnrealEngine/Engine/Binaries/LinuxArm64/UnrealEditor" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Development Server" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_26>
       <configuration_27>
         <option name="CONFIGURATION" value="Development Server" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_27>
       <configuration_28>
-        <option name="CONFIGURATION" value="Development Server" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
+        <option name="CONFIGURATION" value="Development" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_28>
       <configuration_29>
         <option name="CONFIGURATION" value="Development" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_29>
       <configuration_30>
-        <option name="CONFIGURATION" value="Development" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CONFIGURATION" value="Shipping Client" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Shipping" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_30>
       <configuration_31>
         <option name="CONFIGURATION" value="Shipping Client" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Shipping" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_31>
       <configuration_32>
-        <option name="CONFIGURATION" value="Shipping Client" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Shipping Server" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Shipping" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_32>
       <configuration_33>
         <option name="CONFIGURATION" value="Shipping Server" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Shipping" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_33>
       <configuration_34>
-        <option name="CONFIGURATION" value="Shipping Server" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
+        <option name="CONFIGURATION" value="Shipping" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Shipping" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_34>
       <configuration_35>
         <option name="CONFIGURATION" value="Shipping" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Shipping" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_35>
       <configuration_36>
-        <option name="CONFIGURATION" value="Shipping" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Shipping" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+        <option name="CONFIGURATION" value="Test Client" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Test" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_36>
       <configuration_37>
         <option name="CONFIGURATION" value="Test Client" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Client-Linux-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Test" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_37>
       <configuration_38>
-        <option name="CONFIGURATION" value="Test Client" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Client-LinuxArm64-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="CONFIGURATION" value="Test Server" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Test" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_38>
       <configuration_39>
         <option name="CONFIGURATION" value="Test Server" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1Server-Linux-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Test" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_39>
       <configuration_40>
-        <option name="CONFIGURATION" value="Test Server" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1Server-LinuxArm64-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;$PROJECT_DIR$/SPD_Spel1.uproject&quot;" />
+        <option name="CONFIGURATION" value="Test" />
+        <option name="PLATFORM" value="Linux" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Test" />
+        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_40>
       <configuration_41>
         <option name="CONFIGURATION" value="Test" />
-        <option name="PLATFORM" value="Linux" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/Linux/SPD_Spel1-Linux-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
+        <option name="PLATFORM" value="LinuxArm64" />
+        <option name="PROJECT_FILE_PATH" value="" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Test" />
         <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
         <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
         <option name="PASS_PARENT_ENVS" value="1" />
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_41>
-      <configuration_42>
-        <option name="CONFIGURATION" value="Test" />
-        <option name="PLATFORM" value="LinuxArm64" />
-        <option name="EXECUTABLE_PATH" value="$PROJECT_DIR$/Binaries/LinuxArm64/SPD_Spel1-LinuxArm64-Test" />
-        <option name="WORKING_DIRECTORY" value="$USER_HOME$/Git/UnrealEngine" />
-        <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
-        <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
-      </configuration_42>
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/SPD_Spel1.uproject" />
+      <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
         <option name="Build" />
       </method>
