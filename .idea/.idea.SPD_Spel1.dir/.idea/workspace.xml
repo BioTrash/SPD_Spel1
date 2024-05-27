@@ -20,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_EnemyProjectileWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_EnemyProjectileWeapon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBoss.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterEnemy.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -613,7 +614,7 @@
       <workItem from="1716537242099" duration="885000" />
       <workItem from="1716539235350" duration="3715000" />
       <workItem from="1716549709917" duration="732000" />
-      <workItem from="1716550766210" duration="336000" />
+      <workItem from="1716550766210" duration="988000" />
     </task>
     <servers />
   </component>
