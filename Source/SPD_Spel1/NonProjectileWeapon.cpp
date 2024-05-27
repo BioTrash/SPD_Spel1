@@ -12,6 +12,12 @@ ANonProjectileWeapon::ANonProjectileWeapon()
 	// Root and Mesh are created and attached in the WeaponBase (Rufus)
 }
 
+void ANonProjectileWeapon::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+
 void ANonProjectileWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -30,7 +36,6 @@ void ANonProjectileWeapon::Shoot()
 {
 
 	// Is needed because direct shots get blocked by colliders at spawn, potentially damaging the actor that shot (Rufus)
-	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this); // Ignores the weapon collision (Rufus)
 	Params.AddIgnoredActor(GetOwner()); // Ignores the actor that shot (Rufus)
 	//Params.AddIgnoredActor(Cast<AActor>(Projectile)); // Ignores the same projectiles (Rufus)
