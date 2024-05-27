@@ -203,7 +203,7 @@ void APlayerCharacter::Dash()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Dash called"));
 
-	if (!bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
+	if (!bIsSliding && !bIsDashing && (GetWorld()->GetTimeSeconds() - LastDashTime) > DashCooldown)
 	{
 		if (GetCharacterMovement())
 		{
@@ -220,7 +220,7 @@ void APlayerCharacter::Dash()
 			FVector PlayerVelocity = GetCharacterMovement()->Velocity;
 			
 			//if the character barely has any speed || is grounded and is barely moving in the x and y axis. if true, I will get the forward vector and dash forward.
-			if(PlayerVelocity.SizeSquared() < 10 || (!bIsGrounded && (PlayerVelocity.X < 10) && (PlayerVelocity.Y < 10)))
+			if(PlayerVelocity.SizeSquared() < SMALL_NUMBER || (!bIsGrounded && FMath::IsNearlyZero(PlayerVelocity.X) && FMath::IsNearlyZero(PlayerVelocity.Y)))
 			{
 				FVector DashDirectionForward = GetActorForwardVector();
 				DashDirectionForward.Normalize();
