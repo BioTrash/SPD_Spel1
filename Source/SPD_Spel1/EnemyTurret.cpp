@@ -59,7 +59,6 @@ void AEnemyTurret::Tick(float DeltaTime)
 		if (Distance <= FireRange)
 		{
 			//Skjuter på spelaren med projektiler och roterar även turretens huvud mot spelaren
-			//ShootEnemy(10.0f);
 			ShootProjectiles();
 			RotateTurret(Player->GetActorLocation());
 		}
