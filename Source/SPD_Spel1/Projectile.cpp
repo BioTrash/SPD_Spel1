@@ -47,29 +47,27 @@ void AProjectile::Tick(float DeltaTime)
 
 void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	// Check if the other actor is the player pawn
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	if (OtherActor && PlayerPawn && OtherActor == PlayerPawn)
 	{
-		UE_LOG(LogTemp, Log, TEXT("Hit the player"));
-		// Apply damage to the player
 		FPointDamageEvent DamageEvent(Damage, Hit, NormalImpulse, nullptr);
 		PlayerPawn->TakeDamage(Damage, DamageEvent, GetInstigatorController(), this);
 	}
 
-	
-    
-	// Destroy the projectile regardless of the hit actor
-	//UE_LOG(LogTemp, Log, TEXT("Destroying the projectile"));
-	//Destroy();
+	DeactivateProjectile();
+}
 
+void AProjectile::DeactivateProjectile()
+{
 	this->SetActorHiddenInGame(true);
 	this->SetActorEnableCollision(false);
 	this->SetActorTickEnabled(false);
-	Destroy();
-	
-	
 	ProjectileMovementComponent->SetActive(false);
+
+	if (OwningPool)
+	{
+		OwningPool->ReturnPooledObject(this);
+	}
 }
 
 UProjectileMovementComponent* AProjectile::GetProjectileMovementComponent() const

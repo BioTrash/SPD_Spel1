@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "WeaponBase.h"
+#include "GenericObjectPool.h"
 #include "ProjectileWeapon.generated.h"
 
 /**
@@ -33,4 +34,7 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 	TSubclassOf<class AProjectile> ProjectileClass;
+
+	UPROPERTY(EditAnywhere, Category = "Pool")
+	AGenericObjectPool* ObjectPool;
 };

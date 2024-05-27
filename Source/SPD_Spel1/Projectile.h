@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "GenericObjectPool.h"
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -28,6 +29,9 @@ public:
 	UProjectileMovementComponent* GetProjectileMovementComponent() const;
 	
 	void SetProjectileMovementComponent(UProjectileMovementComponent *ProjMove);
+
+	UPROPERTY()
+	AGenericObjectPool* OwningPool;
 private:
 
 	float Damage;
@@ -41,4 +45,6 @@ private:
 	// Is a copy of an existing Unreal function. Ngl, this one confuses me. It is used in Begin() to detect hits (Rufus)
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
+	void DeactivateProjectile();
 };
