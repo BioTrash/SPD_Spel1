@@ -17,6 +17,7 @@ void ASlimeBossAI::BeginPlay()
 	Super::BeginPlay();
 	Health = MaxHealth;
 	BossAIController = Cast<ASlimeBossAIController>(GetController());
+	UE_LOG(LogTemp, Warning, TEXT("Boss initialized. Health: %f"), Health);
 	
 }
 
@@ -27,7 +28,7 @@ void ASlimeBossAI::Tick(float DeltaTime)
 
 	if(Health <= 0)
 	{
-		KillEnemy();
+		UE_LOG(LogTemp, Warning, TEXT("Boss health är 0 eller lägre"));
 	}
 }
 
@@ -66,7 +67,7 @@ float ASlimeBossAI::GetHealthPercentage() const
 
 void ASlimeBossAI::KillEnemy()
 {
-	//UE_LOG(LogTemp, Warning, TEXT("BOSSEN DOG!!"));
+	UE_LOG(LogTemp, Warning, TEXT("BOSSEN DOG!!"));
 	OnEnemyDeath();
 	Destroy();
 }

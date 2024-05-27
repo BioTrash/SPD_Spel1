@@ -260,17 +260,42 @@ void ASlimeBossAIController::SlamAttack()
 	}
 	//Kolla om slamattacken redan pågår
 	//Hanna
-	if(!bIsSlamming)
+	if (!bIsSlamming)
 	{
-		//Sätter att den slammar
+		//Säger att den är true
 		bIsSlamming = true;
-		//Sparar ner bossens ursprunliga värde
+		//Sparar bossens originallocation
 		OriginalLocation = Boss->GetActorLocation();
-		//Sätter värdet för vart bossen ska slama någonstans
-		FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
-		//Flyttar sedan bossen till marknivå 
-		Boss->SetActorLocation(GroundLocation);
-		//Sätter igång slameffect(Jeremy)
+		
+		if (OriginalLocation != FVector::ZeroVector)
+		{
+			//Startposition för linetrace
+			FVector StartLocation = OriginalLocation;
+			//Slutposition
+			FVector EndLocation = StartLocation - FVector(0.0f, 0.0f, 5000.0f); 
+
+			//Kollisionsparametrar, ignorerar sig själv
+			FHitResult HitResult;
+			FCollisionQueryParams Params;
+			Params.AddIgnoredActor(Boss); 
+
+			//Gör själva linetracen
+			bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Visibility, Params);
+
+			if (bHit)
+			{
+				//Om linetrace träffade sätter den slampositionen till dens träffpunkt
+				FVector GroundLocation = HitResult.ImpactPoint;
+				Boss->SetActorLocation(GroundLocation);
+			}
+			else
+			{
+				// Om den inte träffar sätter den tillbaka dens standardvärde
+				FVector GroundLocation = FVector(OriginalLocation.X, OriginalLocation.Y, 1200.0f);
+				Boss->SetActorLocation(GroundLocation);
+			}
+		//Jeremy
+		//Spelare slameffekten	
 		if(SlamEffect)
 		{
 			SlamEffect->Activate();
@@ -278,10 +303,7 @@ void ASlimeBossAIController::SlamAttack()
 		//Sätter in en timemanager för att avsluta slamattacken efter en viss tid
 		GetWorldTimerManager().SetTimer(SlamAttackTimerHandle, this, &ASlimeBossAIController::EndSlamAttack, 2.0f, false);
 		}
-	
-		// JEREMY Show slam mesh. (For debugging)
-		//SlamMesh->SetHiddenInGame(false);
-		
+	}
 	}
 //Avslutar slamattacken
 //Hanna
