@@ -170,7 +170,7 @@ private:
 	float SlideCameraOffset = 25.0f;
 	//how fast i will be moving when sliding (Rebecka)
 	UPROPERTY(EditAnywhere, Category="Slide")
-	float SlideSpeed = 4000.f;
+	float SlideSpeed = 4500.f;
 	//how long the slide lasts (Rebecka)
 	UPROPERTY(EditAnywhere, Category = "Slide")
 	float SlideDuration = 0.5f;
