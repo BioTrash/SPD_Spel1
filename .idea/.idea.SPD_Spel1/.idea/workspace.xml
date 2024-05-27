@@ -10,11 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/Reload.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerWeapon.uasset" afterDir="false" />
-    </list>
+    <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "RufusButLoud",
+    "git-widget-placeholder": "NewMain__Squared",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -253,6 +249,7 @@
       <workItem from="1716540018337" duration="1270000" />
       <workItem from="1716544664679" duration="4047000" />
       <workItem from="1716558691061" duration="671000" />
+      <workItem from="1716800215884" duration="1299000" />
     </task>
     <servers />
   </component>
