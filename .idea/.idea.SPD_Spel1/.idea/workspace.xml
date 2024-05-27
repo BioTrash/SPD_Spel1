@@ -11,15 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/BossDeath.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/BossDefeated.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/Level2Enter.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/Master/VoiceSoundClass.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level2/L2_SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_SettingsLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Music/SoundEffects/MCIntro.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/MCIntro.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Audio.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Audio.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Music/SoundEffects/RatBoss.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/ShooterBoss/BP_ShooterBossCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +256,7 @@
       <workItem from="1716800215884" duration="1299000" />
       <workItem from="1716806030609" duration="2789000" />
       <workItem from="1716821557625" duration="777000" />
+      <workItem from="1716823052157" duration="682000" />
     </task>
     <servers />
   </component>
