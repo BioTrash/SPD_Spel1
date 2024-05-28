@@ -65,10 +65,6 @@ void ASlimeBossAIController::BeginPlay()
 		StartScale = Boss->StartScale;
 		EndScale = Boss->EndScale;
 		SlamDamage = Boss->SlamDamage;
-		if (ProjectileSpawn)
-		{
-			//UE_LOG(LogTemp, Warning, TEXT("SPAWN FOUND" ));
-		}
 	}
 	//Kollar om AIBehavior är giltig 
 	//Hanna

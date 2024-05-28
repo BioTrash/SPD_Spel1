@@ -17,7 +17,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAIController.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -697,7 +698,7 @@
       <workItem from="1716550766210" duration="336000" />
       <workItem from="1716561635485" duration="4397000" />
       <workItem from="1716794862589" duration="2163000" />
-      <workItem from="1716881707491" duration="4757000" />
+      <workItem from="1716881707491" duration="6250000" />
     </task>
     <servers />
   </component>
