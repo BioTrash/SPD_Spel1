@@ -17,8 +17,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/EnemyAI/Bosses/BossFirstLevel/BP_SlimeBossAIController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_BossRoomTrigger.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/Boss.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/Boss.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level/SpawnZone_1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SpawnZone_1.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
