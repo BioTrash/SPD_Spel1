@@ -98,6 +98,11 @@ USceneComponent* AWeaponBase::GetMuzzlePoint() const
 	return MuzzlePoint;
 }
 
+UStaticMeshComponent* AWeaponBase::GetMeshComponent() const
+{
+	return Mesh;
+}
+
 
 void AWeaponBase::SetbUnlimitedAmmo(bool _bUnlimitedAmmo) {
 	bUnlimitedAmmo = _bUnlimitedAmmo;
@@ -120,6 +125,10 @@ void AWeaponBase::SetFireRate(int32 _FireRate)
 	FireRate = _FireRate;
 }
 
+void AWeaponBase::SetMeshComponent(UStaticMeshComponent* MeshComponent)
+{
+	Mesh = MeshComponent;
+}
 
 void AWeaponBase::InitiateReload()
 {

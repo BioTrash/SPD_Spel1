@@ -12,12 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c012173-b7ab-4d83-b745-6effa7b817bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Particles/P_Ambient_Dust.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/PlayerCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WB_Customization.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WB_Customization.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "RebeckaBranchSquared",
+    "git-widget-placeholder": "RufusButLoud",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,9 +74,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\rehs8543\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\rehs8543\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rutr7079\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rutr7079\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -147,18 +142,6 @@
         <option name="USE_EXTERNAL_CONSOLE" value="0" />
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
       </configuration_5>
-      <configuration_6>
-        <option name="CONFIGURATION" value="" />
-        <option name="PLATFORM" value="" />
-        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/SPD_Spel1.vcxproj" />
-        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
-        <option name="EXE_PATH" value="$(TargetPath)" />
-        <option name="PROGRAM_PARAMETERS" value="" />
-        <option name="WORKING_DIRECTORY" value="$(ProjectDir)" />
-        <option name="PASS_PARENT_ENVS" value="1" />
-        <option name="USE_EXTERNAL_CONSOLE" value="0" />
-        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
-      </configuration_6>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/SPD_Spel1.vcxproj" />
       <option name="AUTO_SELECT_PRIORITY" value="0" />
       <method v="2">
@@ -280,6 +263,8 @@
       <workItem from="1716821557625" duration="777000" />
       <workItem from="1716823052157" duration="682000" />
       <workItem from="1716886487023" duration="393000" />
+      <workItem from="1716896110973" duration="19000" />
+      <workItem from="1716902221687" duration="774000" />
     </task>
     <servers />
   </component>
