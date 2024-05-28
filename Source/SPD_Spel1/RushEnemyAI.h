@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "RushEnemyAI.generated.h"
 
+struct FDamageEvent;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEnemyDeathDelegate);
 
 UCLASS()
@@ -15,21 +17,25 @@ class SPD_SPEL1_API ARushEnemyAI : public ACharacter
 
 public:
 	ARushEnemyAI();
+	
+	void Explode(float Damage, bool bCollisionTriggered);
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
+	void OnEnemyDeath();
+	
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	bool GetIsLaunchingAnimation();
+
+	bool IsLaunchingAnimation;
+	bool bHasExploded;
 
 protected:
 	virtual void BeginPlay() override;
-
-public:	
 	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	void Explode(float Damage, bool bCollisionTriggered);
-
-	bool bHasExploded;
-	
-	UPROPERTY(BlueprintAssignable, Category = "Enemy")
-	FOnEnemyDeathDelegate OnEnemyDeathDelegate;
-	
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	
+private:
+	void PerformLineTrace();
 
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 20.f;
@@ -37,29 +43,16 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	float Health;
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
-	void OnEnemyDeath();
-	
+	UPROPERTY(VisibleAnywhere)
 	float MaxTraceDistance = 60.f;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageRadius = 300.0f;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Jump")
-	float JumpForce = 1000.0f;
-
-	bool IsLaunchingAnimation;
-	
-	UFUNCTION(BlueprintCallable, Category="Animations")
-	bool GetIsLaunchingAnimation();
-	
-private:
-	bool bCanAttack = true;
-	FTimerHandle ExplodeCooldown;
-	
-	void PerformLineTrace();
 	
 	UPROPERTY(EditAnywhere, Category="Enemy")
 	class UNiagaraSystem* ExplosionEffect;
-
+	
+	bool bCanAttack = true;
+	FTimerHandle ExplodeCooldown;
+	
 };
