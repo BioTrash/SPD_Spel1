@@ -72,6 +72,7 @@ void AShooterBoss::Tick(float DeltaSeconds)
 	{
 		SetActorHiddenInGame(true);
 		SetActorTickEnabled(false);
+		GetController()->SetActorTickEnabled(false);
 	}
 }
 
