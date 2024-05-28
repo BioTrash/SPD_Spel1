@@ -70,8 +70,8 @@ void AShooterBoss::Tick(float DeltaSeconds)
 	}
 	if (DeathTime >= DespawnCooldown && !isAlive)
 	{
-		SetActorTickEnabled(false);
 		SetActorHiddenInGame(true);
+		SetActorTickEnabled(false);
 	}
 }
 
@@ -99,15 +99,8 @@ void AShooterBoss::KillEnemy()
 	OnEnemyDeath();
 	isAlive = false;
 	DeathTime = 0;
-	TriggerWeapon->SetActorTickEnabled(false);
 	TriggerWeapon->SetActorHiddenInGame(true);
-	
-	UPointLightComponent* PointLightComponent = FindComponentByClass<UPointLightComponent>();
-	if (PointLightComponent)
-	{
-		PointLightComponent->SetHiddenInGame(true);
-	}
-	
+	TriggerWeapon->SetActorTickEnabled(false);
 }
 
 UStaticMeshComponent* AShooterBoss::GetStaticMeshComponent() const
