@@ -40,3 +40,14 @@ void AGenericObjectPool::InitializeAllPools()
 		}
 	}
 }
+
+AActor* AGenericObjectPool::GetPooledActor(TSubclassOf<AActor> PoolClass)
+{
+	UE_LOG(LogTemp, Warning, TEXT("GetPOOL!"));
+	return GetPooledObject<AActor>(PoolClass);
+}
+
+void AGenericObjectPool::ReturnPooledActor(AActor* Object)
+{
+	ReturnPooledObject<AActor>(Object);
+}

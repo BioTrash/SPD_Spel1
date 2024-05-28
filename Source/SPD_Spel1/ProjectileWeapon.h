@@ -1,40 +1,41 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "WeaponBase.h"
-#include "GenericObjectPool.h"
+#include "GameFramework/Actor.h"
 #include "ProjectileWeapon.generated.h"
 
-/**
- * 
- */
+class AGenericObjectPool;
+class AProjectile;
+
 UCLASS()
 class SPD_SPEL1_API AProjectileWeapon : public AWeaponBase
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+    
+public:    
+    AProjectileWeapon();
 
-public:
-	AProjectileWeapon();
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
-	virtual void Shoot() override;
-	void ShootEnemyProjectile();
+protected:
+    virtual void BeginPlay() override;
 
-	// The inbuilt but NOT obligatory way of shooting, more info in the .cpp file. Made initially for player shooting but can be adapted for AI (Rufus)
-	virtual void InitiateTimer(bool bButtonPressed, bool bAlternative) override;
+public:    
+    virtual void Tick(float DeltaTime) override;
 
-	// Preferably Projectile needs to be made into an interface and TSubclassOf should be called a base class. But if enemies are only using one type of projectiles this is fine (Rufus)
-	UPROPERTY(EditAnywhere, Category="Weaponry")
-	TSubclassOf<class AProjectile> Projectile;
+    UFUNCTION(BlueprintCallable, Category = "Weapon")
+    void Shoot();
 
-	UPROPERTY(VisibleAnywhere)
-	AProjectile* SpawnedProjectile;
+    UFUNCTION(BlueprintCallable, Category = "Weapon")
+    void ShootEnemyProjectile();
 
-	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
-	TSubclassOf<class AProjectile> ProjectileClass;
+    UFUNCTION(BlueprintCallable, Category = "Weapon")
+    void InitiateTimer(bool bButtonPressed, bool bAlternative);
 
-	UPROPERTY(EditAnywhere, Category = "Pool")
-	AGenericObjectPool* ObjectPool;
+private:
+    UPROPERTY(EditAnywhere, Category = "Pool")
+    TSubclassOf<AProjectile> ProjectileClass;
+
+    UPROPERTY(EditAnywhere, Category = "Pool")
+    AGenericObjectPool* ObjectPool;
+
 };

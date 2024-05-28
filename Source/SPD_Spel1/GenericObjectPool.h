@@ -1,8 +1,8 @@
-#pragma once
-
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GenericObjectPool.generated.h"
+
+class AProjectile;
 
 USTRUCT(BlueprintType)
 struct FObjectPoolInfo
@@ -22,19 +22,16 @@ class SPD_SPEL1_API AGenericObjectPool : public AActor
     GENERATED_BODY()
     
 public:    
-    // Sets default values for this actor's properties
     AGenericObjectPool();
 
 protected:
-    // Called when the game starts or when spawned
     virtual void BeginPlay() override;
 
 public:    
-    // Called every frame
     virtual void Tick(float DeltaTime) override;
 
     template <typename T>
-    T* GetPooledObject();
+    T* GetPooledObject(TSubclassOf<T> PoolClass);
 
     template <typename T>
     void ReturnPooledObject(T* Object);
@@ -42,16 +39,21 @@ public:
     template <typename T>
     void InitializePool(TSubclassOf<T> ObjectClass, int32 PoolSize);
 
+    UFUNCTION(BlueprintCallable, Category = "Pool")
+    AActor* GetPooledActor(TSubclassOf<AActor> PoolClass);
+
+    UFUNCTION(BlueprintCallable, Category = "Pool")
+    void ReturnPooledActor(AActor* Object);
+
 private:
     TMap<UClass*, TArray<AActor*>> ObjectPools;
 
     UPROPERTY(EditAnywhere, Category = "Pool")
     TArray<FObjectPoolInfo> ObjectClassesToPool;
 
-    void InitializeAllPools();  // Declaration only
+    void InitializeAllPools();
 };
 
-// Template functions should remain in the header file
 template <typename T>
 void AGenericObjectPool::InitializePool(TSubclassOf<T> ObjectClass, int32 PoolSize)
 {
@@ -88,9 +90,9 @@ void AGenericObjectPool::InitializePool(TSubclassOf<T> ObjectClass, int32 PoolSi
 }
 
 template <typename T>
-T* AGenericObjectPool::GetPooledObject()
+T* AGenericObjectPool::GetPooledObject(TSubclassOf<T> PoolClass)
 {
-    TArray<AActor*>* Pool = ObjectPools.Find(*T::StaticClass());
+    TArray<AActor*>* Pool = ObjectPools.Find(PoolClass);
     if (Pool)
     {
         for (AActor* Object : *Pool)

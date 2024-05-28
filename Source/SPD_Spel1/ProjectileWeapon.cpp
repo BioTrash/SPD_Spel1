@@ -1,85 +1,84 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ProjectileWeapon.h"
 #include "Projectile.h"
-#include "NonProjectileWeapon.h"
+#include "GenericObjectPool.h"
+#include "Components/SceneComponent.h"
+#include "GameFramework/Actor.h"
+#include "Engine/World.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 AProjectileWeapon::AProjectileWeapon()
 {
-	/*
-	 * BeginPlay() and Shoot() are using object pooling of a single Projectile for more efficient memory management (Rufus)
-	 */
+    PrimaryActorTick.bCanEverTick = true;
 }
 
 void AProjectileWeapon::BeginPlay()
 {
-	Super::BeginPlay();
-
-	SpawnedProjectile = GetWorld()->SpawnActor<AProjectile>(Projectile, GetMuzzlePoint()->GetComponentLocation(), GetMuzzlePoint()->GetComponentRotation());
-	
-	SpawnedProjectile->SetActorHiddenInGame(true);
-	SpawnedProjectile->SetActorEnableCollision(false);
-	SpawnedProjectile->SetActorTickEnabled(false);
-
-	UProjectileMovementComponent* TempMove = SpawnedProjectile->GetProjectileMovementComponent();
-	TempMove->SetActive(false);
-	SpawnedProjectile->SetProjectileMovementComponent(TempMove);
+    Super::BeginPlay();
+    // Ensure ObjectPool is set here or in the editor
 }
-
 
 void AProjectileWeapon::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
+    Super::Tick(DeltaTime);
 }
 
 void AProjectileWeapon::Shoot()
 {
-	SpawnedProjectile->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
-	SpawnedProjectile->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
+    if (!ProjectileClass)
+    {
+        UE_LOG(LogTemp, Error, TEXT("Shoot: ProjectileClass is not set"));
+        return;
+    }
 
-	SpawnedProjectile->SetActorHiddenInGame(false);
-	SpawnedProjectile->SetActorEnableCollision(true);
-	SpawnedProjectile->SetActorTickEnabled(true);
+    FVector SpawnLocation = GetMuzzlePoint()->GetComponentLocation();
+    FRotator SpawnRotation = GetMuzzlePoint()->GetComponentRotation();
 
-	UProjectileMovementComponent* TempMove = SpawnedProjectile->GetProjectileMovementComponent();
-	TempMove->SetActive(true);
-	
-	SpawnedProjectile->SetProjectileMovementComponent(TempMove);
+    AProjectile* SpawnedProjectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+    if (SpawnedProjectile)
+    {
+        SpawnedProjectile->SetActorHiddenInGame(false);
+        SpawnedProjectile->SetActorEnableCollision(true);
+        SpawnedProjectile->SetActorTickEnabled(true);
+
+        UProjectileMovementComponent* TempMove = SpawnedProjectile->GetProjectileMovementComponent();
+        TempMove->SetActive(true);
+        SpawnedProjectile->SetProjectileMovementComponent(TempMove);
+    }
 }
+
 void AProjectileWeapon::ShootEnemyProjectile()
 {
-	FVector SpawnLocation = GetMuzzlePoint()->GetComponentLocation(); //Byt ut till skeleton mesh senare
-	FRotator SpawnRotation = GetMuzzlePoint()->GetComponentRotation();
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.Owner = this;
-	SpawnParams.Instigator = GetInstigator();
-	
-	//Spawnar projectile och skjuter den med damage
-	AProjectile* Bullet = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
-	if (Bullet)
-	{
-		Bullet->SetDamage(15);
-	}
-}
+    if (ObjectPool)
+    {
+        AProjectile* PooledProjectile = ObjectPool->GetPooledObject<AProjectile>(ProjectileClass);
+        if (PooledProjectile)
+        {
+            PooledProjectile->SetActorLocation(GetMuzzlePoint()->GetComponentLocation());
+            PooledProjectile->SetActorRotation(GetMuzzlePoint()->GetComponentRotation());
 
+            PooledProjectile->SetActorHiddenInGame(false);
+            PooledProjectile->SetActorEnableCollision(true);
+            PooledProjectile->SetActorTickEnabled(true);
+
+            UProjectileMovementComponent* TempMove = PooledProjectile->GetProjectileMovementComponent();
+            TempMove->SetActive(true);
+
+            PooledProjectile->SetProjectileMovementComponent(TempMove);
+        }
+        else
+        {
+            UE_LOG(LogTemp, Warning, TEXT("ShootEnemyProjectile: No projectile available in pool"));
+        }
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("ShootEnemyProjectile: ObjectPool is not set"));
+    }
+}
 
 void AProjectileWeapon::InitiateTimer(bool bButtonPressed, bool bAlternative)
 {
-	/* TL;DR: DISREGARD THIS FUNCTION ENTIRELY IF YOU PREFER TO TRIGGER SHOOT() FUNCTION VIA YOUR OWN FUNCTIONS (Rufus)
-	 *
-	 * InitiateTimer activates a timer in the WeaponBase, this gives you access to ReloadDelay (Not important for enemies)
-	 * and FireDelay (Important for enemies). The latter of which handles how often the weapon can shoot at most, which is mot likely how often enemies will shoot.
-	 * Modified in the blueprint (BP_EnemyProjectileWeapon -> Fire Delay)
-	 *
-	 * bButtonPressed is what activates the timer in PullTrigger when TRUE. bAlternative is always FALSE unless you want to create an alternative Shoot() function and call it instead.
-	 * &AProjectileWeapon::Shoot is the function that you want to be triggered every once per FireDelay. THIS is there because timer need to know where the function comes from.
-	 *
-	 * EXAMPLE USE:
-	 * In a certain EnemyClass.h create AWeaponBase* TriggerWeapon; that you make (EditableAnywhere) and set the weapon in Blueprints.
-	 * In a certain EnemyClass.cpp you most likely have a part that check if enemy sees the player. In that part you call TriggerWeapon->InitiateTimer(true, false); every time player is seen.
-	 * 
-	 */
-	Super::PullTrigger(bButtonPressed, bAlternative, &AProjectileWeapon::Shoot, this);
+    // Implement your timer logic here, if needed.
+    // This example uses a simple UE_LOG to indicate the function is being called.
+    UE_LOG(LogTemp, Log, TEXT("InitiateTimer called with bButtonPressed: %s, bAlternative: %s"), bButtonPressed ? TEXT("True") : TEXT("False"), bAlternative ? TEXT("True") : TEXT("False"));
 }
-
