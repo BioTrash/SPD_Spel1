@@ -6,6 +6,10 @@
 
 // Sets default values
 ASlimeBossAI::ASlimeBossAI()
+	: Health(0.0f),
+	  IsSlammingAnimation(false),
+	  BossAIController(nullptr),
+	  bShield(false)
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -88,7 +92,7 @@ void ASlimeBossAI::SetShield(bool bShielded)
 		GetWorldTimerManager().ClearTimer(ShieldTimerHandle);
 	}
 }
-//Returnerar true om bossen är sköldad annars false
+//Returnerar true om bossen är shielded annars false
 //Hanna
 bool ASlimeBossAI::IsShielded() const
 {
@@ -122,7 +126,4 @@ bool ASlimeBossAI::IsSlamming()
 	}
 	return false;
 }
-
-
-
 

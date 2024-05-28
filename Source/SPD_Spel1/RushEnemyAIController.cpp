@@ -124,20 +124,13 @@ void ARushEnemyAIController::LaunchTowardsPlayer()
 	FVector EnemyLocation = GetPawn()->GetActorLocation();
 	//Beräknar launch riktningen mot spelaren
 	FVector LaunchDirection = (PlayerLocation - EnemyLocation).GetSafeNormal();
-
-	//Sätter launch hastighet
-	float LaunchSpeed = 1000.f;
+	
 	//Kontrollerar ifall fienden är en karaktär
 	if (ACharacter* EnemyCharacter = Cast<ACharacter>(GetPawn()))
 	{
-		//Sätter hopphöjden
-		float JumpHeight = 600.f;
 		//Launchar karaktären mot spelaren
 		EnemyCharacter->LaunchCharacter(LaunchDirection * LaunchSpeed + FVector::UpVector * JumpHeight, true, true);
 	}
-
-	//Sätter spelarens location i blackboard och hanterar explosion
-	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerLocation);
 
 	//Kontrollerar om explode timern inte redan är igång/aktiv
 	if (!GetWorldTimerManager().IsTimerActive(ExplodeTimerHandle))

@@ -26,7 +26,6 @@ public:
 	void DisableShield();
 
 protected:
-
 	virtual void BeginPlay() override;
 
 public:
@@ -34,6 +33,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 	void KillEnemy();
+
+	UFUNCTION(BlueprintImplementableEvent, Category= "Effects")
+	void OnSlamEffect();
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
@@ -80,15 +82,9 @@ public:
 	bool GetIsSlammingAnimation();
 	
 private:
-	
 	bool bShield;
 	FTimerHandle ShieldTimerHandle;
 	
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-
-	
-
-	
-
 };

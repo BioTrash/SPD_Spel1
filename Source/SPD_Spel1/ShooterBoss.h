@@ -81,7 +81,7 @@ private:
 	FVector HitDirection;
 
 	float DeathTime;
-	float DespawnCooldown = 20.f;
+	float DespawnCooldown = 2;
 
 
 };

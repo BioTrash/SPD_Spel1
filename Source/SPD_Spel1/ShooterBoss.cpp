@@ -2,6 +2,7 @@
 #include "ProjectileWeapon.h"
 #include "Components/PointLightComponent.h"
 #include "EnemyShooterAIController.h"
+#include "ShooterBossAIController.h"
 #include "Weapon.h"
 #include "Components/SphereComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -12,6 +13,15 @@ AShooterBoss::AShooterBoss()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+}
+
+// Called when the game starts or when spawned
+void AShooterBoss::BeginPlay()
+{
+	Super::BeginPlay();
+	Health = MaxHealth;
+	isAlive = true;
+
 	if (BP_EnemyWeaponClass)
 	{
 		UE_LOG(LogTemp, Error, TEXT("BP INITIATED"));
@@ -35,15 +45,17 @@ AShooterBoss::AShooterBoss()
 				UE_LOG(LogTemp, Error, TEXT("Instance TRIGGER good"));
 			}
 		}
-	}
-}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Instance NO good"));
 
-// Called when the game starts or when spawned
-void AShooterBoss::BeginPlay()
-{
-	Super::BeginPlay();
-	Health = MaxHealth;
-	isAlive = true;
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Class NO good"));
+
+	}
 }
 
 // Called every frame
@@ -53,12 +65,13 @@ void AShooterBoss::Tick(float DeltaSeconds)
 	DeathTime += DeltaSeconds;
 	if(Health <= 0 && isAlive)
 	{
-		TriggerWeapon->Destroy();
+		//TriggerWeapon->Destroy();
 		KillEnemy();
 	}
 	if (DeathTime >= DespawnCooldown && !isAlive)
 	{
-		Destroy();
+		SetActorHiddenInGame(true);
+		SetActorTickEnabled(false);
 	}
 }
 
@@ -82,52 +95,12 @@ float AShooterBoss::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 void AShooterBoss::KillEnemy()
 {
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	SetRagdollPhysics();
+	//SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
 	DeathTime = 0;
+	TriggerWeapon->SetActorHiddenInGame(true);
 	TriggerWeapon->SetActorTickEnabled(false);
-	TriggerWeapon->SetOwner(nullptr);
-	AAIController* EnemyAIController = Cast<AAIController>(GetController());
-	if (EnemyAIController)
-	{
-		EnemyAIController->StopMovement();
-		EnemyAIController->UnPossess();
-		EnemyAIController->Destroy();
-		//EnemyAIController->SetControlledPawn(nullptr);
-	}
-	UPointLightComponent* PointLightComponent = FindComponentByClass<UPointLightComponent>();
-	if (PointLightComponent)
-	{
-		PointLightComponent->DestroyComponent();
-	}
-	UPrimitiveComponent* EnemyRootComponent = Cast<UPrimitiveComponent>(GetRootComponent());
-	UCapsuleComponent* EnemyCapsuleComponent = GetCapsuleComponent();
-	if (EnemyCapsuleComponent)
-	{
-		EnemyCapsuleComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		USphereComponent* HeadshotComponent = nullptr;
-		TArray<USceneComponent*> ChildrenList;
-		EnemyCapsuleComponent->GetChildrenComponents(true, ChildrenList);
-		for (USceneComponent* Child : ChildrenList)
-		{
-			if (USphereComponent* SphereChild = Cast<USphereComponent>(Child))
-			{
-				if (SphereChild->GetName() == "Headshot")
-				{
-					HeadshotComponent = SphereChild;
-					break;
-				}
-			}
-		}
-
-		if (HeadshotComponent)
-		{
-			HeadshotComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		}
-	}
-	
-	//Destroy();
 }
 
 UStaticMeshComponent* AShooterBoss::GetStaticMeshComponent() const
