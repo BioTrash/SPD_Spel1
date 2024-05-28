@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "EnemyTurret.h"
 #include "PlayerCharacter.h"
 #include "MathUtil.h"
@@ -8,12 +7,16 @@
 #include "Components/CapsuleComponent.h"
 #include "Projectile.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Engine/DamageEvents.h"
 
 //Hanna
 AEnemyTurret::AEnemyTurret()
 {
 	PrimaryActorTick.bCanEverTick = true;
-
+	InitializeTurretComponents();
+}
+void AEnemyTurret::InitializeTurretComponents()
+{
 	//Skapar alla components för turreten och sätter de som attachments där de behövs
 	CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Collider"));
 	RootComponent = CapsuleComponent;
@@ -26,9 +29,8 @@ AEnemyTurret::AEnemyTurret()
     	
 	ProjectileSpawn = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Projectile"));
 	ProjectileSpawn->SetupAttachment(TurretMesh);
-	
-
 }
+
 //Körs när spelet startar eller spawnas in
 void AEnemyTurret::BeginPlay()
 {
@@ -46,7 +48,7 @@ void AEnemyTurret::Tick(float DeltaTime)
 	if (Health <= 0)
 	{
 		//Anropar diefunktionen och returnerar
-		Die();
+		HandleDeath();
 		return;
 	}
 
@@ -95,9 +97,6 @@ void AEnemyTurret::ShootProjectiles()
 	//Kollar cooldown tiden innan den skjuter
 	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
 	{
-		//Kontrollerar om projektilklassen är satt
-		if (ProjectileClass)
-		{
 			//Ställer in parametrar för att spawna in projektiler
 			FActorSpawnParameters SpawnParams;
 			SpawnParams.Owner = this;
@@ -113,44 +112,38 @@ void AEnemyTurret::ShootProjectiles()
 				Projectile->SetOwner(this);
 				Projectile->SetDamage(10);
 			}
-		}
 		//Sätter nästa tid som en projektil ska skjutas
 		NextProjectileTime = GetWorld()->GetTimeSeconds() + ProjectileSpawnCooldown;
 	}
 }
+
 //Skjuter på spelaren med insant-hit
 void AEnemyTurret::ShootEnemy(float Damage)
 {
 	//Kontrollerar om cooldown tiden har gått
 	if (GetWorld()->GetTimeSeconds() >= NextShootTime)
 	{
-		//Kontrollerar om player finns
-		if (Player)
-		{
 			//Beröknar avståndet till spelaren
 			float DistanceToPlayer = FVector::Distance(GetActorLocation(), Player->GetActorLocation());
 			//Beräknar skadans multiplier beroende på avståndet
 			float DistanceMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer * DamageRadius), 0.0f, 1.0f);
 			//Beräknar sedan den faktiska skadan som ska göras
 			float ActualDamage = Damage * DistanceMultiplier + 8.f;
-
 			//Gör skada på spelaren
 			Player->TakeDamage(ActualDamage, FDamageEvent(), GetInstigatorController(), this);
 			//Sätter tiden som nästa skott ska göras
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
-		}
-		//resettar cooldown-tiden för skjutandet
-		ShootAgainCooldown();
-		}
-	//Sätter animationen till false
-	IsShootingAnimation = false;
+			//resettar cooldown-tiden för skjutandet
+			ShootAgainCooldown();
+			//Sätter animationen till false
+			IsShootingAnimation = false;
 	}
+}
 
 //Ser till att spelaren dör
-void AEnemyTurret::Die()
+void AEnemyTurret::HandleDeath()
 {
 	OnEnemyDeath();
-	//Destroy();
 }
 //Resettar cooldownen på när spelaren ska skjuta igen
 void AEnemyTurret::ShootAgainCooldown()

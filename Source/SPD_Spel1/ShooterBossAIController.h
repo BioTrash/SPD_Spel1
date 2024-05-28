@@ -74,7 +74,7 @@ private:
 	void InitiatePlayer();
 	
 	// Cooldown duration between shots
-	float ShootCooldown = 4.5f;
+	float ShootCooldown = 2.5f;
 	float SpamShotCooldown = 0.3;
 
 	bool EffectIsPlaying = false;
