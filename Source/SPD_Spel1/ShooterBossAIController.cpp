@@ -64,7 +64,6 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
                 PlayerPawn->GetActorBounds(true, PlayerBoundsOrigin, PlayerBoundsExtent);
 
                 float DistanceToPlayer = FVector::Dist(EnemyBoundsOrigin, PlayerBoundsOrigin) - (EnemyBoundsExtent.Size() + PlayerBoundsExtent.Size());
-                UE_LOG(LogTemp, Warning, TEXT("RANGE TO PLAYER: %f"), DistanceToPlayer);
                 if (DistanceToPlayer < 200.0f)
                 {
                     // Logic for new position to move towards if the enemy is too close
