@@ -18,11 +18,10 @@ class SPD_SPEL1_API ASlimeBossAIController : public AAIController
 {
 	GENERATED_BODY()
 public:
-
 	ASlimeBossAIController();
 	virtual void Tick(float DeltaSeconds) override;
 	void BeginPlay();
-	void RotateHead(FVector TargetLocation);
+	void RotateHead(const FVector& TargetLocation);
 	void Shoot();
 	void SetPlayer();
 	void UpdateBossPhase();
@@ -47,11 +46,9 @@ public:
 	FTimerHandle SlamAttackTimerHandle;
 	
 protected:
-	
 	FVector OriginalLocation;
 	
 private:
-	
 	UPROPERTY()
 	USkeletalMeshComponent* PawnMesh;
 

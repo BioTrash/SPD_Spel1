@@ -9,12 +9,26 @@
 #include "SlimeBossAI.h"
 #include "PlayerCharacter.h"
 #include "Projectile.h"
-#include "NiagaraFunctionLibrary.h"
+#include "Engine/DamageEvents.h"
 
 
 ASlimeBossAIController::ASlimeBossAIController()
+: PawnMesh(nullptr),
+	SlamMesh(nullptr),
+	SlamDamage(0.0f),
+	Player(nullptr),
+	LastShotTime(0.0f),
+	LastSlamTime(0.0f),
+	LastSpawnTime(0.0f),
+	AIBehavior(nullptr),
+	Boss(nullptr),
+	bIsSlamming(false),
+	BossHealth(),
+	ProjectileSpawn(nullptr),
+	SlamEffect(nullptr),
+	ShootEffect(nullptr)
 {
-	//Sätter dens ursprunliga location för att den ska kunna veta vilken position den ska återgå till efter slam
+	//Sätter dens ursprungliga location för att den ska kunna veta vilken position den ska återgå till efter slam
 	//Hanna
 	OriginalLocation = FVector::ZeroVector;
 }
@@ -22,10 +36,10 @@ ASlimeBossAIController::ASlimeBossAIController()
 void ASlimeBossAIController::BeginPlay()
 {
 	Super::BeginPlay();
-	//Sätter spelarens referems
+	//Sätter spelarens referens
 	SetPlayer();
 	SpawnPointArray = Boss->SpawnPointsArray;
-	// Hämtar in slam effect niagara componenten.
+	// Hämtar in slam effect niagara component.
 	TArray<UNiagaraComponent*> NiagaraComponents;
 	Boss->GetComponents<UNiagaraComponent>(NiagaraComponents);
 	for (UNiagaraComponent* NiagaraComponent : NiagaraComponents)
@@ -62,7 +76,7 @@ void ASlimeBossAIController::BeginPlay()
 	{
 		//Startar AI Behavior tree
 		RunBehaviorTree(AIBehavior);
-		//Initerar de olika blackboard värdena
+		//Initierar de olika blackboard värdena
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), Player->GetActorLocation());
 		GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("PhaseOne"),true);
@@ -117,7 +131,7 @@ void ASlimeBossAIController::Tick(float DeltaSeconds)
 //Hanna
 void ASlimeBossAIController::Shoot()
 {
-	//Hämtar spawnposition och rotation för projektilen
+	//Hämtar spawn position och rotation för projektilen
 	FVector SpawnLocation = ProjectileSpawn->GetComponentLocation();
 	FRotator SpawnRotation = ProjectileSpawn->GetComponentRotation();
 	FActorSpawnParameters SpawnParams;
@@ -126,8 +140,7 @@ void ASlimeBossAIController::Shoot()
 
 	
 	//Skapar och skjuter en projektil
-	AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
-	if (Projectile)
+	if (AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams))
 	{
 		Projectile->SetDamage(ProjectileDamage);
 	}
@@ -135,7 +148,7 @@ void ASlimeBossAIController::Shoot()
 }
 //Får dens huvud att rotera
 //Hanna
-void ASlimeBossAIController::RotateHead(FVector TargetLocation)
+void ASlimeBossAIController::RotateHead(const FVector& TargetLocation)
 {
 	//Beräknar ut rotationen för att hitta targetlocation
 	FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(PawnMesh->GetComponentLocation(), TargetLocation);
@@ -143,7 +156,7 @@ void ASlimeBossAIController::RotateHead(FVector TargetLocation)
 	LookAtRotation.Pitch = 0;
 	LookAtRotation.Roll = 0;
 	LookAtRotation.Yaw += -90.f;
-	//Sätter meshens rotation till den beröknande rotationen
+	//Sätter meshens rotation till den beräknande rotationen
 	PawnMesh->SetWorldRotation(LookAtRotation);
 }
 //Sätter spelarens referns och bossens referens
@@ -158,8 +171,7 @@ void ASlimeBossAIController::SetPlayer()
 void ASlimeBossAIController::UpdateBossPhase()
 {
 	//Hittar slimebossens health
-	ASlimeBossAI* SlimeBoss = Cast<ASlimeBossAI>(GetPawn());
-	if (SlimeBoss)
+	if (ASlimeBossAI* SlimeBoss = Cast<ASlimeBossAI>(GetPawn()))
 	{
 		float Health = SlimeBoss->GetHealth();
 		float MaxHealth = SlimeBoss->MaxHealth;
@@ -280,9 +292,8 @@ void ASlimeBossAIController::SlamAttack()
 			Params.AddIgnoredActor(Boss); 
 
 			//Gör själva linetracen
-			bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Visibility, Params);
-
-			if (bHit)
+			
+			if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Visibility, Params))
 			{
 				//Om linetrace träffade sätter den slampositionen till dens träffpunkt
 				FVector GroundLocation = HitResult.ImpactPoint;
@@ -295,7 +306,7 @@ void ASlimeBossAIController::SlamAttack()
 				Boss->SetActorLocation(GroundLocation);
 			}
 		//Jeremy
-		//Spelare slameffekten	
+		//Spelar slameffekten	
 		if(SlamEffect)
 		{
 			SlamEffect->Activate();

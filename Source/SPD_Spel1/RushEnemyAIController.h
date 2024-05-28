@@ -22,38 +22,33 @@ protected:
 	virtual void Tick(float DeltaSeconds) override;
 
 private:
+	UPROPERTY(EditAnywhere)
+	UBehaviorTree* AIBehavior;
+	
+	UPROPERTY(EditAnywhere, Category = "AI")
+	float AnticipationDelay = 2.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	float LaunchSpeed = 1000.0f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	float JumpHeight = 600.0f;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
+	float ExplosionDamage = 20.f;
+	
+	UPROPERTY(EditAnywhere, Category = "AI")
+	float LaunchDistanceThreshold;
+	
+	UPROPERTY(EditAnywhere, Category="Enemy")
+	class UNiagaraSystem* ExplosionEffect;
+
+	bool bHasLaunched;
+	FTimerHandle ExplodeTimerHandle;
+
 	void UpdatePlayerLocation();
 	void LaunchLogic(float DeltaSeconds);
 	void AnticipationLaunch(float DeltaSeconds, const FVector& EnemyLocation, const FVector& PlayerLocation, float DistanceToPlayer);
 	void LaunchTowardsPlayer();
 	void ExplodeAfterLaunch();
-	
-	UPROPERTY(EditAnywhere)
-	UBehaviorTree* AIBehavior;
-	
-	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
-	float ExplosionDamage = 10.f;
-
-	UPROPERTY(EditAnywhere, Category="Enemy")
-	class UNiagaraSystem* ExplosionEffect;
-
-	UPROPERTY(EditAnywhere, Category = "AI")
-	float LaunchDistanceThreshold;
-
-	UPROPERTY(EditAnywhere, Category = "AI")
-	float AnticipationDelay = 0.0f;
-
-	UPROPERTY(EditAnywhere, Category = "AI")
-	float MinLaunchDistance = 300.0f;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageRadius = 300.0f;
-
-	UPROPERTY(EditAnywhere)
-	TEnumAsByte<ECollisionChannel> TraceChannel = ECollisionChannel::ECC_GameTraceChannel1;
-	
-	bool bHasLaunched;
-	bool bHasBeenDamagedByExplosion;
-
-	FTimerHandle ExplodeTimerHandle;
 };
