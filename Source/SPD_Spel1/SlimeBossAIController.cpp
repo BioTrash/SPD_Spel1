@@ -265,6 +265,7 @@ void ASlimeBossAIController::SlamAttack()
 	if(Boss)
 	{
 		Boss->SetShield(true);
+		Boss->OnSlamEffect();
 	}
 	//Kolla om slamattacken redan pågår
 	//Hanna

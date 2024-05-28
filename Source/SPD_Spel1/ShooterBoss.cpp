@@ -63,16 +63,18 @@ void AShooterBoss::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	DeathTime += DeltaSeconds;
-	if(Health <= 0 && isAlive)
+	if(Health <= 0)
 	{
 		//TriggerWeapon->Destroy();
 		KillEnemy();
 	}
-	if (DeathTime >= DespawnCooldown && !isAlive)
-	{
-		SetActorHiddenInGame(true);
-		SetActorTickEnabled(false);
-	}
+	
+	// if (DeathTime >= DespawnCooldown && !isAlive)
+	// {
+	// 	SetActorHiddenInGame(true);
+	// 	GetController()->SetActorTickEnabled(false);
+	// 	SetActorTickEnabled(false);
+	// }
 }
 
 // Called to bind functionality to input
@@ -97,7 +99,7 @@ void AShooterBoss::KillEnemy()
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
 	//SetRagdollPhysics();
 	OnEnemyDeath();
-	isAlive = false;
+	//isAlive = false;
 	DeathTime = 0;
 	TriggerWeapon->SetActorHiddenInGame(true);
 	TriggerWeapon->SetActorTickEnabled(false);
