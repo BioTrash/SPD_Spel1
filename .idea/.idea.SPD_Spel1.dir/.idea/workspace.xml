@@ -16,6 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/SlimeBossAI.h" afterDir="false" />
     </list>
@@ -699,6 +700,7 @@
       <workItem from="1716561635485" duration="4397000" />
       <workItem from="1716794862589" duration="2163000" />
       <workItem from="1716881707491" duration="7506000" />
+      <workItem from="1716889509645" duration="328000" />
     </task>
     <servers />
   </component>

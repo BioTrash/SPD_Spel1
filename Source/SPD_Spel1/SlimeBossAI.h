@@ -35,7 +35,7 @@ public:
 	void KillEnemy();
 
 	UFUNCTION(BlueprintImplementableEvent, Category= "Effects")
-	bool GetShield();
+	void OnSlamEffect();
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
