@@ -88,7 +88,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
             }
             
                 // Vektorer för Trace (Louis)
-                FVector StartTrace = EnemyWeapon->GetActorLocation();
+                FVector StartTrace = Enemy->GetActorLocation();
                 FVector EndTrace = PlayerPawn->GetActorLocation();
 
                 //Parametrar för linetrace (Louis)
@@ -106,6 +106,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                     
                         // Delegatuppdatering för andra shooters
                         DetectPlayer((HitResult.GetActor()->GetActorLocation()));
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), HitResult.GetActor()->GetActorLocation());
                         BeginChase(true);
 
                         //Skapa ett random Reposition-location som kan användas 
@@ -115,6 +116,7 @@ void AEnemyShooterAIController::Tick(float DeltaSeconds)
                         //Check för skottcooldowns samt effekt
                         if (LastShotTime >= ShootCooldown && ShootTime)
                         {
+                            GetBlackboardComponent()->SetValueAsBool(TEXT("IsShooting"), false);
                             Enemy->IsCharging = true;
                             const float EffectDuration = 1.5f;
                             

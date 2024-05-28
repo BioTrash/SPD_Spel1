@@ -71,7 +71,7 @@ private:
 	void InitiateEnemy();
 	void InitiatePlayer();
 	
-	float ShootCooldown = 1.5f;
+	float ShootCooldown = 0.2f;
 
 	bool EffectIsPlaying = false;
 	UPROPERTY(EditAnywhere, Category = "Mesh")
