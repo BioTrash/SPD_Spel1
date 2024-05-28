@@ -84,7 +84,10 @@ void ASlimeBossAI::SetShield(bool bShielded)
 	if(bShield)
 	{
 		//Sätter igång en timer för att inaktivera den efter 2 sekunder
-		OnSlamEffect();
+		if(IsSlamming())
+		{
+			OnSlamEffect();
+		}
 		GetWorldTimerManager().SetTimer(ShieldTimerHandle, this, &ASlimeBossAI::DisableShield, 2.0f, false);
 	}
 	else //Inte är aktiverad
