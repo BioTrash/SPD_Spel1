@@ -276,7 +276,7 @@ void APlayerCharacter::StopDash()
 void APlayerCharacter::Slide()
 {
 	//check if sliding can be initiated (not currently sliding, ensures player is on ground, ensures player's not dashing, ensures enough time has passed since last slide to initiate new slide
-	if (!bIsSliding && GetCharacterMovement()->IsMovingOnGround() && !bIsDashing && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown)
+	if (!bIsSliding && GetCharacterMovement()->IsMovingOnGround() && (GetWorld()->GetTimeSeconds() - LastSlideTime) > SlideCooldown)
 	{
 		//checks if playervelocity is enough to initate slide
 		FVector PlayerVelocity = GetCharacterMovement()->Velocity;

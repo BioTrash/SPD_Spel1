@@ -1,16 +1,19 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-struct FDamageEvent;
-
 #include "RushEnemyAI.h"
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/EngineTypes.h"
 #include "NiagaraFunctionLibrary.h"
 #include "GameFramework/DamageType.h"
+#include "Engine/DamageEvents.h"
 
 //Hanna
 ARushEnemyAI::ARushEnemyAI()
+	:	IsLaunchingAnimation(false),
+		bHasExploded(false),
+		Health(0.0f),
+		ExplosionEffect(nullptr)
 {
 	//Konstruktor, sätter bool till falskt och sätter igång tick
 	PrimaryActorTick.bCanEverTick = true;
@@ -42,11 +45,6 @@ void ARushEnemyAI::Tick(float DeltaTime)
 		bHasExploded = true;
 	}
 }
-//Spelarinputkomponent
-void ARushEnemyAI::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
 //Utför själva explosionen, skadar spelaren om den är inom radius
 void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 {
@@ -57,7 +55,6 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 		TArray<AActor*> OverlappingActors;
 		//Hämtar explosionens position
 		FVector ExplosionLocation = GetActorLocation();
-
 		//Hämtar alla aktörer av APlayerCharacter som finns i världen
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), APlayerCharacter::StaticClass(), OverlappingActors);
 
@@ -73,8 +70,7 @@ void ARushEnemyAI::Explode(float Damage, bool bCollisionTriggered)
 				float DamageMultiplier = FMath::Clamp(1.0f - (DistanceToPlayer / DamageRadius), 0.0f, 1.0f);
 				//Beräknar sedan den faktiska skadan
 				float ActualDamage = Damage * DamageMultiplier;
-
-				//Gör att spelaren då kan ta skada 
+				//Gör att spelaren kan ta skada
 				Player->TakeDamage(ActualDamage, FDamageEvent(), GetController(), this);
 			}
 		}
@@ -107,7 +103,8 @@ void ARushEnemyAI::PerformLineTrace()
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECC_Pawn, Params))
 	{
 		// Kontrollera om det träffade objektet är spelaren
-		if (APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor()))
+		APlayerCharacter* Player = Cast<APlayerCharacter>(HitResult.GetActor());
+		if (Player)
 		{
 			// Om den då träffat spelaren kallar den på Explode funktionen
 			Explode(30, true);
@@ -121,7 +118,7 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	DamageToMake = FMath::Min(Health,DamageToMake);
 	Health -= DamageToMake;
 
-	//Kontrollerar om dens hälsa är mindre eller lika med 0 och fienden inte har exploderat
+	//Kontrollerar om dens hälsa är mindre eller lika med 0 och fienden inte har exploderat(Hanna)
 	if (Health <= 0 && !bHasExploded)
 	{
 		//Utför explosionen
