@@ -34,8 +34,8 @@ public:
 	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 	void KillEnemy();
 
-	UFUNCTION(BlueprintCallable, Category= "Effects")
-	bool GetShield();
+	UFUNCTION(BlueprintImplementableEvent, Category= "Effects")
+	void OnSlamEffect();
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
