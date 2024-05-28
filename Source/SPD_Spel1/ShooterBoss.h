@@ -62,6 +62,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="Attacking")
 	bool getIsShooting();
+
+	UFUNCTION(BlueprintCallable)
+	void ResetRagdollPhysics();
 	
 	UFUNCTION(BlueprintCallable)
 	void ResetHealth();

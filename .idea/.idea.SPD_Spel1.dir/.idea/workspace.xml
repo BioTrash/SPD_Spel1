@@ -16,7 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +69,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\chhu9071\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\chhu9071\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\chhu9071\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\jeva3947\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\jeva3947\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -700,6 +700,7 @@
       <workItem from="1716881707491" duration="7506000" />
       <workItem from="1716889509645" duration="328000" />
       <workItem from="1716895657399" duration="38000" />
+      <workItem from="1716903116538" duration="7000" />
     </task>
     <servers />
   </component>

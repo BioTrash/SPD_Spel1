@@ -87,6 +87,8 @@ public:
 	FString GetAmmo() const;
 	UFUNCTION(BlueprintPure)
 	USceneComponent* GetMuzzlePoint() const;
+	UFUNCTION(BlueprintPure)
+	UStaticMeshComponent* GetMeshComponent() const;                                              
 	
 	UFUNCTION(BlueprintCallable)
 	void SetbUnlimitedAmmo(bool _bUnlimitedAmmo);
@@ -98,6 +100,8 @@ public:
 	void SetClipSize(int32 _ClipSize);
 	UFUNCTION(BlueprintCallable)
 	void SetFireRate(int32 _FireRate);
+	UFUNCTION(BlueprintCallable)
+	void SetMeshComponent(UStaticMeshComponent* MeshComponent);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void WhenShot();

@@ -62,16 +62,12 @@ void AShooterBoss::BeginPlay()
 void AShooterBoss::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	DeathTime += DeltaSeconds;
+	
 	if(Health <= 0 && isAlive)
 	{
 		//TriggerWeapon->Destroy();
+		
 		KillEnemy();
-	}
-	if (DeathTime >= DespawnCooldown && !isAlive)
-	{
-		SetActorHiddenInGame(true);
-		SetActorTickEnabled(false);
 	}
 }
 
@@ -95,10 +91,9 @@ float AShooterBoss::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 void AShooterBoss::KillEnemy()
 {
 	//För att Jeremy ska kunna hantera Death i sin EnemySpawn(Hanna)
-	//SetRagdollPhysics();
+	SetRagdollPhysics();
 	OnEnemyDeath();
 	isAlive = false;
-	DeathTime = 0;
 	TriggerWeapon->SetActorHiddenInGame(true);
 	TriggerWeapon->SetActorTickEnabled(false);
 }
@@ -122,6 +117,40 @@ void AShooterBoss::SetRagdollPhysics()
 		
 		float ImpulseStrength = 12000;
 		SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
+	}
+}
+
+void AShooterBoss::ResetRagdollPhysics()
+{
+	isAlive = true;
+	USkeletalMeshComponent* SkeletalMesh = GetMesh();
+	if (SkeletalMesh)
+	{
+		// Disable physics simulation and re-enable animation
+		SkeletalMesh->SetAllBodiesSimulatePhysics(false);
+		SkeletalMesh->bBlendPhysics = false;  // Disable blending between physics and animation
+
+		// Reset collision settings to the default
+		SkeletalMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		SkeletalMesh->SetCollisionProfileName(TEXT("CharacterMesh"));
+
+		// Reset the skeletal mesh transform to its initial state (if needed)
+		SkeletalMesh->AttachToComponent(GetCapsuleComponent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+
+		// Optionally, you might need to reset the animation
+		UAnimInstance* AnimInstance = SkeletalMesh->GetAnimInstance();
+		if (AnimInstance)
+		{
+			AnimInstance->Montage_Stop(0.0f);
+		}
+
+		// Force update the bone transforms and animation state
+		SkeletalMesh->RefreshBoneTransforms();
+		SkeletalMesh->UpdateComponentToWorld();
+		SkeletalMesh->TickAnimation(0.0f, false);
+
+		// Wake up all rigid bodies to ensure they're in the correct state
+		SkeletalMesh->WakeAllRigidBodies();
 	}
 }
 
