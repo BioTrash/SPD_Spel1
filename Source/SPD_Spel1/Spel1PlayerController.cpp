@@ -28,8 +28,8 @@ void ASpel1PlayerController::BeginPlay()
 	//if(SlimeChargeClass) SlimeCharge->AddToViewport();
 
 	// Ta bort fade in för debugging
-	//FadeIn = CreateWidget(this, FadeInClass);
-	//if(FadeInClass) FadeIn->AddToViewport();
+	FadeIn = CreateWidget(this, FadeInClass);
+	if(FadeInClass) FadeIn->AddToViewport();
 
 	GetWorld()->GetTimerManager().SetTimer(SinceStartTimer, this, &ASpel1PlayerController::AdvanceTime, 0.001f, true, 0.0f);
 }
