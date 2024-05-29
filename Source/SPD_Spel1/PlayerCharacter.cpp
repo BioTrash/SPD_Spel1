@@ -260,7 +260,7 @@ void APlayerCharacter::DashUp()
 {
 	FVector UpVector = GetActorUpVector();
 	
-	const float DashHeight = 300.0f;
+	const float DashHeight = 350.0f;
 
 	//Upward Dash
 	LaunchCharacter(UpVector * DashHeight, false, true);
