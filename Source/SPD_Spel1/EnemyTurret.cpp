@@ -94,6 +94,7 @@ void AEnemyTurret::RotateTurret(FVector TargetLocation)
 //Skjuter projectiler från turreten
 void AEnemyTurret::ShootProjectiles()
 {
+	
 	//Kollar cooldown tiden innan den skjuter
 	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
 	{
