@@ -25,6 +25,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
 	void OnEnemyDeath();
 	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Enemy")
+    void OnShooting();
+	
 	UFUNCTION(BlueprintCallable, Category="Enemy")
 	void ShootEnemy(float Damage);
 	

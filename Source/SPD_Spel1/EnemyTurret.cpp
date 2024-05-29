@@ -97,6 +97,7 @@ void AEnemyTurret::ShootProjectiles()
 	//Kollar cooldown tiden innan den skjuter
 	if (GetWorld()->GetTimeSeconds() >= NextProjectileTime)
 	{
+			OnShooting();
 			//Ställer in parametrar för att spawna in projektiler
 			FActorSpawnParameters SpawnParams;
 			SpawnParams.Owner = this;
