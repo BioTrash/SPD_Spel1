@@ -208,7 +208,9 @@ void APlayerCharacter::Dash()
 		if (GetCharacterMovement())
 		{
 			//creates a vector where the players last input of movement with WASD is stored. 
-			const FVector DashDirection = this->GetCharacterMovement()->GetLastInputVector();
+			FVector DashDirection = this->GetCharacterMovement()->GetLastInputVector();
+
+			DashDirection = DashDirection.GetClampedToMaxSize(1.0f);
 			//checking if the velocity of the player is not zero.
 			if(GetCharacterMovement()->Velocity != FVector::ZeroVector)
 			{
