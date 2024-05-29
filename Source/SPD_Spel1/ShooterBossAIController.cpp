@@ -66,18 +66,17 @@ void AShooterBossAIController::Tick(float DeltaSeconds)
                 float DistanceToPlayer = FVector::Dist(EnemyBoundsOrigin, PlayerBoundsOrigin) - (EnemyBoundsExtent.Size() + PlayerBoundsExtent.Size());
                 if (DistanceToPlayer < 200.0f)
                 {
-                    // Logic for new position to move towards if the enemy is too close
-                    GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
-                    FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
-                    DirectionAwayFromPlayer.Normalize();
-
-                    FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f);
-                    GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
-                    Enemy->GetCharacterMovement()->MaxWalkSpeed = NewWalkSpeed;
-
+                    SpamAttack();
                     if (DistanceToPlayer < 100.0f)
                     {
-                        SpamAttack();
+                        // Logic for new position to move towards if the enemy is too close
+                        GetBlackboardComponent()->SetValueAsBool(TEXT("InPlayerRange"), true);
+                        FVector DirectionAwayFromPlayer = EnemyLocation - PlayerLocation;
+                        DirectionAwayFromPlayer.Normalize();
+
+                        FVector NewDestination = EnemyLocation + (DirectionAwayFromPlayer * 500.0f);
+                        GetBlackboardComponent()->SetValueAsVector(TEXT("BackOffLocation"), NewDestination);
+                        Enemy->GetCharacterMovement()->MaxWalkSpeed = NewWalkSpeed;
                     }
                 }
                 Enemy->GetCharacterMovement()->MaxWalkSpeed = OriginalWalkSpeed;
