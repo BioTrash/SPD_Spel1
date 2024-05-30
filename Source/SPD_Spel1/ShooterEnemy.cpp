@@ -164,7 +164,6 @@ void AShooterEnemy::SetRagdollPhysics()
 		{
 			SkeletalMesh->AddImpulse(HitDirection * ImpulseStrength , HitBoneName, true);
 			UE_LOG(LogTemp, Warning, TEXT("HIT BY SHOT"));
-
 		}
 	}
 }
