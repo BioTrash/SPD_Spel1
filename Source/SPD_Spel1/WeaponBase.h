@@ -105,6 +105,8 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void WhenShot();
+
+	// The four booleans below should've been turned into Get/Set Functions but due to time constraint and current structure of the code they have not (Rufus)
 	
 	UPROPERTY(BlueprintReadWrite)
 	bool bButtonReleased = false;
