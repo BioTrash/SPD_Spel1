@@ -116,6 +116,13 @@ void AEnemyTurret::ShootProjectiles()
 			}
 		//Sätter nästa tid som en projektil ska skjutas
 		NextProjectileTime = GetWorld()->GetTimeSeconds() + ProjectileSpawnCooldown;
+
+
+	}
+	else
+	{
+		//Sätter animationen till false
+		IsShootingAnimation = false;
 	}
 }
 
@@ -137,8 +144,6 @@ void AEnemyTurret::ShootEnemy(float Damage)
 			NextShootTime = GetWorld()->GetTimeSeconds() + ShootCooldown;
 			//resettar cooldown-tiden för skjutandet
 			ShootAgainCooldown();
-			//Sätter animationen till false
-			IsShootingAnimation = false;
 	}
 }
 
@@ -157,6 +162,12 @@ bool AEnemyTurret::GetIsShootingAnimation()
 {
 	return IsShootingAnimation;
 }
+
+void AEnemyTurret::SetIsShootingAnimation(bool _IsShootingAnimation)
+{
+	IsShootingAnimation = _IsShootingAnimation;
+}
+
 // Resetta HP (Jeremy)
 void AEnemyTurret::ResetHealth()
 {

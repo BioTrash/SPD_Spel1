@@ -34,6 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Animations")
 	bool GetIsShootingAnimation();
 
+	UFUNCTION(BlueprintCallable, Category="Animations")
+	void SetIsShootingAnimation(bool _IsShootingAnimation);
+
 	bool IsShootingAnimation;
 	
 	// Jeremy :)
