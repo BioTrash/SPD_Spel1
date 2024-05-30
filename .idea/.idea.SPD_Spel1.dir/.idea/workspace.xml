@@ -17,17 +17,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0c4281a8-4fbf-4a32-aa9a-99c04f0d2b56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SPD_Spel1.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PlayerCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_WinCheck.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/Blueprints/BP_WinCheck.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Jeremy/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level/SettingsLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Level2/L2_CombinedMain.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_Audio.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_Audio.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_MainMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_MainMenu.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_PauseOptionsMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_PauseOptionsMenu.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/EnemyShooterAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/ShooterBossAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/BP_TurretHead_AnimationBlueprint_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/SM_TurretHead_SkeletalMesh_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_Attack.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_Attack_Anim_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_Attack_PhysicsAsset_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_idle_Anim_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_idle_PhysicsAsset_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/TurretHead_idle_Skeleton_OLD.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Animation/TurretHead_OLD/standardSurface1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_Bullet.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_TestNonProjectileWeapon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_TestWeapon.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGun.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunColored.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_TestGunThird.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SPD_Spel1/WeaponBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "NewMain__Squared",
+    "git-widget-placeholder": "RufusButLoud",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
