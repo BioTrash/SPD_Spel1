@@ -75,6 +75,7 @@ public:
 	//För Animation /Louis
 	UFUNCTION(BlueprintCallable, Category="Damage")
 	bool IsShooting();
+	
 	UFUNCTION(BlueprintCallable, Category="Damage")
 	bool IsSlamming();
 	

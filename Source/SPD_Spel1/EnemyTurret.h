@@ -47,7 +47,6 @@ private:
 	void HandleDeath();
 	void ShootAgainCooldown();
 
-
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 30.f;
 	

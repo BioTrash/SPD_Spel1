@@ -12,6 +12,10 @@
 
 //Hanna
 ARushEnemyAIController::ARushEnemyAIController()
+	:	AIBehavior(nullptr),
+		LaunchDistanceThreshold(0.0f),
+		ExplosionEffect(nullptr),
+		bHasLaunched(false)
 {
 	//Sätter bHasLaunched till false
 	bHasLaunched = false;

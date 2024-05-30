@@ -14,7 +14,11 @@ UCLASS()
 class SPD_SPEL1_API ARushEnemyAI : public ACharacter
 {
 	GENERATED_BODY()
-
+protected:
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	
 public:
 	ARushEnemyAI();
 	
@@ -29,11 +33,7 @@ public:
 	bool IsLaunchingAnimation;
 	bool bHasExploded;
 
-protected:
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
-	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
-	
+
 private:
 	void PerformLineTrace();
 
