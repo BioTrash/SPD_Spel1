@@ -151,6 +151,9 @@ void AShooterBoss::ResetRagdollPhysics()
 
 		// Wake up all rigid bodies to ensure they're in the correct state
 		SkeletalMesh->WakeAllRigidBodies();
+
+		SkeletalMesh->SetRelativeLocation(FVector(0, 0, -90));
+		SkeletalMesh->SetRelativeRotation(FRotator(0, -90, 0));
 	}
 }
 
