@@ -41,7 +41,7 @@ void ARushEnemyAI::Tick(float DeltaTime)
 	if(Health <= 0 && !bHasExploded)
 	{
 		//Utför själva explosionen med 30 skada och sätter bHasExploded till true
-		Explode(30.f, true);
+		Explode(50.f, true);
 		bHasExploded = true;
 	}
 }
@@ -107,7 +107,7 @@ void ARushEnemyAI::PerformLineTrace()
 		if (Player)
 		{
 			// Om den då träffat spelaren kallar den på Explode funktionen
-			Explode(30, true);
+			Explode(50, true);
 		}
 	}
 }
@@ -122,7 +122,7 @@ float ARushEnemyAI::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	if (Health <= 0 && !bHasExploded)
 	{
 		//Utför explosionen
-		Explode(30.f, true);
+		Explode(50.f, true);
 	}
 	return DamageToMake;
 }
